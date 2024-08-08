@@ -1,5 +1,3 @@
-import unittest
-
 from core.ui.common.BaseTest import BaseTest
 from sites.demo.pages.LoginPage import LoginPage
 

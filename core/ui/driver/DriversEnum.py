@@ -11,6 +11,7 @@ class DriversEnum(Enum):
     IE = "ie", "IEDriverServer.exe"
     FIRE_FOX = "firefox", "geckodriver.exe"
     EDGE = "edge", "msedge.exe"
+    WINDOWS = "Windows", "WindowsPC"
 
     def __new__(cls, *args, **kwds):
         obj = object.__new__(cls)

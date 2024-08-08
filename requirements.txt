@@ -1,3 +1,4 @@
 selenium==4.23.1
 local==1.0.0
 pytest==8.3.2
+Appium-Python-Client==4.0.1

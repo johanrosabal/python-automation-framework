@@ -1,4 +1,3 @@
-
 from selenium import webdriver
 from pathlib import Path
 
@@ -6,10 +5,13 @@ from core.config.logger_config import setup_logger
 from core.ui.driver.DriversEnum import DriversEnum
 
 logger = setup_logger('BasePage')
+from appium.options.windows import WindowsOptions
+from appium import webdriver as appium_webdriver
+
+appium_server_url = 'http://localhost:4723'
 
 
 class DriverManager:
-
     defaultBrowser = DriversEnum.CHROME.value
     time_out = ""
     download = ""
@@ -37,14 +39,36 @@ class DriverManager:
             logger.info("Default Web Driver: Chrome")
             return self.chrome_driver()
 
-    def edge_driver(self):
+    @staticmethod
+    def edge_driver():
         logger.info("Setting Edge Driver...")
-        return webdriver.Edge()
+        driver = webdriver.Edge()
+        driver.maximize_window()
+        return driver
 
-    def firefox_driver(self):
+    @staticmethod
+    def firefox_driver():
         logger.info("Setting Firefox Driver...")
-        return webdriver.Firefox()
+        driver = webdriver.Firefox()
+        driver.maximize_window()
+        return driver
 
-    def chrome_driver(self):
+    @staticmethod
+    def chrome_driver():
         logger.info("Setting Chrome Driver...")
-        return webdriver.Chrome()
+        driver = webdriver.Chrome()
+        driver.maximize_window()
+        return driver
+
+    @classmethod
+    def windows_pc(cls, app: str):
+        logger.info("Setting Windows PC...")
+
+        # Driver Capabilities
+        windows_options = WindowsOptions()
+        windows_options.platform_name = 'Windows'
+        windows_options.device_name = 'WindowsPC'
+        windows_options.app = app
+
+        logger.info("APPLICATION: " + app)
+        return appium_webdriver.Remote(appium_server_url, options=windows_options)
