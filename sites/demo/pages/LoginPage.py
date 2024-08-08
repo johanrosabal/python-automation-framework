@@ -9,7 +9,6 @@ logger = setup_logger('LoginPage')
 class LoginPage(BasePage):
 
     url = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
-    page = None
 
     # Locator
     __input_user_name = (By.NAME, "username")
