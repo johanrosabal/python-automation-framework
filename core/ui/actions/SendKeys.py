@@ -2,7 +2,9 @@ from selenium.webdriver import Keys
 
 from core.config.logger_config import setup_logger
 from core.ui.common.BaseApp import BaseApp
+
 logger = setup_logger('SendKeys')
+
 
 class SendKeys:
 

@@ -50,7 +50,7 @@ class LoginPage(BasePage):
         self.pause(5)
         return self
 
-    def login_user(self):
-        self.set_user_name()
-        self.set_password()
-        self.click_login()
+    # def login_user(self):
+    #     self.set_user_name()
+    #     self.set_password()
+    #     self.click_login()
