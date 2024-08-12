@@ -17,7 +17,7 @@ class BaseTest(BaseApp):
         logger.info("Base Test Execution:" + self.SEPARATOR)
 
         browser = DriversEnum.CHROME.value
-        logger.info("Setting Browser Driver: " + str(browser))
+        logger.info("Setting Browser Driver: " + str(browser) + self.SEPARATOR)
         driver = DriverManager(browser).initialize()
         # self.set_driver(driver)
         BaseApp.set_driver(driver)

@@ -28,7 +28,7 @@ class DriverManager:
             self.browser = self.defaultBrowser
 
     def initialize(self):
-        logger.info("Initialize Web Driver...")
+        logger.debug("Initialize Web Driver...")
         if self.browser == "chrome":
             return self.chrome_driver()
         elif self.browser == "edge":
@@ -41,28 +41,28 @@ class DriverManager:
 
     @staticmethod
     def edge_driver():
-        logger.info("Setting Edge Driver...")
+        logger.debug("Setting Edge Driver...")
         driver = webdriver.Edge()
         driver.maximize_window()
         return driver
 
     @staticmethod
     def firefox_driver():
-        logger.info("Setting Firefox Driver...")
+        logger.debug("Setting Firefox Driver...")
         driver = webdriver.Firefox()
         driver.maximize_window()
         return driver
 
     @staticmethod
     def chrome_driver():
-        logger.info("Setting Chrome Driver...")
+        logger.debug("Setting Chrome Driver...")
         driver = webdriver.Chrome()
         driver.maximize_window()
         return driver
 
     @classmethod
     def windows_pc(cls, app: str):
-        logger.info("Setting Windows PC...")
+        logger.debug("Setting Windows PC...")
 
         # Driver Capabilities
         windows_options = WindowsOptions()
@@ -70,5 +70,5 @@ class DriverManager:
         windows_options.device_name = 'WindowsPC'
         windows_options.app = app
 
-        logger.info("APPLICATION: " + app)
+        logger.debug("APPLICATION: " + app)
         return appium_webdriver.Remote(appium_server_url, options=windows_options)

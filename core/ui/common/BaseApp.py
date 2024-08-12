@@ -1,6 +1,6 @@
 import os
+import time
 from threading import local
-
 from core.config.logger_config import setup_logger
 
 logger = setup_logger('BaseApp')
@@ -39,8 +39,8 @@ class BaseApp:
 
     @staticmethod
     def pause(seconds):
-        logger.info("Pause")
-        import time
+        logger.info("Pause: "+str(seconds))
+
         time.sleep(seconds)
 
     @staticmethod
@@ -88,8 +88,5 @@ class BaseApp:
     # def screenshots():
     #     logger.debug("Screenshots")
     #     return Screenshots(BaseApp.get_driver())
-    @classmethod
-    def check_logs_messages(cls):
-        logger.info("This is an info message")
-        logger.debug("This is a debug message")
-        logger.error("This is an error message")
+
+

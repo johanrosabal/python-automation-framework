@@ -14,13 +14,11 @@ class BasePage(BaseApp):
             self.driver = driver
 
     def navigation(self):
-        logger.info("Navigation")
         return Click(self.get_driver())
 
     def send_keys(self):
-        logger.info("Send Keys")
         return SendKeys(self.get_driver())
 
     def click_element(self):
-        logger.info("Click")
         return Click(self.get_driver())
+
