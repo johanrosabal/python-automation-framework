@@ -14,7 +14,7 @@ class BaseTest(BaseApp):
     @pytest.fixture(scope="class", autouse=True)
     def set_up(self):
 
-        logger.info("Base Test Execution:" + self.SEPARATOR)
+        logger.debug("Base Test Execution:" + self.SEPARATOR)
 
         browser = DriversEnum.CHROME.value
         logger.info("Setting Browser Driver: " + str(browser) + self.SEPARATOR)
