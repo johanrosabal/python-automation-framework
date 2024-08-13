@@ -2,7 +2,7 @@ from core.config.logger_config import setup_logger
 from core.ui.common.BaseApp import BaseApp
 from core.ui.actions.Element import Element
 
-logger = setup_logger('SendKeys')
+logger = setup_logger('Click')
 
 
 class Click:
@@ -17,11 +17,13 @@ class Click:
         logger.info(Element.log_console(page, self._name, locator))
         return self
 
+    def pause(self, seconds: int):
+        BaseApp.pause(seconds)
+        return self
+
     def single_click(self):
         if self._element:
             self._element.click()
         return self
 
-    def pause(self, seconds: int):
-        BaseApp.pause(seconds)
-        return self
+

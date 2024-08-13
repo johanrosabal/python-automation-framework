@@ -1,0 +1,20 @@
+# Web Standard Configuration File
+name: Shoftship Master Data Site
+web:
+  base_url: https://jaxvycswebqa.crowley.com
+  browser: chrome
+
+api:
+  base_url: https://jaxvycswebqa.crowley.com/api
+
+user:
+  name: rosabjo
+  password: Teletrabajo02
+
+database:
+  host: na
+  port: 5432
+  user: qa_user
+  password: qa_password
+  name: qa_db
+  ssl: false

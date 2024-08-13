@@ -1,5 +1,6 @@
 import os
 import time
+import inspect
 from threading import local
 from core.config.logger_config import setup_logger
 
@@ -11,15 +12,22 @@ _driver = local()
 
 class BaseApp:
     # Static Variables
-    base_url = None
-    application = None
     project_root = os.getcwd()
     main_resources_path = os.path.join(project_root, 'resources')
+    base_url_var = ""
 
     SEPARATOR = "\n**************************************************************************************************" \
                 "************************************* "
     SEPARATOR_DASH = "\n---------------------------------------------------------------------------------------------" \
                      "------------------------------------------ "
+
+    @classmethod
+    def set_base_url(cls,value):
+        cls.base_url_var = value
+
+    @classmethod
+    def get_base_url(cls):
+        return cls.base_url_var
 
     @property
     def driver(self):
@@ -39,7 +47,7 @@ class BaseApp:
 
     @staticmethod
     def pause(seconds):
-        logger.info("Pause: "+str(seconds))
+        logger.info("Pause: " + str(seconds))
 
         time.sleep(seconds)
 
@@ -55,11 +63,12 @@ class BaseApp:
     def refresh():
         BaseApp.get_driver().refresh()
 
-    def go(self, url):
+    def go(self, base_url, url):
         driver = self.get_driver()
         if driver:
+            url = str(base_url) + str(url)
             driver.get(url)
-            logger.info(f"Going to {url}")
+            logger.debug(f"Go: {url}")
         else:
             logger.error("Driver is not set.")
 
@@ -71,22 +80,11 @@ class BaseApp:
     def main_resources(file_name):
         return os.path.join(BaseApp.main_resources_path, file_name)
 
-    # @staticmethod
-    # def token():
-    #     # Implementar la clase Token si es necesario
-    #     return Token(BaseApp.get_driver())
-
     @staticmethod
     def get_title():
         return BaseApp.get_driver().title
 
     @staticmethod
-    def get_application():
-        return BaseApp.application
-
-    # @staticmethod
-    # def screenshots():
-    #     logger.debug("Screenshots")
-    #     return Screenshots(BaseApp.get_driver())
-
-
+    def method_name():
+        current_method_name = inspect.currentframe().f_back.f_code.co_name
+        return current_method_name

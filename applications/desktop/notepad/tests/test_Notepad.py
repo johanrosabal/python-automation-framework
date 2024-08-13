@@ -1,6 +1,6 @@
 import pytest
 
-from sites.desktop.notepad.pages.NotepadPage import NotepadPage
+from applications.desktop.notepad.pages.NotepadPage import NotepadPage
 
 
 class TestNotepad:

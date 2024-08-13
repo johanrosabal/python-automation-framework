@@ -8,11 +8,13 @@ logger = setup_logger('LoginPage')
 
 
 class LoginPage(BasePage):
-    url = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
 
     def __init__(self, driver):
         super().__init__(driver)
+        # Driver
         self.driver = driver
+        # Relative URL
+        self.relative = "/web/index.php/auth/login"
         # Locator definitions
         self._input_user_name = (By.NAME, "username", "Input Username")
         self._input_password = (By.NAME, "password", "Input Password")
@@ -28,7 +30,9 @@ class LoginPage(BasePage):
         return cls._instance
 
     def load_page(self):
-        self.go(self.url)
+        base_url = BaseApp.get_base_url()
+        logger.info("LOAD PAGE: "+base_url+self.relative)
+        self.go(base_url, self.relative)
         return self
 
     def set_user_name(self, username: str):

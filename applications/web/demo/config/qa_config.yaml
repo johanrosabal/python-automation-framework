@@ -1,0 +1,20 @@
+# Web Standard Configuration File
+name: Orange HRM Open Source HR Management
+web:
+  base_url: https://opensource-demo.orangehrmlive.com
+  browser: chrome
+
+api:
+  base_url: https://opensource-demo.orangehrmlive.com/api
+
+user:
+  name: Admin
+  password: admin123
+
+database:
+  host: qa-db.example.com
+  port: 5432
+  user: qa_user
+  password: qa_password
+  name: qa_db
+  ssl: false
