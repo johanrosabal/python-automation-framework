@@ -1,6 +1,7 @@
 from core.config.logger_config import setup_logger
 from core.ui.common.BaseApp import BaseApp
 from core.ui.actions.Element import Element
+from selenium.webdriver.common.action_chains import ActionChains
 
 logger = setup_logger('Click')
 
@@ -26,4 +27,17 @@ class Click:
             self._element.click()
         return self
 
+    def double_click(self):
+        if self._element:
+            actions = ActionChains(self._driver)
+            actions.double_click(self._element).perform()
 
+    def click_and_hold(self):
+        if self._element:
+            actions = ActionChains(self._driver)
+            actions.click_and_hold(self._element).perform()
+
+    def context_click(self):
+        if self._element:
+            actions = ActionChains(self._driver)
+            actions.context_click(self._element).perform()

@@ -12,14 +12,15 @@ logger = setup_logger('BaseTest')
 @pytest.fixture
 def base_url(config):
     value = config.get('web', {}).get('base_url')
-    logger.info("BASE URL: "+value)
+    logger.info("BASE URL: " + value)
     return value
 
 
 @pytest.fixture
 def user(config):
-    user_dto = UserDTO(user_name=config.get('user', {}).get('name'),user_password=config.get('user', {}).get('password'))
-    logger.info("USER: "+user_dto.__str__())
+    user_dto = UserDTO(user_name=config.get('user', {}).get('name'),
+                       user_password=config.get('user', {}).get('password'))
+    logger.info("USER: " + user_dto.__str__())
     return user_dto
 
 
@@ -33,10 +34,11 @@ class BaseTest(BaseApp):
         driver = DriverManager(browser).initialize()
         value = config.get('web', {}).get('base_url')
         BaseApp.set_base_url(value)
-        logger.info("STATIC BASE URL"+BaseApp.get_base_url())
+        logger.info("BASE URL: " + BaseApp.get_base_url())
 
         # self.set_driver(driver)
         BaseApp.set_driver(driver)
 
         yield
+
         driver.quit()

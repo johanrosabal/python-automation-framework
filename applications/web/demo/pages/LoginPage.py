@@ -1,4 +1,6 @@
 from selenium.webdriver.common.by import By
+
+from core.asserts.AssertCollector import AssertCollector
 from core.config.logger_config import setup_logger
 from core.ui.common.BaseApp import BaseApp
 from core.ui.common.BasePage import BasePage
@@ -20,7 +22,12 @@ class LoginPage(BasePage):
         self._input_password = (By.NAME, "password", "Input Password")
         self._btn_login = (By.XPATH, "//button[contains(@class,'login-button')]", "Login Button")
         self._select_user_dropdown = (By.XPATH, "//li[contains(@class,'oxd-userdropdown')]", "User Dropdown")
-        self._select_logout = (By.XPATH, "//ul[@class='oxd-dropdown-menu']//a[contains(@href, 'logout')]", "user Logout")
+        self._select_logout = (
+            By.XPATH, "//ul[@class='oxd-dropdown-menu']//a[contains(@href, 'logout')]", "User Logout")
+        self._txt_headline = (By.XPATH, "//h5[contains(@class,'orangehrm-login-title')]", "Login Headline")
+        self._link_orange_hrm = (By.XPATH, '//a[text()="OrangeHRM, Inc"]', "Orange HRM Link")
+        self._link_forgot_your_password = (
+            By.XPATH, "//p[contains(@class,'orangehrm-login-forgot-header')]", "Forgot Your Password Link")
 
     @classmethod
     def get_instance(cls):
@@ -31,8 +38,14 @@ class LoginPage(BasePage):
 
     def load_page(self):
         base_url = BaseApp.get_base_url()
-        logger.info("LOAD PAGE: "+base_url+self.relative)
+        logger.info("LOAD PAGE: " + base_url + self.relative)
         self.go(base_url, self.relative)
+        return self
+
+    def login_user(self, user: UserDTO):
+        self.set_user_name(user.user_name)
+        self.set_password(user.user_password)
+        self.click_login()
         return self
 
     def set_user_name(self, username: str):
@@ -56,12 +69,58 @@ class LoginPage(BasePage):
          .single_click())
         return self
 
-    def login_user(self, user: UserDTO):
-        self.set_user_name(user.user_name)
-        self.set_password(user.user_password)
-        self.click_login()
+    def get_headline(self):
+        return (self.get_text()
+                .set_locator(self._txt_headline, self.name)
+                .by_text())
+
+    def link_orange_hrm(self):
+        (self.click_element()
+         .set_locator(self._link_orange_hrm, self.name)
+         .single_click())
+        return self
+
+    def link_forgot_your_password(self):
+        (self.click_element()
+         .set_locator(self._link_forgot_your_password, self.name)
+         .single_click())
         return self
 
     def logout_user(self):
-        self.click_element().set_locator(self._select_user_dropdown,self.name).single_click()
-        self.click_element().set_locator(self._select_logout,self.name).single_click()
+        self.click_element().set_locator(self._select_user_dropdown, self.name).single_click()
+        self.click_element().set_locator(self._select_logout, self.name).single_click()
+
+    def verify_headline(self, headline: str):
+        AssertCollector.assert_equal_message(headline, self.get_headline(), "Login headline match.")
+        return self
+
+    def verify_orange_hrm_link(self, link: str):
+        href = self.get_text().set_locator(self._link_orange_hrm, self.name).by_attribute("href")
+        AssertCollector.assert_equal_message(link, href, "Orange HRM Link correct.")
+
+    def verify_forgot_your_password(self, relative_url):
+        base_url = BaseApp.get_base_url()
+        current_url = self.get_current_url()
+        AssertCollector.assert_equal_message(
+            base_url + relative_url,
+            current_url,
+            "Forgot Password Location correct."
+        )
+
+    def verify_user_is_logged(self, relative_url):
+        base_url = BaseApp.get_base_url()
+        current_url = self.get_current_url()
+        AssertCollector.assert_equal_message(
+            base_url + relative_url,
+            current_url,
+            "User signed successfully."
+        )
+
+    def verify_user_is_logged_out(self, relative_url):
+        base_url = BaseApp.get_base_url()
+        current_url = self.get_current_url()
+        AssertCollector.assert_equal_message(
+            base_url + relative_url,
+            current_url,
+            "User logout successfully."
+        )

@@ -33,7 +33,7 @@ class AssertCollector:
 
     @staticmethod
     def assert_equal_message(expected, actual, message, page="", method_name=""):
-        text = "Expected value [" + expected + "] | Actual value [" + actual + "]"
+        text = "Expected value [" + str(expected) + "] | Actual value [" + str(actual) + "]"
         if expected == actual:
             if page != "" and method_name != "":
                 logger.info("["+page+"]["+method_name+"]"+"[Validation]: "+message + " | " + text)
