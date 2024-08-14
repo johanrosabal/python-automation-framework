@@ -9,6 +9,11 @@ logger = setup_logger('Element')
 
 class Element:
 
+    def __init__(self, driver=None):
+        super().__init__()
+        if driver:
+            self.driver = driver
+
     @staticmethod
     def wait_for_element(driver, locator, timeout=10):
         # Extract only first two values of the tuple

@@ -41,7 +41,7 @@ class SimpleAlertPage(BasePage):
         # Switch to IFrame
         self.frame().set_locator(self._frame_content, self.name).switch_to().pause(2)
 
-        (self.click_element()
+        (self.click()
          .set_locator(self._btn_try_it, self.name)
          .single_click()
          .pause(3))

@@ -68,7 +68,7 @@ class LoginPage(MasterDataPage):
         return self
 
     def click_login(self):
-        (self.click_element()
+        (self.click()
          .set_locator(self._btn_login, self.name)
          .single_click())
         return self
@@ -80,7 +80,7 @@ class LoginPage(MasterDataPage):
         return self
 
     def click_agency(self):
-        (self.click_element()
+        (self.click()
          .set_locator(self._btn_select_agency, self.name)
          .single_click())
         return self

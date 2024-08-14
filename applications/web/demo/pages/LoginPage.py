@@ -64,7 +64,7 @@ class LoginPage(BasePage):
         return self
 
     def click_login(self):
-        (self.click_element()
+        (self.click()
          .set_locator(self._btn_login, self.name)
          .single_click())
         return self
@@ -75,20 +75,20 @@ class LoginPage(BasePage):
                 .by_text())
 
     def link_orange_hrm(self):
-        (self.click_element()
+        (self.click()
          .set_locator(self._link_orange_hrm, self.name)
          .single_click())
         return self
 
     def link_forgot_your_password(self):
-        (self.click_element()
+        (self.click()
          .set_locator(self._link_forgot_your_password, self.name)
          .single_click())
         return self
 
     def logout_user(self):
-        self.click_element().set_locator(self._select_user_dropdown, self.name).single_click()
-        self.click_element().set_locator(self._select_logout, self.name).single_click()
+        self.click().set_locator(self._select_user_dropdown, self.name).single_click()
+        self.click().set_locator(self._select_logout, self.name).single_click()
 
     def verify_headline(self, headline: str):
         AssertCollector.assert_equal_message(headline, self.get_headline(), "Login headline match.")
