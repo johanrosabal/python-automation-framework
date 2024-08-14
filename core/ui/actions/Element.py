@@ -19,7 +19,7 @@ class Element:
             )
             return element
         except TimeoutException:
-            print(f"Element with locator {locator} was not found within {timeout} seconds.")
+            logger.info(f"Element with locator {locator} was not found within {timeout} seconds.")
             return None
 
     @staticmethod

@@ -25,19 +25,27 @@ class Click:
     def single_click(self):
         if self._element:
             self._element.click()
+        else:
+            logger.error("Unable to Click Element WebElement is None.")
         return self
 
     def double_click(self):
         if self._element:
             actions = ActionChains(self._driver)
             actions.double_click(self._element).perform()
+        else:
+            logger.error("Unable to Double Click Element WebElement is None.")
 
     def click_and_hold(self):
         if self._element:
             actions = ActionChains(self._driver)
             actions.click_and_hold(self._element).perform()
+        else:
+            logger.error("Unable to Click and Hold Element WebElement is None.")
 
     def context_click(self):
         if self._element:
             actions = ActionChains(self._driver)
             actions.context_click(self._element).perform()
+        else:
+            logger.error("Unable to Context Click WebElement is None.")

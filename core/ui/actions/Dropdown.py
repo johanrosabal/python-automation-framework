@@ -27,18 +27,24 @@ class Dropdown:
         if self._element:
             select = Select(self._element)
             select.select_by_value(value)
+        else:
+            logger.error("Unable to Find Dropdown Option by Value WebElement is None.")
         return self
 
     def by_index(self, index: int):
         if self._element:
             select = Select(self._element)
             select.select_by_index(index)
+        else:
+            logger.error("Unable to Find Dropdown Option by Index WebElement is None.")
         return self
 
     def by_text(self, text: str):
         if self._element:
             select = Select(self._element)
             select.select_by_visible_text(text)
+        else:
+            logger.error("Unable to Find Dropdown Option by Text WebElement is None.")
         return self
 
     def by_text_contains(self, search_text: str):
@@ -57,4 +63,6 @@ class Dropdown:
         if self._element:
             select = Select(self._element)
             select.deselect_all()
+        else:
+            logger.error("Unable to Find Dropdown Deselect WebElement is None.")
         return self

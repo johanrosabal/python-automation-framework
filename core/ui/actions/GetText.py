@@ -24,18 +24,23 @@ class GetText:
 
     def by_text(self):
         if self._element:
-            return self._element.text
+            text = self._element.text
+            logger.info("Getting Text ["+text+"]")
+            return text
         else:
-            logger.error("No text value found.")
+            logger.error("Unable to get text WebElement is None.")
 
     def by_attribute(self, attribute="value"):
         if self._element:
-            return self._element.get_attribute(attribute)
+            try:
+                return self._element.get_attribute(attribute)
+            except Exception as e:
+                logger.error(f"Exception occurred while getting attribute '{attribute}': {e}")
         else:
-            logger.error("No attribute value found.")
+            logger.error("Unable to get text by attribute WebElement is None.")
 
     def trim(self):
         if self._element:
             return self._element.text.rstrip()
         else:
-            logger.error("No attribute value found.")
+            logger.error("Unable to Trim Text WebElement is None.")

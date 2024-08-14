@@ -22,10 +22,17 @@ class Frame:
         return self
 
     def switch_to(self):
-        self._driver.switch_to.frame(self._element)
+        if self._driver:
+            self._driver.switch_to.frame(self._element)
+        else:
+            logger.error("Unable to Switch to Element WebDriver is None.")
+
         return self
 
     def switch_to_default(self):
-        logger.info("Switch to Default Content")
-        self._driver.switch_to.default_content()
+        if self._driver:
+            logger.info("Switch to Default Content")
+            self._driver.switch_to.default_content()
+        else:
+            logger.error("Unable to Switch to Element WebDriver is None.")
         return self

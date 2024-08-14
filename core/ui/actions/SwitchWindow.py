@@ -18,29 +18,47 @@ class SwitchWindow:
         self.tab = 0
 
     def get_current_window(self):
-        return self._driver.current_windows_handle
+        if self._driver:
+            return self._driver.current_windows_handle
+        else:
+            logger.error("Unable to Show Current Window WebDriver is None.")
 
     def get_original_window(self):
-        return self.original_window
+        tab = self.original_window
+        logger.info("Original Windows: "+str(tab))
+        return tab
 
     def select_tab(self, number: int):
-        self._driver.switch_to.window(self.tabs[number])
-        BaseApp.pause(1)
+        if self._driver:
+            self._driver.switch_to.window(self.tabs[number])
+            BaseApp.pause(1)
+        else:
+            logger.error("Unable to Select Tab WebDriver is None.")
 
     def find_new_windows(self):
-        for window_handle in self._driver.window_handles:
-            if window_handle != self.original_window:
-                self._driver.switch_to.window(window_handle)
-                break
+        if self._driver:
+            for window_handle in self._driver.window_handles:
+                if window_handle != self.original_window:
+                    self._driver.switch_to.window(window_handle)
+                    break
+        else:
+            logger.error("Unable to Find New Tab WebDriver is None.")
 
     def open_new_windows(self):
-        # Open new windows using JavaScript
-        self._driver.execute_script("window.open('');")
-        # Handle the new windows
-        self._driver.switch_to.new_window(self._driver.window_handles[-1])
+        if self._driver:
+            # Open new windows using JavaScript
+            self._driver.execute_script("window.open('');")
+            # Handle the new windows
+            self._driver.switch_to.new_window(self._driver.window_handles[-1])
+        else:
+            logger.error("Unable to Open Tab Windows WebDriver is None.")
 
     def close_tab(self):
-        # Close the tab or window
-        self._driver.close()
-        # Switch back to the old tab or window
-        self._driver.switch_to.window(self.original_window)
+        if self._driver:
+            logger.error("Closing Tab Windows.")
+            # Close the tab or window
+            self._driver.close()
+            # Switch back to the old tab or window
+            self._driver.switch_to.window(self.original_window)
+        else:
+            logger.error("Unable to close Tab Windows WebDriver is None.")

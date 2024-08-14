@@ -20,9 +20,12 @@ class AlertPrompt:
             self._alert = alert
 
         def accept(self):
-            logger.info("Simple Alert Accept")
-            self._alert.accept()
-            time.sleep(1)
+            if self._alert:
+                logger.info("Simple Alert Accept")
+                self._alert.accept()
+                time.sleep(1)
+            else:
+                logger.error("Unable to Alert Simple Accept WebDriver is None.")
 
     class Confirm:
         _alert = None
@@ -31,17 +34,26 @@ class AlertPrompt:
             self._alert = alert
 
         def cancel(self):
-            logger.info("Confirm Alert Cancel")
-            self._alert.dismiss()
-            time.sleep(1)
+            if self._alert:
+                logger.info("Confirm Alert Cancel")
+                self._alert.dismiss()
+                time.sleep(1)
+            else:
+                logger.error("Unable to Alert Confirm Cancel WebDriver is None.")
 
         def accept(self):
-            logger.info("Confirm Alert Accept")
-            self._alert.accept()
-            time.sleep(1)
+            if self._alert:
+                logger.info("Confirm Alert Accept")
+                self._alert.accept()
+                time.sleep(1)
+            else:
+                logger.error("Unable to Alert Confirm Accept WebDriver is None.")
 
     def simple_accept(self):
-        self._simple_alert.accept()
+        if self._alert:
+            self._simple_alert.accept()
+        else:
+            logger.error("Unable to Alert Simple Accept WebDriver is None.")
 
     def confirm_accept(self):
         return self._confirm_alert.accept()
@@ -50,8 +62,14 @@ class AlertPrompt:
         return self._confirm_alert.cancel()
 
     def send_keys(self, text: str):
-        self._alert.send_keys(text)
-        time.sleep(1)
+        if self._alert:
+            self._alert.send_keys(text)
+            time.sleep(1)
+        else:
+            logger.error("Unable to Alert Send Keys WebDriver is None.")
 
     def get_text(self):
-        return self._alert.text
+        if self._alert:
+            return self._alert.text
+        else:
+            logger.error("Unable to Alert Get Text WebDriver is None.")
