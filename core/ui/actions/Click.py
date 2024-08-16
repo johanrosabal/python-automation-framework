@@ -57,6 +57,15 @@ class Click:
             logger.error("Unable to Context Click WebElement is None.")
         return self
 
+    def drag_and_drop(self, draggable, droppable):
+        if draggable is not None and droppable is not None:
+            logger.info("Drag and Drop")
+            actions = ActionChains(self._driver)
+            actions.drag_and_drop(draggable, droppable).perform()
+        else:
+            logger.error("Unable to Drag and Drop WebElement is None.")
+        return self
+
     def mouse_over(self):
         if self._element:
             logger.info("Mouse Over")

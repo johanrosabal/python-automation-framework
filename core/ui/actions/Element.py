@@ -9,10 +9,39 @@ logger = setup_logger('Element')
 
 class Element:
 
-    def __init__(self, driver=None):
-        super().__init__()
-        if driver:
-            self.driver = driver
+    def __init__(self, driver):
+        self._name = self.__class__.__name__
+        self._driver = driver
+        self._element = None
+
+    def set_locator(self, locator: tuple, page='Page'):
+        self._element = Element.wait_for_element(self._driver, locator)
+        logger.info(Element.log_console(page, self._name, locator))
+        return self
+
+    def is_visible(self):
+        self._element.is_displayed()
+
+    def is_enabled(self):
+        self._element.is_enabled()
+
+    def is_selected(self):
+        self._element.is_selected()
+
+    def get_tag_name(self):
+        return self._element.tag_name
+
+    def get_position(self):
+        return self._element.rect
+
+    def get_css_property(self, css_property):
+        return self._element.value_of_css_property(css_property)
+
+    def get_text(self):
+        return self._element.text
+
+    def get_attribute(self,value="value"):
+        return self._element.get_attribute(value)
 
     @staticmethod
     def wait_for_element(driver, locator, timeout=10):

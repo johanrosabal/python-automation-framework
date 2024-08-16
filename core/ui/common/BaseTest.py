@@ -1,5 +1,5 @@
 import pytest
-
+import os
 from core.config.logger_config import setup_logger
 from core.data.UserDTO import UserDTO
 from core.ui.common.BaseApp import BaseApp
@@ -22,6 +22,22 @@ def user(config):
                        user_password=config.get('user', {}).get('password'))
     logger.info("USER: " + user_dto.__str__())
     return user_dto
+
+
+@pytest.hookimpl(tryfirst=True)
+def pytest_runtest_setup(item):
+    # Set up the video recording path before the test runs
+    test_name = item.nodeid.replace("::", "_")
+    recording_path = os.path.join("videos", f"{test_name}.mp4")
+    logger.info("RECODING PATH: "+recording_path)
+    item.config.option.recording_path = recording_path
+
+
+@pytest.fixture(autouse=True)
+def record_video(recording, request):
+    # Fixture to automatically record video for each test
+    yield
+    recording.stop()
 
 
 class BaseTest(BaseApp):
