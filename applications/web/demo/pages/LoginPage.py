@@ -64,6 +64,21 @@ class LoginPage(BasePage):
         return self
 
     def click_login(self):
+
+        # Save Full Screenshot
+        # (self.screenshot().set_locator(self._btn_login, self.name).save_screenshot())
+
+        # Save Screenshot with highlight
+        # (self.screenshot()
+        #  .set_locator(self._btn_login, self.name)
+        #  .save_highlight())
+
+        # Save Screenshot with comment
+        # (self.screenshot()
+        #  .set_locator(self._btn_login, self.name)
+        #  .save_highlight()
+        #  .add_comment("Login Button"))
+
         (self.click()
          .set_locator(self._btn_login, self.name)
          .single_click())
@@ -122,5 +137,4 @@ class LoginPage(BasePage):
         AssertCollector.assert_equal_message(
             base_url + relative_url,
             current_url,
-            "User logout successfully."
-        )
+            "User logout successfully.")

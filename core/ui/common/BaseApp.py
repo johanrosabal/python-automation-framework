@@ -60,8 +60,8 @@ class BaseApp:
         return current_method_name
 
     @staticmethod
-    def build_path(path):
-        return os.path.join(BaseApp.project_root, path)
+    def get_project_root():
+        return os.path.join(BaseApp.project_root)
 
     @staticmethod
     def main_resources(file_name):

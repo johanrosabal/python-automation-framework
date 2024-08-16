@@ -1,10 +1,14 @@
+
+
 from core.config.logger_config import setup_logger
 from core.ui.actions.AlertPrompt import AlertPrompt
+from core.ui.actions.Checkbox import Checkbox
 from core.ui.actions.Click import Click
 from core.ui.actions.Element import Element
 from core.ui.actions.Frame import Frame
 from core.ui.actions.GetText import GetText
 from core.ui.actions.Radio import Radio
+from core.ui.actions.Screeenshot import Screenshot
 from core.ui.actions.Scroll import Scroll
 from core.ui.actions.SendKeys import SendKeys
 from core.ui.actions.Dropdown import Dropdown
@@ -25,8 +29,8 @@ class BasePage(BaseApp):
     def alert(self):
         return AlertPrompt(self.get_driver())
 
-    def radio(self):
-        return Radio(self.get_driver())
+    def checkbox(self):
+        return Checkbox(self.get_driver())
 
     def click(self):
         return Click(self.get_driver())
@@ -42,6 +46,12 @@ class BasePage(BaseApp):
 
     def get_text(self):
         return GetText(self.get_driver())
+
+    def radio(self):
+        return Radio(self.get_driver())
+
+    def screenshot(self):
+        return Screenshot(self.get_driver())
 
     def scroll(self):
         return Scroll(self.get_driver())
