@@ -30,11 +30,11 @@ class SimpleAlertPage(BasePage):
         return cls._instance
 
     def load_alert_page(self):
-        self.go(self.base_url, self.relative_alert)
+        self.navigation().go(self.base_url, self.relative_alert)
         return self
 
     def load_prompt_page(self):
-        self.go(self.base_url, self.relative_prompt)
+        self.navigation().go(self.base_url, self.relative_prompt)
         return self
 
     def click_try_it(self):

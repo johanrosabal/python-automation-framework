@@ -24,7 +24,7 @@ class TestLogin(BaseTest):
     def test_login_forgot_your_password(self):
         self.LoginPage.link_forgot_your_password()
         self.LoginPage.verify_forgot_your_password("/web/index.php/auth/requestPasswordResetCode")
-        self.get_back()
+        self.navigation().get_back()
 
     @test(test_case_id="HRM-0004", test_description="Login user with valid credentials.")
     def test_login_valid_user(self, user):

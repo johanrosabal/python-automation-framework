@@ -49,3 +49,10 @@ class Click:
             actions.context_click(self._element).perform()
         else:
             logger.error("Unable to Context Click WebElement is None.")
+
+    def mouse_over(self):
+        if self._element:
+            actions = ActionChains(self._driver)
+            actions.move_to_element(self._element).perform()
+        else:
+            logger.error("Unable to Context Click WebElement is None.")

@@ -39,7 +39,7 @@ class LoginPage(BasePage):
     def load_page(self):
         base_url = BaseApp.get_base_url()
         logger.info("LOAD PAGE: " + base_url + self.relative)
-        self.go(base_url, self.relative)
+        self.navigation().go(base_url, self.relative)
         return self
 
     def login_user(self, user: UserDTO):
@@ -100,7 +100,7 @@ class LoginPage(BasePage):
 
     def verify_forgot_your_password(self, relative_url):
         base_url = BaseApp.get_base_url()
-        current_url = self.get_current_url()
+        current_url = self.navigation().get_current_url()
         AssertCollector.assert_equal_message(
             base_url + relative_url,
             current_url,
@@ -109,7 +109,7 @@ class LoginPage(BasePage):
 
     def verify_user_is_logged(self, relative_url):
         base_url = BaseApp.get_base_url()
-        current_url = self.get_current_url()
+        current_url = self.navigation().get_current_url()
         AssertCollector.assert_equal_message(
             base_url + relative_url,
             current_url,
@@ -118,7 +118,7 @@ class LoginPage(BasePage):
 
     def verify_user_is_logged_out(self, relative_url):
         base_url = BaseApp.get_base_url()
-        current_url = self.get_current_url()
+        current_url = self.navigation().get_current_url()
         AssertCollector.assert_equal_message(
             base_url + relative_url,
             current_url,

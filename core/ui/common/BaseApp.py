@@ -3,6 +3,7 @@ import time
 import inspect
 from threading import local
 from core.config.logger_config import setup_logger
+from core.ui.actions.Navigation import Navigation
 
 logger = setup_logger('BaseApp')
 
@@ -48,37 +49,10 @@ class BaseApp:
     @staticmethod
     def pause(seconds):
         logger.info("Pause: " + str(seconds))
-
         time.sleep(seconds)
 
-    @staticmethod
-    def get_back():
-        BaseApp.get_driver().back()
-
-    @staticmethod
-    def get_forward():
-        BaseApp.get_driver().forward()
-
-    @staticmethod
-    def get_refresh():
-        BaseApp.get_driver().refresh()
-
-    def go(self, base_url, url):
-        driver = self.get_driver()
-        if driver:
-            url = str(base_url) + str(url)
-            driver.get(url)
-            logger.debug(f"Go: {url}")
-        else:
-            logger.error("Driver is not set.")
-
-    @staticmethod
-    def get_title():
-        return BaseApp.get_driver().title
-
-    @staticmethod
-    def get_current_url():
-        return BaseApp.get_driver().current_url
+    def navigation(self):
+        return Navigation(self.get_driver())
 
     @staticmethod
     def method_name():

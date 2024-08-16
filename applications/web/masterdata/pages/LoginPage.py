@@ -34,7 +34,7 @@ class LoginPage(MasterDataPage):
     def load_page(self):
         base_url = BaseApp.get_base_url()
         logger.info("LOAD PAGE: " + base_url + self.relative)
-        self.go(base_url, self.relative)
+        self.navigation().go(base_url, self.relative)
         return self
 
     def login_user(self, user: UserDTO):
@@ -88,7 +88,7 @@ class LoginPage(MasterDataPage):
     def verify_title(self, title: str):
         AssertCollector.assert_equal_message(
             title,
-            self.get_title(),
+            self.navigation().get_title(),
             "Login Page Title Match.",
             self.name,
             self.method_name()
