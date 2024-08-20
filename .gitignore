@@ -92,4 +92,4 @@ chromedriver.log
 
 # Project-specific
 core/logs/
-*/tests/screenshots/*.png
+**/tests/screenshots/
