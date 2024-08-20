@@ -1,4 +1,4 @@
-from applications.web.masterdata.pages.LoginPage import LoginPage
+from applications.web.softship.pages.LoginPage import LoginPage
 from core.config.logger_config import setup_logger
 from core.ui.common.BaseTest import BaseTest, user
 from core.utils.decorator import test

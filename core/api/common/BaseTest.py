@@ -19,6 +19,6 @@ class BaseTest:
         yield
 
     @classmethod
-    def response(cls):
-        return ResponseUtils()
+    def validations(cls, response):
+        return ResponseUtils(response)
 

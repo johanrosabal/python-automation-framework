@@ -1,7 +1,10 @@
-import pytest
 import requests
 
-from core.utils.config_loader import load_config
+from core.api.actions.Delete import Delete
+from core.api.actions.Get import Get
+from core.api.actions.Patch import Patch
+from core.api.actions.Post import Post
+from core.api.actions.Put import Put
 from core.config.logger_config import setup_logger
 
 logger = setup_logger('BaseApi')
@@ -19,67 +22,21 @@ class BaseApi:
         return cls.base_url
 
     @classmethod
-    def GET(cls, endpoint, params=None, headers=None, verify=False):
-        url = f"{BaseApi.get_base_url()}/{endpoint}"
-        logger.info(f"GET: {url}")
-        response = requests.get(
-            url=url,
-            params=params,
-            headers=headers,
-            verify=False  # Inactive SSL Certificates
-        )
-
-        return response
+    def post_request(cls):
+        return Post(BaseApi.get_base_url())
 
     @classmethod
-    def POST(cls, endpoint, data=None, json=None, headers=None):
-        url = f"{BaseApi.get_base_url()}/{endpoint}"
-        logger.info(f"POST: {url}")
-        response = requests.post(
-            url=url,
-            data=data,
-            json=json,
-            headers=headers,
-            verify=False  # Inactive SSL Certificates
-        )
-
-        return response
+    def get_request(cls):
+        return Get(BaseApi.get_base_url())
 
     @classmethod
-    def PUT(cls, endpoint, data=None, json=None, headers=None):
-        url = f"{BaseApi.get_base_url()}/{endpoint}"
-        logger.info(f"PUT: {url}")
-        response = requests.put(
-            url=url,
-            data=data,
-            json=json,
-            headers=headers,
-            verify=False  # Inactive SSL Certificates
-        )
-
-        return response
+    def put_request(cls):
+        return Put(BaseApi.get_base_url())
 
     @classmethod
-    def PATCH(cls, endpoint, data=None, json=None, headers=None):
-        url = f"{BaseApi.get_base_url()}/{endpoint}"
-        logger.info(f"PATCH: {url}")
-        response = requests.put(
-            url=url,
-            data=data,
-            json=json,
-            headers=headers,
-            verify=False  # Inactive SSL Certificates
-        )
-
-        return response
+    def patch_request(cls):
+        return Patch(BaseApi.get_base_url())
 
     @classmethod
-    def DELETE(cls, endpoint, headers=None):
-        url = f"{BaseApi.get_base_url()}/{endpoint}"
-        logger.info(f"DELETE: {url}")
-        response = requests.delete(
-            url=url,
-            headers=headers,
-            verify=False  # Inactive SSL Certificates
-        )
-        return response
+    def delete_request(cls):
+        return Delete(BaseApi.get_base_url())

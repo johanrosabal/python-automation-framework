@@ -1,4 +1,4 @@
-from applications.web.masterdata.pages.MasterDataPage import MasterDataPage
+from applications.web.softship.pages.MasterDataPage import MasterDataPage
 from selenium.webdriver.common.by import By
 
 from core.asserts.AssertCollector import AssertCollector

@@ -4,12 +4,9 @@ logger = setup_logger('TestPost')
 
 class ResponseUtils:
 
-    def __init__(self):
+    def __init__(self, response):
         self._response = None
-
-    def set_response(self, response):
         self._response = response
-        return self
 
     def get_cookies(self):
         logger.info(f"Response Cookies:\n{self._response.cookies}")
@@ -25,10 +22,11 @@ class ResponseUtils:
 
     def verify_status_success_code(self, status_code):
         try:
+            logger.info(f"verify_status_success_code:[{self._response.status_code}]")
             if self._response.status_code == status_code:
                 logger.info(
                     f"PASS: Status Code: Status:[{self._response.status_code}] | URl Endpoint:[{self._response.url}]")
-                logger.info(f"Response Time (seconds):\n{self._response.elapsed.total_seconds()}")
+                logger.info(f"Response Time (seconds): {self._response.elapsed.total_seconds()}")
                 logger.info(f"Response Headers:\n{self._response.headers}")
                 logger.info(f"Response Text:\n{self._response.text}")
             else:
