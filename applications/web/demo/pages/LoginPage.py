@@ -74,10 +74,10 @@ class LoginPage(BasePage):
         #  .save_highlight())
 
         # Save Screenshot with comment
-        # (self.screenshot()
-        #  .set_locator(self._btn_login, self.name)
-        #  .save_highlight()
-        #  .add_comment("Login Button"))
+        (self.screenshot()
+         .set_locator(self._btn_login, self.name)
+         .save_highlight()
+         .add_comment("Login Button"))
 
         (self.click()
          .set_locator(self._btn_login, self.name)

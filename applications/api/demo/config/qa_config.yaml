@@ -1,0 +1,20 @@
+# Web Standard Configuration File
+name: JSONPlaceholder
+web:
+  base_url: https://jsonplaceholder.typicode.com
+  browser: chrome
+
+api:
+  base_url: https://jsonplaceholder.typicode.com
+
+user:
+  name: na
+  password: na
+
+database:
+  host: qa-db.example.com
+  port: 5432
+  user: qa_user
+  password: qa_password
+  name: qa_db
+  ssl: false
