@@ -12,6 +12,7 @@ logger = setup_logger('BaseApi')
 
 class BaseApi:
     base_url = None
+    base_token_url = None
 
     @classmethod
     def set_base_url(cls, value):
@@ -20,6 +21,14 @@ class BaseApi:
     @classmethod
     def get_base_url(cls):
         return cls.base_url
+
+    @classmethod
+    def set_base_token_url(cls, value):
+        cls.base_token_url = value
+
+    @classmethod
+    def get_base_token_url(cls):
+        return cls.base_token_url
 
     @classmethod
     def post_request(cls):

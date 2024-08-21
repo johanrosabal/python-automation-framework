@@ -1,14 +1,12 @@
 # Web Standard Configuration File
 name: JSONPlaceholder
-web:
-  base_url: https://jsonplaceholder.typicode.com
-  browser: chrome
 
 api:
+  base_token_url: https://jsonplaceholder.typicode.com
   base_url: https://jsonplaceholder.typicode.com
 
 user:
-  name: na
+  username: na
   password: na
 
 database:

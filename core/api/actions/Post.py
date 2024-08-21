@@ -20,10 +20,16 @@ class Post:
         self.timeout = None
         self.verify = False
         self.response = None
+        self.params = None
 
     def set_endpoint(self, endpoint):
         """Set the API endpoint."""
         self.endpoint = endpoint
+        return self
+
+    def set_base_url(self, base_url):
+        """Set the API base url."""
+        self.base_url = base_url
         return self
 
     def add_header(self, key, value):
@@ -86,6 +92,16 @@ class Post:
         self.verify = verify
         return self
 
+    def build_url(self, **kwargs):
+        """Insert dynamic values into the endpoint URL."""
+        self.endpoint = self.endpoint.format(**kwargs)
+        return self
+
+    def set_params(self, params):
+        """Set the query parameters to be sent in the request."""
+        self.params = params
+        return self
+
     def send(self):
         """Send the POST request and return the response."""
         url = f"{self.base_url}/{self.endpoint}"
@@ -96,6 +112,7 @@ class Post:
             # Send the POST request
             self.response = requests.post(
                 url,
+                params=self.params,
                 data=self.data,
                 json=self.json_data,
                 files=self.files,
