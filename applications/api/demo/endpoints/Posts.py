@@ -23,8 +23,7 @@ class Posts(BaseApi):
             .set_data(data) \
             .set_timeout(10) \
             .set_allow_redirects(False) \
-            .send() \
-            .get_response()
+            .send()
 
         return response
 
@@ -33,8 +32,7 @@ class Posts(BaseApi):
         response = self.get_request() \
             .set_endpoint(self.endpoint) \
             .set_timeout(10) \
-            .send() \
-            .get_response()
+            .send()
         return response
 
     def get_post_by_id(self, post_id):
@@ -44,7 +42,6 @@ class Posts(BaseApi):
                     .build_url(post_id=post_id)  # Allow Multiple Values -> post_id=1, post_name="my-post"
                     .set_timeout(10)
                     .send()
-                    .get_response()
                     )
         return response
 
@@ -56,7 +53,6 @@ class Posts(BaseApi):
                     .build_url(post_id=post_id)  # Allow Multiple Values -> post_id=1, post_name="my-post"
                     .set_timeout(10)
                     .send()
-                    .get_response()
                     )
         return response
 
@@ -69,7 +65,6 @@ class Posts(BaseApi):
                     .set_params(params)
                     .set_timeout(10).send()
                     .send()
-                    .get_response()
                     )
         return response
 
@@ -81,7 +76,6 @@ class Posts(BaseApi):
                     .build_url(id_post=post_id)
                     .set_json(json)
                     .send()
-                    .get_response()
                     )
         return response
 
@@ -93,7 +87,6 @@ class Posts(BaseApi):
                     .build_url(post_id=post_id)
                     .set_json(json)
                     .send()
-                    .get_response()
                     )
         return response
 
@@ -103,6 +96,6 @@ class Posts(BaseApi):
                     .set_endpoint(self.endpoint+"/{post_id}")
                     .build_url(post_id=post_id)
                     .send()
-                    .get_response())
+                    )
         return response
         # return self.DELETE(endpoint=f"posts/{id_post}")

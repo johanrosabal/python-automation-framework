@@ -5,7 +5,6 @@ logger = setup_logger('TestPost')
 class ResponseUtils:
 
     def __init__(self, response):
-        self._response = None
         self._response = response
 
     def get_cookies(self):
@@ -20,15 +19,18 @@ class ResponseUtils:
             logger.error(f"FAIL: Content Type, expected [{content_type}] but actual code is [{self._response.headers['Content-Type']}]")
         return self
 
-    def verify_status_success_code(self, status_code):
+    def verify_status_success_code(self, status_code, print_time=False, print_headers=False, print_response_text=False):
         try:
             logger.info(f"verify_status_success_code:[{self._response.status_code}]")
             if self._response.status_code == status_code:
                 logger.info(
                     f"PASS: Status Code: Status:[{self._response.status_code}] | URl Endpoint:[{self._response.url}]")
-                logger.info(f"Response Time (seconds): {self._response.elapsed.total_seconds()}")
-                logger.info(f"Response Headers:\n{self._response.headers}")
-                logger.info(f"Response Text:\n{self._response.text}")
+                if print_time:
+                    logger.info(f"Response Time (seconds): {self._response.elapsed.total_seconds()}")
+                if print_headers:
+                    logger.info(f"Response Headers:\n{self._response.headers}")
+                if print_response_text:
+                    logger.info(f"Response Text:\n{self._response.text}")
             else:
                 logger.error(f"FAIL: Status Code, expected 200 but actual code is [{self._response.status_code}]")
                 logger.error(f"Response text: {self._response.text}")
