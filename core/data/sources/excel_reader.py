@@ -1,6 +1,7 @@
 import pandas as pd
 from tabulate import tabulate
 
+
 class ExcelReader:
     def __init__(self, file_path):
         """
@@ -18,8 +19,10 @@ class ExcelReader:
         :param sheet_name: The name of the sheet to read. If None, the first sheet is read.
         """
         self.data_frame = pd.read_excel(self.file_path, sheet_name=sheet_name)
+        return self
 
-    def map_to_objects(self, object_class, column_mapping):
+    def map_to_objects(self, object_class):
+        column_mapping = object_class.mapping
         """
         Map the rows of the DataFrame to a list of instances of a given class,
         using a specific column mapping.
@@ -35,6 +38,8 @@ class ExcelReader:
             # Create an instance of the class using the mapped data
             obj = object_class(**object_data)
             objects.append(obj)
+
+        self.display_table()
         return objects
 
     def get_headers(self):
@@ -53,3 +58,4 @@ class ExcelReader:
             print(tabulate(self.data_frame, headers='keys', tablefmt='pretty'))
         else:
             print("No data available. Please read the file first.")
+        return self

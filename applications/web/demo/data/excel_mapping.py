@@ -1,4 +1,15 @@
+# mapping -> {'Excel Column Name' : 'Object Field Key'}
+
 class UserInformation:
+
+    # Define the mapping for UserInformation
+    mapping = {
+        'User Name': 'username',
+        'Email': 'email',
+        'Type of User': 'type_of_user',
+        'Enable': 'enable'
+    }
+
     def __init__(self, username, email, type_of_user, enable):
         self.username = username
         self.email = email
