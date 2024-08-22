@@ -3,7 +3,7 @@ name: JSONPlaceholder
 
 api:
   base_token_url: https://test.salesforce.com
-  base_url: https://crowley2--uat.sandbox.lightning.force.com
+  base_url: https://crowley2--qa.my.salesforce.com
   grant_type: password
   client_id: 3MVG9Oe7T3Ol0ea5PBiRyQ1rXlHK1OlMsdtlPESeFhgaOQOWyN2JFgxXnHzNpAvv_NNv3IGuveoDv1sn5.geW
   client_secret: 51E210B3DA47C7178709C639128C7E3C46CBE80581C912356AE3F7CDB5E0C4F8

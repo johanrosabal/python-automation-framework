@@ -1,6 +1,6 @@
 import pytest
 
-from applications.api.salesforce.endpoints.authorization_oauth2 import AuthorizationOauth2
+from applications.api.salesforce.endpoints.oauth2_authorization import AuthorizationOauth2
 from core.api.utils.ResponseUtils import ResponseUtils
 from core.api.common.BaseApi import BaseApi
 from core.config.logger_config import setup_logger

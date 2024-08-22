@@ -1,0 +1,21 @@
+# Web Standard Configuration File
+name: JSONPlaceholder
+
+api:
+  base_token_url: https://test.salesforce.com
+  base_url: https://crowley2--uat.sandbox.lightning.force.com
+  grant_type: password
+  client_id: 3MVG9zlTNB8o8BA2jFUroF6wXmpPRbOzVjsgIOxxG.yr2I4DejDHpKBiOFJJAxtyPIJ964y2cc94AOtCk4Zmy
+  client_secret: B366AF87EA80BD7CEF00A2B419A1770F4FF72FE3E997B2C3F634222D2EF91424
+
+user:
+  username: _rpabotprd@crowley.com
+  password: Q8hqE5Cw0
+
+database:
+  host: qa-db.example.com
+  port: 5432
+  user: qa_user
+  password: qa_password
+  name: qa_db
+  ssl: false
