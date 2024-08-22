@@ -47,14 +47,13 @@ class BaseTest(BaseApp):
         logger.debug("Base Test Execution:" + self.SEPARATOR)
         browser = DriversEnum.CHROME.value
         logger.info("Setting Browser Driver: " + str(browser) + self.SEPARATOR)
-        driver = DriverManager(browser).initialize()
+        # driver = DriverManager(browser).initialize()
         value = config.get('web', {}).get('base_url')
         BaseApp.set_base_url(value)
         logger.info("BASE URL: " + BaseApp.get_base_url())
 
-        # self.set_driver(driver)
-        BaseApp.set_driver(driver)
+        # BaseApp.set_driver(driver)
 
         yield
 
-        driver.quit()
+        # driver.quit()
