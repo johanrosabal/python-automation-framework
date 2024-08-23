@@ -1,0 +1,24 @@
+{
+    "tests": {
+        "new_users": [
+            {
+                "username": "user1",
+                "email": "user1@json.com",
+                "typeOfUser": "admin",
+                "enable": true
+            },
+            {
+                "username": "user2",
+                "email": "user2@json.com",
+                "typeOfUser": "user",
+                "enable": false
+            },
+            {
+                "username": "user3",
+                "email": "user3@json.com",
+                "typeOfUser": "moderator",
+                "enable": true
+            }
+        ]
+    }
+}
