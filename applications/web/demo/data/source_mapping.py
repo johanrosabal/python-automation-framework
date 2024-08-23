@@ -14,7 +14,7 @@ class UserInformation:
         self.username = username
         self.email = email
         self.type_of_user = type_of_user
-        self.enable = enable
+        self.enable = bool(enable)
 
     def __repr__(self):
         return f"UserInformation(username={self.username}, email={self.email}, type_of_user={self.type_of_user}, enable={self.enable})"

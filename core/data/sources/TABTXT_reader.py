@@ -2,35 +2,35 @@ import pandas as pd
 from tabulate import tabulate
 
 
-class ExcelReader:
+class TABTEXT_Reader:
     def __init__(self):
         """
-        Initialize the Excel reader with the file path.
+        Initialize the Tab-Delimited Text reader with the file path.
         """
         self.file_path = None
         self.data_frame = None
 
     def set_file_path(self, file_path):
         """
-        Set the Excel file path and load the data into a pandas DataFrame.
+        Set the file path and return the instance.
 
-        :param file_path: The path file name where the file is located.
+        :param file_path: The path to the tab-delimited text file.
+        :return: The TabDelimitedTextReader instance.
         """
         self.file_path = file_path
         return self
 
-    def read_file(self, object_class=None, sheet_name=None):
-
+    def read_file(self, object_class=None):
         """
-        Map the rows of the DataFrame to a list of instances of a given class,
-        using a specific column mapping.
+        Read the tab-delimited text file and map the rows to a list of instances of a given class.
 
         :param object_class: The class to which the rows will be mapped.
-        :param sheet_name: The name of the sheet to read. If None, the first sheet is read.
         :return: A list of instances of the specified class.
         """
         column_mapping = object_class.mapping
-        self.data_frame = pd.read_excel(self.file_path, sheet_name=sheet_name)
+
+        # Read the tab-delimited text file into a pandas DataFrame
+        self.data_frame = pd.read_csv(self.file_path, delimiter='\t')
 
         objects = []
         for _, row in self.data_frame.iterrows():
@@ -56,7 +56,7 @@ class ExcelReader:
 
     def get_headers(self):
         """
-        Return the headers of the Excel file.
+        Return the headers of the tab-delimited text file.
 
         :return: List of headers.
         """

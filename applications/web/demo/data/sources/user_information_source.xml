@@ -1,0 +1,22 @@
+<tests>
+    <new_users>
+        <user>
+            <username>user1</username>
+            <email>user1@xml.com</email>
+            <typeOfUser>admin</typeOfUser>
+            <enable>True</enable>
+        </user>
+        <user>
+            <username>user2</username>
+            <email>user2@xml.com</email>
+            <typeOfUser>user</typeOfUser>
+            <enable>False</enable>
+        </user>
+        <user>
+            <username>user3</username>
+            <email>user3@xml.com</email>
+            <typeOfUser>moderator</typeOfUser>
+            <enable>True</enable>
+        </user>
+    </new_users>
+</tests>

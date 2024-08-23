@@ -1,0 +1,4 @@
+username	email	typeOfUser	enable
+user1	user1@txt.com	admin	TRUE
+user2	user2@txt.com	tester	TRUE
+user3	user3@txt.com	salesperson	TRUE

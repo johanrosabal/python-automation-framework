@@ -17,9 +17,3 @@ def extract_json_keys(data):
     except ValueError as e:
         print(e)
 
-
-def get_file_path(file_name: str):
-    # Get the current directory of the test file
-    # Construct the path to file in the 'data' folder
-    file_path = os.path.join('..', 'data', 'sources', file_name)  # Adjust the file name if needed
-    return file_path

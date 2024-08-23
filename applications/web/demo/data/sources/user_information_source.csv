@@ -1,0 +1,4 @@
+username,email,typeOfUser,enable
+user1,user1@csv.com,admin,TRUE
+user2,user2@csv.com,tester,TRUE
+user3,user3@csv.com,salesperson,TRUE
