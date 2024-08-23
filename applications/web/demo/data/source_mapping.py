@@ -2,12 +2,12 @@
 
 class UserInformation:
 
-    # Define the mapping for UserInformation
+    # Define the mapping fields
     mapping = {
-        'User Name': 'username',
-        'Email': 'email',
-        'Type of User': 'type_of_user',
-        'Enable': 'enable'
+        'username': 'username',
+        'email': 'email',
+        'typeOfUser': 'type_of_user',
+        'enable': 'enable'
     }
 
     def __init__(self, username, email, type_of_user, enable):
