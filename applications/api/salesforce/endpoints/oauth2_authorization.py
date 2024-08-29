@@ -46,7 +46,7 @@ class AuthorizationOauth2(BaseApi):
 
     @classmethod
     def get_response(cls):
-        return cls._response.get_response()
+        return cls._response.get_info()
 
     @classmethod
     def get_response_json(cls):

@@ -1,5 +1,8 @@
 import requests
+
+from core.api.report.APIResponse import ApiResponse
 from core.config.logger_config import setup_logger
+
 logger = setup_logger('Post')
 
 
@@ -21,6 +24,8 @@ class Post:
         self.verify = False
         self.response = None
         self.params = None
+
+        self.apiResponse = None
 
     def set_endpoint(self, endpoint):
         """Set the API endpoint."""
@@ -126,17 +131,19 @@ class Post:
                 timeout=self.timeout,
                 verify=self.verify
             )
+
             self.response.raise_for_status()  # Raise an error for 4xx or 5xx status codes
             logger.info("Response received successfully")
+
         except requests.exceptions.HTTPError as err:
             logger.error(f"Error in POST request: {err}")
             self.response = None
 
         return self
 
-    def get_response(self):
+    def get_info(self):
         """Get the response from the POST request."""
-        return self.response
+        return ApiResponse(self.response)
 
     def get_response_json(self):
         """Get the JSON response from the POST request."""

@@ -1,8 +1,8 @@
 import pytest
-
 from applications.api.salesforce.endpoints.oauth2_authorization import AuthorizationOauth2
 from core.api.utils.ResponseUtils import ResponseUtils
 from core.api.common.BaseApi import BaseApi
+from core.api.report.APITestReport import APITestReport
 from core.config.logger_config import setup_logger
 
 logger = setup_logger('BaseTest')
@@ -16,6 +16,7 @@ class BaseTest:
     client_secret = None
     username = None
     password = None
+    report = APITestReport()
 
     @pytest.fixture(scope="class", autouse=True)
     def set_up(self, config):
@@ -35,20 +36,39 @@ class BaseTest:
 
         # Getting Authorization Token
         BaseApi.set_base_url(self.base_url)
-        response = (
-            AuthorizationOauth2
-            .set_base_url(self.base_token_url)
-            .set_client_id(self.client_id)
-            .set_grant_type(self.grant_type)
-            .set_client_secret(self.client_secret)
-            .set_username(self.username)
-            .set_password(self.password)
-            .send()
-            .get_response()
-        )
+        # response = (
+        #     AuthorizationOauth2
+        #     .set_base_url(self.base_token_url)
+        #     .set_client_id(self.client_id)
+        #     .set_grant_type(self.grant_type)
+        #     .set_client_secret(self.client_secret)
+        #     .set_username(self.username)
+        #     .set_password(self.password)
+        #     .send()
+        #     .get_info()
+        # )
 
         yield
 
     @classmethod
     def validations(cls, response):
         return ResponseUtils(response)
+
+    @classmethod
+    def add_report(cls, test_name, url, method, response, error_message=None):
+        response_time = response.elapsed.total_seconds() * 1000  # Convert to milliseconds
+        cls.report.add_result(
+            test_name=test_name,
+            url=url,
+            method=method,
+            status_code=response.status_code,
+            response_time=response_time,
+            response_body=response.json(),
+            error_message=error_message
+        )
+
+    @classmethod
+    def teardown_class(cls):
+        # Create Report on Console
+        print("teardown_class")
+        cls.report.generate_report()

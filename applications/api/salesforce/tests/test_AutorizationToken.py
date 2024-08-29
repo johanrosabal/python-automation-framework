@@ -32,7 +32,7 @@ class TestAuthorizationToken(BaseTest):
 
         token = self.authorization.get_token()
         request = self.bookings.get_confirmation(token=token, booking_id="CAT376130")
-        response = request.get_response()
+        response = request.get_info()
 
         # Standard Validations: Status Code and Content Type
         # self.validations(response) \
