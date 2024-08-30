@@ -131,7 +131,6 @@ class Post:
                 timeout=self.timeout,
                 verify=self.verify
             )
-
             self.response.raise_for_status()  # Raise an error for 4xx or 5xx status codes
             logger.info("Response received successfully")
 
@@ -141,12 +140,12 @@ class Post:
 
         return self
 
-    def get_info(self):
-        """Get the response from the POST request."""
-        return ApiResponse(self.response)
+    def get_response(self):
+        """Get the response from the GET request."""
+        return self.response
 
     def get_response_json(self):
-        """Get the JSON response from the POST request."""
+        """Get the JSON response from the GET request."""
         if self.response is not None:
             return self.response.json()
         return None

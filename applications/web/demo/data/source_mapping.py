@@ -1,4 +1,4 @@
-# mapping -> {'Excel Column Name' : 'Object Field Key'}
+# mapping -> {'File Column Name' : 'Object Field Key'}
 
 class UserInformation:
 

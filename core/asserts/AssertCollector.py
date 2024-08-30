@@ -3,6 +3,8 @@ import pytest
 from core.config.logger_config import setup_logger
 
 logger = setup_logger('AssertsCollector')
+
+
 # collector = AssertCollector()
 # collector.assert_equal(title, self.get_title())
 # collector.assert_all()
@@ -36,8 +38,7 @@ class AssertCollector:
         text = "Expected value [" + str(expected) + "] | Actual value [" + str(actual) + "]"
         if expected == actual:
             if page != "" and method_name != "":
-                logger.info("["+page+"]["+method_name+"]"+"[Validation]: "+message + " | " + text)
+                logger.info("[" + page + "][" + method_name + "]" + "[Validation]: " + message + " | " + text)
             else:
                 logger.info("[Validation]: " + message + " | " + text)
-        assert expected == actual, ("["+page+"]["+method_name+"]"+"[Not Match]: " + text)
-
+        assert expected == actual, ("[" + page + "][" + method_name + "]" + "[Not Match]: " + text)

@@ -1,6 +1,9 @@
+import json
+
 import pytest
+from tabulate import tabulate
+
 from applications.api.salesforce.endpoints.oauth2_authorization import AuthorizationOauth2
-from core.api.utils.ResponseUtils import ResponseUtils
 from core.api.common.BaseApi import BaseApi
 from core.api.report.APITestReport import APITestReport
 from core.config.logger_config import setup_logger
@@ -51,24 +54,34 @@ class BaseTest:
         yield
 
     @classmethod
-    def validations(cls, response):
-        return ResponseUtils(response)
+    def add_report(cls, test_name, status_code, response, errors=None):
+        table = []
+        errors = []
 
-    @classmethod
-    def add_report(cls, test_name, url, method, response, error_message=None):
-        response_time = response.elapsed.total_seconds() * 1000  # Convert to milliseconds
-        cls.report.add_result(
-            test_name=test_name,
-            url=url,
-            method=method,
-            status_code=response.status_code,
-            response_time=response_time,
-            response_body=response.json(),
-            error_message=error_message
-        )
+        if response.status_code != status_code:
+            errors.append(f"Status Code should be {status_code}, actual values is {response.status_code}")
+
+        result = {
+            "Test Name": test_name,
+            "URL": response.url,
+            "Method": response.request.method,
+            "Status Code": response.status_code,
+            "Response Time (s)": response.elapsed.total_seconds(),
+            "Response Body": json.dumps(response.text)[:100] + "...",
+            "Status": "PASS" if response.status_code == status_code and not errors else "FAIL",
+            "Errors": errors if errors else "-"
+        }
+
+        table.append(result)
+
+        headers = list(table[0].keys())
+        formatted_results = [[result[header] for header in headers] for result in table]
+        logger.info("\n" + tabulate(formatted_results, headers=headers, tablefmt='pretty'))
+        cls.report.add_result(result)
+        if errors:
+            pytest.fail("\n".join(errors))
 
     @classmethod
     def teardown_class(cls):
         # Create Report on Console
-        print("teardown_class")
         cls.report.generate_report()

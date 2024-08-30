@@ -1,23 +1,14 @@
 from tabulate import tabulate
-import json
+from core.config.logger_config import setup_logger
+logger = setup_logger('APITestReport')
 
 
 class APITestReport:
     def __init__(self):
         self.results = []
 
-    def add_result(self, test_name, url, method, status_code, response_time, response_body, error_message=None):
-        result = {
-            "Test Name": test_name,
-            "URL": url,
-            "Method": method,
-            "Status Code": status_code,
-            "Response Time (ms)": response_time,
-            "Response Body": json.dumps(response_body)[:50] + "..." if isinstance(response_body,
-                                                                                  dict) else response_body[:50] + "...",
-            "Status": "PASS" if status_code < 400 else "FAIL",  # Determine Endpoint Status
-            "Error Message": error_message if error_message else "N/A"
-        }
+    def add_result(self, result):
+        del result['Response Body']
         self.results.append(result)
 
     def generate_report(self):
@@ -25,17 +16,15 @@ class APITestReport:
         passed_tests = len([result for result in self.results if result["Status"] == "PASS"])
         failed_tests = total_tests - passed_tests
 
-        print("\nAPI Test Report")
-        print(f"Total Tests: {total_tests}, Passed: {passed_tests}, Failed: {failed_tests}\n")
+        logger.info("API TEST REPORT")
 
-        if total_tests > 0:  # Verificar si hay resultados para informar
-            # Asegúrate de que los encabezados estén en formato de lista
+        if total_tests > 0:
             headers = list(self.results[0].keys())
-            # Convertir resultados en un formato adecuado para tabulate
             formatted_results = [[result[header] for header in headers] for result in self.results]
-            print(tabulate(formatted_results, headers=headers, tablefmt='pretty'))
+            logger.info(f"\n{tabulate(formatted_results, headers=headers, tablefmt='grid')}\n Total Tests: {total_tests}, Passed: {passed_tests}, Failed: {failed_tests}")
+
         else:
-            print("No tests were executed.")
+            logger.error("No tests were executed.")
 
 
 # Example
