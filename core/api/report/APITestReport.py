@@ -8,7 +8,6 @@ class APITestReport:
         self.results = []
 
     def add_result(self, result):
-        del result['Response Body']
         self.results.append(result)
 
     def generate_report(self):

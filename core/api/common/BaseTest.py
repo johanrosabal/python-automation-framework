@@ -2,7 +2,8 @@ import json
 
 import pytest
 from tabulate import tabulate
-
+from core.utils.helpers import print_json_response
+from core.utils.table_formatter import TableFormatter
 from applications.api.salesforce.endpoints.oauth2_authorization import AuthorizationOauth2
 from core.api.common.BaseApi import BaseApi
 from core.api.report.APITestReport import APITestReport
@@ -54,23 +55,28 @@ class BaseTest:
         yield
 
     @classmethod
-    def add_report(cls, test_name, status_code, response, errors=None):
+    def add_report(cls, test_data, status_code, response, errors=None):
         table = []
-        errors = []
+        errors_list = []
 
         if response.status_code != status_code:
-            errors.append(f"Status Code should be {status_code}, actual values is {response.status_code}")
+            errors_list.append(f"Status Code should be {status_code}, actual values is {response.status_code}")
+
+        if errors:
+            errors_list.extend(errors)
 
         result = {
-            "Test Name": test_name,
+            "Test Case ID": test_data.test_case_id,
+            "Test Name": test_data.test_description,
+            "Status": "PASS" if response.status_code == status_code and not errors_list else "FAIL",
             "URL": response.url,
             "Method": response.request.method,
             "Status Code": response.status_code,
             "Response Time (s)": response.elapsed.total_seconds(),
-            "Response Body": json.dumps(response.text)[:100] + "...",
-            "Status": "PASS" if response.status_code == status_code and not errors else "FAIL",
-            "Errors": errors if errors else "-"
+            "Errors": errors_list if errors_list else "-"
         }
+
+        print_json_response(response.json())
 
         table.append(result)
 
@@ -85,3 +91,17 @@ class BaseTest:
     def teardown_class(cls):
         # Create Report on Console
         cls.report.generate_report()
+
+    @classmethod
+    def assert_group_equals(cls, response=None, expected_values=None, response_list=False, response_item=0):
+
+        errors = []
+        for field, expected_value in expected_values:
+            if response_list:
+                actual_value = response.json()[response_item].get(field)
+            else:
+                actual_value = response.json().get(field)
+
+            if actual_value != expected_value:
+                errors.append(f"Expected '{field}' to be '{expected_value}', but got '{actual_value}'")
+        return errors
