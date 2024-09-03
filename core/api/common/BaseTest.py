@@ -1,12 +1,8 @@
 import pytest
 from tabulate import tabulate
-from core.utils.helpers import print_json_response
-from core.api.common.BaseApi import BaseApi
-from core.config.config_cmd import get_profile
-from core.utils.helpers import load_config
+from core.utils.helpers import print_json
 from core.api.report.APITestReport import APITestReport
 from core.config.logger_config import setup_logger
-from core.utils.table_formatter import TableFormatter
 
 logger = setup_logger('BaseTest')
 
@@ -38,7 +34,8 @@ class BaseTest:
             "Errors": errors_list if errors_list else "-"
         }
 
-        print_json_response(response.json())
+        print_json("Request Body", response.request.body)
+        print_json("Request Response", response.text)
 
         table.append(result)
 

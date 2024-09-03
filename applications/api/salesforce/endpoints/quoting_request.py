@@ -1,7 +1,5 @@
 from core.api.common.BaseApi import BaseApi
 from core.config.logger_config import setup_logger
-from core.config.config_cmd import get_profile
-from core.utils.helpers import load_config
 
 logger = setup_logger('QuotingRequest')
 

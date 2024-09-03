@@ -35,4 +35,3 @@ class Payload:
 
     def __repr__(self):
         return f"Payload(id={self.id}, title={self.title}, body={self.body}, userId={self.user_id})"
-

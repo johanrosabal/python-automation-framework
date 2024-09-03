@@ -1,5 +1,4 @@
 from core.api.common.BaseApi import BaseApi
-from core.api.common.BaseApi import BaseApi
 from core.config.logger_config import setup_logger
 
 logger = setup_logger('AuthorizationOauth2')
@@ -25,4 +24,3 @@ class Bookings(BaseApi):
             .send()
 
         return response
-

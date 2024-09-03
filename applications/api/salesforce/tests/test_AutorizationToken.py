@@ -1,5 +1,3 @@
-import pytest
-
 from applications.api.salesforce.endpoints.bookings_endpoint import Bookings
 from applications.api.salesforce.endpoints.oauth2_authorization import AuthorizationOauth2
 from core.config.logger_config import setup_logger
@@ -39,8 +37,3 @@ class TestAuthorizationToken(BaseTest):
         #     .verify_status_success_code(201, print_response_text=False)
 
         print(response)
-
-
-
-
-
