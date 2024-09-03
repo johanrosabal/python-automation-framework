@@ -1,14 +1,11 @@
-# Web Standard Configuration File
+# Standard Configuration File
 name: Orange HRM Open Source HR Management
 web:
   base_url: https://opensource-demo.orangehrmlive.com
   browser: chrome
 
-api:
-  base_url: https://opensource-demo.orangehrmlive.com/api
-
 user:
-  name: Admin
+  username: Admin
   password: admin123
 
 database:

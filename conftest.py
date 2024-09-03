@@ -1,8 +1,12 @@
 import pytest
 import yaml
-
 from pathlib import Path
 from core.config.logger_config import setup_logger
+from core.config.config_cmd import get_profile
+from core.config.config_loader import load_api_config, load_web_config, load_desktop_config
+from core.ui.common.BaseApp import BaseApp
+from core.utils.table_formatter import TableFormatter
+from core.api.common.BaseApi import BaseApi
 
 logger = setup_logger('BaseTest')
 
@@ -32,6 +36,8 @@ def pytest_addoption(parser):
     parser.addoption("--app-name", action="store", default="demo", help="Application name (e.g. demo)")
     parser.addoption("--app-type", action="store", default="web", choices=("web", "desktop", "api"),
                      help="Profile to use (e.g. web, desktop, api)")
+    parser.addoption("--browser", action="store", default="chrome", choices=("firefox", "edge", "chrome"),
+                     help="Browser to use (e.g. firefox, chrome, edge)")
 
 
 @pytest.fixture(scope='session')
@@ -59,12 +65,6 @@ def config(request):
     return config_data
 
 
-from core.config.config_cmd import get_profile
-from core.utils.helpers import load_config
-from core.utils.table_formatter import TableFormatter
-from core.api.common.BaseApi import BaseApi
-
-
 @pytest.fixture()
 def initialize_api_config():
     # Load Profile Execution
@@ -73,7 +73,7 @@ def initialize_api_config():
         profile = "qa"  # Default Value
 
     # Load Profile Configurations
-    config_yaml = load_config(f"../config/{profile}_config.yaml")
+    config_yaml = load_api_config(f"../config/{profile}_config.yaml")
 
     # Logging Configurations
     config_dict = {
@@ -88,5 +88,27 @@ def initialize_api_config():
     }
     BaseApi.set_base_url(config_yaml.api.base_url)
     TableFormatter().set_dictionary(config_dict).set_headers({"Config Key", "Config Value"}).to_pretty()
+    yield config_dict
 
+
+@pytest.fixture()
+def initialize_web_config():
+    # Load Profile Execution
+    profile = get_profile()
+    if not profile:
+        profile = "qa"  # Default Value
+
+    # Load Profile Configurations
+    config_yaml = load_web_config(f"../config/{profile}_config.yaml")
+
+    # Logging Configurations
+    config_dict = {
+        "application_name": config_yaml.name,
+        "base_url": config_yaml.web.base_url,
+        "browser": config_yaml.web.browser,
+        "username": config_yaml.user.username,
+        "password": config_yaml.user.password
+    }
+    BaseApp.set_base_url(config_yaml.web.base_url)
+    TableFormatter().set_dictionary(config_dict).set_headers({"Config Key", "Config Value"}).to_pretty()
     yield config_dict

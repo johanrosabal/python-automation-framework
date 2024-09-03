@@ -1,4 +1,4 @@
-# Web Standard Configuration File
+# Standard Configuration File
 name: Shoftship Master Data Site
 web:
   base_url: https://jaxvycswebqa.crowley.com
@@ -8,7 +8,7 @@ api:
   base_url: https://jaxvycswebqa.crowley.com/api
 
 user:
-  name: rosabjo
+  username: rosabjo
   password: Teletrabajo02
 
 database:

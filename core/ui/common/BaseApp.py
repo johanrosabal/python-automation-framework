@@ -47,6 +47,11 @@ class BaseApp:
         _driver.instance = driver
 
     @staticmethod
+    def quit_driver():
+        if _driver:
+            getattr(_driver, 'instance', None).quit()
+
+    @staticmethod
     def pause(seconds):
         logger.info("Pause: " + str(seconds))
         time.sleep(seconds)

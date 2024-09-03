@@ -1,6 +1,5 @@
-# Web Standard Configuration File
+# Standard Configuration File
 name: JSONPlaceholder
-
 api:
   base_token_url: https://test.salesforce.com
   base_url: https://qa.api.crowley.com

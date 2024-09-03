@@ -1,0 +1,8 @@
+# Standard Configuration File
+name: Notepad Windows Application
+desktop:
+  application: "C:\\Windows\\System32\\notepad.exe"
+
+user:
+  username: na
+  password: na

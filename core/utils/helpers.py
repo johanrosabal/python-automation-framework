@@ -1,25 +1,7 @@
 import json
 import textwrap
-import yaml
-from core.config.config_yaml import ApiStandardConfig, APIConfig, UserConfig, DatabaseConfig
 from core.config.logger_config import setup_logger
-
 logger = setup_logger('Helpers')
-
-
-def load_config(file_path):
-    with open(file_path, "r") as file:
-        config_data = yaml.safe_load(file)
-
-    # Map Classes Structure
-    config = ApiStandardConfig(
-        name=config_data["name"],
-        api=APIConfig(**config_data["api"]),
-        user=UserConfig(**config_data["user"]),
-        database=DatabaseConfig(**config_data["database"])
-    )
-
-    return config
 
 
 def extract_json_keys(data):

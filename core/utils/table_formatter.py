@@ -1,7 +1,7 @@
 from tabulate import tabulate
 from core.config.logger_config import setup_logger
 from core.utils.helpers import extract_json_keys
-logger = setup_logger('Delete')
+logger = setup_logger('TableFormatter')
 
 
 class TableFormatter:

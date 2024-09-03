@@ -4,56 +4,57 @@ from core.config.logger_config import setup_logger
 from core.data.UserDTO import UserDTO
 from core.ui.common.BaseApp import BaseApp
 from core.ui.driver.DriverManager import DriverManager
-from core.ui.driver.DriversEnum import DriversEnum
+from core.utils.table_formatter import TableFormatter
+from core.config.config_cmd import get_profile, get_browser
+from core.config.config_loader import load_web_config
 
 logger = setup_logger('BaseTest')
 
 
 @pytest.fixture
-def base_url(config):
-    value = config.get('web', {}).get('base_url')
-    logger.info("BASE URL: " + value)
-    return value
-
-
-@pytest.fixture
 def user(config):
-    user_dto = UserDTO(user_name=config.get('user', {}).get('name'),
-                       user_password=config.get('user', {}).get('password'))
-    logger.info("USER: " + user_dto.__str__())
+    user_dto = UserDTO(
+        user_name=config.get('user', {}).get('username'),
+        user_password=config.get('user', {}).get('password')
+    )
+    logger.info("USER DTO: " + user_dto.__str__())
     return user_dto
-
-
-@pytest.hookimpl(tryfirst=True)
-def pytest_runtest_setup(item):
-    # Set up the video recording path before the test runs
-    test_name = item.nodeid.replace("::", "_")
-    recording_path = os.path.join("videos", f"{test_name}.mp4")
-    logger.info("RECODING PATH: "+recording_path)
-    item.config.option.recording_path = recording_path
-
-
-@pytest.fixture(autouse=True)
-def record_video(recording, request):
-    # Fixture to automatically record video for each test
-    yield
-    recording.stop()
 
 
 class BaseTest(BaseApp):
 
     @pytest.fixture(scope="class", autouse=True)
-    def set_up(self, config):
-        logger.debug("Base Test Execution:" + self.SEPARATOR)
-        browser = DriversEnum.CHROME.value
-        logger.info("Setting Browser Driver: " + str(browser) + self.SEPARATOR)
-        # driver = DriverManager(browser).initialize()
-        value = config.get('web', {}).get('base_url')
-        BaseApp.set_base_url(value)
-        logger.info("BASE URL: " + BaseApp.get_base_url())
+    def set_up(self):
+        # Load Profile Execution
+        profile = get_profile()
+        browser = get_browser()
+        if not profile:
+            profile = "qa"  # Default Value
 
-        # BaseApp.set_driver(driver)
+        # Load Profile Configurations
+        config_yaml = load_web_config(f"../config/{profile}_config.yaml")
+
+        if not browser:
+            browser = config_yaml.web.browser
+
+        base_url = config_yaml.web.base_url
+        driver = DriverManager(browser).initialize()
+        BaseApp.set_base_url(base_url)
+        BaseApp.set_driver(driver)
+
+        # Logging Configurations
+        config_dict = {
+            "application_name": config_yaml.name,
+            "base_url": config_yaml.web.base_url,
+            "browser": browser,
+            "profile" : profile,
+            "username": config_yaml.user.username,
+            "password": config_yaml.user.password
+        }
+
+        TableFormatter().set_dictionary(config_dict).set_headers({"Config Key", "Config Value"}).to_pretty()
 
         yield
 
-        # driver.quit()
+        BaseApp.quit_driver()
+
