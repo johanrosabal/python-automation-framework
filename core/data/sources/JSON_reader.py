@@ -12,7 +12,7 @@ class JSONReader:
 
     def set_file_path(self, file_path):
         """
-        Set the Excel file path and load the data into a pandas DataFrame.
+        Set the JSON file path and load the data.
 
         :param file_path: The path file name where the file is located.
         """
@@ -26,14 +26,14 @@ class JSONReader:
 
         :param object_class: The class to which the rows will be mapped.
         :param nested_key: The key in the JSON to navigate to the nested data (e.g., 'test.new_users').
-        :return: A list of instances of the specified class.
-        """
-
-        """
-        Read the JSON file and load the data into a dictionary.
+        :return: A list of instances of the specified class or the raw JSON data.
         """
         with open(self.file_path, 'r') as file:
             self.data = json.load(file)
+
+        if object_class is None and nested_key is None:
+            # Return raw JSON data if no class mapping or nested key is provided
+            return self.data
 
         objects = []
 
@@ -68,3 +68,11 @@ class JSONReader:
             print(tabulate(table, headers=headers, tablefmt='pretty'))
         else:
             print("No data available. Please read the file first.")
+
+    def get_raw_json(self):
+        """
+        Return the raw JSON data loaded from the file.
+
+        :return: The raw JSON data.
+        """
+        return self.data

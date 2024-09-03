@@ -1,0 +1,120 @@
+{
+    "CargoReadyDate": "2023-09-06T00:00:00.0000000Z",
+    "ContractNumber": "",
+    "AccountID": "12345",
+    "ContactDetails": {
+        "EmailID": "abc@gmail.com",
+        "CompanyName": "ABC Company",
+        "PhoneNumber": "1234567890",
+        "Name": "Test User"
+    },
+    "Cargos": [
+        {
+            "IsEmpty": false,
+            "IsShippersOwn": false,
+            "GrossWeight": 2000.0,
+            "IsReefer": false,
+            "CargoQuantity": 1,
+            "GrossWeightUnit": "KG",
+            "HazmatClass": "0",
+            "IsOutOfGauge": false,
+            "IsReeferOperational": false,
+            "ISHeavy": false,
+            "OptionalServices": [
+                {
+                    "EEIPreparationFiling": {
+                        "value": "EEI Filing + Freight Forwarding"
+                    },
+                    "ConsolidationCharges": {
+                        "value": "Refrigerated (Jax, MIA, PEV)"
+                    },
+                    "InBondCF7512Paperwork": {
+                        "value": "YES"
+                    },
+                    "BoLProcessingFee": {
+                        "value": "YES"
+                    },
+                    "ProtectiveCovering": {
+                        "value": "Disposible"
+                    },
+                    "ImporterSecurityFiling": {
+                        "value": "YES"
+                    },
+                    "GPSFee": {
+                        "value": "YES"
+                    },
+                    "LabelsandPlacards": {
+                        "value": "YES"
+                    },
+                    "WirePickEndDownCharge": {
+                        "value": "YES"
+                    },
+                    "BondedDriver": {
+                        "value": "YES"
+                    },
+                    "AdditionalChainsBindersStraps": {
+                        "AdditionalQtySelected": 1,
+                        "value": "YES"
+                    },
+                    "TransferCharge": {
+                        "value": "YES"
+                    },
+                    "MarineCargoInsurance": {
+                        "value": "Up to $250K Cargo Value"
+                    },
+                    "AdditionalSeals": {
+                        "AdditionalQtySelected": 1,
+                        "value": "YES"
+                    },
+                    "CaricomInvoicePrepFee": {
+                        "value": "YES"
+                    },
+                    "CustomsBrokerage": {
+                        "value": "YES"
+                    },
+                    "MultipleBoLFee": {
+                        "AdditionalQtySelected": 1,
+                        "value": "YES"
+                    },
+                    "LateGateCharge": {
+                        "value": "YES"
+                    },
+                    "WAMUsage": {
+                        "value": "YES"
+                    },
+                    "BondedCargoDocFee": {
+                        "value": "YES"
+                    },
+                    "VGMCertification": {
+                        "value": "YES"
+                    },
+                    "CargoinVehicle": {
+                        "value": "YES"
+                    }
+                }
+            ],
+            "CommodityCode": "OTGenCargo",
+            "CargoItemNumber": 1,
+            "CargoType": "Container",
+            "ContainerISOCode": "42G0"
+        }
+    ],
+    "RouteLegDetails": [
+        {
+            "DestinationLocationCode": "PRSJU",
+            "StopsAtOrigin": "",
+            "DestinationDrayage": "",
+            "DestinationLocationType": "P",
+            "OriginDrayage": "",
+            "OriginTransportType": "",
+            "DestinationSubLocationCode": "SJUT001",
+            "OriginSubLocationCode": "",
+            "DestinationTransportType": "",
+            "OriginLocationCode": "USJAX",
+            "StopsAtDestination": "",
+            "OriginLocationType": "P"
+        }
+    ],
+    "ContactName": "Test User",
+    "AccountName": "ABC Company"
+}

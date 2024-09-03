@@ -7,7 +7,7 @@ logger = setup_logger('Post')
 
 
 class Post:
-    def __init__(self, base_url):
+    def __init__(self, base_url=None):
         self.base_url = base_url
         self.endpoint = ""
         self.headers = {}

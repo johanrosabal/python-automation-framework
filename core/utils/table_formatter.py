@@ -23,6 +23,10 @@ class TableFormatter:
         self.data = data
         return self
 
+    def set_dictionary(self, dictionary):
+        self.data = [[key, value] for key, value in dictionary.items()]
+        return self
+
     def set_headers(self, headers):
         self.headers = headers
         return self
@@ -67,6 +71,13 @@ class TableFormatter:
         Format the table as Markdown.
         """
         table = tabulate(self.data, headers=self.headers, tablefmt="github")
+        logger.info(f"\n{table}")
+
+    def to_pretty(self):
+        """
+        Format the table as Markdown.
+        """
+        table = tabulate(self.data, headers=self.headers, tablefmt="pretty")
         logger.info(f"\n{table}")
 
     def to_rst(self):

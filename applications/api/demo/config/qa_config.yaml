@@ -4,6 +4,9 @@ name: JSONPlaceholder
 api:
   base_token_url: https://jsonplaceholder.typicode.com
   base_url: https://jsonplaceholder.typicode.com
+  grant_type: na
+  client_id: na
+  client_secret: na
 
 user:
   username: na

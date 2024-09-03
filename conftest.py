@@ -27,10 +27,10 @@ def pytest_runtest_makereport(item, call):
 
 
 def pytest_addoption(parser):
-    parser.addoption("--profile", action="store", default="qa", choices=("dev","qa","uat","prod"),
+    parser.addoption("--profile", action="store", default="qa", choices=("dev", "qa", "uat", "prod"),
                      help="Profile to use (e.g. dev, qa, uat, prod)")
     parser.addoption("--app-name", action="store", default="demo", help="Application name (e.g. demo)")
-    parser.addoption("--app-type", action="store", default="web", choices=("web","desktop","api"),
+    parser.addoption("--app-type", action="store", default="web", choices=("web", "desktop", "api"),
                      help="Profile to use (e.g. web, desktop, api)")
 
 
@@ -57,3 +57,36 @@ def config(request):
 
     # Return the configuration for use in tests
     return config_data
+
+
+from core.config.config_cmd import get_profile
+from core.utils.helpers import load_config
+from core.utils.table_formatter import TableFormatter
+from core.api.common.BaseApi import BaseApi
+
+
+@pytest.fixture()
+def initialize_api_config():
+    # Load Profile Execution
+    profile = get_profile()
+    if not profile:
+        profile = "qa"  # Default Value
+
+    # Load Profile Configurations
+    config_yaml = load_config(f"../config/{profile}_config.yaml")
+
+    # Logging Configurations
+    config_dict = {
+        "application_name": config_yaml.name,
+        "base_url": config_yaml.api.base_url,
+        "base_token_url": config_yaml.api.base_token_url,
+        "grant_type": config_yaml.api.grant_type,
+        "client_id": config_yaml.api.client_id,
+        "client_secret": config_yaml.api.client_secret,
+        "username": config_yaml.user.username,
+        "password": config_yaml.user.password
+    }
+    BaseApi.set_base_url(config_yaml.api.base_url)
+    TableFormatter().set_dictionary(config_dict).set_headers({"Config Key", "Config Value"}).to_pretty()
+
+    yield config_dict

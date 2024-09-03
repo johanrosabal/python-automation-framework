@@ -3,14 +3,14 @@ name: JSONPlaceholder
 
 api:
   base_token_url: https://test.salesforce.com
-  base_url: https://crowley2--qa.my.salesforce.com
+  base_url: https://qa.api.crowley.com
   grant_type: password
-  client_id: 3MVG9Oe7T3Ol0ea5PBiRyQ1rXlHK1OlMsdtlPESeFhgaOQOWyN2JFgxXnHzNpAvv_NNv3IGuveoDv1sn5.geW
-  client_secret: 51E210B3DA47C7178709C639128C7E3C46CBE80581C912356AE3F7CDB5E0C4F8
+  client_id: e69986178b404349a769cfa6d9c185e9
+  client_secret: FCA640a6E4634A3189458d95A0EE186E
 
 user:
-  username: integrationuser@nagarro.com.qa
-  password: crowley@123
+  username: na
+  password: na
 
 database:
   host: qa-db.example.com
