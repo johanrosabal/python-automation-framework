@@ -7,6 +7,8 @@ from core.ui.driver.DriverManager import DriverManager
 from core.utils.table_formatter import TableFormatter
 from core.config.config_cmd import get_profile, get_browser
 from core.config.config_loader import load_web_config
+from core.ui.report.WEBTestReport import WEBTestReport
+from tabulate import tabulate
 
 logger = setup_logger('BaseTest')
 
@@ -22,6 +24,8 @@ def user(config):
 
 
 class BaseTest(BaseApp):
+
+    report = WEBTestReport()
 
     @pytest.fixture(scope="class", autouse=True)
     def set_up(self):
@@ -58,3 +62,29 @@ class BaseTest(BaseApp):
 
         BaseApp.quit_driver()
 
+    @classmethod
+    def add_report(cls, test_data, errors=None):
+        if errors is None:
+            errors = []
+        table = []
+
+        result = {
+            "Test Case ID": test_data.test_case_id,
+            "Test Name": test_data.test_description,
+            "Status": "PASS" if len(errors) == 0 else "FAIL",
+            "Errors": errors if len(errors) != 0 else "-"
+        }
+
+        table.append(result)
+
+        headers = list(table[0].keys())
+        formatted_results = [[result[header] for header in headers] for result in table]
+        logger.info("\n" + tabulate(formatted_results, headers=headers, tablefmt='pretty'))
+        cls.report.add_result(result)
+        if errors:
+            pytest.fail("\n".join(errors))
+
+    @classmethod
+    def teardown_class(cls):
+        # Create Report on Console
+        cls.report.generate_report()

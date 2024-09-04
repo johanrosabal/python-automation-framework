@@ -35,10 +35,14 @@ class AssertCollector:
 
     @staticmethod
     def assert_equal_message(expected, actual, message, page="", method_name=""):
-        text = "Expected value [" + str(expected) + "] | Actual value [" + str(actual) + "]"
-        if expected == actual:
-            if page != "" and method_name != "":
-                logger.info("[" + page + "][" + method_name + "]" + "[Validation]: " + message + " | " + text)
-            else:
-                logger.info("[Validation]: " + message + " | " + text)
-        assert expected == actual, ("[" + page + "][" + method_name + "]" + "[Not Match]: " + text)
+        error_message = f"Validation: {message} | Expected value [{expected}] | Actual value [{actual}]"
+        log_message = f"[{page}][{method_name}]" if page and method_name else ""
+
+        try:
+            assert expected == actual, f"{log_message}[Not Match]: {error_message}"
+            logger.info(f"{log_message}[Validation]: {message} | {error_message}")
+        except AssertionError as e:
+            logger.error(str(e))
+            raise
+
+

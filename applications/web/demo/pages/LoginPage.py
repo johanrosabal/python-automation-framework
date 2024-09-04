@@ -104,37 +104,62 @@ class LoginPage(BasePage):
     def logout_user(self):
         self.click().set_locator(self._select_user_dropdown, self.name).single_click()
         self.click().set_locator(self._select_logout, self.name).single_click()
+        return self
 
     def verify_headline(self, headline: str):
-        AssertCollector.assert_equal_message(headline, self.get_headline(), "Login headline match.")
+        AssertCollector.assert_equal_message(
+            expected=headline,
+            actual=self.get_headline(),
+            message="Login headline.",
+            page=self.name,
+            method_name="verify_headline"
+        )
         return self
 
     def verify_orange_hrm_link(self, link: str):
         href = self.get_text().set_locator(self._link_orange_hrm, self.name).by_attribute("href")
-        AssertCollector.assert_equal_message(link, href, "Orange HRM Link correct.")
+        AssertCollector.assert_equal_message(
+            expected=link,
+            actual=href,
+            message="Orange HRM Link.",
+            page=self.name,
+            method_name="verify_orange_hrm_link"
+        )
+        return self
 
     def verify_forgot_your_password(self, relative_url):
         base_url = BaseApp.get_base_url()
         current_url = self.navigation().get_current_url()
         AssertCollector.assert_equal_message(
-            base_url + relative_url,
-            current_url,
-            "Forgot Password Location correct."
+            expected=base_url + relative_url,
+            actual=current_url,
+            message="Forgot Password Location.",
+            page=self.name,
+            method_name="verify_forgot_your_password"
         )
+        return self
 
     def verify_user_is_logged(self, relative_url):
         base_url = BaseApp.get_base_url()
         current_url = self.navigation().get_current_url()
         AssertCollector.assert_equal_message(
-            base_url + relative_url,
-            current_url,
-            "User signed successfully."
+            expected=base_url + relative_url,
+            actual=current_url,
+            message="User Signed.",
+            page=self.name,
+            method_name="verify_user_is_logged"
         )
+        return self
 
     def verify_user_is_logged_out(self, relative_url):
         base_url = BaseApp.get_base_url()
         current_url = self.navigation().get_current_url()
         AssertCollector.assert_equal_message(
-            base_url + relative_url,
-            current_url,
-            "User logout successfully.")
+            expected=base_url + relative_url,
+            actual=current_url,
+            message="User Logout.",
+            page=self.name,
+            method_name="verify_user_is_logged_out"
+        )
+        return self
+
