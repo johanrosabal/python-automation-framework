@@ -5,11 +5,11 @@ web:
   browser: chrome
 
 api:
-  base_url: https://jaxvycswebqa.crowley.com/api
+  base_url: na
 
 user:
-  username: rosabjo
-  password: Teletrabajo02
+  username: na
+  password: na
 
 database:
   host: na

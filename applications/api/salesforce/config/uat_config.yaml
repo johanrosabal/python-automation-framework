@@ -1,15 +1,15 @@
 # Standard Configuration File
 name: JSONPlaceholder
 api:
-  base_token_url: https://test.salesforce.com
-  base_url: https://crowley2--uat.sandbox.my.salesforce.com
+  base_token_url: na
+  base_url: na
   grant_type: password
-  client_id: 3MVG9Gmy2zmPB01p5AN5N8YM1P2HLCB6nQNmRSpXSeptzXIRxCpLoKBMVj_wcDRuq.9JzvWvTceURkJJTrlD5
-  client_secret: EDFFD85DC0CC33617896DFC98AF453283A234C619FEE55B6F1C005B613BCD813
+  client_id: na
+  client_secret: na
 
 user:
-  username: integration.admin@crowley.com.uat
-  password: Crowley@1234
+  username: na
+  password: na
 
 database:
   host: qa-db.example.com

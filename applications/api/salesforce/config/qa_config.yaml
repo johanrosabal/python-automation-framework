@@ -1,11 +1,11 @@
 # Standard Configuration File
 name: JSONPlaceholder
 api:
-  base_token_url: https://test.salesforce.com
-  base_url: https://qa.api.crowley.com
-  grant_type: password
-  client_id: e69986178b404349a769cfa6d9c185e9
-  client_secret: FCA640a6E4634A3189458d95A0EE186E
+  base_token_url: na
+  base_url: na
+  grant_type: na
+  client_id: na
+  client_secret: na
 
 user:
   username: na
