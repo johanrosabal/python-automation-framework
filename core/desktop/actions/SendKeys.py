@@ -1,7 +1,7 @@
-from selenium.webdriver import Keys
 from core.config.logger_config import setup_logger
-from core.ui.common.BaseApp import BaseApp
-from core.ui.actions.Element import Element
+from core.desktop.actions.Element import Element
+from selenium.webdriver import Keys
+from selenium.webdriver import ActionChains
 
 logger = setup_logger('SendKeys')
 
@@ -9,17 +9,11 @@ logger = setup_logger('SendKeys')
 class SendKeys:
 
     def __init__(self, driver):
-        self._name = self.__class__.__name__
         self._driver = driver
         self._element = None
-        self._text = None
-        self._clear = None
-        self._pause = None
-        self._special_characters = None
 
-    def set_locator(self, locator: tuple, page='Page'):
-        self._element = Element.wait_for_element(self._driver, locator)
-        logger.info(Element.log_console(page, self._name, locator))
+    def set_locator(self, locator: tuple):
+        self._element = Element(self._driver).wait_for_element(locator)
         return self
 
     def set_text(self, text: str):
@@ -30,6 +24,17 @@ class SendKeys:
             self._element.send_keys(text)
         else:
             logger.error("Unable to Send Text [" + text + "] element is None")
+        return self
+
+    def set_text_with_action_chain(self, text: str):
+        if not isinstance(text, str):
+            raise TypeError("The argument should be a string text.")
+        if self._element:
+            logger.info("Send Keys ["+text+"]")
+            actions = ActionChains(self._driver)
+            actions.send_keys_to_element(self._element, text).perform()
+        else:
+            logger.error("Unable to Send Text with Action Chain [" + text + "] element is None")
         return self
 
     def set_text_by_character(self, text: str):
@@ -45,11 +50,15 @@ class SendKeys:
             logger.error("Unable to Send Text By Character [" + text + "] element is None.")
         return self
 
-    def get_text(self):
+    def set_value(self, text: str):
+        if not isinstance(text, str):
+            raise TypeError("The argument should be a string text.")
         if self._element:
-            input_value = self._element.get_attribute('value')
-            logger.info("Get Element Value: " + input_value)
-            return input_value
+            logger.info("Send Keys Set Value ["+text+"]")
+            self._element.set_value(text)
+        else:
+            logger.error("Unable to Set Value [" + text + "] element is None")
+        return self
 
     def clear(self):
         if self._element:
@@ -59,12 +68,12 @@ class SendKeys:
         else:
             logger.error("Unable to Clear Element Web Element is None.")
 
-    def press_return(self):
+    def paste_clipboard_text(self):
         if self._element:
-            logger.info("Press [RETURN] Keyboard Button.")
-            self._element.send_keys(Keys.RETURN)
+            logger.info("Paste Clipboard Text.")
+            self._element.send_keys(Keys.CONTROL, 'v')
         else:
-            logger.error("Unable to Press [RETURN] element is None.")
+            logger.error("Unable to Paste Text Element Web Element is None.")
 
     def press_enter(self):
         if self._element:
@@ -93,7 +102,3 @@ class SendKeys:
             self._element.send_keys(Keys.ESCAPE)
         else:
             logger.error("Unable to Press [ESCAPE] element is None.")
-
-    def pause(self, seconds: int):
-        BaseApp.pause(seconds)
-        return self

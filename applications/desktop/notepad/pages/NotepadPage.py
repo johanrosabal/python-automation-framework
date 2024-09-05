@@ -17,6 +17,8 @@ class NotepadPage:
     # Locator
     __text_editor = (By.CLASS_NAME, "Edit")
     __menu_file = (By.CLASS_NAME, "Edit")
+    __menu_help = (By.CLASS_NAME, "Help")
+    __menu_help_about_notepad = (By.CLASS_NAME, "About Notepad")
     __dont_save_button = (By.NAME, "Don't Save")
 
     _instance = None
@@ -29,6 +31,18 @@ class NotepadPage:
 
     def menu_edit(self):
         by, value = self.__menu_file
+        if self.driver:
+            self.driver.find_element(by, value).click()
+        return self
+
+    def menu_help(self):
+        by, value = self.__menu_help
+        if self.driver:
+            self.driver.find_element(by, value).click()
+        return self
+
+    def menu_help_about_notepad(self):
+        by, value = self.__menu_help_about_notepad
         if self.driver:
             self.driver.find_element(by, value).click()
         return self
@@ -52,3 +66,21 @@ class NotepadPage:
                 self.driver.find_element(*self.__dont_save_button).click()
             except:
                 pass
+
+
+class Menu:
+    def __init__(self, driver):
+        self._driver = driver
+        __menu_file = (By.CLASS_NAME, "File")
+        __menu_edit = (By.CLASS_NAME, "Edit")
+        __menu_format = (By.CLASS_NAME, "Format")
+        __menu_view = (By.CLASS_NAME, "View")
+        __menu_help = (By.CLASS_NAME, "Help")
+
+
+
+
+class Help:
+
+    def __init__(self, driver):
+        self._driver = driver
