@@ -1,4 +1,5 @@
 from core.config.logger_config import setup_logger
+from core.ui.actions.Screeenshot import Screenshot
 from core.ui.common.BaseApp import BaseApp
 from core.ui.actions.Element import Element
 
@@ -11,10 +12,14 @@ class Checkbox:
         self._name = self.__class__.__name__
         self._driver = driver
         self._element = None
+        self._locator = None
+        self._page = None
 
     def set_locator(self, locator: tuple, page='Page'):
+        self._locator = locator
+        self._page = page
         self._element = Element.wait_for_element(self._driver, locator)
-        logger.info(Element.log_console(page, self._name, locator))
+        logger.info(Element.log_console(self._page, self._name, locator))
         return self
 
     def pause(self, seconds: int):
@@ -52,4 +57,8 @@ class Checkbox:
         else:
             logger.error("Unable to Select Checkbox WebElement is None.")
 
+        return self
+
+    def screenshot(self, name="screenshot"):
+        Screenshot(self._driver).set_locator(self._locator,self._page).attach_to_allure(name)
         return self

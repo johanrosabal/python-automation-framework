@@ -1,5 +1,6 @@
 from selenium.webdriver import Keys
 from core.config.logger_config import setup_logger
+from core.ui.actions.Screeenshot import Screenshot
 from core.ui.common.BaseApp import BaseApp
 from core.ui.actions.Element import Element
 
@@ -16,13 +17,18 @@ class SendKeys:
         self._clear = None
         self._pause = None
         self._special_characters = None
+        self._locator = None
+        self._page = None
 
     def set_locator(self, locator: tuple, page='Page'):
+        self._locator = locator
+        self._page = page
         self._element = Element.wait_for_element(self._driver, locator)
-        logger.info(Element.log_console(page, self._name, locator))
+        logger.info(Element.log_console(self._page, self._name, locator))
         return self
 
     def set_text(self, text: str):
+        text = str(text)
         if not isinstance(text, str):
             raise TypeError("The argument should be a string text.")
         if self._element:
@@ -58,6 +64,7 @@ class SendKeys:
             self._element.clear()
         else:
             logger.error("Unable to Clear Element Web Element is None.")
+        return self
 
     def press_return(self):
         if self._element:
@@ -65,6 +72,7 @@ class SendKeys:
             self._element.send_keys(Keys.RETURN)
         else:
             logger.error("Unable to Press [RETURN] element is None.")
+        return self
 
     def press_enter(self):
         if self._element:
@@ -72,6 +80,7 @@ class SendKeys:
             self._element.send_keys(Keys.ENTER)
         else:
             logger.error("Unable to Press [ENTER] element is None.")
+        return self
 
     def press_backspace(self):
         if self._element:
@@ -79,6 +88,7 @@ class SendKeys:
             self._element.send_keys(Keys.BACKSPACE)
         else:
             logger.error("Unable to Press [BACKSPACE] element is None.")
+        return self
 
     def press_tab(self):
         if self._element:
@@ -86,6 +96,7 @@ class SendKeys:
             self._element.send_keys(Keys.TAB)
         else:
             logger.error("Unable to Press [TAB] element is None.")
+        return self
 
     def press_escape(self):
         if self._element:
@@ -93,7 +104,12 @@ class SendKeys:
             self._element.send_keys(Keys.ESCAPE)
         else:
             logger.error("Unable to Press [ESCAPE] element is None.")
+        return self
 
     def pause(self, seconds: int):
         BaseApp.pause(seconds)
+        return self
+
+    def screenshot(self, name="screenshot"):
+        Screenshot(self._driver).set_locator(self._locator, self._page).attach_to_allure(name)
         return self

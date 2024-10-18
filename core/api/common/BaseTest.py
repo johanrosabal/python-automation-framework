@@ -17,6 +17,9 @@ class BaseTest:
         table = []
         errors_list = []
 
+        if response is None:
+            errors_list.append("Api Response is None")
+
         if response.status_code != status_code:
             errors_list.append(f"Status Code should be {status_code}, actual values is {response.status_code}")
 
@@ -43,8 +46,8 @@ class BaseTest:
         formatted_results = [[result[header] for header in headers] for result in table]
         logger.info("\n" + tabulate(formatted_results, headers=headers, tablefmt='pretty'))
         cls.report.add_result(result)
-        if errors:
-            pytest.fail("\n".join(errors))
+        if errors_list:
+            pytest.fail("\n".join(errors_list))
 
     @classmethod
     def teardown_class(cls):

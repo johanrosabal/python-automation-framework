@@ -3,7 +3,7 @@ from core.ui.common.BaseApp import BaseApp
 from core.ui.actions.Element import Element
 from PIL import Image, ImageDraw, ImageFont
 import time
-import io
+import allure
 import os
 
 logger = setup_logger('Screenshot')
@@ -29,27 +29,28 @@ class Screenshot:
         logger.info(Element.log_console(page, self._name, locator))
         return self
 
-    def save_screenshot(self):
-        description = self._locator[2]
+    def save_screenshot(self, description, page='Page'):
+        #  description = self._locator[2]
+        self._page = page
         file_path = self._root + "\\screenshots\\"
 
         # Create directory if it does not exist
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
-        file_name = f"{self._page}_{self._name}_{description.replace(' ', '_')}.png"
+        file_name = f"{self._page}_{description.replace(' ', '_')}.png"
         full_path = os.path.join(file_path, file_name)
 
         if self._driver:
             time.sleep(1)
-            logger.info("[Screenshot]:[Path]: " + file_path + file_name)
+            # logger.info("[Screenshot]:[Path]: " + file_path + file_name)
             self._driver.save_screenshot(full_path)
             return full_path
         else:
             logger.error("Unable to take Screenshot, WebElement is None.")
         return self
 
-    def save_highlight(self, padding=10):
-        screenshot_path = self.save_screenshot()
+    def save_highlight(self, description,  padding=10):
+        screenshot_path = self.save_screenshot(description)
         if screenshot_path and self._element:
             image = Image.open(screenshot_path)
             draw = ImageDraw.Draw(image)
@@ -120,4 +121,27 @@ class Screenshot:
 
             logger.info(f"Added comment '{comment}' to screenshot saved at {screenshot_path}")
 
+        return self
+
+    def attach_to_allure(self, name="screenshot", page="page"):
+        """
+        Attach a screenshot to the allure report. Optionally add highlight and comment.
+        """
+        screenshot_path = self.save_screenshot(description=name, page=page)  # Take a screenshot and return the path
+        if screenshot_path:
+            allure.attach.file(
+                screenshot_path,
+                name=name,
+                attachment_type=allure.attachment_type.PNG
+            )
+            logger.info(f"Screenshot attached to Allure report: {screenshot_path}")
+            # Check if the file exists before deleting
+            if os.path.exists(screenshot_path):
+                os.remove(screenshot_path)
+        else:
+            logger.error("Failed to attach screenshot to Allure report.")
+        return self
+
+    def pause(self, seconds: int):
+        BaseApp.pause(seconds)
         return self

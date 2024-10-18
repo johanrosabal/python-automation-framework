@@ -1,5 +1,7 @@
 import pandas as pd
 from tabulate import tabulate
+from core.config.logger_config import setup_logger
+logger = setup_logger('TABTEXT_Reader')
 
 
 class TABTEXT_Reader:
@@ -48,10 +50,9 @@ class TABTEXT_Reader:
         Display the contents of the DataFrame as a table in the console.
         """
         if self.data_frame is not None:
-            print("")
-            print(tabulate(self.data_frame, headers='keys', tablefmt='pretty'))
+            logger.info("\n"+tabulate(self.data_frame, headers='keys', tablefmt='pretty'))
         else:
-            print("No data available. Please read the file first.")
+            logger.info("No data available. Please read the file first.")
         return self
 
     def get_headers(self):

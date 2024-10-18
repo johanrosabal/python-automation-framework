@@ -111,7 +111,7 @@ class Post:
         """Send the POST request and return the response."""
         url = f"{self.base_url}/{self.endpoint}"
         logger.info(
-            f"Sending POST to: {url} With data: {self.data}, JSON: {self.json_data}, files: {self.files}, headers: {self.headers}")
+            f"Sending POST to: {url} With data: {self.data}, JSON: {self.json_data}, files: {self.files}, headers: {self.headers}, cookies: {self.cookies}, params: {self.params}, verify ssl: {self.verify}, timeout: {self.timeout}")
 
         try:
             # Send the POST request

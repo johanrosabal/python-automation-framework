@@ -1,7 +1,8 @@
 from core.config.logger_config import setup_logger
 from core.ui.actions.Element import Element
+from core.ui.actions.Screeenshot import Screenshot
 
-logger = setup_logger('Click')
+logger = setup_logger('Navigation')
 
 
 class Navigation:
@@ -67,5 +68,6 @@ class Navigation:
         else:
             logger.error("Unable to Load page WebDriver is None.")
         return self
+
 
 

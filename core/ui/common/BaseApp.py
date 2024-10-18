@@ -3,7 +3,7 @@ import time
 import inspect
 from threading import local
 from core.config.logger_config import setup_logger
-from core.ui.actions.Navigation import Navigation
+
 
 logger = setup_logger('BaseApp')
 
@@ -52,12 +52,14 @@ class BaseApp:
             getattr(_driver, 'instance', None).quit()
 
     @staticmethod
+    def get_title():
+        if _driver:
+            return getattr(_driver, 'instance', None).title
+
+    @staticmethod
     def pause(seconds):
         logger.info("Pause: " + str(seconds))
         time.sleep(seconds)
-
-    def navigation(self):
-        return Navigation(self.get_driver())
 
     @staticmethod
     def method_name():

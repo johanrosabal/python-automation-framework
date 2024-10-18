@@ -43,6 +43,4 @@ class AssertCollector:
             logger.info(f"{log_message}[Validation]: {message} | {error_message}")
         except AssertionError as e:
             logger.error(str(e))
-            raise
-
-
+            pytest.fail(f"{log_message}[Validation]: {message} | {error_message}", True)

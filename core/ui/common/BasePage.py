@@ -1,6 +1,6 @@
 
-
 from core.config.logger_config import setup_logger
+from core.ui.actions.Navigation import Navigation
 from core.ui.actions.AlertPrompt import AlertPrompt
 from core.ui.actions.Checkbox import Checkbox
 from core.ui.actions.Click import Click
@@ -24,7 +24,10 @@ class BasePage(BaseApp):
     def __init__(self, driver=None):
         super().__init__()
         if driver:
-            self.driver = driver
+            self._driver = driver
+
+    def navigation(self):
+        return Navigation(self.get_driver())
 
     def alert(self):
         return AlertPrompt(self.get_driver())

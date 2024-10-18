@@ -1,5 +1,7 @@
 import yaml
 from tabulate import tabulate
+from core.config.logger_config import setup_logger
+logger = setup_logger('YAMLReader')
 
 
 class YAMLReader:
@@ -74,10 +76,9 @@ class YAMLReader:
         if items:
             headers = list(items[0].keys())
             table = [list(item.values()) for item in items]
-            print("")
-            print(tabulate(table, headers=headers, tablefmt='pretty'))
+            logger.info("\n"+tabulate(table, headers=headers, tablefmt='pretty'))
         else:
-            print("No data available. Please read the file first.")
+            logger.info("No data available. Please read the file first.")
         return self
 
     def get_headers(self, section=None):

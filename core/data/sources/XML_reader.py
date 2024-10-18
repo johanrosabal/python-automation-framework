@@ -1,5 +1,8 @@
 import xml.etree.ElementTree as ET
 from tabulate import tabulate
+from core.config.logger_config import setup_logger
+logger = setup_logger('XMLReader')
+
 
 class XMLReader:
     def __init__(self):
@@ -55,10 +58,9 @@ class XMLReader:
         if items:
             headers = [elem.tag for elem in items[0]]
             table = [[elem.text for elem in item] for item in items]
-            print("")
-            print(tabulate(table, headers=headers, tablefmt='pretty'))
+            logger.info("\n"+tabulate(table, headers=headers, tablefmt='pretty'))
         else:
-            print("No data available. Please read the file first.")
+            logger.info("No data available. Please read the file first.")
         return self
 
     def get_headers(self, section=None):

@@ -23,7 +23,7 @@ class Scroll:
         return self
 
     def to_bottom(self):
-        if self._element:
+        if self._driver:
             logger.info("Scroll to Bottom page.")
             self._driver.execute_script("window.scrollTo(0, document.body.scrollHeight)")
             self.pause(3)
@@ -32,7 +32,7 @@ class Scroll:
         return self
 
     def to_top(self):
-        if self._element:
+        if self._driver:
             logger.info("Scroll to bottom page.")
             self._driver.execute_script("window.scrollTo(0, document.body.scrollTop)")
             self.pause(3)
