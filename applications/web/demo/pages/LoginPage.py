@@ -52,6 +52,7 @@ class LoginPage(BasePage):
         (self.send_keys()
          .set_locator(self._input_user_name, self.name)
          .set_text(username)
+         .highlight()
          )
         return self
 
@@ -59,6 +60,7 @@ class LoginPage(BasePage):
         (self.send_keys()
          .set_locator(self._input_password, self.name)
          .set_text(password)
+         .highlight()
          )
 
         return self
@@ -76,11 +78,12 @@ class LoginPage(BasePage):
         # Save Screenshot with comment
         (self.screenshot()
          .set_locator(self._btn_login, self.name)
-         .save_highlight()
+         .save_highlight(description="Login Page")
          .add_comment("Login Button"))
 
         (self.click()
          .set_locator(self._btn_login, self.name)
+         .highlight()
          .single_click())
         return self
 

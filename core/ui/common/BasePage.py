@@ -1,5 +1,6 @@
 
 from core.config.logger_config import setup_logger
+from core.ui.actions.ElementHighlighter import ElementHighlighter
 from core.ui.actions.Navigation import Navigation
 from core.ui.actions.AlertPrompt import AlertPrompt
 from core.ui.actions.Checkbox import Checkbox
@@ -8,7 +9,7 @@ from core.ui.actions.Element import Element
 from core.ui.actions.Frame import Frame
 from core.ui.actions.GetText import GetText
 from core.ui.actions.Radio import Radio
-from core.ui.actions.Screeenshot import Screenshot
+from core.ui.actions.Screenshot import Screenshot
 from core.ui.actions.Scroll import Scroll
 from core.ui.actions.SendKeys import SendKeys
 from core.ui.actions.Dropdown import Dropdown
@@ -67,3 +68,6 @@ class BasePage(BaseApp):
 
     def upload_file(self):
         return UploadFile(self.get_driver())
+
+    def highlight_element(self):
+        return ElementHighlighter(self.get_driver())

@@ -1,5 +1,6 @@
 from core.config.logger_config import setup_logger
-from core.ui.actions.Screeenshot import Screenshot
+from core.ui.actions.ElementHighlighter import ElementHighlighter
+from core.ui.actions.Screenshot import Screenshot
 from core.ui.common.BaseApp import BaseApp
 from core.ui.actions.Element import Element
 
@@ -61,4 +62,8 @@ class Radio:
 
     def screenshot(self, name="screenshot"):
         Screenshot(self._driver).set_locator(self._locator, self._page).attach_to_allure(name)
+        return self
+
+    def highlight(self, duration=1):
+        ElementHighlighter(self._driver).set_locator(self._locator).highlight_temporarily(duration)
         return self

@@ -1,11 +1,11 @@
 import pytest
-import os
+from pathlib import Path
 from core.config.logger_config import setup_logger
 from core.data.UserDTO import UserDTO
 from core.ui.common.BaseApp import BaseApp
 from core.ui.driver.DriverManager import DriverManager
 from core.utils.table_formatter import TableFormatter
-from core.config.config_cmd import get_profile, get_browser
+from core.config.config_cmd import get_profile, get_browser, get_app_type, get_app_name
 from core.config.config_loader import load_web_config
 from core.ui.report.WEBTestReport import WEBTestReport
 from tabulate import tabulate
@@ -35,8 +35,20 @@ class BaseTest(BaseApp):
         if not profile:
             profile = "qa"  # Default Value
 
+        # Load App Name Execution
+        app_name = get_app_name()
+        if not profile:
+            app_name = "demo"  # Default Value
+
+        # Load App Type Execution
+        app_type = get_app_type()
+        if not profile:
+            app_type = "web"  # Default Value
+
+        project_root = Path(__file__).resolve().parent.parent.parent.parent
+        config_path = f"{project_root}/applications/{app_type}/{app_name}/config/{profile}_config.yaml"
         # Load Profile Configurations
-        config_yaml = load_web_config(f"../config/{profile}_config.yaml")
+        config_yaml = load_web_config(config_path)
 
         if not browser:
             browser = config_yaml.web.browser

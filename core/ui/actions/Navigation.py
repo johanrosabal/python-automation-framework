@@ -1,6 +1,6 @@
 from core.config.logger_config import setup_logger
 from core.ui.actions.Element import Element
-from core.ui.actions.Screeenshot import Screenshot
+from core.ui.actions.Screenshot import Screenshot
 
 logger = setup_logger('Navigation')
 

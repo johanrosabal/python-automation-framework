@@ -1,13 +1,29 @@
 from selenium.webdriver import Keys
 from core.config.logger_config import setup_logger
-from core.ui.actions.Screeenshot import Screenshot
+from core.ui.actions.ElementHighlighter import ElementHighlighter
+from core.ui.actions.Screenshot import Screenshot
 from core.ui.common.BaseApp import BaseApp
 from core.ui.actions.Element import Element
 
+# Logger setup for 'SendKeys' operations
 logger = setup_logger('SendKeys')
 
 
 class SendKeys:
+    """
+    The SendKeys class handles actions to send text and key inputs to web elements.
+
+    Attributes:
+        _name (str): Name of the class, used for logging.
+        _driver (WebDriver): The WebDriver instance.
+        _element (WebElement): The targeted element to interact with.
+        _text (str): Text to send to the element.
+        _clear (bool): Flag to indicate if the element should be cleared.
+        _pause (int): Optional pause duration for actions.
+        _special_characters (str): Holds special keys if needed.
+        _locator (tuple): Locator used to find the element.
+        _page (str): Page name for logging context.
+    """
 
     def __init__(self, driver):
         self._name = self.__class__.__name__
@@ -20,96 +36,104 @@ class SendKeys:
         self._locator = None
         self._page = None
 
-    def set_locator(self, locator: tuple, page='Page'):
+    def set_locator(self, locator: tuple, page='Page', explicit_wait=10):
+        """
+        Set the locator for the element, wait for it to become available, and log the result.
+
+        Args:
+            locator (tuple): Tuple with the locating strategy and value (e.g., By.ID, 'element_id').
+            page (str): Name of the page to help with logging.
+            explicit_wait (int): Time to wait for element visibility (default is 10 seconds).
+        """
         self._locator = locator
         self._page = page
-        self._element = Element.wait_for_element(self._driver, locator)
+        # Wait for the element using Element class method, with specified timeout
+        self._element = Element.wait_for_element(driver=self._driver, locator=locator, timeout=explicit_wait)
+        # Log the action with page and element details
         logger.info(Element.log_console(self._page, self._name, locator))
         return self
 
     def set_text(self, text: str):
-        text = str(text)
+        """Sets and sends the provided text to the element."""
         if not isinstance(text, str):
             raise TypeError("The argument should be a string text.")
         if self._element:
-            logger.info("Send Keys ["+text+"]")
+            logger.info("Send Keys [" + text + "]")
             self._element.send_keys(text)
         else:
             logger.error("Unable to Send Text [" + text + "] element is None")
         return self
 
     def set_text_by_character(self, text: str):
+        """Sends text to the element character by character."""
         if not isinstance(text, str):
             raise TypeError("The argument should be a string text.")
-        letters = list(text)
         if self._element:
-            logger.info("Send Keys [" + text + "] by Character.")
-            for letter in letters:
-                logger.info("Send Keys Letter [" + letter + "].")
+            logger.info(f"Sending text '{text}' by character.")
+            for letter in text:
+                logger.info(f"Sending character: '{letter}'")
                 self._element.send_keys(letter)
         else:
-            logger.error("Unable to Send Text By Character [" + text + "] element is None.")
+            logger.error(f"Unable to send text by character '{text}': element is None.")
         return self
 
     def get_text(self):
+        """Retrieves text from the element's value attribute."""
         if self._element:
             input_value = self._element.get_attribute('value')
-            logger.info("Get Element Value: " + input_value)
+            logger.info("Retrieved Element Value: " + input_value)
             return input_value
 
     def clear(self):
+        """Clears the text from the element."""
         if self._element:
-            logger.info("Press [CLEAR] Keyboard Button.")
+            logger.info("Clearing text from element.")
             self._element.click()
             self._element.clear()
         else:
-            logger.error("Unable to Clear Element Web Element is None.")
+            logger.error("Unable to clear element: element is None.")
         return self
 
+    # Keyboard actions
     def press_return(self):
-        if self._element:
-            logger.info("Press [RETURN] Keyboard Button.")
-            self._element.send_keys(Keys.RETURN)
-        else:
-            logger.error("Unable to Press [RETURN] element is None.")
-        return self
+        """Presses the RETURN key on the element."""
+        return self._press_key(Keys.RETURN, "RETURN")
 
     def press_enter(self):
-        if self._element:
-            logger.info("Press [ENTER] Keyboard Button.")
-            self._element.send_keys(Keys.ENTER)
-        else:
-            logger.error("Unable to Press [ENTER] element is None.")
-        return self
+        """Presses the ENTER key on the element."""
+        return self._press_key(Keys.ENTER, "ENTER")
 
     def press_backspace(self):
-        if self._element:
-            logger.info("Press [BACKSPACE] Keyboard Button.")
-            self._element.send_keys(Keys.BACKSPACE)
-        else:
-            logger.error("Unable to Press [BACKSPACE] element is None.")
-        return self
+        """Presses the BACKSPACE key on the element."""
+        return self._press_key(Keys.BACKSPACE, "BACKSPACE")
 
     def press_tab(self):
-        if self._element:
-            logger.info("Press [TAB] Keyboard Button.")
-            self._element.send_keys(Keys.TAB)
-        else:
-            logger.error("Unable to Press [TAB] element is None.")
-        return self
+        """Presses the TAB key on the element."""
+        return self._press_key(Keys.TAB, "TAB")
 
     def press_escape(self):
+        """Presses the ESCAPE key on the element."""
+        return self._press_key(Keys.ESCAPE, "ESCAPE")
+
+    def _press_key(self, key, key_name):
+        """Helper method to press a specific key on the element."""
         if self._element:
-            logger.info("Press [ESCAPE] Keyboard Button")
-            self._element.send_keys(Keys.ESCAPE)
+            logger.info(f"Pressing [{key_name}] key.")
+            self._element.send_keys(key)
         else:
-            logger.error("Unable to Press [ESCAPE] element is None.")
+            logger.error(f"Unable to press [{key_name}]: element is None.")
         return self
 
     def pause(self, seconds: int):
+        """Pauses the execution for a given number of seconds."""
         BaseApp.pause(seconds)
         return self
 
     def screenshot(self, name="screenshot"):
+        """Takes a screenshot and attaches it to the report."""
         Screenshot(self._driver).set_locator(self._locator, self._page).attach_to_allure(name)
+        return self
+
+    def highlight(self, duration=1):
+        ElementHighlighter(self._driver).set_locator(self._locator).highlight_temporarily(duration)
         return self

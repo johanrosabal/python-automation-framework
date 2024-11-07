@@ -1,3 +1,5 @@
+import pytest
+
 from applications.web.demo.data.source_mapping import UserInformation
 from core.data.sources.TABTXT_reader import TABTEXT_Reader
 from core.data.sources.XML_reader import XMLReader
@@ -7,13 +9,14 @@ from core.data.sources.JSON_reader import JSONReader
 from core.ui.common.BaseTest import BaseTest
 
 
+@pytest.mark.web
 class TestReaderFiles(BaseTest):
 
     def test_excel_reader(self):
         # 01. Load the Excel File using a relative Path
         path = "../data/sources/user_information_source.xlsx"
         # 02. Specifying the Sheet Name to map UserInformation values
-        user_information = EXCELReader().set_file_path(path).read_file(
+        user_information = EXCELReader().set_file_path(path).read_list_structure(
             object_class=UserInformation,
             sheet_name="UserData"
         )
@@ -31,7 +34,7 @@ class TestReaderFiles(BaseTest):
         # 01. Load the Excel File using a relative Path
         path = "../data/sources/user_information_source.csv"
         # 02. Specifying the Sheet Name to map UserInformation values
-        user_information = EXCELReader().set_file_path(path).read_file(
+        user_information = EXCELReader().set_file_path(path).read_list_structure(
             object_class=UserInformation
         )
 
@@ -49,7 +52,7 @@ class TestReaderFiles(BaseTest):
         path = "../data/sources/user_information_source.json"
         # Read the file and map the data to UserInformation objects
 
-        user_information = JSONReader().set_file_path(path).read_file(
+        user_information = JSONReader().set_file_path(path).read_list_structure(
             object_class=UserInformation,
             nested_key="tests.new_users"
         )
@@ -68,7 +71,7 @@ class TestReaderFiles(BaseTest):
         path = "../data/sources/user_information_source.yaml"
         # Read the file and map the data to UserInformation objects
 
-        user_information = YAMLReader().set_file_path(path).read_file(
+        user_information = YAMLReader().set_file_path(path).read_list_structure(
             object_class=UserInformation,
             nested_key="tests.new_users"
         )
@@ -87,7 +90,7 @@ class TestReaderFiles(BaseTest):
         path = "../data/sources/user_information_source.txt"
         # Read the file and map the data to UserInformation objects
 
-        user_information = TABTEXT_Reader().set_file_path(path).read_file(
+        user_information = TABTEXT_Reader().set_file_path(path).read_list_structure(
             object_class=UserInformation
         )
 
@@ -105,7 +108,7 @@ class TestReaderFiles(BaseTest):
         path = "../data/sources/user_information_source.xml"
         # Read the file and map the data to UserInformation objects
 
-        user_information = XMLReader().set_file_path(path).read_file(
+        user_information = XMLReader().set_file_path(path).read_list_structure(
             object_class=UserInformation,
             section="new_users"
         )

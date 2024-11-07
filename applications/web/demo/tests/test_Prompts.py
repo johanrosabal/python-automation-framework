@@ -1,3 +1,5 @@
+import pytest
+
 from core.config.logger_config import setup_logger
 from applications.web.demo.pages.AlertPage import AlertPage
 from core.ui.common.BaseTest import BaseTest
@@ -6,8 +8,8 @@ from core.utils.decorator import test
 logger = setup_logger('TestLogin')
 
 
+@pytest.mark.web
 class TestPrompts(BaseTest):
-
     alertPage = AlertPage.get_instance()
 
     @test(test_case_id="00001", test_description="Verify Accept Alert")

@@ -1,3 +1,5 @@
+import pytest
+
 from core.asserts.AssertCollector import AssertCollector
 from core.config.logger_config import setup_logger
 from applications.web.demo.pages.LoginPage import LoginPage
@@ -7,8 +9,8 @@ from core.utils.decorator import test
 logger = setup_logger('TestLogin')
 
 
+@pytest.mark.web
 class TestLogin(BaseTest):
-
     LoginPage = LoginPage.get_instance()
 
     @test(test_case_id="HRM-0001", test_description="Verify Login Page headline")
@@ -44,4 +46,3 @@ class TestLogin(BaseTest):
         self.LoginPage.logout_user()
         # 02. Validations
         self.LoginPage.verify_user_is_logged_out("/web/index.php/auth/login")
-

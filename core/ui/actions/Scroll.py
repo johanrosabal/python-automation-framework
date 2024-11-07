@@ -13,8 +13,8 @@ class Scroll:
         self._driver = driver
         self._element = None
 
-    def set_locator(self, locator: tuple, page='Page'):
-        self._element = Element.wait_for_element(self._driver, locator)
+    def set_locator(self, locator: tuple, page='Page', explicit_wait=10):
+        self._element = Element.wait_for_element(driver=self._driver, locator=locator, timeout=explicit_wait)
         logger.info(Element.log_console(page, self._name, locator))
         return self
 
