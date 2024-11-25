@@ -1,0 +1,64 @@
+# Python package
+# Create and test a Python package on multiple Python versions.
+# Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/python
+parameters:
+  - name: "testplan"
+    type: string
+    default: ""
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+strategy:
+  matrix:
+    Python311:
+      python.version: '3.12.4'
+
+steps:
+# 1. Install Python
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.12.4'
+    addToPath: true
+
+- script: |
+    sudo apt-get update
+    sudo apt-get install -y wget software-properties-common
+    wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+    sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main"
+    sudo apt-get install -y libgbm-dev libnss3 libxshmfence1
+    sudo apt-get install -y microsoft-edge-stable
+    VERSION=$(microsoft-edge --version | grep -oP '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+')
+    wget https://msedgedriver.azureedge.net/$VERSION/edgedriver_linux64.zip
+    unzip edgedriver_linux64.zip
+    sudo mv msedgedriver /usr/local/bin/
+    microsoft-edge --version
+    msedgedriver --version
+  displayName: 'Install Microsoft Edge and EdgeDriver'
+
+# 2. Install dependencies
+- script: |
+    python -m pip install --upgrade pip
+    pip install -r requirements.txt
+  displayName: 'Install dependencies'
+
+- script: |
+    sudo mkdir -p /home/logs
+    sudo chmod -R 777 /home/logs
+  displayName: 'Set permissions for /home/logs'
+
+# 4. Execute test cases with pytest
+- script: |
+    pytest applications/web/softship/tests/test_test.py --alluredir=allure-results --headless=True
+  displayName: 'Execute test cases'
+
+# 5. Publish results in Allure
+- task: PublishAllureReport@1
+  displayName: 2.27.0
+  inputs:
+    allureVersion: 2.27.0
+    testResultsDir: allure-results

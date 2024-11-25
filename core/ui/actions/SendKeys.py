@@ -41,7 +41,7 @@ class SendKeys:
         Set the locator for the element, wait for it to become available, and log the result.
 
         Args:
-            locator (tuple): Tuple with the locating strategy and value (e.g., By.ID, 'element_id').
+            locator (tuple): Tuple with the locating strategy and value (e.g., By. ID, 'element_id').
             page (str): Name of the page to help with logging.
             explicit_wait (int): Time to wait for element visibility (default is 10 seconds).
         """

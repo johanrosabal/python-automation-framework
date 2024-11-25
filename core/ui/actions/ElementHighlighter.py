@@ -22,7 +22,7 @@ class ElementHighlighter:
         Set the locator for the element, wait for it to become available, and log the result.
 
         Args:
-            locator (tuple): Tuple with the locating strategy and value (e.g., By.ID, 'element_id').
+            locator (tuple): Tuple with the locating strategy and value (e.g., By. ID, 'element_id').
             page (str): Name of the page to help with logging.
             explicit_wait (int): Time to wait for element visibility (default is 10 seconds).
         """
@@ -32,6 +32,10 @@ class ElementHighlighter:
         self._element = Element.wait_for_element(driver=self._driver, locator=locator, timeout=explicit_wait)
         # Log the action with page and element details
         logger.info(Element.log_console(self._page, self._name, locator))
+        return self
+
+    def set_element(self, element):
+        self._element = element
         return self
 
     def highlight_element(self, color: str = "red", border_width: str = "3px"):
@@ -51,7 +55,7 @@ class ElementHighlighter:
         if self._element:
             self._driver.execute_script("arguments[0].style.border=''", self._element)
 
-    def highlight_temporarily(self, duration: int = 1, color: str = "red", border_width: str = "3px"):
+    def highlight_temporarily(self, duration: int = 0.5, color: str = "red", border_width: str = "3px"):
         """
         Highlights the specified WebElement for a few seconds, then removes the highlight.
         :param duration: Duration to keep the highlight in seconds.

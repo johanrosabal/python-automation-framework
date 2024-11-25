@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver.edge.options import Options
 from pathlib import Path
 
 from core.config.logger_config import setup_logger
@@ -20,12 +21,14 @@ class DriverManager:
     project_root = Path(__file__).parent.parent
 
     # Constructor
-    def __init__(self, browser):
+    def __init__(self, browser, headless=False):
 
         if browser:
             self.browser = browser
         else:
             self.browser = self.defaultBrowser
+
+        self.headless = headless
 
     def initialize(self):
         logger.debug("Initialize Web Driver...")
@@ -39,24 +42,43 @@ class DriverManager:
             logger.info("Default Web Driver: Chrome")
             return self.chrome_driver()
 
-    @staticmethod
-    def edge_driver():
+    def edge_driver(self):
         logger.debug("Setting Edge Driver...")
-        driver = webdriver.Edge()
+
+        options = Options()
+        if bool(self.headless):
+            logger.debug("Adding --headless argument")
+            options.add_argument("--headless")  # Headless mode
+        # options.add_argument("--disable-gpu")  # Disabled GPU (recommended for headless)
+        options.add_argument("--disable-dev-shm-usage")  # Shared memory for avoid issues
+        options.add_argument("--no-sandbox")  # Restricted mode for avoid errors
+
+        driver = webdriver.Edge(options=options)
         driver.maximize_window()
         return driver
 
-    @staticmethod
-    def firefox_driver():
+    def firefox_driver(self):
         logger.debug("Setting Firefox Driver...")
-        driver = webdriver.Firefox()
+        options = Options()
+        if bool(self.headless):
+            logger.debug("Adding --headless argument")
+            options.add_argument("--headless")  # Headless mode
+
+        driver = webdriver.Firefox(options=options)
         driver.maximize_window()
         return driver
 
-    @staticmethod
-    def chrome_driver():
+    def chrome_driver(self):
         logger.debug("Setting Chrome Driver...")
-        driver = webdriver.Chrome()
+        options = Options()
+        if bool(self.headless):
+            logger.debug("Adding --headless argument")
+            options.add_argument("--headless")  # Headless mode
+        # options.add_argument("--disable-gpu")  # Disabled GPU (recommended for headless)
+        options.add_argument("--disable-dev-shm-usage")  # Shared memory for avoid issues
+        options.add_argument("--no-sandbox")  # Restricted mode for avoid errors
+
+        driver = webdriver.Chrome(options=options)
         driver.maximize_window()
         return driver
 

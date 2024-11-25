@@ -7,7 +7,7 @@ from core.config.logger_config import setup_logger
 logger = setup_logger('BaseTest')
 
 
-@pytest.mark.usefixtures("initialize_api_config")
+@pytest.mark.usefixtures("load_yaml_config")
 class BaseTest:
 
     report = APITestReport()

@@ -14,6 +14,7 @@ from core.ui.actions.Scroll import Scroll
 from core.ui.actions.SendKeys import SendKeys
 from core.ui.actions.Dropdown import Dropdown
 from core.ui.actions.SwitchWindow import SwitchWindow
+from core.ui.actions.Table import Table
 from core.ui.actions.UploadFile import UploadFile
 from core.ui.common.BaseApp import BaseApp
 
@@ -71,3 +72,7 @@ class BasePage(BaseApp):
 
     def highlight_element(self):
         return ElementHighlighter(self.get_driver())
+
+    def table(self):
+        return Table(self.get_driver())
+

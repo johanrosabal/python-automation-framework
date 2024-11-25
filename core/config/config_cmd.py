@@ -27,3 +27,10 @@ def get_browser():
         if arg.startswith("--browser="):
             return arg.split("=")[1]
     return None
+
+
+def get_headless():
+    for arg in sys.argv:
+        if arg.startswith("--headless="):
+            return arg.split("=")[1]
+    return None

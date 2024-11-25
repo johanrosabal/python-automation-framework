@@ -2,7 +2,6 @@ from core.config.logger_config import setup_logger
 from core.ui.actions.ElementHighlighter import ElementHighlighter
 from core.ui.common.BaseApp import BaseApp
 from core.ui.actions.Element import Element
-from selenium.webdriver.common.keys import Keys
 
 logger = setup_logger('UploadFile')
 
@@ -23,7 +22,7 @@ class UploadFile:
         Set the locator for the element, wait for it to become available, and log the result.
 
         Args:
-            locator (tuple): Tuple with the locating strategy and value (e.g., By.ID, 'element_id').
+            locator (tuple): Tuple with the locating strategy and value (e.g., By. ID, 'element_id').
             page (str): Name of the page to help with logging.
             explicit_wait (int): Time to wait for element visibility (default is 10 seconds).
         """

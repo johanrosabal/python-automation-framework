@@ -1,5 +1,6 @@
-/logs/
-/reports/
+logs/
+reports/
+screenshots/
 /venv/
 
 # Byte-compiled / optimized / DLL files
@@ -93,4 +94,8 @@ chromedriver.log
 # Project-specific
 core/logs/
 **/tests/screenshots/
-applications/web/demo/tests/reports/
+**/tests/reports
+/output.json
+/pytest_html_report.html
+/archive/
+application/logs

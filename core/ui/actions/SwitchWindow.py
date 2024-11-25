@@ -1,7 +1,4 @@
 from core.config.logger_config import setup_logger
-from selenium import webdriver
-from selenium.webdriver.remote.webdriver import WebDriver
-from typing import List
 
 from core.ui.common.BaseApp import BaseApp
 

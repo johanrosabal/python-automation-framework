@@ -13,22 +13,22 @@ _driver = local()
 
 class BaseApp:
     # Static Variables
-    project_root = os.getcwd()
-    main_resources_path = os.path.join(project_root, 'resources')
-    base_url_var = ""
+    _project_root = os.getcwd()
+    _main_resources_path = os.path.join(_project_root, 'resources')
+    _base_url_var = ""
 
-    SEPARATOR = "\n**************************************************************************************************" \
+    _SEPARATOR = "\n**************************************************************************************************" \
                 "************************************* "
-    SEPARATOR_DASH = "\n---------------------------------------------------------------------------------------------" \
+    _SEPARATOR_DASH = "\n---------------------------------------------------------------------------------------------" \
                      "------------------------------------------ "
 
     @classmethod
     def set_base_url(cls, value):
-        cls.base_url_var = value
+        cls._base_url_var = value
 
     @classmethod
     def get_base_url(cls):
-        return cls.base_url_var
+        return cls._base_url_var
 
     @property
     def driver(self):
@@ -68,8 +68,8 @@ class BaseApp:
 
     @staticmethod
     def get_project_root():
-        return os.path.join(BaseApp.project_root)
+        return os.path.join(BaseApp._project_root)
 
     @staticmethod
     def main_resources(file_name):
-        return os.path.join(BaseApp.main_resources_path, file_name)
+        return os.path.join(BaseApp._main_resources_path, file_name)

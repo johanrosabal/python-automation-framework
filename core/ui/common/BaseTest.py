@@ -5,7 +5,7 @@ from core.data.UserDTO import UserDTO
 from core.ui.common.BaseApp import BaseApp
 from core.ui.driver.DriverManager import DriverManager
 from core.utils.table_formatter import TableFormatter
-from core.config.config_cmd import get_profile, get_browser, get_app_type, get_app_name
+from core.config.config_cmd import get_profile, get_browser, get_app_type, get_app_name, get_headless
 from core.config.config_loader import load_web_config
 from core.ui.report.WEBTestReport import WEBTestReport
 from tabulate import tabulate
@@ -16,45 +16,38 @@ logger = setup_logger('BaseTest')
 @pytest.fixture
 def user(config):
     user_dto = UserDTO(
-        user_name=config.get('user', {}).get('username'),
-        user_password=config.get('user', {}).get('password')
+        user_name=str(config.get('user', {}).get('username')),
+        user_password=str(config.get('user', {}).get('password'))
     )
     logger.info("USER DTO: " + user_dto.__str__())
     return user_dto
 
 
 class BaseTest(BaseApp):
-
     report = WEBTestReport()
 
     @pytest.fixture(scope="class", autouse=True)
     def set_up(self):
-        # Load Profile Execution
-        profile = get_profile()
-        browser = get_browser()
-        if not profile:
-            profile = "qa"  # Default Value
+        # Use class attributes as defaults
+        profile = get_profile() or getattr(self, "profile", None) or "qa"
+        app_name = get_app_name() or getattr(self, "app_name", None) or "demo"
+        browser = get_browser() or getattr(self, "browser", None) or "chrome"
+        app_type = get_app_type() or getattr(self, "app_type", None) or "web"
+        headless = get_headless() or getattr(self, "headless", None) or False
 
-        # Load App Name Execution
-        app_name = get_app_name()
-        if not profile:
-            app_name = "demo"  # Default Value
-
-        # Load App Type Execution
-        app_type = get_app_type()
-        if not profile:
-            app_type = "web"  # Default Value
-
+        # Load configurations
         project_root = Path(__file__).resolve().parent.parent.parent.parent
         config_path = f"{project_root}/applications/{app_type}/{app_name}/config/{profile}_config.yaml"
-        # Load Profile Configurations
         config_yaml = load_web_config(config_path)
 
+        # Load Default Browser in Yaml File, in case not arguments or project decorator
         if not browser:
             browser = config_yaml.web.browser
 
+        # Setup driver and base URL
         base_url = config_yaml.web.base_url
-        driver = DriverManager(browser).initialize()
+        driver = DriverManager(browser, headless).initialize()
+
         BaseApp.set_base_url(base_url)
         BaseApp.set_driver(driver)
 
@@ -63,12 +56,14 @@ class BaseTest(BaseApp):
             "application_name": config_yaml.name,
             "base_url": config_yaml.web.base_url,
             "browser": browser,
-            "profile" : profile,
+            "profile": profile,
+            "headless": headless,
             "username": config_yaml.user.username,
             "password": config_yaml.user.password
         }
 
         TableFormatter().set_dictionary(config_dict).set_headers({"Config Key", "Config Value"}).to_pretty()
+        logger.info(f"Running with profile: {profile}, app_name: {app_name}, app_type: {app_type}, browser: {browser}, headless: {headless}")
 
         yield
 

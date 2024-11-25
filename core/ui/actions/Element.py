@@ -1,7 +1,6 @@
 from core.config.logger_config import setup_logger
-from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support import expected_conditions as ec
 from selenium.common.exceptions import TimeoutException
 
 # Initialize logger specifically for the Element class
@@ -22,7 +21,7 @@ class Element:
         Set the locator for the target element, wait for it to become available, and log the result.
 
         Args:
-            locator (tuple): Tuple with the locating strategy and value (e.g., By.ID, 'element_id').
+            locator (tuple): Tuple with the locating strategy and value (e.g., By. ID, 'element_id').
             page (str): Name of the page for logging purposes.
         """
         # Wait for the element to be visible, and store the WebElement if found
@@ -126,7 +125,7 @@ class Element:
     @staticmethod
     def wait_for_element(driver, locator, timeout=15):
         """
-        Wait for an element to become visible within a given timeout.
+        Wait for an element to become visible and clickable within a given timeout.
 
         Args:
             driver (WebDriver): The Selenium WebDriver instance.
@@ -134,22 +133,26 @@ class Element:
             timeout (int): Maximum time to wait for the element in seconds (default is 15 seconds).
 
         Returns:
-            WebElement: The WebElement if it becomes visible within the timeout, else None.
+            WebElement: The WebElement if it becomes visible and clickable within the timeout, else None.
         """
 
         # Extract only the first two values of the locator tuple: the locating strategy and locator string.
         __locator = locator[:2]
 
         try:
-            # Wait until the element specified by __locator is visible within the timeout period, then return it
+            # Wait for the element to be visible
+            WebDriverWait(driver, timeout).until(
+                ec.visibility_of_element_located(__locator)
+            )
+            # Wait for the element to be clickable
             element = WebDriverWait(driver, timeout).until(
-                EC.visibility_of_element_located(__locator)
+                ec.element_to_be_clickable(__locator)
             )
             return element
 
         except TimeoutException:
             # Log an error if the element is not found within the specified timeout
-            logger.error(f"Element with locator {locator} was not found within {timeout} seconds.")
+            logger.error(f"Element with locator {locator} was not visible or clickable within {timeout} seconds.")
             return None
 
     @staticmethod
@@ -170,7 +173,7 @@ class Element:
         try:
             # Wait until all elements matching __locator are visible within the timeout period, then return them
             element = WebDriverWait(driver, timeout).until(
-                EC.visibility_of_all_elements_located(__locator)
+                ec.visibility_of_all_elements_located(__locator)
             )
             return element
         except TimeoutException:

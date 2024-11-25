@@ -37,6 +37,10 @@ class Click:
         logger.info(Element.log_console(self._page, self._name, locator))
         return self
 
+    def set_element(self, element):
+        self._element = element
+        return self
+
     def pause(self, seconds: int):
         """
         Pause the execution for a specified number of seconds.
