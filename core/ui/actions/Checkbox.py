@@ -44,6 +44,10 @@ class Checkbox:
         logger.info(Element.log_console(self._page, self._name, locator))
         return self
 
+    def set_element(self, element):
+        self._element = element
+        return self
+
     def pause(self, seconds: int):
         """Pauses the execution for a given number of seconds."""
         BaseApp.pause(seconds)
@@ -89,7 +93,10 @@ class Checkbox:
 
     def screenshot(self, name="screenshot"):
         """Takes a screenshot of the checkbox and attaches it to the report."""
-        Screenshot(self._driver).set_locator(self._locator, self._page).attach_to_allure(name)
+        if self._locator:
+            Screenshot(self._driver).set_locator(self._locator, self._page).attach_to_allure(name)
+        if self._element:
+            Screenshot(self._driver).set_element(self._element).attach_to_allure(name)
         return self
 
     def highlight(self, duration=1):

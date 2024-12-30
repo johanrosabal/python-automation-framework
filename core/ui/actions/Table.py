@@ -85,17 +85,23 @@ class Table:
                 )
                 header_text = header.text.strip()
             except TimeoutException as e:
-                # logger.warning(f"Header {idx + 1}: no se pudo capturar el texto. Error: {e}")
+                # logger.warning(f"Header {idx + 1}: could not capture text. Error: {e}")
                 header_text = ""
 
-            if header_text:  # Agregar solo si tiene texto visible
-                #logger.info(f"Header {idx + 1}: '{header_text}'")
-                header_map[header_text] = idx + 1  # Guardar en el diccionario
+            if header_text:  # Add if Text is Visible
+                # logger.info(f"Header {idx + 1}: '{header_text}'")
+                header_map[header_text] = idx + 1  # Add to Dict header_map
 
         if not header_map:
             logger.warning("No headers were processed. Returning an empty dictionary.")
         else:
             logger.info(f"Processed Headers: {header_map}")
+
+        # Scroll Cell: To First Header Element
+        self._driver.execute_script("arguments[0].scrollIntoView({block: 'nearest', inline: 'start'});", headers[0])
+        self._driver.execute_script("arguments[0].scrollIntoView({block: 'nearest', inline: 'start'});", headers[1])
+        self._driver.execute_script("arguments[0].scrollIntoView({block: 'nearest', inline: 'start'});", headers[2])
+        self._driver.execute_script("arguments[0].scrollIntoView({block: 'nearest', inline: 'start'});", headers[3])
 
         return header_map
 
@@ -109,6 +115,17 @@ class Table:
             xpath = ".//thead//th"
         headers = self._element.find_elements(By.XPATH, xpath)  # Adjust based on your table structure
         return [header.text.strip() for header in headers if header.text.strip()]
+
+    def click_table_header_by_text(self, header_text: str, old_table):
+        """
+        Get the headers of the table and return a list of header names, excluding empty headers.
+        """
+        if old_table:
+            xpath = f".//thead//div[contains(@class,'ui-jqgrid-sortable')]/span/span[text()='{header_text}']"
+        else:
+            xpath = f".//thead//th/span[text()='{header_text}']"
+
+        self._element.find_element(By.XPATH, xpath).click()
 
     def get_row_count(self):
         """
@@ -138,13 +155,17 @@ class Table:
             column_index = column_index+2
             logger.info(f"OLD:{old_table}")
 
-        cell = self._element.find_element(By.XPATH, f".//tbody/tr[{row_index}]/td[{column_index}]")
+        cell_locator = (By.XPATH, f"{self._locator[1]}//tbody/tr[{row_index}]/td[{column_index}]", f"Cell Element [{header_name}]: ")
+        cell = Element(self._driver).wait(cell_locator)
+
         ElementHighlighter(self._driver).set_element(cell).highlight_temporarily(0)
         # Scroll Cell
         self._driver.execute_script(
             "arguments[0].scrollIntoView({block: 'nearest', inline: 'center'});",
             cell
         )
+        logger.info(f"Cell {header_name}: {cell.text.strip()}")
+
         return cell.text.strip()
 
     def get_row_data_by_index(self, row_index: int, column_index: int):
@@ -185,10 +206,11 @@ class Table:
         """
         Get all table data as a list of cell data.
         """
-        xpath = f"tbody/tr[{str(index)}]/td[{str(column)}]/input[@type='checkbox']"
-        checkbox = self._element.find_element(By.XPATH, xpath)
+        cell_locator = (By.XPATH, f"{self._locator[1]}//tbody/tr[{str(index)}]/td[{str(column)}]//input[@type='checkbox']", f"Cell Column [{column}]: ")
+        checkbox = Element(self._driver).wait(cell_locator)
+        logger.info(f"Cell CheckBox: {cell_locator}")
         if checkbox and checkbox.is_displayed():
-            ElementHighlighter(self._driver).set_element(checkbox).highlight_temporarily(0)
+            # ElementHighlighter(self._driver).set_element(checkbox).highlight_temporarily(0)
             checkbox.click()
 
     def get_table_element(self, index: int = 1, column: int = 2, explicit_wait = 10):

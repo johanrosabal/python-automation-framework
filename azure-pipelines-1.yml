@@ -5,10 +5,15 @@
 parameters:
   - name: "testplan"
     type: string
-    default: ""
+    default: "CT-1276"
 
 trigger:
 - main
+
+resources:
+  webhooks:
+    - webhook: "MyWebhookTrigger"             ### Webhook alias
+      connection: "MyWebhookConnection"   
 
 pool:
   vmImage: ubuntu-latest
@@ -44,21 +49,39 @@ steps:
 - script: |
     python -m pip install --upgrade pip
     pip install -r requirements.txt
-  displayName: 'Install dependencies'
-
-- script: |
     sudo mkdir -p /home/logs
     sudo chmod -R 777 /home/logs
-  displayName: 'Set permissions for /home/logs'
+  displayName: 'Install dependencies'
 
-# 4. Execute test cases with pytest
+
+# 3. Execute test cases with pytest
 - script: |
-    pytest applications/web/softship/tests/test_test.py --alluredir=allure-results --headless=True
+    pytest applications/web/softship/tests/bookings/test_bookings_pages_validation.py --alluredir=allure-results --junitxml=reports/results.xml --headless=True
   displayName: 'Execute test cases'
+  
+
+- script: |
+    cat reports/results.xml  # Esto imprime el contenido del archivo para ver si está bien formado.
+  displayName: 'Check results file'
+  condition: always()
 
 # 5. Publish results in Allure
 - task: PublishAllureReport@1
-  displayName: 2.27.0
+  displayName: Publish results in Allure
   inputs:
     allureVersion: 2.27.0
     testResultsDir: allure-results
+  condition: always()
+
+- bash: |
+    echo "Exporting testplan parameter to environment variable"
+    export TESTPLAN=${ parameters.testplan }
+    echo $TESTPLAN
+  displayName: '(debug) print testplan parameter'
+
+- bash: |
+    set -x
+    export token=$(curl -H "Content-Type: application/json" -X POST --data "{ \"client_id\": \"$CLIENT_ID\",\"client_secret\": \"$CLIENT_SECRET\" }" "$(xray_endpoint)/api/v2/authenticate"| tr -d '"')
+    curl -X POST -H "Content-Type: text/xml" -H "Authorization: Bearer $token"  --data @"reports/results.xml" $(xray_endpoint)/api/v2/import/execution/junit?projectKey=CT&testPlanKey=${{ parameters.testplan }}
+  displayName: 'Import results to Xray cloud'
+  condition: always()

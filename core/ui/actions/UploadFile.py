@@ -34,6 +34,10 @@ class UploadFile:
         logger.info(Element.log_console(self._page, self._name, locator))
         return self
 
+    def set_element(self, element):
+        self._element = element
+        return self
+
     def pause(self, seconds: int):
         BaseApp.pause(seconds)
         return self

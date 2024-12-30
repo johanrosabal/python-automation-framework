@@ -107,7 +107,15 @@ class JSONReader:
         self.display_table([nested_data])
         return obj
 
-    def display_table(self, data):
+    @staticmethod
+    def import_json(path):
+        with open(path, 'r') as file:
+            dictionary = json.load(file)
+        logger.info(dictionary)
+        return dictionary
+
+    @staticmethod
+    def display_table(data):
         """
         Display the contents of the JSON data as a table in the console.
 

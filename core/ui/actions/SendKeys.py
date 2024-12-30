@@ -1,5 +1,8 @@
 from selenium.webdriver import Keys
+from selenium.webdriver.common.by import By
+
 from core.config.logger_config import setup_logger
+from core.ui.actions.Click import Click
 from core.ui.actions.ElementHighlighter import ElementHighlighter
 from core.ui.actions.Screenshot import Screenshot
 from core.ui.common.BaseApp import BaseApp
@@ -35,6 +38,8 @@ class SendKeys:
         self._special_characters = None
         self._locator = None
         self._page = None
+        # Table Input Field
+        self._locator_table = None
 
     def set_locator(self, locator: tuple, page='Page', explicit_wait=10):
         """
@@ -53,15 +58,47 @@ class SendKeys:
         logger.info(Element.log_console(self._page, self._name, locator))
         return self
 
+    def set_element(self, element):
+        self._element = element
+        return self
+
+    def set_locator_by_table(self, table_xpath):
+        self._element = table_xpath
+        self._locator_table = table_xpath
+        return self
+
     def set_text(self, text: str):
         """Sets and sends the provided text to the element."""
         if not isinstance(text, str):
             raise TypeError("The argument should be a string text.")
         if self._element:
             logger.info("Send Keys [" + text + "]")
-            self._element.send_keys(text)
+            self._element.send_keys(str(text))
         else:
             logger.error("Unable to Send Text [" + text + "] element is None")
+        return self
+
+    def by_table_text(self,  row: int, text: str, column_index: list):
+        """Sets and sends the provided text to the element."""
+        parent_xpath = self._locator_table[1]
+
+        if not isinstance(text, str):
+            raise TypeError("The argument should be a string text.")
+        if self._element:
+
+            cell_xpath = f"/tbody/tr[{row}]/td[{column_index[0]}]"
+            input_xpath = f"/tbody/tr[{row}]/td[{column_index[0]}]//input"
+
+            # 01 Click on Cell to Activate the Input Field
+            cell_locator = (By.XPATH, f"{parent_xpath}{cell_xpath}", f"Table Send Keys: Click Activate [{row}][{column_index[0]}]: Cell: {column_index}")
+            Click(self._driver).set_locator(cell_locator).single_click()
+            # 02 Click on Input Text Field
+            input_text = (By.XPATH, f"{parent_xpath}{input_xpath}", f"Table Send Keys: Click Input '{column_index[1]}' [{row}][{column_index[0]}]: Select Text: {text}")
+            Click(self._driver).set_locator(input_text).single_click()
+            # 03 Send Text to Input Data
+            SendKeys(self._driver).set_locator(input_text).clear().set_text(text).highlight()
+        else:
+            logger.error(f"Unable to Send Text to table {parent_xpath}[" + text + "] element is None")
         return self
 
     def set_text_by_character(self, text: str):
@@ -130,8 +167,12 @@ class SendKeys:
         return self
 
     def screenshot(self, name="screenshot"):
-        """Takes a screenshot and attaches it to the report."""
-        Screenshot(self._driver).set_locator(self._locator, self._page).attach_to_allure(name)
+        """Takes a screenshot of the checkbox and attaches it to the report."""
+        if self._locator:
+            Screenshot(self._driver).set_locator(self._locator, self._page).attach_to_allure(name)
+
+        if self._element and self._locator is None:
+            Screenshot(self._driver).set_element(self._element).attach_to_allure(name)
         return self
 
     def highlight(self, duration=1):

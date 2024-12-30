@@ -1,6 +1,9 @@
 import json
 import textwrap
 import os
+import time
+import glob
+from pathlib import Path
 from core.config.logger_config import setup_logger
 
 logger = setup_logger('Helpers')
@@ -76,6 +79,60 @@ def generate_directory_tree(directory_path, prefix=""):
             print(f"{prefix}|-- {name}")
 
 
+def get_file_path(file_name=""):
+    """
+    Retrieve JSON files from root directory and subfolders,
+    filtering by files containing a specific path segment.
+    """
+    from pathlib import Path
+    import os
+
+    # Getting Project Root
+    root = Path(__file__).parent.parent.parent.resolve()
+    filtered_files = []
+    root = os.path.abspath(root)  # Convert relative path to absolute path
+
+    for dirpath, _, filenames in os.walk(root):
+        for filename in filenames:
+            if filename.endswith(".json"):
+                file_path = os.path.join(dirpath, filename)
+                if file_name in file_path.replace("\\", "/"):  # Normalize paths for filtering
+                    filtered_files.append(file_path)
+    if filtered_files:
+        return filtered_files[0]
+    else:
+        logger.error(f"File {file_name} Not Found")
+        return None
+
+
+def wait_for_file_to_download(filename: str, timeout: int = 30, interval: int = 1):
+    """
+    Wait for a file to appear in the download directory.
+
+    Arguments:
+    filename (str): Name of the file to wait for.
+    timeout (int): Maximum wait time in seconds (default: 30).
+    interval (int): Wait interval between checks (default: 1 second).
+
+    Returns:
+    bool: True if the file exists within the timeout, False otherwise.
+    """
+    project_root = Path(__file__).parent.parent.parent
+    download_path = f"{project_root}\\downloads"
+
+    file_path = os.path.join(download_path, filename)
+    start_time = time.time()
+
+    while time.time() - start_time < timeout:
+        if os.path.exists(file_path):
+            logger.info(f"The file {filename} has been downloaded successfully.")
+            return True
+        time.sleep(interval)
+    logger.error(f"Timed out. File {filename} not found.")
+    return False
+
+
+wait_for_file_to_download("samplefile.pdf", 30, 1)
 # Path of the directory you want to generate the tree for
 root_directory = "../../"  # Change to your project directory
 # generate_directory_tree(root_directory)

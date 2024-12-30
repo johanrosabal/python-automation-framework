@@ -30,6 +30,10 @@ class Element:
         logger.info(Element.log_console(page, self._name, locator))
         return self
 
+    def set_element(self, element):
+        self._element = element
+        return self
+
     def is_visible(self):
         """
         Check if the element is visible.
@@ -121,6 +125,24 @@ class Element:
         """
         if self._element is not None:
             return self._element.get_attribute(value)
+
+    def wait(self, locator, timeout=15):
+        __locator = locator[:2]
+        try:
+            # Wait for the element to be visible
+            WebDriverWait(self._driver, timeout).until(
+                ec.visibility_of_element_located(__locator)
+            )
+            # Wait for the element to be clickable
+            element = WebDriverWait(self._driver, timeout).until(
+                ec.element_to_be_clickable(__locator)
+            )
+            return element
+
+        except TimeoutException:
+            # Log an error if the element is not found within the specified timeout
+            logger.error(f"Element with locator {__locator} was not visible or clickable within {timeout} seconds.")
+            return None
 
     @staticmethod
     def wait_for_element(driver, locator, timeout=15):

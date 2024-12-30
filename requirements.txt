@@ -1,3 +1,4 @@
+--trusted-host pypi.org --trusted-host files.pythonhosted.org
 selenium==4.23.1
 local==1.0.0
 pytest==8.3.2
@@ -16,3 +17,4 @@ allure-pytest==2.13.5
 pytest-dependency==0.6.0
 pillow==10.4.0
 webdriver-manager==4.0.2
+pyyaml==6.0.2

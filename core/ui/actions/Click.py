@@ -127,13 +127,11 @@ class Click:
         return self
 
     def screenshot(self, name="screenshot"):
-        """
-        Capture a screenshot of the current element, attaching it to Allure report.
-
-        Args:
-            name (str): Name of the screenshot.
-        """
-        Screenshot(self._driver).set_locator(self._locator, self._page).attach_to_allure(name)
+        """Takes a screenshot of the checkbox and attaches it to the report."""
+        if self._locator:
+            Screenshot(self._driver).set_locator(self._locator, self._page).attach_to_allure(name)
+        if self._element:
+            Screenshot(self._driver).set_element(self._element).attach_to_allure(name)
         return self
 
     def highlight(self, duration=1):

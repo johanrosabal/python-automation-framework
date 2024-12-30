@@ -23,6 +23,13 @@ def user(config):
     return user_dto
 
 
+@pytest.fixture
+def downloads():
+    project_root = Path(__file__).parent.parent.parent.parent
+    downloads = f"{project_root}\\downloads"
+    return downloads
+
+
 class BaseTest(BaseApp):
     report = WEBTestReport()
 
@@ -47,6 +54,9 @@ class BaseTest(BaseApp):
         # Setup driver and base URL
         base_url = config_yaml.web.base_url
         driver = DriverManager(browser, headless).initialize()
+        # Detect Javascript Console Errors
+        for log in driver.get_log('browser'):
+            logger.error(log)
 
         BaseApp.set_base_url(base_url)
         BaseApp.set_driver(driver)

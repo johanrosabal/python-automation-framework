@@ -45,6 +45,10 @@ class Dropdown:
         logger.info(Element.log_console(self._page, self._name, locator))
         return self
 
+    def set_element(self, element):
+        self._element = element
+        return self
+
     def pause(self, seconds: int):
         """Pauses execution for a specified number of seconds."""
         BaseApp.pause(seconds)
@@ -52,7 +56,7 @@ class Dropdown:
 
     def by_value(self, value: str):
         """Selects an option by its 'value' attribute."""
-        if self._element:
+        if Element(self._driver).wait(self._locator):
             Select(self._element).select_by_value(value)
             logger.info(f"Dropdown option selected by value: {value}")
         else:
@@ -61,7 +65,7 @@ class Dropdown:
 
     def by_index(self, index: int):
         """Selects an option by its index."""
-        if self._element:
+        if Element(self._driver).wait(self._locator):
             Select(self._element).select_by_index(index)
             logger.info(f"Dropdown option selected by index: {index}")
         else:
@@ -70,7 +74,7 @@ class Dropdown:
 
     def by_text(self, text: str):
         """Selects an option by its visible text."""
-        if self._element:
+        if Element(self._driver).wait(self._locator):
             Select(self._element).select_by_visible_text(text)
             logger.info(f"Dropdown option selected by text: {text}")
         else:
@@ -79,7 +83,7 @@ class Dropdown:
 
     def by_text_contains(self, search_text: str):
         """Selects an option that contains specific text."""
-        if self._element:
+        if Element(self._driver).wait(self._locator):
             for option in Select(self._element).options:
                 if search_text in option.text:
                     option.click()
@@ -92,7 +96,7 @@ class Dropdown:
 
     def deselect_all(self):
         """Deselects all selected options if the dropdown supports multiple selections."""
-        if self._element:
+        if Element(self._driver).wait(self._locator):
             Select(self._element).deselect_all()
             logger.info("All dropdown options deselected.")
         else:
@@ -100,8 +104,11 @@ class Dropdown:
         return self
 
     def screenshot(self, name="screenshot"):
-        """Takes a screenshot of the dropdown and attaches it to the report."""
-        Screenshot(self._driver).set_locator(self._locator, self._page).attach_to_allure(name)
+        """Takes a screenshot of the checkbox and attaches it to the report."""
+        if self._locator:
+            Screenshot(self._driver).set_locator(self._locator, self._page).attach_to_allure(name)
+        if self._element:
+            Screenshot(self._driver).set_element(self._element).attach_to_allure(name)
         return self
 
     def highlight(self, duration=1):

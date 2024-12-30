@@ -99,3 +99,8 @@ core/logs/
 /pytest_html_report.html
 /archive/
 application/logs
+allure-report
+allure-results
+
+/downloads/
+**/report.xml

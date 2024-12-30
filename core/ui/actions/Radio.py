@@ -23,6 +23,10 @@ class Radio:
         logger.info(Element.log_console(page, self._name, locator))
         return self
 
+    def set_element(self, element):
+        self._element = element
+        return self
+
     def pause(self, seconds: int):
         BaseApp.pause(seconds)
         return self
@@ -61,7 +65,11 @@ class Radio:
         return self
 
     def screenshot(self, name="screenshot"):
-        Screenshot(self._driver).set_locator(self._locator, self._page).attach_to_allure(name)
+        """Takes a screenshot of the checkbox and attaches it to the report."""
+        if self._locator:
+            Screenshot(self._driver).set_locator(self._locator, self._page).attach_to_allure(name)
+        if self._element:
+            Screenshot(self._driver).set_element(self._element).attach_to_allure(name)
         return self
 
     def highlight(self, duration=1):

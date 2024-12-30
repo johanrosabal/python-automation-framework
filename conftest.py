@@ -3,20 +3,18 @@ import yaml
 from pathlib import Path
 from core.config.logger_config import setup_logger
 from core.config.config_cmd import get_profile, get_app_name, get_app_type
-from core.config.config_loader import load_api_config, load_web_config, load_desktop_config
-from core.ui.common.BaseApp import BaseApp
+from core.config.config_loader import load_api_config
 from core.utils.table_formatter import TableFormatter
 from core.api.common.BaseApi import BaseApi
 
-logger = setup_logger('BaseTest')
+
+logger = setup_logger('conftest')
 
 
 @pytest.hookimpl(tryfirst=True)
 def pytest_runtest_makereport(item, call):
     if call.when == 'call':
         outcome = 'PASSED' if call.excinfo is None else 'FAILED'
-        test_case_id = getattr(item.function, 'test_case_id', 'No ID')
-        test_description = getattr(item.function, 'test_description', 'No Description')
         logger.info(
             f"\n****************************************************************************************************" +
             f"\n\tTest Result: {item.name} -> " + str(outcome) +
@@ -26,10 +24,11 @@ def pytest_runtest_makereport(item, call):
             handler.flush()  # Ensure logs are flushed to the output
 
 
-def pytest_runtest_protocol(item, nextitem):
-    logger.info("\n" + "=" * 50)  # Line Decoration
+@pytest.hookimpl(tryfirst=True)
+def pytest_runtest_call(item):
     test_case_id = getattr(item.function, 'test_case_id', 'No ID')
     test_description = getattr(item.function, 'test_description', 'No Description')
+    logger.info("\n" + "=" * 50)  # Line Decoration
     logger.info(
         f"\n****************************************************************************************************" +
         "\n\t\tTest Name:" + str(item.name) +
@@ -59,7 +58,6 @@ def config(request):
     profile = request.config.getoption("--profile")
     app_name = request.config.getoption("--app-name")
     app_type = request.config.getoption("--app-type")
-
 
     # Try to get values from the class decorator
     test_class = getattr(request.node, 'cls', None)
@@ -106,7 +104,6 @@ def load_yaml_config(request):
         app_name = getattr(test_class, "app_name", app_name)
         app_type = getattr(test_class, "app_type", app_type)
 
-
     # Fallback defaults
     profile = profile or "qa"
     app_name = app_name or "demo"
@@ -135,3 +132,9 @@ def load_yaml_config(request):
     BaseApi.set_base_url(config_yaml.api.base_url)
     TableFormatter().set_dictionary(config_dict).set_headers({"Config Key", "Config Value"}).to_pretty()
     yield config_dict
+
+def pytest_collection_modifyitems(session, config, items):
+    for item in items:
+        for marker in item.iter_markers(name="test_id"):
+            test_id = marker.args[0]
+            item.user_properties.append(("test_id", test_id))

@@ -68,5 +68,13 @@ class Navigation:
             logger.error("Unable to Load page WebDriver is None.")
         return self
 
+    def go_to_url(self, url):
+        if self._driver:
+            self._driver.get(url)
+            logger.debug(f"Go to: {url}")
+        else:
+            logger.error("Unable to Load page WebDriver is None.")
+        return self
+
 
 
