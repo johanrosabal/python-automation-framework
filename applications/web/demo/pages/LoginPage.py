@@ -165,4 +165,3 @@ class LoginPage(BasePage):
             method_name="verify_user_is_logged_out"
         )
         return self
-

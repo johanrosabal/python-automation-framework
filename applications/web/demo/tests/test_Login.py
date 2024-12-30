@@ -1,6 +1,6 @@
 import pytest
 
-from core.asserts.AssertCollector import AssertCollector
+from applications.web.demo.config.decorators import demo
 from core.config.logger_config import setup_logger
 from applications.web.demo.pages.LoginPage import LoginPage
 from core.ui.common.BaseTest import BaseTest, user
@@ -10,6 +10,7 @@ logger = setup_logger('TestLogin')
 
 
 @pytest.mark.web
+@demo
 class TestLogin(BaseTest):
     LoginPage = LoginPage.get_instance()
 

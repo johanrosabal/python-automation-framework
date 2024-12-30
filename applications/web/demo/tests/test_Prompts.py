@@ -1,5 +1,6 @@
 import pytest
 
+from applications.web.demo.config.decorators import demo
 from core.config.logger_config import setup_logger
 from applications.web.demo.pages.AlertPage import AlertPage
 from core.ui.common.BaseTest import BaseTest
@@ -9,6 +10,7 @@ logger = setup_logger('TestLogin')
 
 
 @pytest.mark.web
+@demo
 class TestPrompts(BaseTest):
     alertPage = AlertPage.get_instance()
 
