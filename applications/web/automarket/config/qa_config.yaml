@@ -1,0 +1,17 @@
+# Standard Configuration File
+name: Auto Market Pro
+web:
+  base_url: https://studio--go-automarket-pro.us-central1.hosted.app
+  browser: chrome
+
+user:
+  username: johan.manuel.rosabal@gmail.com
+  password: Snap1234!
+
+database:
+  host: na
+  port: na
+  user: na
+  password: na
+  name: na
+  ssl: false

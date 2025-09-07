@@ -54,6 +54,10 @@ class DriverManager:
             options.add_argument("--headless")  # Headless mode
         # options.add_argument("--disable-gpu")  # Disabled GPU (recommended for headless)
         options.add_argument("--disable-dev-shm-usage")  # Shared memory for avoid issues
+        options.add_argument("----start-maximized")  #
+        # Set the default zoom level to 80%
+        options.add_argument("--force-device-scale-factor=0.8")
+        options.add_argument("--zoom=0.8")  # This may not work directly; use CDP instead
         options.add_argument("--no-sandbox")  # Restricted mode for avoid errors
         # options.add_argument("--disable-notifications")  # Disable Browser Notifications
         options.add_argument("--disable-extensions")  # Disable Extensions Notifications
@@ -124,6 +128,10 @@ class DriverManager:
             options.add_argument("--headless")  # Headless mode
         # options.add_argument("--disable-gpu")  # Disabled GPU (recommended for headless)
         options.add_argument("--disable-dev-shm-usage")  # Shared memory for avoid issues
+        options.add_argument("----start-maximized")  #
+        # Set the default zoom level to 80%
+        options.add_argument("--force-device-scale-factor=0.8")
+        options.add_argument("--zoom=0.8")  # This may not work directly; use CDP instead
         options.add_argument("--no-sandbox")  # Restricted mode for avoid errors
         # options.add_argument("--disable-notifications")  # Disable Browser Notifications
         options.add_argument("--disable-extensions")  # Disable Extensions Notifications

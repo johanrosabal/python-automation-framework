@@ -25,26 +25,21 @@ class EXCELReader:
     def read_file(self, object_class=None, sheet_name=None):
         """
         Read the file (Excel or CSV) and map the rows to a list of instances of a given class.
-
-        :param object_class: The class to which the rows will be mapped.
-        :param sheet_name: The name of the sheet to read for Excel files. Ignored for CSV files.
-        :return: A list of instances of the specified class.
         """
         column_mapping = object_class.mapping
 
-        # Check the file extension to determine whether to read as Excel or CSV
         if self.file_path.endswith('.xlsx') or self.file_path.endswith('.xls'):
             self.data_frame = pd.read_excel(self.file_path, sheet_name=sheet_name)
         elif self.file_path.endswith('.csv'):
-            self.data_frame = pd.read_csv(self.file_path)
+            # ✅ Leer con codificación latin-1 para manejar tildes y ñ
+            self.data_frame = pd.read_csv(self.file_path, encoding='latin-1')  # También puedes probar 'cp1252'
+
         else:
             raise ValueError("Unsupported file format. Only Excel (.xlsx, .xls) and CSV files are supported.")
 
         objects = []
         for _, row in self.data_frame.iterrows():
-            # Create a dictionary with the mapping of the row values
             object_data = {attr: row.get(column_name) for column_name, attr in column_mapping.items()}
-            # Create an instance of the class using the mapped data
             obj = object_class(**object_data)
             objects.append(obj)
 
