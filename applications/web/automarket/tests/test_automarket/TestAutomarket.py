@@ -67,7 +67,7 @@ class TestLogin(BaseTest):
     def test_agregar_modelos_de_vehiculo(self):
 
         # Importar Datos
-        path = "../../data/modelos_vehiculos_2.csv"
+        path = "../../data/modelos_vehiculos_3.csv"
         # 02. Specifying the Sheet Name to map UserInformation values
         modelos_vehiculos = EXCELReader().set_file_path(path).read_file(
             object_class=ModelosDeVehiculos

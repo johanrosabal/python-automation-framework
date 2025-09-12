@@ -5,5 +5,5 @@ def demo(cls):
     cls.profile = "qa"
     cls.app_name = "demo"
     cls.app_type = "web"
-    cls.browser = "edge"
+    cls.browser = "chrome"
     return cls

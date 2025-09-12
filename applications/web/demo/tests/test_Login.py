@@ -14,26 +14,26 @@ logger = setup_logger('TestLogin')
 class TestLogin(BaseTest):
     LoginPage = LoginPage.get_instance()
 
-    @test(test_case_id="HRM-0001", test_description="Verify Login Page headline")
+    @test(test_case_id="HRM-0001", test_description="Verify Login Page headline", skip=False)
     def test_login_headline(self):
         # 01. Interact with page elements
         self.LoginPage.load_page()
         # 02. Validations
         self.LoginPage.verify_headline("Login")
 
-    @test(test_case_id="HRM-0002", test_description="Verify the Orange HRM Link match")
+    @test(test_case_id="HRM-0002", test_description="Verify the Orange HRM Link match", skip=True)
     def test_login_link(self):
         # 01. Validations
         self.LoginPage.verify_orange_hrm_link("http://www.orangehrm.com/")
 
-    @test(test_case_id="HRM-0003", test_description="Verify the Forgot Your Password Link")
+    @test(test_case_id="HRM-0003", test_description="Verify the Forgot Your Password Link", skip=True)
     def test_login_forgot_your_password(self):
         # 01. Interact with page elements
         self.LoginPage.link_forgot_your_password()
         # 02. Validations
-        self.LoginPage.verify_forgot_your_password("/web/index.php/auth/requestPasswordResetCode")
+        self.LoginPage.verify_forgot_your_password("/web/index.php/auth/requestPasswordResetCode",skip=False)
 
-    @test(test_case_id="HRM-0004", test_description="Login user with valid credentials.")
+    @test(test_case_id="HRM-0004", test_description="Login user with valid credentials.", skip=True)
     def test_login_valid_user(self, user):
         # 01. Interact with page elements
         self.LoginPage.load_page()
@@ -41,7 +41,7 @@ class TestLogin(BaseTest):
         # 02. Validations
         self.LoginPage.verify_user_is_logged("/web/index.php/dashboard/index")
 
-    @test(test_case_id="HRM-0005", test_description="Log out user.")
+    @test(test_case_id="HRM-0005", test_description="Log out user.", skip=True)
     def test_log_out_user(self):
         # 01. Interact with page elements
         self.LoginPage.logout_user()

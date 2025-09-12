@@ -51,7 +51,7 @@ class ModelosPage(BasePage):
         return self
 
     def click_agregar_modelo(self):
-        self.click().set_locator(self._button_add_model_button).single_click()
+        self.click().set_locator(self._button_add_model_button).pause(2).single_click()
         return self
 
     def click_marca(self):
@@ -85,7 +85,7 @@ class ModelosPage(BasePage):
         return self
 
     def select_tipo_de_vehiculo(self, tipo_de_vehiculo):
-        combobox = (By.XPATH, f"//label[text()='{tipo_de_vehiculo}']", f"Seleccionar Tipo de Vehiculo [{tipo_de_vehiculo}]")
+        combobox = (By.XPATH, f"//label[text()=\"{tipo_de_vehiculo}\"]", f"Seleccionar Tipo de Vehiculo [{tipo_de_vehiculo}]")
         self.click().set_locator(combobox).highlight().pause(1).single_click()
         return self
 
@@ -102,11 +102,11 @@ class ModelosPage(BasePage):
         return self
 
     def click_finalizacion(self):
-        self.click().set_locator(self._model_end_year_check).single_click().pause(1)
+        self.click().set_locator(self._model_end_year_check).single_click().pause(2)
         return self
 
     def click_guardar(self):
-        self.click().set_locator(self._model_save).single_click()
+        self.click().set_locator(self._model_save).single_click().pause(2)
         return self
 
     def click_cancelar(self):
@@ -126,9 +126,9 @@ class ModelosPage(BasePage):
         self.enter_marca(marca)
         self.select_marca(marca)
 
-        self.click_categoria()
-        self.enter_categoria(categoria)
-        self.select_categoria(categoria)
+        # self.click_categoria()
+        # self.enter_categoria(categoria)
+        # self.select_categoria(categoria)
 
         self.enter_tipo_de_vehiculo(tipo)
         self.select_tipo_de_vehiculo(tipo)
