@@ -1,3 +1,4 @@
+import time
 from core.config.logger_config import setup_logger
 from core.ui.common.BaseApp import BaseApp
 from core.ui.actions.Element import Element
@@ -25,8 +26,23 @@ class Scroll:
     def to_bottom(self):
         if self._driver:
             logger.info("Scroll to Bottom page.")
-            self._driver.execute_script("window.scrollTo(0, document.body.scrollHeight)")
-            self.pause(3)
+            # Scroll hacia abajo incrementalmente
+            scroll_pause_time = 1  # Tiempo de pausa entre scrolls
+            last_height = self._driver.execute_script("return document.body.scrollHeight")
+
+            while True:
+                # Realiza scroll hasta el fondo actual de la página
+                self._driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+
+                # Espera para que se cargue el contenido
+                time.sleep(scroll_pause_time)
+
+                # Calcula la nueva altura de la página
+                new_height = self._driver.execute_script("return document.body.scrollHeight")
+                if new_height == last_height:
+                    # Si no hay más contenido para cargar, sal del bucle
+                    break
+                last_height = new_height
         else:
             logger.error("Unable to Scroll to Bottom page WebElement is None.")
         return self
@@ -57,17 +73,16 @@ class Scroll:
 
         return self
 
-    def to_element(self):
+    def to_element(self, pixels=-100):
         if self._element:
             logger.info("Scroll to Element page.")
             # Scroll to Element
             self._driver.execute_script("arguments[0].scrollIntoView(true);", self._element)
             # Get Location
             location = self._element.location_once_scrolled_into_view
-            logger.info("Scroll to Element -> Location["+location+"]")
+            logger.info("Scroll to Element -> Location["+str(location)+"]")
 
-            self._element.send_keys(Keys.ARROW_UP)
-            self._element.send_keys(Keys.ARROW_UP)
+            self._driver.execute_script(f"window.scrollBy(0, {pixels});")
 
         else:
             logger.error("Unable to Execute Scroll To Element WebElement is None.")

@@ -20,7 +20,7 @@ class GetText:
     def set_locator(self, locator: tuple, page='Page'):
         self._locator = locator
         self._page = page
-        self._element = Element.wait_for_element(self._driver, locator)
+        self._element = Element.wait_for_element(self._driver, locator, 5)
         logger.info(Element.log_console(self._page, self._name, locator))
         return self
 

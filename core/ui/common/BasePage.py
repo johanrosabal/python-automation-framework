@@ -76,3 +76,19 @@ class BasePage(BaseApp):
     def table(self):
         return Table(self.get_driver())
 
+    def verify_locators_page(self, locators:list):
+        missing_elements = []
+
+        for locator in locators:
+            by, value, description = locator
+            try:
+                Element.wait_for_element(driver=self.get_driver(), locator=(by, value), timeout=10)
+                logger.info(f"✅ Found element: {description}")
+            except Exception as e:
+                logger.error(f"❌ Missing element: {description} | Locator: ({by}, {value})")
+                missing_elements.append(description)
+
+        if missing_elements:
+            raise AssertionError(f"The following elements are missing on the page: {', '.join(missing_elements)}")
+
+

@@ -41,7 +41,7 @@ class Click:
         self._element = element
         return self
 
-    def pause(self, seconds: int):
+    def pause(self, seconds: int = 2):
         """
         Pause the execution for a specified number of seconds.
 
@@ -57,7 +57,10 @@ class Click:
         """
         if self._element:
             logger.info("Single Click")
-            self._element.click()
+            try:
+                self._element.click()
+            except Exception as e:
+                logger.error(f"Unable to Click: {e.msg}")
         else:
             logger.error("Unable to Click: Element WebElement is None.")
         return self
@@ -126,12 +129,12 @@ class Click:
             logger.error("Unable to Mouse Over: WebElement is None.")
         return self
 
-    def screenshot(self, name="screenshot"):
+    def screenshot(self, name="screenshot", page="Page"):
         """Takes a screenshot of the checkbox and attaches it to the report."""
         if self._locator:
-            Screenshot(self._driver).set_locator(self._locator, self._page).attach_to_allure(name)
+            Screenshot(self._driver).set_locator(self._locator, self._page).attach_to_allure(name).save_screenshot(description=name, page=page)
         if self._element:
-            Screenshot(self._driver).set_element(self._element).attach_to_allure(name)
+            Screenshot(self._driver).set_element(self._element).attach_to_allure(name).save_screenshot(description=name,page=page)
         return self
 
     def highlight(self, duration=1):

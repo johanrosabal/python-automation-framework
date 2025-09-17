@@ -1,3 +1,8 @@
+import os
+from pathlib import Path
+
+from selenium.webdriver import Keys
+
 from core.config.logger_config import setup_logger
 from core.ui.actions.ElementHighlighter import ElementHighlighter
 from core.ui.common.BaseApp import BaseApp
@@ -57,17 +62,19 @@ class UploadFile:
         return self
 
     def upload(self):
+        file_path = f"{Path(__file__).parent.parent.parent.parent}\\resources\\uploads\\{self._file_name}"
         if self._element:
             logger.info("Uploading File...")
-            file_path = self._path + "\\" + self._file_name
-            if self._path is not None:
-                if self._file_name is not None:
-                    logger.info("Uploading File ["+file_path+"]")
-                    self._element.clear()
+            if self._file_name is not None:
+                logger.info("Uploading File ["+file_path+"]")
+
+                if os.path.exists(file_path):
                     self._element.send_keys(file_path)
                 else:
-                    logger.error("Unable to upload file, Specify the File Name.")
+                    logger.error("File not exist.")
             else:
-                logger.error("Unable to upload file, Specify the Path of the File.")
+                logger.error("Unable to upload file, Specify the File Name.")
         else:
             logger.error("Unable to upload file, WebElement is None.")
+
+        return self

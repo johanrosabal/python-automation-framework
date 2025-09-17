@@ -1,5 +1,8 @@
+from selenium.webdriver.support.wait import WebDriverWait
+
 from core.config.logger_config import setup_logger
 from core.ui.actions.Element import Element
+from core.ui.common.BaseApp import BaseApp
 
 logger = setup_logger('Navigation')
 
@@ -63,6 +66,9 @@ class Navigation:
         if self._driver:
             url = str(base_url) + str(url)
             self._driver.get(url)
+            WebDriverWait(self._driver, 15).until(
+                lambda d: d.execute_script("return document.readyState") == "complete"
+            )
             logger.debug(f"Go to: {url}")
         else:
             logger.error("Unable to Load page WebDriver is None.")
@@ -74,6 +80,16 @@ class Navigation:
             logger.debug(f"Go to: {url}")
         else:
             logger.error("Unable to Load page WebDriver is None.")
+        return self
+
+    def pause(self, seconds: int = 2):
+        """
+        Pause the execution for a specified number of seconds.
+
+        Args:
+            seconds (int): Duration of the pause.
+        """
+        BaseApp.pause(seconds)
         return self
 
 

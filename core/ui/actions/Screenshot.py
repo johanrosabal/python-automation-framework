@@ -6,7 +6,7 @@ import time
 import allure
 import os
 
-from core.utils import random
+from core.utils import random_utils
 
 # Logger setup for Screenshot actions
 logger = setup_logger('Screenshot')
@@ -142,7 +142,7 @@ class Screenshot:
 
     def attach_to_allure(self, name="screenshot", page="page"):
         """Attaches the screenshot to the Allure report, optionally deleting the file afterward."""
-        random_prefix = random.generate_random_code("screen_")
+        random_prefix = random_utils.generate_random_code("screen_")
         screenshot_path = self.save_screenshot(description=name, page=page)
         if screenshot_path and name != "":
             allure.attach.file(
