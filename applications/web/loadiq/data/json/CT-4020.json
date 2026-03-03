@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-4020",
+    "testCaseName": "test_in_upload_info_modal_verify_update_chassis_number_order_created_in_blue_yonder",
+    "title": "Update Load info: Validate Update Chassis Number order created in Blueyonder",
+    "description": "Verify that an error email is sent when updating the Trailer/Container Number field fails.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-4020",
+      "name": "CT-4020"
+    },
+    "data": {
+    }
+  }
+}

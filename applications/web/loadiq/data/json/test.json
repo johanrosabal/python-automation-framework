@@ -1,0 +1,19 @@
+{
+  "tests": {
+    "idTC": "CT-",
+    "testCaseName": "",
+    "title": "",
+    "description": "",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-",
+      "name": "CT-"
+    },
+    "data": {
+
+
+    }
+  }
+}

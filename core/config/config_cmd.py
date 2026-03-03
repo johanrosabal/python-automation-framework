@@ -22,6 +22,20 @@ def get_app_type():
     return None
 
 
+def get_app_endpoint():
+    for arg in sys.argv:
+        if arg.startswith("--app-endpoint="):
+            return arg.split("=")[1]
+    return None
+
+
+def get_app_module():
+    for arg in sys.argv:
+        if arg.startswith("--app-module="):
+            return arg.split("=")[1]
+    return None
+
+
 def get_browser():
     for arg in sys.argv:
         if arg.startswith("--browser="):

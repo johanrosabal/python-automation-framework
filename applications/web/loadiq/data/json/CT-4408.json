@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-4408",
+    "testCaseName": "test_verify_initial_display_status_screen_no_previous_statuses",
+    "title": "Verify the initial display of the status update screen for a load with no previous statuses.",
+    "description": "This test case verifies that when clicking on \"Status Update\" for a load with no prior updates, the screen correctly displays all stops with the actual date and time fields enabled for data entry.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-4408",
+      "name": "CT-4408"
+    },
+    "data": {
+    }
+  }
+}

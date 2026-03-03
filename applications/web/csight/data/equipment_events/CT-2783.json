@@ -1,0 +1,32 @@
+{
+  "tests": [
+    {
+      "idTC": "CT-2783",
+      "testCaseName": "test_create_equipment_event_gate_in_full",
+      "description": "Create an equipment event full gate in for a full container booking",
+      "data": {
+          "sublocation": "JAXT000",
+          "sublocation_item": "JACKSONVILLE PORT",
+          "event_date": "",
+          "event_time": "",
+          "movement": "Gate In",
+          "equipment_details": {
+              "enter_manually": true,
+              "upload_bulk": false,
+              "cargo_type": "Full Container",
+              "container_id": "CMCU5203475",
+              "trucker_scac": "CPRC",
+              "reference_type_and_number": [
+                {
+                  "reference_type": "booking",
+                  "reference_number": "{CAT Number}"
+                }
+              ],
+              "seals":[
+                "B002684"
+              ]
+          }
+      }
+    }
+  ]
+}

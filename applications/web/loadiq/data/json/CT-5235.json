@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-5235",
+    "testCaseName": "test_validate_that_a_carrier_user_only_see_equipment_types_currently_present_in_their_loads_within_the_filter_options",
+    "title": "My Loads - Equipment dropdown shows only visible types for Carrier",
+    "description": "Validate that a Carrier user only sees equipment types currently present in their 'My Loads' view within the filter dropdown.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-5235",
+      "name": "CT-5235"
+    },
+    "data": {
+    }
+  }
+}

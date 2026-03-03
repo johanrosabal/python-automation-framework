@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-4411",
+    "testCaseName": "test_verify_modal_doesnt_show_an_error_when_trying_to_update_a_status_without_completing_the_previous_ones",
+    "title": "Validate that the modal doesn't show an error when trying to update a status without completing the previous ones.",
+    "description": "This test case verifies that the system doesn’t show any error when the update of a status if the previous chronological statuses have not been registered and the Update button is enabled",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-4411",
+      "name": "CT-4411"
+    },
+    "data": {
+    }
+  }
+}

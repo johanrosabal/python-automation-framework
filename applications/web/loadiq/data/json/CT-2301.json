@@ -1,0 +1,19 @@
+{
+  "tests": {
+    "idTC": "CT-2301",
+    "testCaseName": "test_ensure_search_functionality_for_open_records",
+    "title": "Ensure search functionality for open records",
+    "description": "My loads contain all closed/ open records in the system.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-2301",
+      "name": "CT-2301"
+    },
+    "data": {
+      "xml_path": "applications/web/loadiq/data/carrier_portal/my_loads/blueyoder_loads/single/load_tender_accepted/LoadTenderAccepted_10000048625.xml",
+      "expected_status": 200
+    }
+  }
+}

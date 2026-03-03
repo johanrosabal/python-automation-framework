@@ -1,0 +1,29 @@
+# Standard Configuration File
+name: Shoftship Master Data Site
+web:
+  base_url: https://jaxvycswebqa.crowley.com
+  browser: edge
+
+modules:
+  contracts: https://softship-qa.crowley.com/Contract
+  finance: https://jaxvycswebqa.crowley.com/Finance
+  commercial: https://softship-qa.crowley.com/Commercial
+  configuration: https://jaxvycswebqa.crowley.com/Configuration
+  booking: https://softship-qa.crowley.com/Booking
+  sof: https://softship-qa.crowley.com/SOF
+  master_data: https://jaxvycswebqa.crowley.com/MasterData
+
+api:
+  base_url: https://jaxvycswebqa.crowley.com/api
+
+user:
+  username: Datadriven
+  password: E/9tgqc2[x:}Pd
+
+database:
+  host: na
+  port: 5432
+  user: qa_user
+  password: qa_password
+  name: qa_db
+  ssl: false

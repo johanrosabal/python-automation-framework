@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-4521",
+    "testCaseName": "test_verify_milestone_details_display_in_tracking_section",
+    "title": "Verify milestone details display in tracking section",
+    "description": "Verifies milestone details display in tracking section.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-4521",
+      "name": "CT-4521"
+    },
+    "data": {
+    }
+  }
+}

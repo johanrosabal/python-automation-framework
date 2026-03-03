@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-4414",
+    "testCaseName": "test_validate_error_when_entering_a_departure_time_earlier_than_the_arrival_time_for_different_stop",
+    "title": "Validate error when entering a departure time earlier than the arrival time for the different stop.",
+    "description": "This negative test case verifies that the system prevents the 'Actual Departure' date/time from being earlier than the 'Actual Arrival' date/time for the different stop.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-4414",
+      "name": "CT-4414"
+    },
+    "data": {
+    }
+  }
+}

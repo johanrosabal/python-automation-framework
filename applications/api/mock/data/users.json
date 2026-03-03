@@ -1,0 +1,26 @@
+{
+  "tests": [
+    {
+      "idTC": "CT-1234",
+      "testCaseName": "Create an user",
+      "description": "Test Case Description 2",
+      "data": {
+        "username": "joe.black",
+        "email": "joe.black@example.com",
+        "full_name": "Joe Black",
+        "age": 20
+      }
+    },
+    {
+      "idTC": "CT-1234",
+      "testCaseName": "Edit an user",
+      "description": "Test Case Description 2",
+      "data": {
+        "username": "joe.black",
+        "email": "joe.black@example.com",
+        "full_name": "Joe Black",
+        "age": 25
+      }
+    }
+  ]
+}

@@ -1,12 +1,16 @@
+from allure_commons._allure import step
+from selenium.webdriver.support.wait import WebDriverWait
+
 from core.config.logger_config import setup_logger
 from core.ui.common.BaseApp import BaseApp
 from core.ui.actions.Element import Element
 from PIL import Image, ImageDraw, ImageFont
+from core.utils import random_utils
 import time
 import allure
 import os
+import base64
 
-from core.utils import random
 
 # Logger setup for Screenshot actions
 logger = setup_logger('Screenshot')
@@ -58,22 +62,101 @@ class Screenshot:
         self._element = element
         return self
 
-    def save_screenshot(self, description, page='Page'):
-        """Captures and saves a screenshot with a descriptive file name."""
+    def save_screenshot(self, description, page="", force_scroll_top=True, capture_full_page=True):
+        """
+        Captures and saves a screenshot using Chrome DevTools Protocol.
+
+        Args:
+            description (str): Description for the screenshot filename.
+            page (str): Page identifier for the filename.
+            force_scroll_top (bool): If True, scrolls to top before capture.
+                                     If False, preserves current scroll position.
+            capture_full_page (bool): If True, captures entire page height.
+                                      If False, captures only current viewport.
+        """
         self._page = page
         file_path = os.path.join(self._root, "screenshots")
         os.makedirs(file_path, exist_ok=True)
-
         file_name = f"{self._page}_{description.replace(' ', '_')}.png"
         full_path = os.path.join(file_path, file_name)
 
-        if self._driver:
-            time.sleep(1)
-            self._driver.save_screenshot(full_path)
+        driver = self._driver
+        if not driver:
+            logger.error("Driver is None. Cannot take screenshot.")
+            return self
+
+        try:
+            # 1. Wait for page to be fully loaded
+            wait = WebDriverWait(driver, 10)
+            wait.until(lambda d: d.execute_script("return document.readyState") == "complete")
+            time.sleep(0.5)
+
+            # 2. Save current scroll position BEFORE any manipulation
+            current_scroll = driver.execute_script("""
+                return {
+                    scrollX: window.scrollX || window.pageXOffset,
+                    scrollY: window.scrollY || window.pageYOffset,
+                    docHeight: document.documentElement.scrollHeight,
+                    viewportHeight: window.innerHeight
+                };
+            """)
+            logger.info(f"Current scroll position: X={current_scroll['scrollX']}, Y={current_scroll['scrollY']}")
+
+            # 3. Get real page metrics
+            metrics = driver.execute_cdp_cmd('Page.getLayoutMetrics', {})
+            width = metrics['contentSize']['width']
+            height = metrics['contentSize']['height']
+
+            # 4. Configure virtual viewport for full-page capture
+            if capture_full_page:
+                driver.execute_cdp_cmd('Emulation.setDeviceMetricsOverride', {
+                    'width': int(width),
+                    'height': int(height),
+                    'deviceScaleFactor': 1,
+                    'mobile': False,
+                    'screenOrientation': {'angle': 0, 'type': 'portraitPrimary'}
+                })
+
+            # 5. Handle scroll behavior
+            if force_scroll_top:
+                # Scroll to top for consistent full-page capture
+                driver.execute_script("window.scrollTo(0, 0);")
+                time.sleep(0.3)  # Allow scroll to complete
+                logger.info("Scrolled to top for screenshot")
+            else:
+                # Restore scroll position in case CDP commands altered it
+                driver.execute_script(
+                    f"window.scrollTo({current_scroll['scrollX']}, {current_scroll['scrollY']});"
+                )
+                time.sleep(0.3)
+                logger.info(f"Preserved scroll position: Y={current_scroll['scrollY']}")
+
+            # 6. Capture screenshot
+            screenshot = driver.execute_cdp_cmd('Page.captureScreenshot', {
+                'format': 'png',
+                'fromSurface': True,
+                'captureBeyondViewport': capture_full_page  # Only capture beyond viewport if full page requested
+            })
+
+            # 7. Restore original scroll position AFTER capture (important for test continuity)
+            if not force_scroll_top:
+                driver.execute_script(
+                    f"window.scrollTo({current_scroll['scrollX']}, {current_scroll['scrollY']});"
+                )
+
+            # 8. Save the file
+            with open(full_path, 'wb') as f:
+                f.write(base64.b64decode(screenshot['data']))
+            logger.info(f"Screenshot saved: {full_path}")
+
+            # 9. Clear device metrics override
+            driver.execute_cdp_cmd('Emulation.clearDeviceMetricsOverride', {})
+
             return full_path
-        else:
-            logger.error("Unable to take screenshot: WebElement is None.")
-        return self
+
+        except Exception as e:
+            logger.error(f"CDP screenshot failed: {e}. Falling back to traditional method.")
+            return self._fallback_screenshot(full_path)
 
     def save_highlight(self, description, padding=10):
         """Highlights the target element by drawing a rectangle around it in the screenshot."""
@@ -140,24 +223,59 @@ class Screenshot:
 
         return self
 
-    def attach_to_allure(self, name="screenshot", page="page"):
-        """Attaches the screenshot to the Allure report, optionally deleting the file afterward."""
-        random_prefix = random.generate_random_code("screen_")
-        screenshot_path = self.save_screenshot(description=name, page=page)
-        if screenshot_path and name != "":
-            allure.attach.file(
-                screenshot_path,
-                name=random_prefix+name,
-                attachment_type=allure.attachment_type.PNG
-            )
-            logger.info(f"Screenshot attached to Allure report: {screenshot_path}")
-            if os.path.exists(screenshot_path):
-                os.remove(screenshot_path)
+    def attach_to_allure(self, name="screenshot", page="", remove_screenshot_file=False, usePrefix=False, force_scroll_top=True, capture_full_page=True):
+        file_name = name
+
+        if usePrefix:
+            file_name = random_utils.generate_random_code("screen") + name
+
+        screenshot_path = self.save_screenshot(description=name, page=page, force_scroll_top=force_scroll_top, capture_full_page=capture_full_page)
+
+        logger.info(f"[Allure] Trying to attach screenshot: {screenshot_path}")
+
+        if screenshot_path and os.path.exists(screenshot_path):
+            try:
+                with step(f"Origin Destination: {file_name}"):
+                    allure.attach.file(
+                        screenshot_path,
+                        name=file_name,
+                        attachment_type=allure.attachment_type.PNG
+                    )
+                logger.info(f"✅ Screenshot attached to Allure: {screenshot_path}")
+                if remove_screenshot_file:
+                    os.remove(screenshot_path)
+            except Exception as e:
+                logger.error(f"❌ Error attaching to Allure: {e}")
         else:
-            logger.error("Failed to attach screenshot to Allure report.")
+            logger.error(f"❌ Screenshot does not exist or is None: {screenshot_path}")
         return self
 
     def pause(self, seconds: int):
         """Pauses execution for a specified number of seconds."""
         BaseApp.pause(seconds)
         return self
+
+    def _fallback_screenshot(self, full_path):
+        """Backup method if CDP is unavailable (e.g., Firefox)."""
+        try:
+            # Scroll to bottom to ensure all content is rendered
+            self._driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+            time.sleep(1)
+            self._driver.execute_script("window.scrollTo(0, 0);")
+
+            # Get total size
+            total_width = self._driver.execute_script("return document.body.scrollWidth")
+            total_height = self._driver.execute_script("return document.body.scrollHeight")
+
+            # Adjust window (better with a margin)
+            self._driver.set_window_size(
+                max(total_width, 1024),
+                max(total_height, 768)
+            )
+            time.sleep(1)  # Allow time for rendering
+
+            self._driver.save_screenshot(full_path)
+            return full_path
+        except Exception as e:
+            logger.error(f"[Screenshot][attach_to_allure]The backup screenshot failed: {e}")
+            return self

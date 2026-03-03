@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-4405",
+    "testCaseName": "test_verify_correct_display_status_update_modal",
+    "title": "Verify the correct display of the Status Update modal.",
+    "description": "This test case verifies that the \"Status Update\" modal interface is displayed correctly when loaded, including the two-line format for scheduled dates and the proper spacing in empty date fields.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-4405",
+      "name": "CT-4405"
+    },
+    "data": {
+    }
+  }
+}

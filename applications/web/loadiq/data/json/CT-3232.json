@@ -1,0 +1,18 @@
+{
+  "tests": {
+    "idTC": "CT-3232",
+    "testCaseName": "test_verify_display_by_equipment_size_type_in_shipment_tracking_card",
+    "title": "Verify Display of equipment size/type in Shipment Tracking card",
+    "description": "It needs to see the Equipment size/Types as part of the Load identification in the list view and as a search criterion in the ‘Shipment Tracking’ section of the customer portal.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-3232",
+      "name": "CT-3232"
+    },
+    "data": {
+
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+   "tests":{
+      "header_tab":{
+         "customer":"Lynden Air Freight, Inc",
+         "from_receipt_term":"Door",
+         "from_location_zip":"32099",
+         "from_location_name": "Jacksonville, FL",
+         "to_delivery_term":"Port",
+         "to_location_zip": "00904",
+         "to_location_name": "San Juan, Puerto Rico",
+         "shipment":"Prepaid",
+         "agency":"HQ"
+      }
+   }
+}

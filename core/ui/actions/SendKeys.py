@@ -1,6 +1,6 @@
 from selenium.webdriver import Keys
 from selenium.webdriver.common.by import By
-
+from core.utils.encryptation_utils import encode_base64
 from core.config.logger_config import setup_logger
 from core.ui.actions.Click import Click
 from core.ui.actions.ElementHighlighter import ElementHighlighter
@@ -38,6 +38,7 @@ class SendKeys:
         self._special_characters = None
         self._locator = None
         self._page = None
+        self._encrypt = False
         # Table Input Field
         self._locator_table = None
 
@@ -67,21 +68,40 @@ class SendKeys:
         self._locator_table = table_xpath
         return self
 
+    def set_encrypt(self):
+        self._encrypt = True
+        return self
+
+    def set_text_with_javascript(self, text: str):
+        if self._element:
+            self._driver.execute_script(f"""
+                   arguments[0].value = '{text}';
+                   arguments[0].dispatchEvent(new Event('input', {{ bubbles: true }}));
+                   arguments[0].dispatchEvent(new Event('change', {{ bubbles: true }}));
+               """, self._element)
+        return self
+
     def set_text(self, text: str):
         """Sets and sends the provided text to the element."""
         if not isinstance(text, str):
             raise TypeError("The argument should be a string text.")
         if self._element:
-            logger.info("Send Keys [" + text + "]")
+            if self._encrypt:
+                logger.info("Send Keys [" + encode_base64(text) + "]")
+            else:
+                logger.info("Send Keys [" + text + "]")
             self._element.send_keys(str(text))
         else:
-            logger.error("Unable to Send Text [" + text + "] element is None")
+            if self._encrypt:
+                logger.error("Unable to Send Text [" + encode_base64(text) + "] element is None")
+            else:
+                logger.error("Unable to Send Text [" + text + "] element is None")
         return self
 
     def by_table_text(self,  row: int, text: str, column_index: list):
         """Sets and sends the provided text to the element."""
         parent_xpath = self._locator_table[1]
-
+        self._text = text
         if not isinstance(text, str):
             raise TypeError("The argument should be a string text.")
         if self._element:
@@ -129,6 +149,26 @@ class SendKeys:
             self._element.clear()
         else:
             logger.error("Unable to clear element: element is None.")
+        return self
+
+    def clear_input_with_events(self):
+        """
+        Clears input field and triggers necessary JavaScript events.
+        """
+        element = self._element
+        element.clear()
+
+        self._driver.execute_script("""
+            var element = arguments[0];
+            element.value = '';
+            element.dispatchEvent(new Event('input', { bubbles: true }));
+            element.dispatchEvent(new Event('change', { bubbles: true }));
+            element.dispatchEvent(new Event('blur', { bubbles: true }));
+        """, element)
+
+        # # Método 3: Alternativa con send_keys de teclas especiales
+        # element.send_keys(Keys.CONTROL + "a")  # Seleccionar todo
+        # element.send_keys(Keys.DELETE)  # Borrar
         return self
 
     # Keyboard actions

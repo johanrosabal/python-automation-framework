@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-5236",
+    "testCaseName": "test_verify_multi_select_capabilities_for_origin_state_and_load_status",
+    "title": "My Loads - Verify multi-select capabilities for Origin State and Load Status",
+    "description": "Ensure the user can select multiple states and multiple statuses simultaneously.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-5236",
+      "name": "CT-5236"
+    },
+    "data": {
+    }
+  }
+}

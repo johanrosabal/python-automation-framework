@@ -1,0 +1,24 @@
+{
+    "tests": {
+        "customer_suppliers": {
+            "address": {
+                "address_code": "9999",
+                "address_line_1": "123 Main St",
+                "secondary_language_line_1": "123 Calle Principal",
+                "contact_name": "Joe Doe Test",
+                "contact_type": "EM",
+                "contact_no": "555-1231",
+                "street_line_1": "Main Street",
+                "street_line_2": "Apt 1",
+                "street_line_3": "Test",
+                "city_name": "Jacksonville, NC",
+                "country": "United States",
+                "province": "North Carolina",
+                "postal_code": "27006",
+                "ban": "BAN000",
+                "coordinates": "",
+                "is_hide": "false"
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+{
+  "tests": {
+    "idTC": "CT-5422",
+    "testCaseName": "test_verification_of_update_after_data_deletion",
+    "title": "Verification of update after data deletion",
+    "description": "Verify that upon deleting information from the source fields, the summary updates to show the empty status or N/A, and does not keep \"stale data\".",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-5422",
+      "name": "CT-5422"
+    },
+    "data": {
+
+    }
+  }
+}

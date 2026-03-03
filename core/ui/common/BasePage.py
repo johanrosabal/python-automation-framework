@@ -16,6 +16,7 @@ from core.ui.actions.Dropdown import Dropdown
 from core.ui.actions.SwitchWindow import SwitchWindow
 from core.ui.actions.Table import Table
 from core.ui.actions.UploadFile import UploadFile
+from core.ui.actions.VerifyLocators import VerifyLocators
 from core.ui.common.BaseApp import BaseApp
 
 logger = setup_logger('BasePage')
@@ -76,3 +77,5 @@ class BasePage(BaseApp):
     def table(self):
         return Table(self.get_driver())
 
+    def verify_locators(self):
+        return VerifyLocators(self.get_driver())

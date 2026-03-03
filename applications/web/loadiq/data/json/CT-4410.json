@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-4410",
+    "testCaseName": "test_verify_update_multiple_consecutive_status_simultaneously",
+    "title": "Verify the update of multiple consecutive statuses simultaneously.",
+    "description": "This test case validates that the system allows the user to enter and save multiple consecutive status updates (e.g., Arrival and Departure from Stop 1) in a single action.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-4410",
+      "name": "CT-4410"
+    },
+    "data": {
+    }
+  }
+}

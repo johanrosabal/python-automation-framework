@@ -1,0 +1,18 @@
+{
+  "tests": [
+    {
+      "idTC": "CT-2883",
+      "testCaseName": "test_support_user_creation_dispatcher",
+      "description": "Create User Dispatcher",
+      "data": {
+        "accountType": "Carrier",
+        "tmsID": "ABC026",
+        "accountName": "ABC026",
+        "firstName": "John",
+        "lastName": "Due",
+        "email": "jonh.due026@crowley.com",
+        "role": "Dispatcher"
+      }
+    }
+  ]
+}

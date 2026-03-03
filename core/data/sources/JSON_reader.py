@@ -111,8 +111,12 @@ class JSONReader:
     def import_json(path):
         with open(path, 'r') as file:
             dictionary = json.load(file)
-        logger.info(dictionary)
+        logger.info(json.dumps(dictionary))
         return dictionary
+
+    @staticmethod
+    def dict_to_json(data):
+        return json.dumps(data)
 
     @staticmethod
     def display_table(data):
@@ -130,6 +134,25 @@ class JSONReader:
             logger.info("\n" + tabulate(table, headers=headers, tablefmt='pretty'))
         else:
             logger.info("No data available. Please read the file first.")
+
+    @staticmethod
+    def text_to_dict(text):
+        """
+        Convert a JSON-formatted string into a Python dictionary.
+
+        :param text: A string containing JSON data.
+        :return: A dictionary parsed from the JSON string.
+        """
+        try:
+            if text.startswith("'") and text.endswith("'"):
+                text = text.strip("'")
+
+            dictionary = json.loads(text)
+            logger.info("Successfully converted text to dictionary.")
+            return dictionary
+        except json.JSONDecodeError as e:
+            logger.error(f"Failed to parse JSON text: {e}")
+            return None
 
     def get_raw_json(self):
         """

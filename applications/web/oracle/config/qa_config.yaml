@@ -1,0 +1,20 @@
+# Standard Configuration File
+name: Oracle Cloud Site
+web:
+  base_url: https://efli-test.login.us6.oraclecloud.com
+  browser: chrome
+
+api:
+  base_url: https://efli-test.fa.us6.oraclecloud.com
+
+user:
+  username: 523394
+  password: Crowley123!
+
+database:
+  host: na
+  port: 5432
+  user: qa_user
+  password: qa_password
+  name: qa_db
+  ssl: false

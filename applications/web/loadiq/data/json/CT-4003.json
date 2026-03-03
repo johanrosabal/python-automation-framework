@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-4003",
+    "testCaseName": "test_add_check_call_field_level_validation",
+    "title": "Add check call - Field-Level Validation",
+    "description": "Verify required-field, format, and length validations inside the Add Check Call pop-up.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-4003",
+      "name": "CT-4003"
+    },
+    "data": {
+    }
+  }
+}

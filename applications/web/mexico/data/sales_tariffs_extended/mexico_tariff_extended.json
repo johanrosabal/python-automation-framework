@@ -1,0 +1,238 @@
+{
+    "tests": {
+        "sales_tariff_extended": {
+            "level_1": {
+                "information": {
+                    "row": 1,
+                    "tariff_name": "GEN: USGPT-> MXTUX (Container)",
+                    "level": "1",
+                    "from_pol": "USGPT",
+                    "to_pod": "MXTUX",
+                    "agency": "HQ",
+                    "package": "-C-",
+                    "valid_from": "4/1/2024",
+                    "shippers_own": "",
+                    "change_frequency": "STD",
+                    "sales_tariff_remark": "Mexico",
+                    "cargo": "Container",
+                    "short_from": "N",
+                    "transport_mode": "",
+                    "devanning": "N",
+                    "crossdocking": "N",
+                    "to_sublocation_pod_berth": ""
+                },
+                "search_expression": [
+                    {
+                        "field_name": "Level",
+                        "field_operator": "equal",
+                        "field_value": "1"
+                    },
+                    {
+                        "field_name": "From/Pol",
+                        "field_operator": "starts with",
+                        "field_value": "USGPT"
+                    },
+                    {
+                        "field_name": "To/Pod",
+                        "field_operator": "starts with",
+                        "field_value": "MXTUX"
+                    },
+                    {
+                        "field_name": "Original Sales Tariff Id",
+                        "field_operator": "has no value",
+                        "field_value": ""
+                    },
+                    {
+                        "field_name": "Valid To",
+                        "field_operator": "has no value",
+                        "field_value": ""
+                    }
+                ],
+                "internal_calculation": {
+                    "row": 1,
+                    "charge": "NTFR",
+                    "plus_minus": "+",
+                    "currency": "USD",
+                    "rate": "2500",
+                    "per": "C",
+                    "var_code": "",
+                    "invoice_currency": "USD"
+                }
+            },
+            "level_61": {
+                "information": {
+                    "row": 1,
+                    "tariff_name": "Inland O: Drayage USMOB to GPT",
+                    "level": "61",
+                    "from_pol": "USMOB",
+                    "to_pod": "USGPT",
+                    "agency": "HQ",
+                    "package": "-C-",
+                    "valid_from": "8/18/2024",
+                    "shippers_own": "N",
+                    "change_frequency": "STD",
+                    "sales_tariff_remark": "US Inland",
+                    "cargo": "Container",
+                    "short_from": "N",
+                    "transport_mode": "TRUCK",
+                    "devanning": "N",
+                    "crossdocking": "N",
+                    "to_sublocation_pod_berth": ""
+                },
+                "search_expression": [
+                    {
+                        "field_name": "Level",
+                        "field_operator": "equal",
+                        "field_value": "61"
+                    },
+                    {
+                        "field_name": "From/Pol",
+                        "field_operator": "starts with",
+                            "field_value": "USMOB"
+                    },
+                    {
+                        "field_name": "To/Pod",
+                        "field_operator": "starts with",
+                        "field_value": "USGPT"
+                    },
+                    {
+                        "field_name": "Original Sales Tariff Id",
+                        "field_operator": "has no value",
+                        "field_value": ""
+                    },
+                    {
+                        "field_name": "Valid To",
+                        "field_operator": "has no value",
+                        "field_value": ""
+                    }
+                ],
+                "internal_calculation": {
+                    "row": 1,
+                    "charge": "INO_DRAYAGEBASE",
+                    "plus_minus": "+",
+                    "currency": "USD",
+                    "rate": "400",
+                    "per": "P",
+                    "var_code": "",
+                    "invoice_currency": "USD"
+                }
+            },
+            "level_63": {
+                "information": {
+                    "row": 1,
+                    "tariff_name": "Inland O: Rail CABRP _> USMOB",
+                    "level": "63",
+                    "from_pol": "CABRP",
+                    "to_pod": "USMOB",
+                    "agency": "HQ",
+                    "package": "-C-",
+                    "valid_from": "10/21/2023",
+                    "shippers_own": "",
+                    "change_frequency": "STD",
+                    "sales_tariff_remark": "Non-CASS US Inland",
+                    "cargo": "Container",
+                    "short_from": "N",
+                    "transport_mode": "RAIL",
+                    "devanning": "N",
+                    "crossdocking": "N",
+                    "to_sublocation_pod_berth": ""
+                },
+                "search_expression": [
+                    {
+                        "field_name": "Level",
+                        "field_operator": "equal",
+                        "field_value": "63"
+                    },
+                    {
+                        "field_name": "From/Pol",
+                        "field_operator": "starts with",
+                        "field_value": "CABRP"
+                    },
+                    {
+                        "field_name": "To/Pod",
+                        "field_operator": "starts with",
+                        "field_value": "USMOB"
+                    },
+                    {
+                        "field_name": "Original Sales Tariff Id",
+                        "field_operator": "has no value",
+                        "field_value": ""
+                    },
+                    {
+                        "field_name": "Valid To",
+                        "field_operator": "has no value",
+                        "field_value": ""
+                    }
+                ],
+                "internal_calculation": {
+                    "row": 1,
+                    "charge": "INO_RAILBASE",
+                    "plus_minus": "+",
+                    "currency": "USD",
+                    "rate": "800",
+                    "per": "P",
+                    "var_code": "",
+                    "invoice_currency": "USD"
+                }
+            },
+            "level_61_sublocation": {
+                "information": {
+                    "row": 1,
+                    "tariff_name": "Inland O: Drayage $0OO5 to CABRP",
+                    "level": "61",
+                    "from_pol": "$0OO5",
+                    "to_pod": "CABRP",
+                    "agency": "HQ",
+                    "package": "-C-",
+                    "valid_from": "8/18/2024",
+                    "shippers_own": "N",
+                    "change_frequency": "STD",
+                    "sales_tariff_remark": "US Inland",
+                    "cargo": "Container",
+                    "short_from": "N",
+                    "transport_mode": "TRUCK",
+                    "devanning": "N",
+                    "crossdocking": "N",
+                    "to_sublocation_pod_berth": "BRPR005"
+                },
+                "search_expression": [
+                    {
+                        "field_name": "Level",
+                        "field_operator": "equal",
+                        "field_value": "61"
+                    },
+                    {
+                        "field_name": "From/Pol",
+                        "field_operator": "starts with",
+                        "field_value": "$0OO5"
+                    },
+                    {
+                        "field_name": "To/Pod",
+                        "field_operator": "starts with",
+                        "field_value": "CABRP"
+                    },
+                    {
+                        "field_name": "Original Sales Tariff Id",
+                        "field_operator": "has no value",
+                        "field_value": ""
+                    },
+                    {
+                        "field_name": "Valid To",
+                        "field_operator": "has no value",
+                        "field_value": ""
+                    }
+                ],
+                "internal_calculation": {
+                    "row": 1,
+                    "charge": "INO_DRAYAGEBASE",
+                    "plus_minus": "+",
+                    "currency": "USD",
+                    "rate": "400",
+                    "per": "P",
+                    "var_code": "",
+                    "invoice_currency": "USD"
+                }
+            }
+        }
+    }
+}

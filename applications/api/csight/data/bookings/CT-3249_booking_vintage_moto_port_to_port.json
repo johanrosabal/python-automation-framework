@@ -1,0 +1,147 @@
+{
+    "agreementReference": "",
+    "cargoAvailableDate": "future-date-to-utc{1}",
+    "cargos": [
+        {
+            "cargoType": "VEHICLE",
+            "commodityCode": "OTMOTOVINT",
+            "commodityDescription": "Motorcycles - Vintage",
+            "notInContainerDetails": {
+                "heightUom": "FT",
+                "vehicleSpecificationDetails": {
+                    "year": "1970",
+                    "make": "Harley",
+                    "model": "FXL",
+                    "isNew": false,
+                    "propulsion": "DRIVABLE-GAS[UN3166]",
+                    "vechicleDetails": [
+                        {
+                            "vin": "",
+                            "color": "Blue"
+                        }
+                    ]
+                },
+                "width": 2.10,
+                "length": 7.6,
+                "height": 2.10,
+                "lengthUom": "FT",
+                "widthUom": "FT",
+                "quantity": 1
+            },
+            "weight": 119,
+            "weightUOM": "LBS",
+            "volume": 60,
+            "volumeUOM": "FTQ",
+            "emergencyContact": {
+                "emailAddress": "abc@gmail.com",
+                "mobilephone": "999-999-9999",
+                "name": "User1",
+                "telephone": "999-999-9999",
+                "faxNumber": "999-999-9999",
+                "website": "abcwebsite.com"
+            },
+            "cargoItems": [
+                {
+
+                    "numberOfPackages": 1,
+                    "weight": 119,
+                    "weightUOM": "LBS",
+                    "volume": 60,
+                    "volumeUOM": "FTQ",
+                    "hazMatDetails": {
+                        "packagingGroup": "",
+                        "subHazard1": "",
+                        "prefix": "UN",
+                        "properShippingName": "VEHICLE, FLAMMABLE GAS POWERED",
+                        "UNNumber": "3166",
+                        "isMarinePollutant": false,
+                        "class": "1",
+                        "isLimitedQuantity": false,
+                        "technicalName": "Motorcycles",
+                        "subHazard2": ""
+                    }
+                }
+            ]
+        }
+    ],
+    "Voyages": [],
+    "moveType": "PortToPort",
+    "bookingRemarks": "Test Remarks",
+    "isHazMatBooking": true,
+    "freightPaymentMode": "PrePaid",
+    "electronicCustomerReference": "timestamp-prefix{CustCont}",
+    "shippingtype": "Laden",
+    "shippingCompany": "CRWLY",
+ "parties": [
+        {
+            "code": "5780713-01",
+            "bookingParty": true,
+            "role": "SHP",
+            "name": "GALLERY SHIPPING LLC",
+            "address": {
+                "address1": "12902 CANTON AVE",
+                "stateOrProvince": "FL",
+                "address3": "GALLERY SHIPPING LLC",
+                "country": "US",
+                "zipCode": "34669",
+                "city": "HUDSON",
+                "address2": ""
+            },
+            "externalPartnerReference": "Test123",
+            "vatNumber": "Test123",
+            "contact": {
+                "emailAddress": "christy.hernandez@crowley.com.uat",
+                "mobilephone": "3052063753",
+                "name": "CHRISTY HERNANDEZ",
+                "telephone": "3052063753",
+                "faxNumber": "",
+                "website": ""
+            },
+            "reference": ""
+        },
+        {
+            "code": "5780713-01",
+            "bookingParty": false,
+            "role": "CON",
+            "name": "GALLERY SHIPPING LLC",
+            "address": {
+                "address1": "12902 CANTON AVE",
+                "stateOrProvince": "FL",
+                "address3": "",
+                "country": "US",
+                "zipCode": "34669",
+                "city": "HUDSON",
+                "address2": ""
+            },
+            "externalPartnerReference": "",
+            "vatNumber": "Test123",
+            "contact": {
+                "emailAddress": "christy.hernandez@crowley.com.uat",
+                "mobilephone": "3052063753",
+                "name": "CHRISTY HERNANDEZ",
+                "telephone": "3052063753",
+                "faxNumber": "",
+                "website": ""
+            },
+            "reference": ""
+        }
+    ],
+    "Locations": [
+        {
+            "Function": "PortOfLoading",
+            "Qualifier": "UN",
+            "Identifier": "USJAX",
+            "StateOrProvince": "FL",
+            "Country": "US",
+            "City": "Jacksonville"
+        },
+        {
+            "Function": "PortOfDischarge",
+            "Qualifier": "UN",
+            "Identifier": "PRSJU",
+            "StateOrProvince": "Puertorico",
+            "Country": "PR",
+            "City": "PuertoRico"
+        }
+    ]
+}

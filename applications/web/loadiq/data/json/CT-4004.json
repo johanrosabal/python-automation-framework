@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-4004",
+    "testCaseName": "test_add_check_call_cancel_check_call",
+    "title": "Add check call - Cancel Check-Call",
+    "description": "Confirm Cancel dismisses the pop-up without saving any data.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-4004",
+      "name": "CT-4004"
+    },
+    "data": {
+    }
+  }
+}

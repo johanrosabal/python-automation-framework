@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-4486",
+    "testCaseName": "",
+    "title": "Verify date format in my loads displays as mm/dd/yy",
+    "description": "Verify date format in my loads displays as mm/dd/yy.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-4486",
+      "name": "CT-4486"
+    },
+    "data": {
+    }
+  }
+}

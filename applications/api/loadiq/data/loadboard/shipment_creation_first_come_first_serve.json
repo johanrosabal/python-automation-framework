@@ -1,0 +1,126 @@
+{
+    "tests": {
+        "step_1": {
+            "origin_location": {
+                "name": "Miami",
+                "address_description": "Miami Beach, FL, USA",
+                "location": "Miami Beach",
+                "address_line_1": "200 Lincoln Rd",
+                "address_line_2": "NA"
+            },
+            "origin_contact": {
+                "name": "John",
+                "email": "bob@flinstones.com",
+                "phone": "1141850000"
+            },
+            "origin_appointment": {
+                "datetime_option": "first_come_first_serve",
+                "from_day": "future-date-{4}",
+                "to_day": "future-date-{9}",
+                "open_hours": "01",
+                "open_minutes": "30",
+                "open_indicator": "AM",
+                "close_hours": "01",
+                "close_minutes": "00",
+                "close_indicator": "PM",
+                "appointment_required": false
+            },
+            "point_of_contact": {
+                "use_current_contact": false,
+                "name": null,
+                "email": null,
+                "phone": null
+            }
+        },
+        "step_2": {
+            "distance": 1062.5,
+            "destination_location": {
+                "name": "22557 Lost Creek Terrace",
+                "location": "22557 Lost Creek Terrace",
+                "address": "22557 Lost Creek Terrace, Ashburn, VA, USA",
+                "address_line_2": "N/A"
+            },
+            "destination_contact": {
+                "name": "Damian",
+                "phone": "9988779936",
+                "email": "test@hotmail.com"
+            },
+            "destination_appointment": {
+                "datetime_option": "first_come_first_serve",
+                "from_day": "future-date-{14}",
+                "to_day": "future-date-{19}",
+                "open_hours": "01",
+                "open_minutes": "00",
+                "open_indicator": "AM",
+                "close_hours": "01",
+                "close_minutes": "00",
+                "close_indicator": "PM",
+                "appointment_required": false
+            },
+            "point_of_contact": {
+                "use_current_contact": false,
+                "name": null,
+                "email": null,
+                "phone": null
+            }
+        },
+        "step_3": {
+            "shipment_details": {
+                "transport_mode": "FTL",
+                "equipment_name": "20' Dry Container",
+                "po_number": "1234",
+                "bill_of_landing_number": "1234",
+                "pick_up_number": "1234",
+                "shipment_instructions": "Shipment Automation Test",
+                "max_temperature": null,
+                "min_temperature": null
+            }
+        },
+        "step_4": {
+            "freight_line": [
+                {
+                    "item": {
+                        "commodity_value": "10000",
+                        "gross_weight": "100",
+                        "gross_weight_UOM": "lb",
+                        "weight_display_value": "Lb",
+                        "handling_unit_count": "1",
+                        "handling_unit_type": "package",
+                        "handling_unit_display_value": "Package",
+                        "is_delete": false
+                    },
+                    "dimension": {
+                        "height": "222",
+                        "length": "121",
+                        "width": "212",
+                        "dim_UOM": "in",
+                        "dim_display_value": "Inch",
+                        "description": "Shipment Automation Test"
+                    },
+                    "is_hazmat": {
+                        "is_hazmat": false,
+                        "un_class": null,
+                        "hazmat_class": null,
+                        "hazmat_contact_number": null,
+                        "packing_group": null
+                    }
+                }
+            ]
+        },
+        "step_5": {
+            "bid_parameters": {
+                "book_it_now_rate": 100,
+                "bid_expiration_date": "future-date-{1}",
+                "hours": "12",
+                "minutes": "00",
+                "indicator": "PM"
+            },
+            "upload_file": [
+                {
+                    "file_name": "upload_test_document.png",
+                    "description": "Upload Automation Test"
+                }
+            ]
+        }
+    }
+}

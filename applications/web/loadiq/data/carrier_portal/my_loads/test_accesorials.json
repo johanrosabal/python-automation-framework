@@ -1,0 +1,20 @@
+{
+  "tests": [
+    {
+      "idTC": "test_my_loads_accessorials_flat_origin",
+      "testCaseName": "test_my_loads_accessorials_flat_origin",
+      "description": "data for test cases of test_my_loads_accessorials_flat_origin",
+      "data": {
+        "loadId": "BY_40000080882"
+      }
+    },
+    {
+      "idTC": "test_my_loads_accessorials_per_hour",
+      "testCaseName": "test_my_loads_accessorials_per_hour",
+      "description": "data for test cases of test_my_loads_accessorials_per_hour",
+      "data": {
+        "loadId": "BY_40000080882"
+      }
+    }
+  ]
+}

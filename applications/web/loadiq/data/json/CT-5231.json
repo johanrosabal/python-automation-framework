@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-5231",
+    "testCaseName": "test_apply_both_pickup_and_delivery_date_filters_simultaneously",
+    "title": "My Loads - Apply both 'Pickup' and 'Delivery' Date filters simultaneously",
+    "description": "Verify that the system can handle filtering by both Pickup and Delivery dates at the same time.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-5231",
+      "name": "CT-5231"
+    },
+    "data": {
+    }
+  }
+}

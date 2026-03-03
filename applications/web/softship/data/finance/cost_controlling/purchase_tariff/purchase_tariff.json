@@ -1,0 +1,104 @@
+{
+    "tests": {
+      "purchase_tariff": {
+        "search_expression": {
+              "name": "Type",
+              "operator": "equal",
+              "value": "VOYAGE"
+        },
+        "add": {
+            "data": {
+                "row": 1,
+                "type": "VOYAGE",
+                "comment": "Automation Test Original",
+                "valid_from": "12/12/2024",
+                "valid_to": "12/31/2024"
+           },
+            "expected": {
+                "row": 1,
+                "type": "VOYAGE",
+                "comment": "Automation Test Original",
+                "valid_from": "12/12/2024",
+                "valid_to": "12/31/2024"
+          }
+        },
+        "edit": {
+          "data": {
+              "row": 1,
+              "charge": "LOAD",
+              "plus_minus": "+",
+              "currency": "USD",
+              "rate": 1250,
+              "per": "C",
+              "var_code": "0%",
+              "invoice_currency": "USD"
+          },
+          "expected": {
+              "row": 1,
+              "position_amount": "LOAD 1250 USD C"
+          }
+        },
+        "copy": {
+          "data": {
+            "row": 1,
+            "comment": "Automation Test Copy"
+          },
+          "expected": {
+              "search_expression": {
+                  "type": "Comment",
+                  "operator": "equal",
+                  "value": "Automation Test Copy"
+              },
+              "row": 1,
+              "comment": "Automation Test Copy"
+          }
+        },
+        "delete": {
+          "data": {
+            "rows": [1 , 2]
+          },
+          "expected": {
+            "message": "No records found."
+          }
+        },
+        "sort_columns": {
+          "search_expression" : [
+              {
+                  "name": "Type",
+                  "operator": "equal",
+                  "value": "VOYPORT"
+              },
+              {
+                  "name": "Valid From",
+                  "operator": "equal",
+                  "value": "1/1/2017"
+              },
+              {
+                  "name": "Valid To",
+                  "operator": "equal",
+                  "value": "3/18/2019"
+              },
+              {
+                  "name": "Supplier",
+                  "operator": "equal",
+                  "value": "1037420"
+              },
+              {
+                  "name": "Comment",
+                  "operator": "contains",
+                  "value": "Vessel Assist"
+              }
+          ]
+        },
+        "filter_search_expression": {
+          "search_expression": [
+            {
+                "name": "Type",
+                "operator": "equal",
+                "value": "SCOD"
+            }
+          ]
+        }
+      }
+    }
+}

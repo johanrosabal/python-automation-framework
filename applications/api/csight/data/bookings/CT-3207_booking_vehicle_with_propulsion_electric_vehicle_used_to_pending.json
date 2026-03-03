@@ -1,0 +1,150 @@
+{
+    "crowleyBookingNumber": "",
+    "agreementReference": "20-00809",
+    "cargoAvailableDate": "future-date-to-utc{1}",
+    "cargos": [
+        {
+            "cargoType": "VEHICLE",
+            "commodityCode": "OTVehUsed",
+            "commodityDescription": "Vehicle Used",
+            "notInContainerDetails": {
+                "heightUom": "FT",
+                "vehicleSpecificationDetails": {
+                    "year": "2011",
+                    "make": "Kia",
+                    "model": "Forte",
+                    "isNew": true,
+                    "propulsion": "DRIVABLE-ELECTRIC[UN3171]",
+                    "vechicleDetails": [
+                        {
+                            "vin": "KNAFU6A21L5395258",
+                            "color": "Grey"
+                        }
+                    ]
+                },
+                "width": 5,
+                "length": 15,
+                "height": 4,
+                "lengthUom": "FT",
+                "widthUom": "FT",
+                "quantity": 1
+            },
+            "weight": 5810,
+            "weightUOM": "LBS",
+            "volume": 300,
+            "volumeUOM": "MTQ",
+            "emergencyContact": {
+                "emailAddress": "abc@gmail.com",
+                "mobilephone": "999-999-9999",
+                "name": "User1",
+                "telephone": "999-999-9999",
+                "faxNumber": "999-999-9999",
+                "website": "abcwebsite.com"
+            },
+            "cargoItems": [
+                {
+                    "goodsPackaging": "AUT-Automobile",
+                    "numberOfPackages": 1,
+                    "weight": 5810,
+                    "weightUOM": "LBS",
+                    "volume": 300,
+                    "volumeUOM": "MTQ",
+                    "hazMatDetails": {
+                        "packagingGroup": "",
+                        "subHazard1": "",
+                        "prefix": "UN",
+                        "properShippingName": "CHLORINE PENTAFLUORIDE",
+                        "UNNumber": "3171",
+                        "isMarinePollutant": false,
+                        "class": "9",
+                        "isLimitedQuantity": false,
+                        "technicalName": "Vehicle",
+                        "subHazard2": ""
+                    }
+                }
+            ]
+        }
+    ],
+    "Voyages": [],
+    "moveType": "PortToPort",
+    "bookingRemarks": "Test Remarks",
+    "isHazMatBooking": true,
+    "pickUpLocations": [],
+    "dropOffLocations": [],
+    "freightPaymentMode": "PrePaid",
+    "electronicCustomerReference": "timestamp-prefix{CustCont}",
+    "shippingtype": "Laden",
+    "shippingCompany": "CRWLY",
+    "parties": [
+        {
+            "code": "5780713-01",
+            "bookingParty": true,
+            "role": "SHP",
+            "name": "GALLERY SHIPPING LLC",
+            "address": {
+                "address1": "12902 CANTON AVE",
+                "stateOrProvince": "FL",
+                "address3": "GALLERY SHIPPING LLC",
+                "country": "US",
+                "zipCode": "34669",
+                "city": "HUDSON",
+                "address2": ""
+            },
+            "externalPartnerReference": "Test123",
+			"vatNumber": "Test123",
+            "contact": {
+                "emailAddress": "christy.hernandez@crowley.com.uat",
+                "mobilephone": "3052063753",
+                "name": "CHRISTY HERNANDEZ",
+                "telephone": "3052063753",
+                "faxNumber": "",
+                "website": ""
+            },
+            "reference": "CEE1234"
+        },
+        {
+            "code": "5780713-01",
+            "bookingParty": false,
+            "role": "CON",
+            "name": "GALLERY SHIPPING LLC",
+            "address": {
+                "address1": "12902 CANTON AVE",
+                "stateOrProvince": "FL",
+                "address3": "",
+                "country": "US",
+                "zipCode": "34669",
+                "city": "HUDSON",
+                "address2": ""
+            },
+            "externalPartnerReference": "",
+			"vatNumber": "Test123",
+            "contact": {
+                "emailAddress": "christy.hernandez@crowley.com.uat",
+                "mobilephone": "3052063753",
+                "name": "CHRISTY HERNANDEZ",
+                "telephone": "3052063753",
+                "faxNumber": "",
+                "website": ""
+            },
+            "reference": "CEE1234"
+        }
+    ],
+    "Locations": [
+        {
+            "Function": "PortOfLoading",
+            "Qualifier": "UN",
+            "Identifier": "USJAX",
+            "StateOrProvince": "FL",
+            "Country": "US",
+            "City": "Jacksonville"
+        },
+        {
+            "Function": "PortOfDischarge",
+            "Qualifier": "UN",
+            "Identifier": "PRSJU",
+            "StateOrProvince": "Puertorico",
+            "Country": "PR",
+            "City": "San Juan"
+        }
+    ]
+}

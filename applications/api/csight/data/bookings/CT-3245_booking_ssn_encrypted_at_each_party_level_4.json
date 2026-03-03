@@ -1,0 +1,141 @@
+{
+    "crowleyBookingNumber": "",
+    "agreementReference": "20-00809",
+    "cargoAvailableDate": "future-date-to-utc{1}",
+    "cargos": [
+        {
+            "cargoType": "CONTAINER",
+            "commodityCode": "201200400",
+            "commodityDescription": "General Cargo",
+            "containerDetails": {
+                "isShippersOwn": true,
+                "isRunningReefer": false,
+                "equipmentIsoCode": "22G0",
+                "equipmentQuantity": 1
+            },
+            "weight": 2000.00,
+            "weightUOM": "KGS",
+            "volume": 300,
+            "volumeUOM": "MTQ",
+            "cargoItems": [
+                {
+                    "goodsPackaging": "BAG-Bag",
+                    "numberOfPackages": 10,
+                    "weight": 2000.00,
+                    "weightUOM": "KGS",
+                    "volume": 30,
+                    "volumeUOM": "MTQ"
+                }
+            ]
+        }
+    ],
+    "Voyages": [],
+    "moveType": "PortToPort",
+    "bookingRemarks": "Test Remarks",
+    "isHazMatBooking": false,
+    "freightPaymentMode": "PrePaid",
+    "electronicCustomerReference": "timestamp-prefix{CustCont}",
+    "shippingtype": "Laden",
+    "shippingCompany": "CRWLY",
+    "parties": [
+        {
+            "ein": "-----BEGIN PGP MESSAGE-----\r\nVersion: BCPG v1.74.0\r\n\r\nwcDMA42u3/pDdqFbAQv/WfK8H2JR0Pr1069OKFHo2aWr59GgqRSUHU/2Rh0c7RS/\r\nF3RPbWfnilCBonJwi+gxi3A6aPduqo3170xd5Q/8ichFTfbEHkCE5ZFPnVHr5MEh\r\nR+WtGyRqgilIK0Mcn3wUioBiwvninvrnauBS6WBUeghu+MzKbAylcrLLxFFM6+hE\r\n6NXyIA+A/eEsOQrLqjVeIqUOyQsuApqEO5sr3CdK2lkzR8mltXYxFHssv5TC4sC1\r\nblvPhlP8v9rD/nVlTD9SUR4vUudTHOFjFR+fo97w2zsJ2ahZQm9Tqm9glyLfznEi\r\nzdS9X62hDYDt9Q2kk5CmW3Xvq8iDV4xCooK6jaC94Xvpn2YwXATjUho2o8M4T7Lt\r\nlXfWIYaJTdHM75ml7p/xRM3UYDr5UU0PMY3jpFZzV1+9TbEDzRTzXCH9f92QwPgQ\r\nH/opFMl7cZ1NzY30JyKAUsiFPwF5+YiNzWHOZIoE/ltZQf27e1ViZsuSDKoyqADb\r\nXA6icfX5Cjmsy90V9B2E0kABSVEJGDWSvL9dRrfDkTDW0lZ+5oGjzOMsTv8Pxx0x\r\nx23ik56lNYepNDIdAUGW4GLXsegXkpnt6I5detgX+dHe\r\n=Ui+p\r\n-----END PGP MESSAGE-----\r\n",
+            "code": "1912879-51",
+            "bookingParty": true,
+            "role": "SHP",
+            "name": "FRUIT OF THE LOOM INC",
+            "address": {
+                "address1": "1 COLUMBUS DISTRIBUTION",
+                "stateOrProvince": "GA",
+                "address3": "",
+                "country": "US",
+                "zipCode": "31820",
+                "city": "MIDLAND",
+                "address2": "MIDLAND"
+            },
+            "externalPartnerReference": "Test123",
+            "vatNumber": "Test123",
+            "contact": {
+                "emailAddress": "shreyansh.jain@nagarro.com",
+                "mobilephone": "09911131061",
+                "name": "TEST1233",
+                "telephone": "8888888888",
+                "faxNumber": "8888888888",
+                "website": "testweb.com"
+            },
+            "reference": "CEE1234"
+        },
+        {
+            "ein": "-----BEGIN PGP MESSAGE-----\r\nVersion: BCPG v1.74.0\r\n\r\nwcDMA42u3/pDdqFbAQv/WfK8H2JR0Pr1069OKFHo2aWr59GgqRSUHU/2Rh0c7RS/\r\nF3RPbWfnilCBonJwi+gxi3A6aPduqo3170xd5Q/8ichFTfbEHkCE5ZFPnVHr5MEh\r\nR+WtGyRqgilIK0Mcn3wUioBiwvninvrnauBS6WBUeghu+MzKbAylcrLLxFFM6+hE\r\n6NXyIA+A/eEsOQrLqjVeIqUOyQsuApqEO5sr3CdK2lkzR8mltXYxFHssv5TC4sC1\r\nblvPhlP8v9rD/nVlTD9SUR4vUudTHOFjFR+fo97w2zsJ2ahZQm9Tqm9glyLfznEi\r\nzdS9X62hDYDt9Q2kk5CmW3Xvq8iDV4xCooK6jaC94Xvpn2YwXATjUho2o8M4T7Lt\r\nlXfWIYaJTdHM75ml7p/xRM3UYDr5UU0PMY3jpFZzV1+9TbEDzRTzXCH9f92QwPgQ\r\nH/opFMl7cZ1NzY30JyKAUsiFPwF5+YiNzWHOZIoE/ltZQf27e1ViZsuSDKoyqADb\r\nXA6icfX5Cjmsy90V9B2E0kABSVEJGDWSvL9dRrfDkTDW0lZ+5oGjzOMsTv8Pxx0x\r\nx23ik56lNYepNDIdAUGW4GLXsegXkpnt6I5detgX+dHe\r\n=Ui+p\r\n-----END PGP MESSAGE-----\r\n",
+            "code": "",
+            "bookingParty": false,
+            "role": "CON",
+            "name": "Warehouse Party INC",
+            "address": {
+                "address1": "789 Florida Warehouse",
+                "stateOrProvince": "FL",
+                "address3": "",
+                "country": "US",
+                "zipCode": "32256",
+                "city": "Jacksonville",
+                "address2": ""
+            },
+            "externalPartnerReference": "Dist124",
+            "vatNumber": "Dist124",
+            "contact": {
+                "emailAddress": "rahul.kakkannoor@crowley.com",
+                "mobilephone": "4148888888",
+                "name": "Consignee Warehouse",
+                "telephone": "4148888888",
+                "faxNumber": "4146906398",
+                "website": "testwebWH.com"
+            },
+            "reference": "CEE1234"
+        },
+        {
+            "ein": "-----BEGIN PGP MESSAGE-----\r\nVersion: BCPG v1.74.0\r\n\r\nwcDMA42u3/pDdqFbAQv/WfK8H2JR0Pr1069OKFHo2aWr59GgqRSUHU/2Rh0c7RS/\r\nF3RPbWfnilCBonJwi+gxi3A6aPduqo3170xd5Q/8ichFTfbEHkCE5ZFPnVHr5MEh\r\nR+WtGyRqgilIK0Mcn3wUioBiwvninvrnauBS6WBUeghu+MzKbAylcrLLxFFM6+hE\r\n6NXyIA+A/eEsOQrLqjVeIqUOyQsuApqEO5sr3CdK2lkzR8mltXYxFHssv5TC4sC1\r\nblvPhlP8v9rD/nVlTD9SUR4vUudTHOFjFR+fo97w2zsJ2ahZQm9Tqm9glyLfznEi\r\nzdS9X62hDYDt9Q2kk5CmW3Xvq8iDV4xCooK6jaC94Xvpn2YwXATjUho2o8M4T7Lt\r\nlXfWIYaJTdHM75ml7p/xRM3UYDr5UU0PMY3jpFZzV1+9TbEDzRTzXCH9f92QwPgQ\r\nH/opFMl7cZ1NzY30JyKAUsiFPwF5+YiNzWHOZIoE/ltZQf27e1ViZsuSDKoyqADb\r\nXA6icfX5Cjmsy90V9B2E0kABSVEJGDWSvL9dRrfDkTDW0lZ+5oGjzOMsTv8Pxx0x\r\nx23ik56lNYepNDIdAUGW4GLXsegXkpnt6I5detgX+dHe\r\n=Ui+p\r\n-----END PGP MESSAGE-----\r\n",
+            "code": "",
+            "bookingParty": false,
+            "role": "FOR",
+            "name": "Warehouse Forwarder INC",
+            "address": {
+                "address1": "1159 DISTRIBUTION",
+                "stateOrProvince": "FL",
+                "address3": "",
+                "country": "US",
+                "zipCode": "32246",
+                "city": "Jacksonville",
+                "address2": ""
+            },
+            "externalPartnerReference": "Dist345",
+            "vatNumber": "Dist345",
+            "contact": {
+                "emailAddress": "rahul2891987@gmail.com",
+                "mobilephone": "4144144141",
+                "name": "Forwader Florida",
+                "telephone": "4144777777",
+                "faxNumber": "4144144141",
+                "website": "testwebfor.com"
+            },
+            "reference": "CEE1234"
+        }
+    ],
+    "Locations": [
+        {
+            "Function": "PortOfLoading",
+            "Qualifier": "UN",
+            "Identifier": "USJAX",
+            "StateOrProvince": "FL",
+            "Country": "US",
+            "City": "Jacksonville"
+        },
+        {
+            "Function": "PortOfDischarge",
+            "Qualifier": "UN",
+            "Identifier": "PRSJU",
+            "StateOrProvince": "Puertorico",
+            "Country": "PR",
+            "City": "San Juan"
+        }
+    ]
+}

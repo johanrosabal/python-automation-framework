@@ -1,3 +1,6 @@
+import pytest
+
+from applications.api.demo.config.decoratos import demo
 from core.api.common.BaseTest import BaseTest
 from applications.api.demo.endpoints.Posts import Posts
 from applications.api.demo.data.sources_mapping import Payload
@@ -5,11 +8,12 @@ from core.config.logger_config import setup_logger
 from core.data.sources.JSON_reader import JSONReader
 from core.utils.decorator import test
 
-logger = setup_logger('TestPost')
+logger = setup_logger('TestPostComments')
 
 
 # @pytest.mark.skip(reason="no way of currently testing this")
-
+@pytest.mark.api
+@demo
 class TestPostComments(BaseTest):
 
     def setup_class(self):
@@ -19,7 +23,7 @@ class TestPostComments(BaseTest):
     @test(test_case_id="API-0001", test_description="Create a Post using JSON Data")
     def test_create_posts(self):
         path = "../data/sources/payload.json"
-        data = JSONReader().set_file_path(path).read_file(Payload, "tests.payload")
+        data = JSONReader().set_file_path(path).read_list_structure(Payload, "tests.payload")
         payload = data[0].to_json()
 
         # Sending Post Request

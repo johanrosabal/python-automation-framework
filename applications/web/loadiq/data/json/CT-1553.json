@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-1553",
+    "testCaseName": "test_verify_the_load_details_with_missing_data",
+    "title": "Verify the 'load details' with missing data",
+    "description": "System prevents the update and prompts for a phone number.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-1553",
+      "name": "CT-1553"
+    },
+    "data": {
+    }
+  }
+}

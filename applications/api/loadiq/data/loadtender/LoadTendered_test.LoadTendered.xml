@@ -1,0 +1,1061 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CISDocument>
+  <EventName>LoadTendered</EventName>
+  <ReasonCode>TNRD</ReasonCode>
+  <ReasonCodeDescription>Tendered</ReasonCodeDescription>
+  <SystemTimeZoneOffset>0.000000</SystemTimeZoneOffset>
+  <EventDateTime>2025-04-15T07:34:29</EventDateTime>
+  <EventReportedDateTime>2025-04-15T07:34:29</EventReportedDateTime>
+  <EventOccurredDateTime>2025-04-15T07:34:29</EventOccurredDateTime>
+  <EventOccurredTimeZoneOffset>0.000000</EventOccurredTimeZoneOffset>
+  <EventUser>David.Barrera@crowley.com</EventUser>
+  <SystemLoadID>51400102958</SystemLoadID>
+  <DivisionCode>CROW</DivisionCode>
+  <LogisticsGroup>*DFT</LogisticsGroup>
+  <Carrier>
+    <CarrierCode>TESTCARRIER</CarrierCode>
+    <CarrierName>COWAN INTERMODAL GROUP</CarrierName>
+    <POD>PODRQ</POD>
+    <SCAC>CIGL</SCAC>
+    <CarrierBusinessHours>
+      <CarrierBusinessHoursTimeZoneOffset>0.000000</CarrierBusinessHoursTimeZoneOffset>
+    </CarrierBusinessHours>
+    <CarrierExternalID1>DOT215194</CarrierExternalID1>
+    <CarrierExternalID2>MC155424</CarrierExternalID2>
+  </Carrier>
+  <Service>
+    <ServiceCode>SFL</ServiceCode>
+  </Service>
+  <EquipmentTypeDetail>
+    <EquipmentType>40RH</EquipmentType>
+  </EquipmentTypeDetail>
+  <TenderedBy>
+    <TenderedByUserID>David.Barrera@crowley.com</TenderedByUserID>
+  </TenderedBy>
+  <TariffService>
+    <SystemTariffID>2512</SystemTariffID>
+    <AutoAcceptTender>bFALSE</AutoAcceptTender>
+  </TariffService>
+  <SuspendedReasonEnumVal>NOT SUSPEND</SuspendedReasonEnumVal>
+  <TrailerNumber>cmcu5602330</TrailerNumber>
+  <AmountDetail>
+    <ChargeAmount>223.200000</ChargeAmount>
+  </AmountDetail>
+  <CurrencyType>USD</CurrencyType>
+  <TotalNumberOfStops>3</TotalNumberOfStops>
+  <TripID>0</TripID>
+  <SystemLoadStatus>LL_DTENDER</SystemLoadStatus>
+  <PaymentTerm>PREPAID</PaymentTerm>
+  <MustRespondByDateTime>2025-04-15T07:34:00</MustRespondByDateTime>
+  <LoadUOM>
+    <LoadVolumeUOM>FT</LoadVolumeUOM>
+    <LoadWeightUOM>LB</LoadWeightUOM>
+  </LoadUOM>
+  <LoadReferenceNumberList>
+    <LoadReferenceNumberType>BN</LoadReferenceNumberType>
+    <LoadReferenceNumber>CAT356353001001</LoadReferenceNumber>
+    <LoadReferenceNumberExternalID>BN</LoadReferenceNumberExternalID>
+  </LoadReferenceNumberList>
+  <LoadReferenceNumberList>
+    <LoadReferenceNumberType>BN</LoadReferenceNumberType>
+    <LoadReferenceNumber>CAT356353001001</LoadReferenceNumber>
+    <LoadReferenceNumberExternalID>BN</LoadReferenceNumberExternalID>
+  </LoadReferenceNumberList>
+  <LoadReferenceNumberList>
+    <LoadReferenceNumberType>LD_ATTACH</LoadReferenceNumberType>
+    <LoadReferenceNumber>Document Attachment Pending</LoadReferenceNumber>
+  </LoadReferenceNumberList>
+  <LoadReferenceNumberList>
+    <LoadReferenceNumberType>BOL</LoadReferenceNumberType>
+    <LoadReferenceNumber>100090067</LoadReferenceNumber>
+  </LoadReferenceNumberList>
+  <LoadReferenceNumberList>
+    <LoadReferenceNumberType>DLV_Event</LoadReferenceNumberType>
+    <LoadReferenceNumber>CU</LoadReferenceNumber>
+  </LoadReferenceNumberList>
+  <LoadReferenceNumberList>
+    <LoadReferenceNumberType>LG</LoadReferenceNumberType>
+    <LoadReferenceNumber>ILIN</LoadReferenceNumber>
+  </LoadReferenceNumberList>
+  <LoadReferenceNumberList>
+    <LoadReferenceNumberType>PU_Event</LoadReferenceNumberType>
+    <LoadReferenceNumber>LD</LoadReferenceNumber>
+  </LoadReferenceNumberList>
+  <LoadStopList>
+    <SystemStopID>132013</SystemStopID>
+    <StopSequenceNumber>1</StopSequenceNumber>
+    <ShippingPointType>DC</ShippingPointType>
+    <ShippingLocationCode>FREHIA07</ShippingLocationCode>
+    <ShippingPointAddress>
+      <ShippingPointStreet>3995 W 108TH ST</ShippingPointStreet>
+      <ShippingPointCity>HIALEAH</ShippingPointCity>
+      <ShippingPointPostalCode>33018</ShippingPointPostalCode>
+      <ShippingPointStateCode>FL</ShippingPointStateCode>
+      <ShippingPointCountryCode>USA</ShippingPointCountryCode>
+      <ShippingPointTimeZoneOffset>0.000000</ShippingPointTimeZoneOffset>
+    </ShippingPointAddress>
+    <StopShippingLocation>
+      <StopShippingLocationName>FREEZPAK LOGISTICS</StopShippingLocationName>
+      <StopShippingLocationAddress>
+        <StopShippingLocationStreet>3995 W 108TH ST</StopShippingLocationStreet>
+        <StopShippingLocationCity>HIALEAH</StopShippingLocationCity>
+        <StopShippingLocationPostalCode>33018</StopShippingLocationPostalCode>
+        <StopShippingLocationStateCode>FL</StopShippingLocationStateCode>
+        <StopShippingLocationCountryCode>USA</StopShippingLocationCountryCode>
+        <StopShippingLocationAddressTimeZoneOffset>0.000000</StopShippingLocationAddressTimeZoneOffset>
+      </StopShippingLocationAddress>
+      <StopShippingLocationContact />
+      <StopShippingLocationTimeZoneOffset>0.000000</StopShippingLocationTimeZoneOffset>
+      <StopShippingLocationExternalID2>0100254-01</StopShippingLocationExternalID2>
+    </StopShippingLocation>
+    <LoadingHours>0.000000</LoadingHours>
+    <UnLoadingHours>0.000000</UnLoadingHours>
+    <WaitingHours>0.000000</WaitingHours>
+    <ShipmentsPickedNumber>1</ShipmentsPickedNumber>
+    <PickedShipmentInfo>
+      <PickedWeight>20000.000000</PickedWeight>
+      <PickedVolume>0.000000</PickedVolume>
+      <PickedSkids>1.000000</PickedSkids>
+      <PickedPieces>0.000000</PickedPieces>
+    </PickedShipmentInfo>
+    <ShipmentsDroppedNumber>0</ShipmentsDroppedNumber>
+    <DroppedShipmentInfo>
+      <DroppedWeight>0.000000</DroppedWeight>
+      <DroppedVolume>0.000000</DroppedVolume>
+      <DroppedSkids>0.000000</DroppedSkids>
+      <DroppedPieces>0.000000</DroppedPieces>
+    </DroppedShipmentInfo>
+    <ComputedArrivalDateTime>2025-04-15T10:00:00</ComputedArrivalDateTime>
+    <ComputedDepartureDateTime>2025-04-15T10:00:00</ComputedDepartureDateTime>
+    <AppointmentInfo>
+      <SystemAppointmentID>24902</SystemAppointmentID>
+      <AppointmentStatus>
+        <AppointmentStatusCode>CONFIRMED</AppointmentStatusCode>
+      </AppointmentStatus>
+      <AppointmentFromDateTime>2025-04-15T10:00:00</AppointmentFromDateTime>
+      <AppointmentToDateTime>2025-04-15T10:00:00</AppointmentToDateTime>
+      <OverrideHours>bFALSE</OverrideHours>
+      <AppointmentWithInfo />
+    </AppointmentInfo>
+    <PickShipmentLegDetails>
+      <PickSystemShipmentLegID>100090067</PickSystemShipmentLegID>
+      <PickSystemShipmentNumber>356353001001_1</PickSystemShipmentNumber>
+    </PickShipmentLegDetails>
+    <DriveTimeToStop>0.000000</DriveTimeToStop>
+    <DriveDistanceToStop>0.000000</DriveDistanceToStop>
+    <WeekendHolidayBreakHours>0.000000</WeekendHolidayBreakHours>
+    <WeekendHolidayBreakOrientation>0</WeekendHolidayBreakOrientation>
+    <LastComputedArrivalDateTime>2025-04-15T10:00:00</LastComputedArrivalDateTime>
+    <LastComputedDepartureDateTime>2025-04-15T10:00:00</LastComputedDepartureDateTime>
+    <StopShippingLocationNameOverride>FREEZPAK LOGISTICS</StopShippingLocationNameOverride>
+  </LoadStopList>
+  <LoadStopList>
+    <SystemStopID>132014</SystemStopID>
+    <StopSequenceNumber>2</StopSequenceNumber>
+    <ShippingPointType>DC</ShippingPointType>
+    <ShippingLocationCode>JOMHIA01</ShippingLocationCode>
+    <ShippingPointAddress>
+      <ShippingPointStreet>2275 W 9TH AVE</ShippingPointStreet>
+      <ShippingPointCity>HIALEAH</ShippingPointCity>
+      <ShippingPointPostalCode>33010</ShippingPointPostalCode>
+      <ShippingPointStateCode>FL</ShippingPointStateCode>
+      <ShippingPointCountryCode>USA</ShippingPointCountryCode>
+      <ShippingPointTimeZoneOffset>0.000000</ShippingPointTimeZoneOffset>
+    </ShippingPointAddress>
+    <StopShippingLocation>
+      <StopShippingLocationName>JOMARA SEAFOOD INC</StopShippingLocationName>
+      <StopShippingLocationAddress>
+        <StopShippingLocationStreet>2275 W 9TH AVE</StopShippingLocationStreet>
+        <StopShippingLocationCity>HIALEAH</StopShippingLocationCity>
+        <StopShippingLocationPostalCode>33010</StopShippingLocationPostalCode>
+        <StopShippingLocationStateCode>FL</StopShippingLocationStateCode>
+        <StopShippingLocationCountryCode>USA</StopShippingLocationCountryCode>
+        <StopShippingLocationAddressTimeZoneOffset>0.000000</StopShippingLocationAddressTimeZoneOffset>
+      </StopShippingLocationAddress>
+      <StopShippingLocationContact />
+      <StopShippingLocationTimeZoneOffset>0.000000</StopShippingLocationTimeZoneOffset>
+      <StopShippingLocationExternalID2>3092097-02</StopShippingLocationExternalID2>
+    </StopShippingLocation>
+    <LoadingHours>0.000000</LoadingHours>
+    <UnLoadingHours>0.000000</UnLoadingHours>
+    <WaitingHours>1.680000</WaitingHours>
+    <ShipmentsPickedNumber>1</ShipmentsPickedNumber>
+    <PickedShipmentInfo>
+      <PickedWeight>20000.000000</PickedWeight>
+      <PickedVolume>0.000000</PickedVolume>
+      <PickedSkids>1.000000</PickedSkids>
+      <PickedPieces>0.000000</PickedPieces>
+    </PickedShipmentInfo>
+    <ShipmentsDroppedNumber>1</ShipmentsDroppedNumber>
+    <DroppedShipmentInfo>
+      <DroppedWeight>20000.000000</DroppedWeight>
+      <DroppedVolume>0.000000</DroppedVolume>
+      <DroppedSkids>1.000000</DroppedSkids>
+      <DroppedPieces>0.000000</DroppedPieces>
+    </DroppedShipmentInfo>
+    <ComputedArrivalDateTime>2025-04-15T12:00:00</ComputedArrivalDateTime>
+    <ComputedDepartureDateTime>2025-04-15T12:00:00</ComputedDepartureDateTime>
+    <AppointmentInfo>
+      <SystemAppointmentID>25030</SystemAppointmentID>
+      <AppointmentStatus>
+        <AppointmentStatusCode>CONFIRMED</AppointmentStatusCode>
+      </AppointmentStatus>
+      <AppointmentFromDateTime>2025-04-15T12:00:00</AppointmentFromDateTime>
+      <AppointmentToDateTime>2025-04-15T12:00:00</AppointmentToDateTime>
+      <OverrideHours>bFALSE</OverrideHours>
+      <AppointmentWithInfo />
+    </AppointmentInfo>
+    <PickShipmentLegDetails>
+      <PickSystemShipmentLegID>100090068</PickSystemShipmentLegID>
+      <PickSystemShipmentNumber>356353001001_2</PickSystemShipmentNumber>
+    </PickShipmentLegDetails>
+    <DropShipmentLegDetails>
+      <DropSystemShipmentLegID>100090067</DropSystemShipmentLegID>
+      <DropSystemShipmentNumber>356353001001_1</DropSystemShipmentNumber>
+    </DropShipmentLegDetails>
+    <DriveTimeToStop>0.320000</DriveTimeToStop>
+    <DriveDistanceToStop>11.300000</DriveDistanceToStop>
+    <WeekendHolidayBreakHours>0.000000</WeekendHolidayBreakHours>
+    <WeekendHolidayBreakOrientation>0</WeekendHolidayBreakOrientation>
+    <LastComputedArrivalDateTime>2025-04-15T12:00:00</LastComputedArrivalDateTime>
+    <LastComputedDepartureDateTime>2025-04-15T12:00:00</LastComputedDepartureDateTime>
+    <StopShippingLocationNameOverride>JOMARA SEAFOOD INC</StopShippingLocationNameOverride>
+  </LoadStopList>
+  <LoadStopList>
+    <SystemStopID>132027</SystemStopID>
+    <StopSequenceNumber>3</StopSequenceNumber>
+    <ShippingPointType>HUB</ShippingPointType>
+    <ShippingLocationCode>PEFR002</ShippingLocationCode>
+    <ShippingPointAddress>
+      <ShippingPointStreet>1500 ELLER DRIVE</ShippingPointStreet>
+      <ShippingPointCity>FORT LAUDERDALE</ShippingPointCity>
+      <ShippingPointPostalCode>33316</ShippingPointPostalCode>
+      <ShippingPointStateCode>FL</ShippingPointStateCode>
+      <ShippingPointCountryCode>USA</ShippingPointCountryCode>
+      <ShippingPointTimeZoneOffset>0.000000</ShippingPointTimeZoneOffset>
+    </ShippingPointAddress>
+    <StopShippingLocation>
+      <StopShippingLocationName>FEC RAIL RAMP</StopShippingLocationName>
+      <StopShippingLocationAddress>
+        <StopShippingLocationStreet>1500 ELLER DRIVE</StopShippingLocationStreet>
+        <StopShippingLocationCity>FORT LAUDERDALE</StopShippingLocationCity>
+        <StopShippingLocationPostalCode>33316</StopShippingLocationPostalCode>
+        <StopShippingLocationStateCode>FL</StopShippingLocationStateCode>
+        <StopShippingLocationCountryCode>USA</StopShippingLocationCountryCode>
+        <StopShippingLocationAddressTimeZoneOffset>0.000000</StopShippingLocationAddressTimeZoneOffset>
+      </StopShippingLocationAddress>
+      <StopShippingLocationContact />
+      <StopShippingLocationTimeZoneOffset>0.000000</StopShippingLocationTimeZoneOffset>
+      <StopShippingLocationExternalID1>PEFT001</StopShippingLocationExternalID1>
+      <StopShippingLocationExternalID2>0217255-07</StopShippingLocationExternalID2>
+    </StopShippingLocation>
+    <LoadingHours>0.000000</LoadingHours>
+    <UnLoadingHours>0.000000</UnLoadingHours>
+    <WaitingHours>0.000000</WaitingHours>
+    <ShipmentsPickedNumber>0</ShipmentsPickedNumber>
+    <PickedShipmentInfo>
+      <PickedWeight>0.000000</PickedWeight>
+      <PickedVolume>0.000000</PickedVolume>
+      <PickedSkids>0.000000</PickedSkids>
+      <PickedPieces>0.000000</PickedPieces>
+    </PickedShipmentInfo>
+    <ShipmentsDroppedNumber>1</ShipmentsDroppedNumber>
+    <DroppedShipmentInfo>
+      <DroppedWeight>20000.000000</DroppedWeight>
+      <DroppedVolume>0.000000</DroppedVolume>
+      <DroppedSkids>1.000000</DroppedSkids>
+      <DroppedPieces>0.000000</DroppedPieces>
+    </DroppedShipmentInfo>
+    <ComputedArrivalDateTime>2025-04-15T12:39:00</ComputedArrivalDateTime>
+    <ComputedDepartureDateTime>2025-04-15T12:39:00</ComputedDepartureDateTime>
+    <DropShipmentLegDetails>
+      <DropSystemShipmentLegID>100090068</DropSystemShipmentLegID>
+      <DropSystemShipmentNumber>356353001001_2</DropSystemShipmentNumber>
+    </DropShipmentLegDetails>
+    <DriveTimeToStop>0.650000</DriveTimeToStop>
+    <DriveDistanceToStop>30.600000</DriveDistanceToStop>
+    <WeekendHolidayBreakHours>0.000000</WeekendHolidayBreakHours>
+    <WeekendHolidayBreakOrientation>0</WeekendHolidayBreakOrientation>
+    <LastComputedArrivalDateTime>2025-04-15T12:39:00</LastComputedArrivalDateTime>
+    <LastComputedDepartureDateTime>2025-04-15T12:39:00</LastComputedDepartureDateTime>
+    <StopShippingLocationNameOverride>FEC RAIL RAMP</StopShippingLocationNameOverride>
+  </LoadStopList>
+  <ShipmentLeg>
+    <ShipmentItinerarySeqNum>100</ShipmentItinerarySeqNum>
+    <Shipment>
+      <SystemShipmentID>51318</SystemShipmentID>
+      <SystemShipmentNumber>356353001001_2</SystemShipmentNumber>
+      <ShipmentDescription>CAT356353001001</ShipmentDescription>
+      <OriginTypeEnumVal>DC</OriginTypeEnumVal>
+      <OriginCode>JOMHIA01</OriginCode>
+      <OriginName>JOMARA SEAFOOD INC</OriginName>
+      <OriginAddress>
+        <OriginStreet>2275 W 9TH AVE</OriginStreet>
+        <OriginCity>HIALEAH</OriginCity>
+        <OriginPostalCode>33010</OriginPostalCode>
+        <OriginStateCode>FL</OriginStateCode>
+        <OriginCountryCode>USA</OriginCountryCode>
+        <OriginTimeZoneOffset>0.000000</OriginTimeZoneOffset>
+      </OriginAddress>
+      <OriginShippingLocation>
+        <OriginShippingLocationName>JOMARA SEAFOOD INC</OriginShippingLocationName>
+        <OriginShippingLocationContact />
+        <OriginShippingLocationTimeZoneOffset>0.000000</OriginShippingLocationTimeZoneOffset>
+        <OriginShippingLocationExternalID2>3092097-02</OriginShippingLocationExternalID2>
+      </OriginShippingLocation>
+      <DestinationTypeEnumVal>HUB</DestinationTypeEnumVal>
+      <DestinationCode>JAXT000</DestinationCode>
+      <DestinationName>JACKSONVILLE PORT AUTHORITY</DestinationName>
+      <DestinationAddress>
+        <DestinationStreet>3001 TALLEYRAND AVE</DestinationStreet>
+        <DestinationCity>JACKSONVILLE</DestinationCity>
+        <DestinationPostalCode>32206</DestinationPostalCode>
+        <DestinationStateCode>FL</DestinationStateCode>
+        <DestinationCountryCode>USA</DestinationCountryCode>
+        <DestinationTimeZoneOffset>0.000000</DestinationTimeZoneOffset>
+      </DestinationAddress>
+      <DestinationShippingLocation>
+        <DestinationShippingLocationName>JACKSONVILLE PORT AUTHORITY</DestinationShippingLocationName>
+        <DestinationShippingLocationContact>
+          <DestinationShippingLocationContactPrimaryTelephoneNumber>7173962700</DestinationShippingLocationContactPrimaryTelephoneNumber>
+        </DestinationShippingLocationContact>
+        <DestinationShippingLocationTimeZoneOffset>0.000000</DestinationShippingLocationTimeZoneOffset>
+        <DestinationShippingLocationExternalID1>JAXAR</DestinationShippingLocationExternalID1>
+        <DestinationShippingLocationExternalID2>2133989</DestinationShippingLocationExternalID2>
+      </DestinationShippingLocation>
+      <CustomerCode>SAL</CustomerCode>
+      <BillToCustomerCode>SAL</BillToCustomerCode>
+      <CSR>0</CSR>
+      <ShipmentInfo>
+        <Weight>20000.000000</Weight>
+        <Volume>0.000000</Volume>
+        <Pieces>0.000000</Pieces>
+        <Skids>1.000000</Skids>
+      </ShipmentInfo>
+      <UOM>
+        <WeightUOM>LB</WeightUOM>
+        <VolumeUOM>FT</VolumeUOM>
+      </UOM>
+      <OnHold>bFALSE</OnHold>
+      <CommodityCode>REEFER</CommodityCode>
+      <Customer>
+        <CurrentCustomerVersion>
+          <CustomerName>SAL</CustomerName>
+          <CustomerAddress>
+            <CustomerAddressStreet>9487 REGENCY SQUARE BLVD.</CustomerAddressStreet>
+            <CustomerAddressCity>JACKSONVILLE</CustomerAddressCity>
+            <CustomerAddressPostalCode>32225</CustomerAddressPostalCode>
+            <CustomerAddressStateCode>FL</CustomerAddressStateCode>
+            <CustomerAddressCountryCode>USA</CustomerAddressCountryCode>
+            <CustomerAddressTimeZoneOffset>0.000000</CustomerAddressTimeZoneOffset>
+          </CustomerAddress>
+        </CurrentCustomerVersion>
+        <CustomerBusinessHours>
+          <CustomerBusinessHoursTimeZoneOffset>0.000000</CustomerBusinessHoursTimeZoneOffset>
+        </CustomerBusinessHours>
+      </Customer>
+      <BillToCustomer>
+        <CurrentBillToCustomerVersion>
+          <BillToCustomerName>SAL</BillToCustomerName>
+          <BillToCustomerAddress>
+            <BillToCustomerAddressStreet>9487 REGENCY SQUARE BLVD.</BillToCustomerAddressStreet>
+            <BillToCustomerAddressCity>JACKSONVILLE</BillToCustomerAddressCity>
+            <BillToCustomerAddressPostalCode>32225</BillToCustomerAddressPostalCode>
+            <BillToCustomerAddressStateCode>FL</BillToCustomerAddressStateCode>
+            <BillToCustomerAddressCountryCode>USA</BillToCustomerAddressCountryCode>
+            <BillToCustomerAddressTimeZoneOffset>0.000000</BillToCustomerAddressTimeZoneOffset>
+          </BillToCustomerAddress>
+          <CurrentBillToCustomerVersionContact />
+        </CurrentBillToCustomerVersion>
+        <BillToCustomerBusinessHours>
+          <BillToCustomerBusinessHoursTimeZoneOffset>0.000000</BillToCustomerBusinessHoursTimeZoneOffset>
+        </BillToCustomerBusinessHours>
+      </BillToCustomer>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>EQ1</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>40RH</ShipmentReferenceNumber>
+        <ShipmentReferenceNumberExternalID>EQ</ShipmentReferenceNumberExternalID>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>HAZ</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>N</ShipmentReferenceNumber>
+        <ShipmentReferenceNumberExternalID>HO</ShipmentReferenceNumberExternalID>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>V3</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>SAL5031S</ShipmentReferenceNumber>
+        <ShipmentReferenceNumberExternalID>V3</ShipmentReferenceNumberExternalID>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>MVT</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>Southbound</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>REGIONAL_OFF</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>JAX</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>ACTIVITY</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>TRK</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>COMPANY</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>CLS</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>DLV_Event</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>CU</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>LG</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>ILIN</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>Profitability</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>Shipment Not Rated Or Invalid Rating</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>PU_Event</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>LD</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>Shipment Source</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>CSight</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>MODE</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>C</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>OFFICE</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>JAX</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>ORDER_BY_ADDRESS</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>SEA WORLD LLC CALLE DIANA SUITE 2 LOTE 36 GUAYNABO PR, 00968 USA</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>ORDER_BY_CVIF</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>2579480-03</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>ORDER_BY_ID</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>TBD</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>TEMP_MAX</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>-010</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>TEMP_MIN</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>-010</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>Loaded OR Empty</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>Loaded</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>TEMP_VENT</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>0</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>ORGREF</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>SM151896 / PO 402854</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>ShipmentPurpose</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>Export_LiveLoad</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentContainer>
+        <ContainerId>68756</ContainerId>
+        <ContainerDescription>REFRIGERATEDCARGO,CHILLEDORFROZEN,NOS</ContainerDescription>
+        <ContainerQuantity>1.000000</ContainerQuantity>
+        <ContainerLength>0.000000</ContainerLength>
+        <ContainerWidth>0.000000</ContainerWidth>
+        <ContainerHeight>0.000000</ContainerHeight>
+        <ContainerRatingUnitType>PALLETS</ContainerRatingUnitType>
+        <ContainerShippingInfo>
+          <ContainerShippingInfoWeight>20000.000000</ContainerShippingInfoWeight>
+          <ContainerShippingInfoVolume>0.000000</ContainerShippingInfoVolume>
+          <ContainerShippingInfoOrderValue>0.000000</ContainerShippingInfoOrderValue>
+        </ContainerShippingInfo>
+        <ContainerMarkedForLocationEnumVal>0</ContainerMarkedForLocationEnumVal>
+        <ContainerCommodityCodeDetail>
+          <ContainerCommodityCode>REEFER</ContainerCommodityCode>
+        </ContainerCommodityCodeDetail>
+        <ContainerWeightByFreightClass>
+          <WeightByFreightClassFreightCode> 85 </WeightByFreightClassFreightCode>
+        </ContainerWeightByFreightClass>
+        <StackingRuleEnumVal>0</StackingRuleEnumVal>
+        <CarrierPackagingTypeVal>0</CarrierPackagingTypeVal>
+        <SplitMethodEnumVal>NONE</SplitMethodEnumVal>
+        <SystemItemMasterID>0</SystemItemMasterID>
+        <ShipmentDetailItemNumber>1</ShipmentDetailItemNumber>
+        <ItemPackageLevelCode>0</ItemPackageLevelCode>
+        <ShipmentDetailItemDescription>REFRIGERATEDCARGO,CHILLEDORFROZEN,NOS</ShipmentDetailItemDescription>
+        <ContentQuantity>0.000000</ContentQuantity>
+        <Is3DLoadingRequired>bFALSE</Is3DLoadingRequired>
+        <ItemType>0</ItemType>
+        <ContentLevel>100</ContentLevel>
+        <Priority>0</Priority>
+        <IsItemPackagingCommitted>bFALSE</IsItemPackagingCommitted>
+      </ShipmentContainer>
+      <PickupFromDateTime>2025-04-14T00:00:00</PickupFromDateTime>
+      <PickupToDateTime>2025-04-18T11:58:00</PickupToDateTime>
+      <DeliveryFromDateTime>2025-04-14T00:01:00</DeliveryFromDateTime>
+      <DeliveryToDateTime>2025-04-18T11:59:00</DeliveryToDateTime>
+      <ShipmentNote>
+        <NoteID>30293</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>Order Remarks</NoteSubject>
+        <NoteDescription>SEA WORLD LLC | CALLE DIANA SUITE 2 LOTE 36 | AMELIA INDUSTRIAL PARK | GUAYNABO</NoteDescription>
+        <NoteInternalOnly>bFALSE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-04-14T12:49:10</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>51318</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>30294</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>EDI 204 DATA 04/14/2025 17:48 UTC</NoteSubject>
+        <NoteDescription>0239BGUS          UCAT356353001001     202504140000195001010000202504180000  U000000164078000000000000                                                                                   
+0539RTR-010F0                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+0539_R4C                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+0539_R1CLS                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539VOYSAL5031S                                                                                                                                                                                                                                                                                                                                                                                                                                                
+0539HZIN                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+0539_RMSEA WORLD LLC | CALLE DIANA SUITE 2 LOTE 36 | AMELIA INDUSTRIAL PARK | GUAYNABO                                                                                                                                                                                                                                                                                                                                                                         
+0539_T140HCRC                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+0539SSTPFP                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539_R2TRK                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539_R3JAX                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539VCO202504181200                                                                                                                                                                                                                                                                                                                                                                                                                                            
+0539OCCUnited States                                                                                                                                                                                                                                                                                                                                                                                                                                           
+0539FRV000000000                                                                                                                                                                                                                                                                                                                                                                                                                                               
+0839TRLTRLQL NY1   
+0839TRL40HCRCNY1   
+0639COJAXT0                                                                                                    JACKSONVILLE        FL         US                                                                                                               JAXT0       
+0639BTSAL                                9487 REGENCY SQUARE BLVD.                                             JACKSONVILLE        FL32225    US 8002769539                                                                                                    SAL         
+0639SHSEA WORLD LLC                      CALLE DIANA SUITE 2 LOTE 36        AMELIA INDUSTRIAL PARK             GUAYNABO              00968    PR                                                                                                               2579480-03  
+0339PU195001010000195001010000195001010000                    
+0539REFSM151896 / PO 402854                                                                                                                                                                                                                                                                                                                                                                                                                                    
+0639STJOMARA SEAFOOD INC                 2275 W 9TH AVE                                                        HIALEAH             FL33010    US 3058854577                                                                                                    3092097-02  
+0739CNBOB INTERIAN                                      TE3058854577                                                                      
+0439                LBS   0000000100                                           REEFER                                            REEFER                                                                                          
+0439                LBS   0002000000CFT   0000000100                           REFRIGERATEDCARGO,CHILLEDORFROZEN,NOS             REEFER                                                                                          
+0339DR202504181200202504181200202504181200                    
+0639STJAXT0                                                                                                    JACKSONVILLE        FL         US                                                                                                               JAXT0       
+0439                LBS   0000000100                                           REEFER                                            REEFER                                                                                          
+0439                LBS   0002000000CFT   0000000100                           REFRIGERATEDCARGO,CHILLEDORFROZEN,NOS             REEFER</NoteDescription>
+        <NoteInternalOnly>bFALSE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-04-14T12:49:10</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>51318</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>30295</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>EDI 990 DATA 04/14/2025 17:48 UTC</NoteSubject>
+        <NoteDescription>{"eventContext":{"eventId":"86323E94-7396-4CDE-85B4-DDDF82921CB0","eventName":"tender-acknowledgement","eventDateTimeStamp":"2025-04-14T17:48:37.800"},"orderTenderResponse":{"messageType":"990","senderSystemId":"BYTM","eventDateTimeStamp":"2025-04-14T17:48:37.800","orderNumber":"356353001001","moveType":"Export","tenderResponse":"Accepted","tenderResponseType":"Update to an Order","tenderResponseDateTime":"2025-04-14T17:48:37.800","equipmentInfo":[{}],"booking":[{"bookingPrefix":"CAT","bookingNumber":"356353","bookingSeq":"001001"}],"carrier":[{"scac":"CYLI"}]}}</NoteDescription>
+        <NoteInternalOnly>bTRUE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-04-14T12:49:12</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>51318</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>30767</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>Order Remarks</NoteSubject>
+        <NoteDescription>SEA WORLD LLC | CALLE DIANA SUITE 2 LOTE 36 | AMELIA INDUSTRIAL PARK | GUAYNABO</NoteDescription>
+        <NoteInternalOnly>bFALSE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-04-14T13:13:01</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>51318</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>30768</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>EDI 204 DATA 04/14/2025 18:12 UTC</NoteSubject>
+        <NoteDescription>0239BGUS          UCAT356353001001     202504140000195001010000202504180000  U000000164078000000000000                                                                                   
+0539RTR-010F0                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+0539_R4C                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+0539_R1CLS                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539VOYSAL5031S                                                                                                                                                                                                                                                                                                                                                                                                                                                
+0539HZIN                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+0539_RMSEA WORLD LLC | CALLE DIANA SUITE 2 LOTE 36 | AMELIA INDUSTRIAL PARK | GUAYNABO                                                                                                                                                                                                                                                                                                                                                                         
+0539_T140HCRC                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+0539SSTPFP                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539_R2TRK                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539_R3JAX                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539VCO202504181200                                                                                                                                                                                                                                                                                                                                                                                                                                            
+0539OCCUnited States                                                                                                                                                                                                                                                                                                                                                                                                                                           
+0539FRV000000000                                                                                                                                                                                                                                                                                                                                                                                                                                               
+0839TRLTRLQL NY1   
+0839TRL40HCRCNY1   
+0639COJAXT0                                                                                                    JACKSONVILLE        FL         US                                                                                                               JAXT0       
+0639BTSAL                                9487 REGENCY SQUARE BLVD.                                             JACKSONVILLE        FL32225    US 8002769539                                                                                                    SAL         
+0639SHSEA WORLD LLC                      CALLE DIANA SUITE 2 LOTE 36        AMELIA INDUSTRIAL PARK             GUAYNABO              00968    PR                                                                                                               2579480-03  
+0339PU195001010000195001010000195001010000                    
+0539REFSM151896 / PO 402854                                                                                                                                                                                                                                                                                                                                                                                                                                    
+0639STJOMARA SEAFOOD INC                 2275 W 9TH AVE                                                        HIALEAH             FL33010    US 3058854577                                                                                                    3092097-02  
+0739CNBOB INTERIAN                                      TE3058854577                                                                      
+0439                LBS   0000000100                                           REEFER                                            REEFER                                                                                          
+0439                LBS   0002000000CFT   0000000100                           REFRIGERATEDCARGO,CHILLEDORFROZEN,NOS             REEFER                                                                                          
+0339DR202504181200202504181200202504181200                    
+0639STJAXT0                                                                                                    JACKSONVILLE        FL         US                                                                                                               JAXT0       
+0439                LBS   0000000100                                           REEFER                                            REEFER                                                                                          
+0439                LBS   0002000000CFT   0000000100                           REFRIGERATEDCARGO,CHILLEDORFROZEN,NOS             REEFER</NoteDescription>
+        <NoteInternalOnly>bFALSE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-04-14T13:13:01</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>51318</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>30769</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>EDI 990 DATA 04/14/2025 18:12 UTC</NoteSubject>
+        <NoteDescription>{"eventContext":{"eventId":"C45385A2-F1EF-4C63-89AC-4DBD7A30BB23","eventName":"tender-acknowledgement","eventDateTimeStamp":"2025-04-14T18:12:28.857"},"orderTenderResponse":{"messageType":"990","senderSystemId":"BYTM","eventDateTimeStamp":"2025-04-14T18:12:28.857","orderNumber":"356353001001","moveType":"Export","tenderResponse":"Accepted","tenderResponseType":"Update to an Order","tenderResponseDateTime":"2025-04-14T18:12:28.857","equipmentInfo":[{}],"booking":[{"bookingPrefix":"CAT","bookingNumber":"356353","bookingSeq":"001001"}],"carrier":[{"scac":"CYLI"}]}}</NoteDescription>
+        <NoteInternalOnly>bTRUE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-04-14T13:13:04</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>51318</NoteEntityID>
+      </ShipmentNote>
+    </Shipment>
+    <SystemPickUpStopID>132014</SystemPickUpStopID>
+    <SystemDropStopID>132027</SystemDropStopID>
+    <SystemShipmentLegID>100090068</SystemShipmentLegID>
+    <PickUpSequenceNumber>0</PickUpSequenceNumber>
+    <DropSequenceNumber>2</DropSequenceNumber>
+    <PickStopSequenceNumber>2</PickStopSequenceNumber>
+    <DropStopSequenceNumber>3</DropStopSequenceNumber>
+  </ShipmentLeg>
+  <ShipmentLeg>
+    <ShipmentItinerarySeqNum>100</ShipmentItinerarySeqNum>
+    <Shipment>
+      <SystemShipmentID>51317</SystemShipmentID>
+      <SystemShipmentNumber>356353001001_1</SystemShipmentNumber>
+      <ShipmentDescription>CAT356353001001</ShipmentDescription>
+      <OriginTypeEnumVal>DC</OriginTypeEnumVal>
+      <OriginCode>FREHIA07</OriginCode>
+      <OriginName>FREEZPAK LOGISTICS</OriginName>
+      <OriginAddress>
+        <OriginStreet>3995 W 108TH ST</OriginStreet>
+        <OriginCity>HIALEAH</OriginCity>
+        <OriginPostalCode>33018</OriginPostalCode>
+        <OriginStateCode>FL</OriginStateCode>
+        <OriginCountryCode>USA</OriginCountryCode>
+        <OriginTimeZoneOffset>0.000000</OriginTimeZoneOffset>
+      </OriginAddress>
+      <OriginShippingLocation>
+        <OriginShippingLocationName>FREEZPAK LOGISTICS</OriginShippingLocationName>
+        <OriginShippingLocationContact />
+        <OriginShippingLocationTimeZoneOffset>0.000000</OriginShippingLocationTimeZoneOffset>
+        <OriginShippingLocationExternalID2>0100254-01</OriginShippingLocationExternalID2>
+      </OriginShippingLocation>
+      <DestinationTypeEnumVal>DC</DestinationTypeEnumVal>
+      <DestinationCode>JOMHIA01</DestinationCode>
+      <DestinationName>JOMARA SEAFOOD INC</DestinationName>
+      <DestinationAddress>
+        <DestinationStreet>2275 W 9TH AVE</DestinationStreet>
+        <DestinationCity>HIALEAH</DestinationCity>
+        <DestinationPostalCode>33010</DestinationPostalCode>
+        <DestinationStateCode>FL</DestinationStateCode>
+        <DestinationCountryCode>USA</DestinationCountryCode>
+        <DestinationTimeZoneOffset>0.000000</DestinationTimeZoneOffset>
+      </DestinationAddress>
+      <DestinationShippingLocation>
+        <DestinationShippingLocationName>JOMARA SEAFOOD INC</DestinationShippingLocationName>
+        <DestinationShippingLocationContact />
+        <DestinationShippingLocationTimeZoneOffset>0.000000</DestinationShippingLocationTimeZoneOffset>
+        <DestinationShippingLocationExternalID2>3092097-02</DestinationShippingLocationExternalID2>
+      </DestinationShippingLocation>
+      <CustomerCode>SAL</CustomerCode>
+      <BillToCustomerCode>SAL</BillToCustomerCode>
+      <CSR>0</CSR>
+      <ShipmentInfo>
+        <Weight>20000.000000</Weight>
+        <Volume>0.000000</Volume>
+        <Pieces>0.000000</Pieces>
+        <Skids>1.000000</Skids>
+      </ShipmentInfo>
+      <UOM>
+        <WeightUOM>LB</WeightUOM>
+        <VolumeUOM>FT</VolumeUOM>
+      </UOM>
+      <OnHold>bFALSE</OnHold>
+      <CommodityCode>REEFER</CommodityCode>
+      <Customer>
+        <CurrentCustomerVersion>
+          <CustomerName>SAL</CustomerName>
+          <CustomerAddress>
+            <CustomerAddressStreet>9487 REGENCY SQUARE BLVD.</CustomerAddressStreet>
+            <CustomerAddressCity>JACKSONVILLE</CustomerAddressCity>
+            <CustomerAddressPostalCode>32225</CustomerAddressPostalCode>
+            <CustomerAddressStateCode>FL</CustomerAddressStateCode>
+            <CustomerAddressCountryCode>USA</CustomerAddressCountryCode>
+            <CustomerAddressTimeZoneOffset>0.000000</CustomerAddressTimeZoneOffset>
+          </CustomerAddress>
+        </CurrentCustomerVersion>
+        <CustomerBusinessHours>
+          <CustomerBusinessHoursTimeZoneOffset>0.000000</CustomerBusinessHoursTimeZoneOffset>
+        </CustomerBusinessHours>
+      </Customer>
+      <BillToCustomer>
+        <CurrentBillToCustomerVersion>
+          <BillToCustomerName>SAL</BillToCustomerName>
+          <BillToCustomerAddress>
+            <BillToCustomerAddressStreet>9487 REGENCY SQUARE BLVD.</BillToCustomerAddressStreet>
+            <BillToCustomerAddressCity>JACKSONVILLE</BillToCustomerAddressCity>
+            <BillToCustomerAddressPostalCode>32225</BillToCustomerAddressPostalCode>
+            <BillToCustomerAddressStateCode>FL</BillToCustomerAddressStateCode>
+            <BillToCustomerAddressCountryCode>USA</BillToCustomerAddressCountryCode>
+            <BillToCustomerAddressTimeZoneOffset>0.000000</BillToCustomerAddressTimeZoneOffset>
+          </BillToCustomerAddress>
+          <CurrentBillToCustomerVersionContact />
+        </CurrentBillToCustomerVersion>
+        <BillToCustomerBusinessHours>
+          <BillToCustomerBusinessHoursTimeZoneOffset>0.000000</BillToCustomerBusinessHoursTimeZoneOffset>
+        </BillToCustomerBusinessHours>
+      </BillToCustomer>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>EQ1</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>40RH</ShipmentReferenceNumber>
+        <ShipmentReferenceNumberExternalID>EQ</ShipmentReferenceNumberExternalID>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>HAZ</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>N</ShipmentReferenceNumber>
+        <ShipmentReferenceNumberExternalID>HO</ShipmentReferenceNumberExternalID>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>V3</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>SAL5031S</ShipmentReferenceNumber>
+        <ShipmentReferenceNumberExternalID>V3</ShipmentReferenceNumberExternalID>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>MVT</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>Southbound</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>REGIONAL_OFF</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>JAX</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>ACTIVITY</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>TRK</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>COMPANY</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>CLS</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>DLV_Event</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>CU</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>LG</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>ILIN</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>Profitability</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>Shipment Not Rated Or Invalid Rating</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>PU_Event</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>LD</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>Shipment Source</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>CSight</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>MODE</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>C</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>OFFICE</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>JAX</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>ORDER_BY_ADDRESS</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>SEA WORLD LLC CALLE DIANA SUITE 2 LOTE 36 GUAYNABO PR, 00968 USA</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>ORDER_BY_CVIF</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>2579480-03</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>ORDER_BY_ID</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>TBD</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>TEMP_MAX</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>-010</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>TEMP_MIN</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>-010</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>Loaded OR Empty</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>Loaded</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>TEMP_VENT</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>0</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>ORGREF</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>SM151896 / PO 402854</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>ShipmentPurpose</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>Export_LiveLoad</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentContainer>
+        <ContainerId>68754</ContainerId>
+        <ContainerDescription>REFRIGERATEDCARGO,CHILLEDORFROZEN,NOS</ContainerDescription>
+        <ContainerQuantity>1.000000</ContainerQuantity>
+        <ContainerLength>0.000000</ContainerLength>
+        <ContainerWidth>0.000000</ContainerWidth>
+        <ContainerHeight>0.000000</ContainerHeight>
+        <ContainerRatingUnitType>PALLETS</ContainerRatingUnitType>
+        <ContainerShippingInfo>
+          <ContainerShippingInfoWeight>20000.000000</ContainerShippingInfoWeight>
+          <ContainerShippingInfoVolume>0.000000</ContainerShippingInfoVolume>
+          <ContainerShippingInfoOrderValue>0.000000</ContainerShippingInfoOrderValue>
+        </ContainerShippingInfo>
+        <ContainerMarkedForLocationEnumVal>0</ContainerMarkedForLocationEnumVal>
+        <ContainerCommodityCodeDetail>
+          <ContainerCommodityCode>REEFER</ContainerCommodityCode>
+        </ContainerCommodityCodeDetail>
+        <ContainerWeightByFreightClass>
+          <WeightByFreightClassFreightCode> 85 </WeightByFreightClassFreightCode>
+        </ContainerWeightByFreightClass>
+        <StackingRuleEnumVal>0</StackingRuleEnumVal>
+        <CarrierPackagingTypeVal>0</CarrierPackagingTypeVal>
+        <SplitMethodEnumVal>NONE</SplitMethodEnumVal>
+        <SystemItemMasterID>0</SystemItemMasterID>
+        <ShipmentDetailItemNumber>1</ShipmentDetailItemNumber>
+        <ItemPackageLevelCode>0</ItemPackageLevelCode>
+        <ShipmentDetailItemDescription>REFRIGERATEDCARGO,CHILLEDORFROZEN,NOS</ShipmentDetailItemDescription>
+        <ContentQuantity>0.000000</ContentQuantity>
+        <Is3DLoadingRequired>bFALSE</Is3DLoadingRequired>
+        <ItemType>0</ItemType>
+        <ContentLevel>100</ContentLevel>
+        <Priority>0</Priority>
+        <IsItemPackagingCommitted>bFALSE</IsItemPackagingCommitted>
+      </ShipmentContainer>
+      <PickupFromDateTime>2025-04-14T00:00:00</PickupFromDateTime>
+      <PickupToDateTime>2025-04-18T11:58:00</PickupToDateTime>
+      <DeliveryFromDateTime>2025-04-14T00:01:00</DeliveryFromDateTime>
+      <DeliveryToDateTime>2025-04-18T11:59:00</DeliveryToDateTime>
+      <ShipmentNote>
+        <NoteID>30291</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>Order Remarks</NoteSubject>
+        <NoteDescription>SEA WORLD LLC | CALLE DIANA SUITE 2 LOTE 36 | AMELIA INDUSTRIAL PARK | GUAYNABO</NoteDescription>
+        <NoteInternalOnly>bFALSE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-04-14T12:49:06</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>51317</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>30292</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>EDI 204 DATA 04/14/2025 17:48 UTC</NoteSubject>
+        <NoteDescription>0239BGUS          UCAT356353001001     202504140000195001010000202504180000  U000000164078000000000000                                                                                   
+0539RTR-010F0                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+0539_R4C                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+0539_R1CLS                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539VOYSAL5031S                                                                                                                                                                                                                                                                                                                                                                                                                                                
+0539HZIN                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+0539_RMSEA WORLD LLC | CALLE DIANA SUITE 2 LOTE 36 | AMELIA INDUSTRIAL PARK | GUAYNABO                                                                                                                                                                                                                                                                                                                                                                         
+0539_T140HCRC                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+0539SSTPFP                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539_R2TRK                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539_R3JAX                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539VCO202504181200                                                                                                                                                                                                                                                                                                                                                                                                                                            
+0539OCCUnited States                                                                                                                                                                                                                                                                                                                                                                                                                                           
+0539FRV000000000                                                                                                                                                                                                                                                                                                                                                                                                                                               
+0839TRLTRLQL NY1   
+0839TRL40HCRCNY1   
+0639COJAXT0                                                                                                    JACKSONVILLE        FL         US                                                                                                               JAXT0       
+0639BTSAL                                9487 REGENCY SQUARE BLVD.                                             JACKSONVILLE        FL32225    US 8002769539                                                                                                    SAL         
+0639SHSEA WORLD LLC                      CALLE DIANA SUITE 2 LOTE 36        AMELIA INDUSTRIAL PARK             GUAYNABO              00968    PR                                                                                                               2579480-03  
+0339PU195001010000195001010000195001010000                    
+0539REFSM151896 / PO 402854                                                                                                                                                                                                                                                                                                                                                                                                                                    
+0639STFREEZPAK LOGISTICS                 3995 W 108TH ST                                                       HIALEAH             FL33018    US                                                                                                               0100254-01  
+0739CNLAURA DE SANCTIS                                  TE                                                                                
+0439                LBS   0000000100                                           REEFER                                            REEFER                                                                                          
+0439                LBS   0002000000CFT   0000000100                           REFRIGERATEDCARGO,CHILLEDORFROZEN,NOS             REEFER                                                                                          
+0339DR202504181200202504181200202504181200                    
+0639STJAXT0                                                                                                    JACKSONVILLE        FL         US                                                                                                               JAXT0       
+0439                LBS   0000000100                                           REEFER                                            REEFER                                                                                          
+0439                LBS   0002000000CFT   0000000100                           REFRIGERATEDCARGO,CHILLEDORFROZEN,NOS             REEFER</NoteDescription>
+        <NoteInternalOnly>bFALSE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-04-14T12:49:06</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>51317</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>30765</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>Order Remarks</NoteSubject>
+        <NoteDescription>SEA WORLD LLC | CALLE DIANA SUITE 2 LOTE 36 | AMELIA INDUSTRIAL PARK | GUAYNABO</NoteDescription>
+        <NoteInternalOnly>bFALSE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-04-14T13:12:57</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>51317</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>30766</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>EDI 204 DATA 04/14/2025 18:12 UTC</NoteSubject>
+        <NoteDescription>0239BGUS          UCAT356353001001     202504140000195001010000202504180000  U000000164078000000000000                                                                                   
+0539RTR-010F0                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+0539_R4C                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+0539_R1CLS                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539VOYSAL5031S                                                                                                                                                                                                                                                                                                                                                                                                                                                
+0539HZIN                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+0539_RMSEA WORLD LLC | CALLE DIANA SUITE 2 LOTE 36 | AMELIA INDUSTRIAL PARK | GUAYNABO                                                                                                                                                                                                                                                                                                                                                                         
+0539_T140HCRC                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+0539SSTPFP                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539_R2TRK                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539_R3JAX                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539VCO202504181200                                                                                                                                                                                                                                                                                                                                                                                                                                            
+0539OCCUnited States                                                                                                                                                                                                                                                                                                                                                                                                                                           
+0539FRV000000000                                                                                                                                                                                                                                                                                                                                                                                                                                               
+0839TRLTRLQL NY1   
+0839TRL40HCRCNY1   
+0639COJAXT0                                                                                                    JACKSONVILLE        FL         US                                                                                                               JAXT0       
+0639BTSAL                                9487 REGENCY SQUARE BLVD.                                             JACKSONVILLE        FL32225    US 8002769539                                                                                                    SAL         
+0639SHSEA WORLD LLC                      CALLE DIANA SUITE 2 LOTE 36        AMELIA INDUSTRIAL PARK             GUAYNABO              00968    PR                                                                                                               2579480-03  
+0339PU195001010000195001010000195001010000                    
+0539REFSM151896 / PO 402854                                                                                                                                                                                                                                                                                                                                                                                                                                    
+0639STFREEZPAK LOGISTICS                 3995 W 108TH ST                                                       HIALEAH             FL33018    US                                                                                                               0100254-01  
+0739CNLAURA DE SANCTIS                                  TE                                                                                
+0439                LBS   0000000100                                           REEFER                                            REEFER                                                                                          
+0439                LBS   0002000000CFT   0000000100                           REFRIGERATEDCARGO,CHILLEDORFROZEN,NOS             REEFER                                                                                          
+0339DR202504181200202504181200202504181200                    
+0639STJAXT0                                                                                                    JACKSONVILLE        FL         US                                                                                                               JAXT0       
+0439                LBS   0000000100                                           REEFER                                            REEFER                                                                                          
+0439                LBS   0002000000CFT   0000000100                           REFRIGERATEDCARGO,CHILLEDORFROZEN,NOS             REEFER</NoteDescription>
+        <NoteInternalOnly>bFALSE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-04-14T13:12:57</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>51317</NoteEntityID>
+      </ShipmentNote>
+    </Shipment>
+    <SystemPickUpStopID>132013</SystemPickUpStopID>
+    <SystemDropStopID>132014</SystemDropStopID>
+    <SystemShipmentLegID>100090067</SystemShipmentLegID>
+    <PickUpSequenceNumber>0</PickUpSequenceNumber>
+    <DropSequenceNumber>1</DropSequenceNumber>
+    <PickStopSequenceNumber>1</PickStopSequenceNumber>
+    <DropStopSequenceNumber>2</DropStopSequenceNumber>
+  </ShipmentLeg>
+  <LoadCarrierTenderContact>
+    <LoadCarrierTenderContactInfo>
+      <LoadCarrierTenderContactInfoPrimaryTelephoneNumber>3056812008</LoadCarrierTenderContactInfoPrimaryTelephoneNumber>
+      <LoadCarrierTenderContactInfoAlternateTelephoneNumber>3056812008</LoadCarrierTenderContactInfoAlternateTelephoneNumber>
+      <LoadCarrierTenderContactInfoEMailAddress>natdispatch3@gmail.com</LoadCarrierTenderContactInfoEMailAddress>
+    </LoadCarrierTenderContactInfo>
+    <LoadCarrierTenderContactName>OZZIE ROSABAL</LoadCarrierTenderContactName>
+    <LoadCarrierTenderContactLanguageType>en</LoadCarrierTenderContactLanguageType>
+  </LoadCarrierTenderContact>
+  <LoadSenderTenderContact>
+    <LoadSenderTenderContactInfo>
+      <LoadSenderTenderContactInfoEMailAddress>David.Barrera@crowley.com</LoadSenderTenderContactInfoEMailAddress>
+    </LoadSenderTenderContactInfo>
+    <LoadSenderTenderContactName>David Barrera</LoadSenderTenderContactName>
+    <LoadSenderTenderContactLanguageType>en</LoadSenderTenderContactLanguageType>
+  </LoadSenderTenderContact>
+  <SendTenderByEDI>bFALSE</SendTenderByEDI>
+  <LoadScheduleCompleted>bTRUE</LoadScheduleCompleted>
+  <RatingValid>bTRUE</RatingValid>
+  <LoadStartDateTime>2025-04-15T10:00:00</LoadStartDateTime>
+  <LoadEndDateTime>2025-04-15T13:07:00</LoadEndDateTime>
+  <TotalNumberOfShipments>2</TotalNumberOfShipments>
+  <LoadTotals>
+    <LoadWeight>40000.000000</LoadWeight>
+    <LoadVolume>0.000000</LoadVolume>
+    <LoadSkids>2.000000</LoadSkids>
+    <LoadPieces>0.000000</LoadPieces>
+    <LoadFlexibleQuantity1>0.000000</LoadFlexibleQuantity1>
+    <LoadFlexibleQuantity2>0.000000</LoadFlexibleQuantity2>
+    <LoadFlexibleQuantity3>0.000000</LoadFlexibleQuantity3>
+    <LoadFlexibleQuantity4>0.000000</LoadFlexibleQuantity4>
+    <LoadFlexibleQuantity5>0.000000</LoadFlexibleQuantity5>
+  </LoadTotals>
+  <TotalDriveTime>1.430000</TotalDriveTime>
+  <TotalDriveDistance>67.600000</TotalDriveDistance>
+  <LoadSequenceNumber>0</LoadSequenceNumber>
+  <LoadStartDateTimeTimeZoneOffset>0.000000</LoadStartDateTimeTimeZoneOffset>
+  <LoadEndDateTimeTimeZoneOffset>0.000000</LoadEndDateTimeTimeZoneOffset>
+  <LoadSystemTenderRequestID>57590</LoadSystemTenderRequestID>
+  <TenderLevelEnumVal>LOAD</TenderLevelEnumVal>
+  <PaymentCurrencyChargeAmount>223.200000</PaymentCurrencyChargeAmount>
+  <PaymentCurrencyType>USD</PaymentCurrencyType>
+  <NonLivePickUp>bFALSE</NonLivePickUp>
+  <NonLivePickUpOverrideStatus>NONE</NonLivePickUpOverrideStatus>
+  <NonLiveDropOff>bFALSE</NonLiveDropOff>
+  <NonLiveDropOffOverrideStatus>NONE</NonLiveDropOffOverrideStatus>
+  <CarrierMovementTypeEnumVal>1</CarrierMovementTypeEnumVal>
+  <LoadChargeDetailList>
+    <LoadChargeDetailID>25496914</LoadChargeDetailID>
+    <LoadRatingCurrencyAmount>0.000000</LoadRatingCurrencyAmount>
+    <LoadPaymentCurrencyAmount>0.000000</LoadPaymentCurrencyAmount>
+    <LoadRatingUnits>0.000000</LoadRatingUnits>
+    <LoadRate>0.000000</LoadRate>
+    <LoadAdjustmentReason>0</LoadAdjustmentReason>
+    <LoadShippingLocationType>0</LoadShippingLocationType>
+    <LoadApprovalStatus>0</LoadApprovalStatus>
+  </LoadChargeDetailList>
+  <LoadChargeDetailList>
+    <LoadChargeDetailID>25496915</LoadChargeDetailID>
+    <LoadRatingCurrencyAmount>180.000000</LoadRatingCurrencyAmount>
+    <LoadPaymentCurrencyAmount>0.000000</LoadPaymentCurrencyAmount>
+    <LoadRatingUnits>1.000000</LoadRatingUnits>
+    <LoadRate>180.000000</LoadRate>
+    <LoadAdjustmentReason>0</LoadAdjustmentReason>
+    <LoadShippingLocationType>0</LoadShippingLocationType>
+    <LoadApprovalStatus>0</LoadApprovalStatus>
+    <LoadChargeCode>LHS</LoadChargeCode>
+    <LoadChargeDescription>LINEHAUL CHARGES FLAT RAATE - LANES NEED FUEL_LH</LoadChargeDescription>
+  </LoadChargeDetailList>
+  <LoadChargeDetailList>
+    <LoadChargeDetailID>25496916</LoadChargeDetailID>
+    <LoadRatingCurrencyAmount>43.200000</LoadRatingCurrencyAmount>
+    <LoadPaymentCurrencyAmount>0.000000</LoadPaymentCurrencyAmount>
+    <LoadRatingUnits>180.000000</LoadRatingUnits>
+    <LoadRate>24.000000</LoadRate>
+    <LoadAdjustmentReason>0</LoadAdjustmentReason>
+    <LoadShippingLocationType>0</LoadShippingLocationType>
+    <LoadApprovalStatus>0</LoadApprovalStatus>
+    <LoadChargeCode>FSCH</LoadChargeCode>
+    <LoadChargeDescription>FUEL SURCHARGE_FSC</LoadChargeDescription>
+  </LoadChargeDetailList>
+  <LoadChargeDetailList>
+    <LoadChargeDetailID>25496918</LoadChargeDetailID>
+    <LoadRatingCurrencyAmount>223.200000</LoadRatingCurrencyAmount>
+    <LoadPaymentCurrencyAmount>0.000000</LoadPaymentCurrencyAmount>
+    <LoadRatingUnits>0.000000</LoadRatingUnits>
+    <LoadRate>0.000000</LoadRate>
+    <LoadAdjustmentReason>0</LoadAdjustmentReason>
+    <LoadShippingLocationType>0</LoadShippingLocationType>
+    <LoadApprovalStatus>0</LoadApprovalStatus>
+  </LoadChargeDetailList>
+  <RepositioningDistance>0.000000</RepositioningDistance>
+  <ReturnToOriginDistance>25.700000</ReturnToOriginDistance>
+</CISDocument>

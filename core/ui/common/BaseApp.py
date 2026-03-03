@@ -16,6 +16,7 @@ class BaseApp:
     _project_root = os.getcwd()
     _main_resources_path = os.path.join(_project_root, 'resources')
     _base_url_var = ""
+    _modules = None
 
     _SEPARATOR = "\n**************************************************************************************************" \
                 "************************************* "
@@ -30,9 +31,27 @@ class BaseApp:
     def get_base_url(cls):
         return cls._base_url_var
 
+    @classmethod
+    def set_modules(cls, value):
+        cls._modules = value
+
+    @classmethod
+    def get_modules(cls):
+        return cls._modules
+
     @property
     def driver(self):
         return _driver.instance
+
+    @property
+    def close(self):
+        return self.get_driver().close()
+
+    def maximize_window(self):
+        return self.get_driver().maximize_window()
+
+    def set_windows_set(self, width=1920, height=1080):
+        return self.get_driver().set_window_size(width, height)
 
     @driver.setter
     def driver(self, driver):
@@ -52,12 +71,17 @@ class BaseApp:
             getattr(_driver, 'instance', None).quit()
 
     @staticmethod
+    def close_driver():
+        if _driver:
+            getattr(_driver, 'instance', None).close()
+
+    @staticmethod
     def get_title():
         if _driver:
             return getattr(_driver, 'instance', None).title
 
     @staticmethod
-    def pause(seconds):
+    def pause(seconds: int = 1):
         logger.info("Pause: " + str(seconds))
         time.sleep(seconds)
 

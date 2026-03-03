@@ -1,0 +1,10 @@
+{
+ "tests":  {
+      "idTC": "CT-XXXX",
+      "testCaseName": "dsff sf",
+      "description": "sfdfsf",
+      "data": {
+        ......
+      }
+    }
+}

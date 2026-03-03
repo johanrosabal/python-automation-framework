@@ -1,0 +1,51 @@
+
+{
+    "tests": {
+      "comments": "Test Automation QA",
+      "purchase_tariff_criteria": {
+        "search_expression": {
+            "type": "Tariff Type",
+            "operator": "equal",
+            "value": "VOYAGE"
+        },
+        "add": {
+          "id": "",
+          "data": {
+            "type": "VOYAGE",
+            "rate_category": "Ocean Additionals",
+            "rate_available": [
+              "Cargo type",
+              "Commodity",
+              "Vessel"
+            ]
+          },
+          "expected": {
+            "row": 1,
+            "type": "VOYAGE",
+            "matching_code": "3"
+          }
+        },
+        "edit": {
+          "id": "",
+          "data": {
+            "row": 1,
+            "used_criteria": "Vessel"
+          },
+           "expected": {
+              "row": 1,
+              "type": "VOYAGE",
+              "matching_code": "2"
+          }
+        },
+        "delete": {
+          "id": "",
+          "data": {
+            "rows": [1]
+          },
+          "expected": {
+            "message": "No records found."
+          }
+        }
+      }
+    }
+}

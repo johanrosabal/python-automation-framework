@@ -1,0 +1,20 @@
+# Standard Configuration File
+name: JSONPlaceholder
+api:
+  base_token_url: https://test.salesforce.com
+  base_url: https://qa.api.crowley.com
+  grant_type: password
+  client_id: e69986178b404349a769cfa6d9c185e9
+  client_secret: FCA640a6E4634A3189458d95A0EE186E
+
+user:
+  username: na
+  password: na
+
+database:
+  host: qa-db.example.com
+  port: 5432
+  user: qa_user
+  password: qa_password
+  name: qa_db
+  ssl: false

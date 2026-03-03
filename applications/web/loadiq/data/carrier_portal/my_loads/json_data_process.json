@@ -1,0 +1,17 @@
+{
+  "tests": [
+    {
+      "idTC": "CT-4730",
+      "testCaseName": "test_hazmat_details_tab_in_shipment_tracking",
+      "description": "This test case validates that the Hazmat information of a Load created previously match with the Hazmat information shown in Hazmat Details tab on Shipment Tracking",
+      "data": {
+        "shipment_id": "LD25101500036",
+        "un_na_number": "123",
+        "hazmat_class": "1.1A",
+        "hazmat_contact_number": "(112) 321-2312",
+        "packing_group": "Group 1 - High Danger",
+        "proper_shipping_name": "1231 name hazmat"
+      }
+    }
+  ]
+}

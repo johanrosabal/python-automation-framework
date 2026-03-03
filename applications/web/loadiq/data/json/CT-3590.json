@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-3590",
+    "testCaseName": "test_verify_the_feedback_option_my_loads",
+    "title": "Op's portal - Verify the feedback option (MyLoads)",
+    "description": "LoadIQA pages have the ability to send general feedbacks.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Medium",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-3590",
+      "name": "CT-3590"
+    },
+    "data": {
+    }
+  }
+}

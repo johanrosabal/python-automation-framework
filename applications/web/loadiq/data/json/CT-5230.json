@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-5230",
+    "testCaseName": "test_verify_that_user_can_reset_an_unsuccessful_search_and_return_to_full_list_of_loads_using_clear_filter_option",
+    "title": "My Loads - Restore load list using 'Clear Filter'",
+    "description": "Verify that the user can reset an unsuccessful search and return to the full list of loads using the 'Clear filter' option.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-5230",
+      "name": "CT-5230"
+    },
+    "data": {
+    }
+  }
+}

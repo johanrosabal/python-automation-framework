@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-5229",
+    "testCaseName": "test_verify_filter_for_non_exist_loads_using_delivery_date",
+    "title": "My Loads - Filter for non-exist loads using 'Delivery Date'",
+    "description": "Verify the system behavior when a user filters by a date range (Pickup or Delivery) that has no associated loads.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-5229",
+      "name": "CT-5229"
+    },
+    "data": {
+    }
+  }
+}

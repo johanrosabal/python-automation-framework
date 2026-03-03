@@ -1,0 +1,18 @@
+{
+  "tests": [
+    {
+      "idTC": "CT-2884",
+      "testCaseName": "test_view_and_disable_user",
+      "description": "User Management - View and Disable User",
+      "data": {
+        "accountType": "Carrier",
+        "tmsID": "ABC020",
+        "accountName": "ABC020",
+        "firstName": "John",
+        "lastName": "Due",
+        "email": "jonh.due020@crowley.com",
+        "role": "Dispatcher"
+      }
+    }
+  ]
+}

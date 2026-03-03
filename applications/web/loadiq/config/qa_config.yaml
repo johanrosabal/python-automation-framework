@@ -1,0 +1,20 @@
+# Standard Configuration File
+name: LoadIQ
+web:
+  base_url: https://logib-qa.solutions.logxplus.com
+  browser: edge
+
+api:
+  base_url: https://logib-qa.solutions.logxplus.com
+
+user:
+  username: na
+  password: na
+
+database:
+  host: na
+  port: 5432
+  user: qa_user
+  password: qa_password
+  name: qa_db
+  ssl: false

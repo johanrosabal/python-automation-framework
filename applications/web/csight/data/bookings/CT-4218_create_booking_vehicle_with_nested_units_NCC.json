@@ -1,0 +1,307 @@
+{
+  "tests": {
+    "idTC": "CT-4218",
+    "testCaseName": "test_create_booking_vehicles",
+    "title": "Bookings - Validate creation of Vehicle bookings with nested units NCC",
+    "description": "Booking Vehicle Used Vehicle with nested units NCC",
+    "tag": "CSIGHT",
+    "feature": "Create Booking Vehicles",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-4218",
+      "name": "CT-4218"
+    },
+    "data": {
+      "booking": {
+        "origin_destination": {
+          "booking_party": {
+            "booking_account": "GALLERY SHIPPING TEST",
+            "address": "GALLERY SHIPPING TEST ADDRESS 1234, JACKSONVILLE, FL 32225, US",
+            "contact_name": "GALLERY TEST",
+            "phone_number": "",
+            "email": "",
+            "replace_contact_info": false
+          },
+          "bill_to_party": {
+            "same_as_booking_party": true,
+            "bill_to_party_type": "Shipper",
+            "bill_to_account": "",
+            "address": "",
+            "contact_name": "",
+            "phone_number": "",
+            "email": "",
+            "replace_contact_info": false
+          },
+          "shipping_details": {
+            "cargo_ready_for_transport": "future-date-{1}"
+          },
+          "account_details": {
+            "same_as_booking_party": true,
+            "same_as_bill_to_party": false,
+            "search_using_account_name": true,
+            "search_using_contract_number": false,
+            "account_name": "",
+            "address": "",
+            "contact_name": "",
+            "phone_number": "",
+            "email": "",
+            "replace_contact_info": false,
+            "contract_number": "-- None --"
+          },
+          "origin_details_pick_up_address": {
+            "origin": "PORT - Jacksonville, FL (USJAX)",
+            "origin_country_cargo": "United States",
+            "origin_sublocation": "--None--",
+            "crowley_trucking_pickup": false,
+            "cleared_customs_at_first_us_port_of_entry": "No",
+            "pre_carriage_mode": "",
+            "drayage_options": "",
+            "special_instructions": "",
+            "pick_up_location_account_name": "",
+            "pick_up_location_address": "",
+            "pick_up_location_contact_name": "",
+            "pick_up_location_phone_number": "",
+            "enable-stops": false,
+            "stops": [
+              {
+                "stop_location_account_name": "",
+                "stop_location_address": "",
+                "stop_location_contact_name": "",
+                "stop_location_phone_number": ""
+              }
+            ]
+          },
+          "destination_details_final_delivery_address": {
+            "final_destination": "PORT - San Juan, Puerto Rico (PRSJU)",
+            "crowley_trucking_pickup": false,
+            "on_carriage_mode": "",
+            "drayage_options": "",
+            "special_instructions": "",
+            "final_delivery_location_account_name": "",
+            "address": "",
+            "contact_name": "",
+            "relace_phone_number": false,
+            "phone_number": "",
+            "enable-stops": false,
+            "stops_intermediate": [
+              {
+                "stop_location_account_name": "",
+                "stop_location_address": "",
+                "stop_location_contact_name": "",
+                "stop_location_phone_number": ""
+              }
+            ]
+          }
+        },
+        "cargo_details": {
+          "cargo_type": {
+            "container": false,
+            "vehicles": true,
+            "cargo_not_in_container": false
+          },
+          "vehicle": [
+
+            {
+              "rating_commodity_category": "Vehicles - Used",
+              "year": "2021",
+              "manufacturer": "Suzuki",
+              "model": "Grand Vitara",
+              "color": "White",
+              "quantity": [
+                {
+                  "vin_serial_number" : "1G1RB57101A123459",
+                  "consolidate_units" : ["1G1RB57101A123454","1G1RB57101A123455"]
+                },
+                {
+                  "vin_serial_number" : "1G1RB57101A123460",
+                  "consolidate_units" : ["1G1RB57101A123461","1G1RB57101A123462"]
+                }
+              ],
+              "propulsion":"Drivable - Hybrid Plug-In",
+              "over_dim": false,
+              "declared_value_of_cargo": 2800,
+              "description": "2016 Toyota Corolla",
+              "add_additional_units": false,
+              "add_additional_cargo_in_on_units": true,
+              "dimensions": {
+                "unit_measure": {
+                  "lb_ft": true,
+                  "kg_m": false
+                },
+                "length": {
+                  "ft_m": 14,
+                  "in_cm": 0
+                },
+                "width": {
+                  "ft_m": 6,
+                  "in_cm": 0
+                },
+                "height": {
+                  "ft_m": 5,
+                  "in_cm": 0
+                },
+                "weight": {
+                  "lb_kg": 2000
+                }
+              },
+              "optional_services": {
+                "bulkhead": "No",
+                "logistic_bar": "No",
+                "protective_covering": "No",
+                "team_driver_origin": "No",
+                "EEI_preparation": "EEI Filing",
+                "marine_cargo_insurance": "No",
+                "south_florida_tailgate_government_inspec": "No",
+                "fumigation": "No",
+                "merchant_haulage": "No",
+                "team_driver_destination": "No",
+                "additional_bill_of_lading_fee": {
+                  "checked": false,
+                  "quantity": 0
+                },
+                "additional_seals": {
+                  "checked": false,
+                  "quantity": 0
+                },
+                "customs_exam": {
+                  "checked": false,
+                  "price": 0
+                },
+                "multiple_bills_of_lading": {
+                  "checked": false,
+                  "quantity": 0
+                },
+                "additional_bill_of_lading_fee_return_cargo": {
+                  "checked": false,
+                  "quantity": 0
+                },
+                "additional_straps": {
+                  "checked": false,
+                  "quantity": 0
+                },
+                "dry_run_false_move_destination": {
+                  "checked": false,
+                  "price": 0
+                },
+                "pallets": {
+                  "checked": false,
+                  "quantity": 0
+                },
+                "additional_chains": {
+                  "checked": false,
+                  "quantity": 0
+                },
+                "complete_government_inspection": {
+                  "checked": false,
+                  "price": 0
+                },
+                "dry_run_false_move_origin": {
+                  "checked": false,
+                  "price": 0
+                },
+                "additional_cargo_in_on_units": false,
+                "bonded_cargo_document_fee": false,
+                "customs_clearance_vehicle_wheeled_NIT": false,
+                "equipment_cleaning": false,
+                "GPS_fee": false,
+                "late_documentation_fee": false,
+                "shipment_roll_over_charge": false,
+                "WAM_usage": false,
+                "blocking_bracing_securing_fee": false,
+                "caricom_invoice_prep_fee": false,
+                "diversion_or_reconsignment": false,
+                "equipment_repositioning_charge": false,
+                "importer_security_filing": false,
+                "late_gate_charge": false,
+                "shipper_loaded_flatrack_OOG_cargo_penalty": false,
+                "wire_pick_end_down_charge": false,
+                "BOL_processing_fee": false,
+                "custom_brokerage": false,
+                "document_change_fee": false,
+                "excess_fuel_in_vehicles_RO_RO": false,
+                "labels_and_placards": false,
+                "NIT_non_operable": false,
+                "VGM_certification": false
+              }
+            }
+
+
+
+
+          ],
+          "operational_services": {
+            "origin_transfer": "None",
+            "destination_transfer": "None",
+            "load_last_hot_hatch": false,
+            "do_not_advance": false,
+            "do_not_split": false
+          }
+        },
+        "routes": {
+          "routes_item": 1,
+          "vessel_name": "",
+          "voyage_number": "",
+          "origin_terminal": "",
+          "origin_city_state": "",
+          "origin_prefix": "",
+          "destination_terminal": "",
+          "destination_city_state": "",
+          "destination_prefix": "",
+          "rate_amount": 0
+        },
+        "other_details": {
+          "booking_options": {
+            "single_booking": true,
+            "multiple_booking": false
+          },
+          "customer_details": "Prepaid",
+          "cargo_release": {
+            "customs_clearence_location": "PRSJU",
+            "Customs Clearence Sublocation": "ISLA GRAND TERMINAL-SJUT001",
+            "cargo_release_location": "",
+            "cargo_release_sublocation": ""
+          },
+          "shipper_details": {
+            "reference_number": "1234"
+          },
+          "consignee_details": {
+            "same_as_booking_party": true,
+            "same_as_customer": false,
+            "shipper_account": "",
+            "address": "",
+            "contact_name": "",
+            "phone_number": "",
+            "email_id": "",
+            "reference_number": ""
+          },
+          "other_party_details": [
+            {
+              "party_type": "",
+              "same_as_booking_party": false,
+              "same_as_customer": false,
+              "account": "",
+              "address": "",
+              "contact_name": "",
+              "email_id": "",
+              "reference_number": ""
+            }
+          ],
+          "booking_remarks": [
+            "Remark 1 Test"
+          ],
+          "ITN_Number": [
+            "123456"
+          ],
+          "exemption_clause": "",
+          "postdeparture_date": "",
+          "booking_pending_reason": [],
+          "vsa_booking_ref_numbers": "",
+          "reefer": "",
+          "hazardous": "",
+          "vehicle": "",
+          "cargo_not_in_a_container": ""
+        }
+      }
+    }
+  }
+}

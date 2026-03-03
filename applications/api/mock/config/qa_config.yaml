@@ -1,0 +1,20 @@
+# Standard Configuration File
+name: Mock Rest Api
+api:
+  base_token_url: http://127.0.0.1:8000
+  base_url: http://127.0.0.1:8000
+  grant_type: na
+  client_id: na
+  client_secret: na
+
+user:
+  username: na
+  password: na
+
+database:
+  host: qa-db.example.com
+  port: 5432
+  user: qa_user
+  password: qa_password
+  name: qa_db
+  ssl: false

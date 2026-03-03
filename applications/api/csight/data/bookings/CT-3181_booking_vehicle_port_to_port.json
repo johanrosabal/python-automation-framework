@@ -1,0 +1,168 @@
+{
+    "crowleyBookingNumber": "",
+    "agreementReference": "20-00809",
+    "cargoAvailableDate": "future-date-to-utc{1}",
+    "cargos": [
+        {
+            "cargoType": "VEHICLE",
+            "commodityCode": "OTVehUsed",
+            "declaredValue": "1234",
+            "commodityDescription": "Vehicle Used",
+            "notInContainerDetails": {
+                "heightUom": "FT",
+                "breakBulkSpecification": {
+                    "selfPropelInd": "TRUE",
+                    "roroInd": "TRUE"
+                },
+                "vehicleSpecificationDetails": {
+                    "model": "Accord",
+                    "year": "2024",
+                    "propulsion": "DRIVABLE-GAS[UN3166]",
+                    "make": "HONDA",
+                    "vechicleDetails": [
+                        {
+                            "vin": "ZHF1234567899814",
+                            "color": "White",
+                            "commmodityCode": "Test",
+                            "additionalVinNumber": [
+                                "123",
+                                "456"
+                            ],
+                            "dockReceiptNumber": ""
+                        }
+                    ],
+                    "isNew": false
+                },
+                "width": 5,
+                "length": 15,
+                "height": 4,
+                "lengthUom": "FT",
+                "widthUom": "FT",
+                "quantity": 1
+            },
+            "weight": 3120.00,
+            "weightUOM": "LBS",
+            "volume": 300,
+            "volumeUOM": "FTQ",
+            "emergencyContact": {
+                "emailAddress": "abc@gmail.com",
+                "mobilephone": "999-999-9999",
+                "name": "User1",
+                "telephone": "999-999-9999",
+                "faxNumber": "999-999-9999",
+                "website": "abcwebsite.com"
+            },
+            "cargoItems": [
+                {
+                    "goodsPackaging": "AUT-Automobile",
+                    "numberOfPackages": 1,
+                    "weight": 3120.00,
+                    "weightUOM": "LBS",
+                    "volume": 300,
+                    "volumeUOM": "FTQ",
+                    "hazMatDetails": {
+                        "packagingGroup": "",
+                        "subHazard1": "",
+                        "prefix": "UN",
+                        "properShippingName": "Vehicle Electric",
+                        "UNNumber": "3166",
+                        "isMarinePollutant": false,
+                        "class": "9",
+                        "isLimitedQuantity": false,
+                        "technicalName": "Test",
+                        "subHazard2": ""
+                    }
+                }
+            ],
+            "OptionalServices": [
+                {
+                    "MarineCargoInsurance": {
+                        "value": "Up to $50K Cargo Value"
+                    }
+                }
+            ]
+        }
+    ],
+    "Voyages": [],
+    "moveType": "PortToPort",
+    "bookingRemarks": "Test Remarks",
+    "isHazMatBooking": true,
+    "pickUpLocations": [],
+    "dropOffLocations": [],
+    "freightPaymentMode": "PrePaid",
+    "electronicCustomerReference": "timestamp-prefix{CustCont}",
+    "shippingtype": "Laden",
+    "shippingCompany": "CRWLY",
+    "parties": [
+        {
+            "code": "5780713-01",
+            "bookingParty": true,
+            "role": "SHP",
+            "name": "GALLERY SHIPPING LLC",
+            "address": {
+                "address1": "12902 CANTON AVE",
+                "stateOrProvince": "FL",
+                "address3": "GALLERY SHIPPING LLC",
+                "country": "US",
+                "zipCode": "34669",
+                "city": "HUDSON",
+                "address2": ""
+            },
+            "externalPartnerReference": "Test123",
+            "vatNumber": "Test123",
+            "contact": {
+                "emailAddress": "christy.hernandez@crowley.com.uat",
+                "mobilephone": "3052063753",
+                "name": "CHRISTY HERNANDEZ",
+                "telephone": "3052063753",
+                "faxNumber": "",
+                "website": ""
+            },
+            "reference": "CEE1234"
+        },
+        {
+            "code": "5780713-01",
+            "bookingParty": false,
+            "role": "CON",
+            "name": "GALLERY SHIPPING LLC",
+            "address": {
+                "address1": "12902 CANTON AVE",
+                "stateOrProvince": "FL",
+                "address3": "",
+                "country": "US",
+                "zipCode": "34669",
+                "city": "HUDSON",
+                "address2": ""
+            },
+            "externalPartnerReference": "",
+            "vatNumber": "Test123",
+            "contact": {
+                "emailAddress": "christy.hernandez@crowley.com.uat",
+                "mobilephone": "3052063753",
+                "name": "CHRISTY HERNANDEZ",
+                "telephone": "3052063753",
+                "faxNumber": "",
+                "website": ""
+            },
+            "reference": "CEE1234"
+        }
+    ],
+    "Locations": [
+        {
+            "Function": "PortOfLoading",
+            "Qualifier": "UN",
+            "Identifier": "USJAX",
+            "StateOrProvince": "FL",
+            "Country": "US",
+            "City": "Jacksonville"
+        },
+        {
+            "Function": "PortOfDischarge",
+            "Qualifier": "UN",
+            "Identifier": "PRSJU",
+            "StateOrProvince": "Puertorico",
+            "Country": "PR",
+            "City": "San Juan"
+        }
+    ]
+}

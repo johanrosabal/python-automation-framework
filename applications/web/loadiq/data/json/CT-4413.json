@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-4413",
+    "testCaseName": "test_verify_updating_a_status_and_selecting_a_reason_code",
+    "title": "Verify updating a status and selecting a reason code.",
+    "description": "This test case validates that the system allows updating an event (e.g., 'Actual Arrival'), selecting an associated 'Reason code', and that all information is saved correctly.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-4413",
+      "name": "CT-4413"
+    },
+    "data": {
+    }
+  }
+}

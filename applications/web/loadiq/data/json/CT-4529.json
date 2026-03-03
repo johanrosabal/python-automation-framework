@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-4529",
+    "testCaseName": "test_verify_special_characters_in_container_trailer_no_field_are_not_allowed",
+    "title": "Verify special characters in Container/trailer no field are not allowed",
+    "description": "Ensures special characters are not allowed in the Trailer/Container No field.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-4529",
+      "name": "CT-4529"
+    },
+    "data": {
+    }
+  }
+}

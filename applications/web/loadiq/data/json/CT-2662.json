@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-2662",
+    "testCaseName": "test_verify_booking_number_field_is_searchable",
+    "title": "Verify 'Booking #' Field is Searchable",
+    "description": "Ensures that users can search for a specific booking number in the My Loads and Shipment Tracking pages.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Medium",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-2662",
+      "name": "CT-2662"
+    },
+    "data": {
+    }
+  }
+}

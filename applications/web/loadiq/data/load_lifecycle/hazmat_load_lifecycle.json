@@ -1,0 +1,105 @@
+{
+  "tests": [
+    {
+      "idTC": "CT-2054",
+      "testCaseName": "test_customer_create_shipment_first_come_with_hazmat",
+      "description": "Create Hazmat Shipment in LoadIQ",
+      "data": {
+        "origin": {
+          "location": {
+            "name": "Miami",
+            "location": "",
+            "address": "",
+            "address_line_2": "N/A"
+          },
+          "contact": {
+            "name": "John",
+            "phone": "1141850000",
+            "email": "bob@flinstones.com"
+          },
+          "pickup_appointment": {
+            "from_day_offset": 5,
+            "to_day_offset": 10,
+            "open_time": {
+              "hours": "09",
+              "minutes": "00"
+            },
+            "close_time": {
+              "hours": "13",
+              "minutes": "00"
+            }
+          }
+        },
+        "destination": {
+          "location": {
+            "name": "22554 Stafford",
+            "location": "22554 Stafford",
+            "address": "Stafford, VA 22554, USA",
+            "address_line_2": "N/A"
+          },
+          "contact": {
+            "name": "Damian",
+            "phone": "9988779936",
+            "email": "test@hotmail.com"
+          },
+          "pickup_appointment": {
+            "from_day_offset": 10,
+            "to_day_offset": 15,
+            "open_time": {
+              "hours": "14",
+              "minutes": "00"
+            },
+            "close_time": {
+              "hours": "15",
+              "minutes": "00"
+            }
+          }
+        },
+        "shipment_details": {
+          "equipment": "Container",
+          "freight_class": "Class 55",
+          "po_number": "1234",
+          "bill_of_lading_number": "1234",
+          "pick_up_number": "1234",
+          "shipment_instructions": "Shipment Automation Test"
+        },
+        "freight": {
+          "freight_item": {
+            "gross_weight": "100",
+            "weight_type": "Lb",
+            "handling_unit_count": "1",
+            "select_handling_unit_type": "Pallet",
+            "commodity_value": "10000"
+          },
+          "dimension": {
+            "length": "121",
+            "width": "212",
+            "height": "222",
+            "uom": "Inch",
+            "commodity_description": "Shipment Automation Test"
+          },
+          "hazmat": {
+            "un_na_number": "1234567890",
+            "hazmat_class": "Class 3 - Flammable Liquids",
+            "hazmat_contact_number": "1141850001",
+            "packing_group": "Group 2 - Moderate Danger",
+            "proper_shipping_name": "Lithium ion batteries"
+          }
+        },
+        "bid_parameters": {
+          "book_it_now_rate": "100",
+          "bid_expiration_offset_days": 3,
+          "bid_expiration_time": {
+            "hours": "16",
+            "minutes": "00"
+          },
+          "upload_file": {
+            "file_name": "upload_test_document.png",
+            "description": "Automation Test Upload"
+          }
+        },
+        "shipment_id": "LD25101600001"
+      }
+    }
+  ]
+}

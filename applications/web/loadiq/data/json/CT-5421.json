@@ -1,0 +1,19 @@
+{
+  "tests": {
+    "idTC": "CT-5421",
+    "testCaseName": "test_verification_of_NA_display_when_no_data_exist",
+    "title": "Verification of \"N/A\" display when no data exists",
+    "description": "Confirm that the system displays \"N/A\" in the Genset and Chassis fields when no information has been provided, maintaining UI consistency with the provided image.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-5421",
+      "name": "CT-5421"
+    },
+    "data": {
+
+
+    }
+  }
+}
