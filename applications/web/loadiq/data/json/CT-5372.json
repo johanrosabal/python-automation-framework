@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-5372",
+    "testCaseName": "test_dynamic_parameter_stress_test_advance_filters",
+    "title": "My Loads - Dynamic Parameter Stress Test Advance filters",
+    "description": "Verify that the refactoring eliminates the dependency on a fixed parameter limit (previously 15) by populating all available filter fields simultaneously.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-5372",
+      "name": "CT-5372"
+    },
+    "data": {
+    }
+  }
+}

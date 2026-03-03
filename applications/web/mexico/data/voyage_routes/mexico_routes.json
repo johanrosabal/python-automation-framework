@@ -1,0 +1,64 @@
+{
+    "tests": {
+        "main_information": {
+            "status": "active",
+            "service": "Mexico US Service",
+            "vessel": "Sonderborg",
+            "vessel_owner": "STANDARD SHIPOWNER",
+            "voyage_number": "MEX5001",
+            "second_voyage_number": "5001W",
+            "customs_declarations_number": "12345",
+            "financial_voyage_period": "future-date-{30}",
+            "operator": "SEABOARD MARINE LTD",
+            "transport_mode": "Owned",
+            "commercial_service": "Mexico US Service"
+        },
+        "details_information": {
+            "toggle_details": true,
+            "offshore_days": 0,
+            "publish_voyage": true,
+            "remarks": "",
+            "carriers_agent_ecs": ""
+        },
+        "port_calls": [
+            {
+                "port": "Gulfport, MS",
+                "eta": "future-date-{10} 12:00 AM",
+                "ets": "future-date-{10} 12:00 PM",
+                "status": "PP",
+                "type": "Load"
+            },
+            {
+                "port": "Tuxpan, Mexico",
+                "eta": "future-date-{15} 12:00 AM",
+                "ets": "future-date-{15} 12:00 PM",
+                "status": "PP",
+                "type": "Both"
+            },
+            {
+                "port": "Gulfport, MS",
+                "eta": "future-date-{22} 08:00 AM",
+                "ets": "future-date-{22} 07:00 PM",
+                "status": "PP",
+                "type": "Discharge"
+            }
+        ],
+        "search_expression": [
+            {
+                "field_name": "Source",
+                "field_operator": "equal",
+                "field_value": "Commercial"
+            },
+            {
+                "field_name": "Voyage Number",
+                "field_operator": "contains",
+                "field_value": "MEX5002"
+            },
+            {
+                "field_name": "Second Voyage Number",
+                "field_operator": "contains",
+                "field_value": "5002W"
+            }
+        ]
+    }
+}

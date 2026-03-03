@@ -1,3 +1,6 @@
+import allure
+from allure_commons.types import AttachmentType
+
 from applications.desktop.notepad.pages.dialog_box.go_to_line_dialog_box import GoToLineDialogBox
 from core.desktop.common.BaseApp import BaseApp
 from core.ui.driver.DriverManager import DriverManager
@@ -58,6 +61,8 @@ class NotepadAutomation(BaseApp):
         self.send_keys()\
             .set_locator(self.__text_area)\
             .set_text(text)
+        allure.attach(self._driver.get_screenshot_as_png(), name="Password Entered",
+                      attachment_type=AttachmentType.PNG)
         return self
 
     def save_as_file(self, filepath):

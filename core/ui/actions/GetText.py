@@ -17,15 +17,21 @@ class GetText:
         self._locator = None
         self._page = None
 
-    def set_locator(self, locator: tuple, page='Page'):
+    def set_locator(self, locator: tuple, page='Page', timeout=15):
         self._locator = locator
         self._page = page
-        self._element = Element.wait_for_element(self._driver, locator, 5)
+        self._element = Element(self._driver).get_element(locator=locator, timeout=timeout)
         logger.info(Element.log_console(self._page, self._name, locator))
         return self
 
     def set_element(self, element):
         self._element = element
+        return self
+
+    def wait_for_text(self, text: str, timeout=15):
+        if self._locator:
+            Element.wait_for_text_to_be_present(self._driver, self._locator, text, timeout)
+            self._element = Element.wait_for_element(self._driver, self._locator, timeout)
         return self
 
     def pause(self, seconds: int):

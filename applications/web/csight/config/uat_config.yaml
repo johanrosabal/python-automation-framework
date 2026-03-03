@@ -1,0 +1,28 @@
+# Standard Configuration File
+name: C-Sight
+web:
+  base_url: https://crowley2--uat.sandbox.my.site.com/
+  browser: edge
+
+api:
+  base_url: https://crowley2--uat.sandbox.my.site.com/
+
+user:
+  username: ZmFiaWFuLnZhcmdhc0Bjcm93bGV5LmNvbS5zZg==
+  password: VjExI3FUMUBMeTkhTno1Jlo=
+
+invalid_credentials:
+  username: invalid@invalid.com
+  password: invalid
+
+invalid_username:
+  username: invalid
+  password: invalid
+
+database:
+  host: na
+  port: 5432
+  user: qa_user
+  password: qa_password
+  name: qa_db
+  ssl: false

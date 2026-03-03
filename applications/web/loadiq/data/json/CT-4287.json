@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-4287",
+    "testCaseName": "test_validate_that_the_update_button_is_enabled_and_disabled_correctly_according_to_data_validity",
+    "title": "Verify entry of milestone dates without sequence order.",
+    "description": "Temporarily deactivates date validations in status update modal.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-4287",
+      "name": "CT-4287"
+    },
+    "data": {
+    }
+  }
+}

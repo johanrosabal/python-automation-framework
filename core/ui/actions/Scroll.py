@@ -15,8 +15,12 @@ class Scroll:
         self._element = None
 
     def set_locator(self, locator: tuple, page='Page', explicit_wait=10):
-        self._element = Element.wait_for_element(driver=self._driver, locator=locator, timeout=explicit_wait)
+        self._element = Element(self._driver).get_element(locator=locator, timeout=explicit_wait)
         logger.info(Element.log_console(page, self._name, locator))
+        return self
+
+    def set_element(self, element=None):
+        self._element = element
         return self
 
     def pause(self, seconds: int):
@@ -73,17 +77,22 @@ class Scroll:
 
         return self
 
-    def to_element(self, pixels=-100):
-        if self._element:
-            logger.info("Scroll to Element page.")
-            # Scroll to Element
-            self._driver.execute_script("arguments[0].scrollIntoView(true);", self._element)
-            # Get Location
-            location = self._element.location_once_scrolled_into_view
-            logger.info("Scroll to Element -> Location["+str(location)+"]")
+    def to_element(self, pixels=0):
+        if not self._element:
+            logger.error("WebElement is None.")
+            return self
 
+        # 1. Use scrollIntoView with 'center' to avoid fixed headers
+        self._driver.execute_script("""
+            arguments[0].scrollIntoView({
+                behavior: 'auto',
+                block: 'center'
+            });
+        """, self._element)
+
+        # 2. If you need an offset, use a positive value to go down, not a negative one.
+        if pixels != 0:
             self._driver.execute_script(f"window.scrollBy(0, {pixels});")
 
-        else:
-            logger.error("Unable to Execute Scroll To Element WebElement is None.")
+        logger.info(f"Scrolled to element with offset {pixels}")
         return self

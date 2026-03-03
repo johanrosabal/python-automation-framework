@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-4409",
+    "testCaseName": "test_verify_display_of_previously_registered_status_and_enable_of_the_next_chronological_status",
+    "title": "Verify the display of previously registered statuses and the enabling of the next chronological status.",
+    "description": "This test case ensures that if a load already has registered statuses (e.g., Arrival at stop 1), the \"Status Update\" screen displays that information as disabled and enables the next status field in the sequence (e.g., Departure from stop 1).",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-4409",
+      "name": "CT-4409"
+    },
+    "data": {
+    }
+  }
+}

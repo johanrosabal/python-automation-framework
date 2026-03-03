@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-5233",
+    "testCaseName": "test_verification_of_filter_panel_elements",
+    "title": "My Loads - Verification of Filter Panel Elements",
+    "description": "Ensure all required filter options are visible on the 'My Loads' filter panel, specifically verifying the newly added fields.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-5233",
+      "name": "CT-5233"
+    },
+    "data": {
+    }
+  }
+}

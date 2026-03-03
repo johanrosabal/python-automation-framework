@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-3695",
+    "testCaseName": "test_in_upload_info_modal_verify_input_excessive_characters_in_all_fields",
+    "title": "My Loads - In 'Update Load' modal, verify Input Excessive Characters in All Fields",
+    "description": "Verify system behavior when entering an excessive number of characters in all fields.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-3695",
+      "name": "CT-3695"
+    },
+    "data": {
+    }
+  }
+}

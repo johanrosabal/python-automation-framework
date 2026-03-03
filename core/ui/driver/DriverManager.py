@@ -29,7 +29,7 @@ class DriverManager:
         else:
             self.browser = self.defaultBrowser
 
-        self.headless = headless
+        self.headless = str(headless).lower() == 'true' if isinstance(headless, str) else bool(headless)
         self.downloads = f"{self.project_root}\\downloads"
 
     def initialize(self):
@@ -54,16 +54,15 @@ class DriverManager:
             options.add_argument("--headless")  # Headless mode
         # options.add_argument("--disable-gpu")  # Disabled GPU (recommended for headless)
         options.add_argument("--disable-dev-shm-usage")  # Shared memory for avoid issues
-        options.add_argument("----start-maximized")  #
-        # Set the default zoom level to 80%
-        options.add_argument("--force-device-scale-factor=0.8")
-        options.add_argument("--zoom=0.8")  # This may not work directly; use CDP instead
         options.add_argument("--no-sandbox")  # Restricted mode for avoid errors
         # options.add_argument("--disable-notifications")  # Disable Browser Notifications
         options.add_argument("--disable-extensions")  # Disable Extensions Notifications
         options.add_argument('--ignore-certificate-errors')
         options.add_argument('--allow-insecure-localhost')
         options.add_argument("--disable-popup-blocking")
+        options.add_argument("--start-maximized")
+        options.add_argument("--window-size=1920,1080")
+
         # options.add_argument("--auto-open-devtools-for-tabs")
 
         prefs = {
@@ -87,7 +86,8 @@ class DriverManager:
         service = Service(service_args=["--verbose", "--log-path=edge.log"])
 
         driver = webdriver.Edge(service=service, options=options)
-        driver.maximize_window()
+        if not self.headless:
+            driver.maximize_window()
         driver.delete_all_cookies()
         logger.info("Return Edge Driver..........................")
         return driver
@@ -116,7 +116,8 @@ class DriverManager:
             options.set_preference(key, value)
 
         driver = webdriver.Firefox(options=options)
-        driver.maximize_window()
+        if not self.headless:
+            driver.maximize_window()
         driver.delete_all_cookies()
         return driver
 
@@ -128,15 +129,12 @@ class DriverManager:
             options.add_argument("--headless")  # Headless mode
         # options.add_argument("--disable-gpu")  # Disabled GPU (recommended for headless)
         options.add_argument("--disable-dev-shm-usage")  # Shared memory for avoid issues
-        options.add_argument("----start-maximized")  #
-        # Set the default zoom level to 80%
-        options.add_argument("--force-device-scale-factor=0.8")
-        options.add_argument("--zoom=0.8")  # This may not work directly; use CDP instead
         options.add_argument("--no-sandbox")  # Restricted mode for avoid errors
         # options.add_argument("--disable-notifications")  # Disable Browser Notifications
         options.add_argument("--disable-extensions")  # Disable Extensions Notifications
         options.add_argument('--ignore-certificate-errors')
         options.add_argument('--allow-insecure-localhost')
+        options.add_argument("--start-maximized")
 
         prefs = {
             "download.default_directory": self.downloads,  # Download Path
@@ -158,7 +156,8 @@ class DriverManager:
         service = Service(service_args=["--verbose", "--log-path=edge.log"])
         driver = webdriver.Chrome(service=service, options=options)
 
-        driver.maximize_window()
+        if not self.headless:
+            driver.maximize_window()
         driver.delete_all_cookies()
         logger.info("Return Chrome Driver..........................")
         return driver

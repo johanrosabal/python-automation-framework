@@ -1,0 +1,20 @@
+# Standard Configuration File
+name: softship
+api:
+  base_token_url: https://jaxvycswebqa.crowley.com
+  base_url: https://jaxvycswebqa.crowley.com
+  grant_type: password
+  client_id: na
+  client_secret: na
+
+user:
+  username: Datadriven
+  password: E/9tgqc2[x:}Pd
+
+database:
+  host: na
+  port: na
+  user: na
+  password: na
+  name: na
+  ssl: na

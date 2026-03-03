@@ -21,6 +21,10 @@ class Put:
         self.verify = False
         self.response = None
 
+    def set_base_url(self, base_url):
+        """Set the API BaseURL."""
+        self.base_url = base_url
+        return self
     def set_endpoint(self, endpoint):
         """Set the API endpoint."""
         self.endpoint = endpoint
@@ -37,7 +41,7 @@ class Put:
         return self
 
     def set_json(self, json_data):
-        """Set the JSON data to be sent in the request."""
+        """Set the JSON data to be sent in the request. Don't Pass String Text with this method because it will generate an HTTTP Error ("ERR-VALIDATION-1005") """
         self.json_data = json_data
         return self
 
@@ -114,13 +118,20 @@ class Put:
                 timeout=self.timeout,
                 verify=self.verify
             )
-            self.response.raise_for_status()  # Raise an error for 4xx or 5xx status codes
-            logger.info("Response received successfully")
+
+            if 200 <= self.response.status_code < 300:
+                logger.info("Response received successfully")
+                logger.info(f"Status Code: {self.response.status_code}")
+            else:
+                logger.error(f"Error response: {self.response.status_code}")
+                logger.error(self.response.text)
+                logger.error(self.response.request.body)
+
+            return self.response
+
         except requests.exceptions.HTTPError as err:
             logger.error(f"Error in PUT request: {err}")
-            self.response = None
-
-        return self
+            return self.response
 
     def get_response(self):
         """Get the response from the PUT request."""

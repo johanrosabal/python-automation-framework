@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-4696",
+    "testCaseName": "test_validate_that_the_user_can_upload_a_document_after_that_the_load_change_to_complete_no_imdl",
+    "title": "Validate that the user can upload a document after that the Load change to Completed NO IMDL.",
+    "description": "This test validates that the user can upload the POD after the load change to Completed.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-4696",
+      "name": "CT-4696"
+    },
+    "data": {
+    }
+  }
+}

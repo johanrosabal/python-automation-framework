@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-4406",
+    "testCaseName": "test_verify_appearance_checkmark_saving_new_stop",
+    "title": "Verify the appearance of the \"checkmark\" icon when saving a new stop",
+    "description": "This test case validates that after successfully entering and saving a new stop, the \"X\" icon is replaced by a checkmark icon (✓).",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-4406",
+      "name": "CT-4406"
+    },
+    "data": {
+    }
+  }
+}

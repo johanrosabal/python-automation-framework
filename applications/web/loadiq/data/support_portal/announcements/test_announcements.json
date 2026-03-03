@@ -1,0 +1,25 @@
+{
+  "tests": [
+    {
+      "idTC": "CT-3942",
+      "testCaseName": "test_expedite_field_in_my_offers",
+      "description": "Verifies that when an offer created with the Expedite field is displayed in the My Offers list view",
+      "data": {
+        "shipment_id": "LD25100100017"
+      }
+    },
+    {
+      "idTC": "CT-3766",
+      "testCaseName": "test_hazmat_details_in_my_offers",
+      "description": "Verify that the new field Proper Shipping Name is displayed  in the My Offers list view",
+      "data": {
+        "shipment_id": "LD25101500040",
+        "un_na_number": "1234567890",
+        "hazmat_class": "Class 3 - Flammable Liquids",
+        "hazmat_contact_number": "1141850001",
+        "packing_group": "Group 2 - Moderate Danger",
+        "proper_shipping_name": "Lithium ion batteries"
+      }
+    }
+  ]
+}

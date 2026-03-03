@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-5234",
+    "testCaseName": "",
+    "title": "My Loads - Verify filtering loads by Hazmat status with Pickup Date and Delivery Date",
+    "description": "Ensure the system correctly filters loads when Hazmat is set to 'Yes' and a valid date range is provided.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-5234",
+      "name": "CT-5234"
+    },
+    "data": {
+    }
+  }
+}

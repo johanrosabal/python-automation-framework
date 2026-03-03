@@ -1,0 +1,174 @@
+{
+    "crowleyBookingNumber": "",
+    "agreementReference": "20-00809",
+    "cargoAvailableDate": "future-date-to-utc{1}",
+    "cargos": [
+        {
+            "cargoType": "CONTAINER",
+            "commodityCode": "OTGenCargo ",
+            "commodityDescription": "General Cargo",
+            "containerDetails": {
+                "isShippersOwn": false,
+                "isRunningReefer": false,
+                "equipmentIsoCode": "22G0",
+                "equipmentQuantity": 1
+            },
+            "weight": 2000.00,
+            "weightUOM": "KGS",
+            "volume": 300,
+            "volumeUOM": "MTQ",
+            "emergencyContact": {
+                "emailAddress": "abc@gmail.com",
+                "mobilephone": "999-999-9999",
+                "name": "User1",
+                "telephone": "999-999-9999",
+                "faxNumber": "999-999-9999",
+                "website": "abcwebsite.com"
+            },
+            "cargoItems": [
+                {
+                    "goodsPackaging": "BAG-Bag",
+                    "numberOfPackages": 10,
+                    "weight": 2000.00,
+                    "weightUOM": "KGS",
+                    "volume": 30,
+                    "volumeUOM": "MTQ",
+                    "hazMatDetails": {
+                    }
+                }
+            ]
+        }
+    ],
+    "Voyages": [
+        {
+			"voyageNumber": "SZV4040",
+			"estimateSailDate": "2024-10-06",
+			"estimateArrivalDate": "2024-10-08",
+            "vesselLloydsCode": "",
+			"vesselName": "Warnow Beluga",
+			"load": {
+				"Country": "US",
+				"Function": "PortOfLoading",
+				"Identifier": "USPEF",
+				"StateOrProvince": "FL",
+				"Qualifier": "UN",
+				"City": "Port Everglades"
+			},
+			"discharge": {
+				"Country": "US",
+				"Function": "PortOfDischarge",
+				"Identifier": "CRMOB",
+				"StateOrProvince": "CR",
+				"Qualifier": "UN",
+				"City": "Moin"
+			}
+		}
+    ],
+    "moveType": "DoorToPort",
+    "bookingRemarks": "Test Remarks",
+    "isHazMatBooking": false,
+    "pickUpLocations": [
+        {
+            "sequence": 1,
+            "Qualifier": "UN",
+            "Identifier": "USUZC",
+            "pickupDateTime": "2024-10-01T13:00:00Z",
+            "crowleyCustomerCode": "1912879-43",
+            "name": "FRUIT OF THE LOOM INC",
+            "address": {
+                "address1": "1116 BUSINESS PARK RD",
+                "stateOrProvince": "SC",
+                "address3": "FRUIT OF THE LOOM INC",
+                "country": "US",
+                "zipCode": "29483",
+                "city": "Summerville",
+                "address2": "1116 BUSINESS PARK RD"
+            },
+            "contact": {
+                "name": "BRAD ALLEN",
+                "faxNumber": "888-999-9988",
+                "emailAddress": "johndoe3@gmail.com",
+                "telephone": "888-999-9999",
+                "mobilephone": "888-999-9999",
+                "website": "xyzcomanywebsitewwW.com"
+            }
+        }
+    ],
+    "dropOffLocations": [],
+    "freightPaymentMode": "PrePaid",
+    "electronicCustomerReference": "timestamp-prefix{CustCont}",
+    "shippingtype": "Laden",
+    "shippingCompany": "CRWLY",
+    "parties": [
+        {
+            "code": "5780713-01",
+            "bookingParty": true,
+            "role": "SHP",
+            "name": "GALLERY SHIPPING LLC",
+            "address": {
+                "address1": "12902 CANTON AVE",
+                "stateOrProvince": "FL",
+                "address3": "GALLERY SHIPPING LLC",
+                "country": "US",
+                "zipCode": "34669",
+                "city": "HUDSON",
+                "address2": ""
+            },
+            "externalPartnerReference": "Test123",
+            "vatNumber": "Test123",
+            "contact": {
+                "emailAddress": "christy.hernandez@crowley.com.uat",
+                "mobilephone": "3052063753",
+                "name": "CHRISTY HERNANDEZ",
+                "telephone": "3052063753",
+                "faxNumber": "",
+                "website": ""
+            },
+            "reference": "CEE1234"
+        },
+        {
+            "code": "5780713-01",
+            "bookingParty": false,
+            "role": "CON",
+            "name": "GALLERY SHIPPING LLC",
+            "address": {
+                "address1": "12902 CANTON AVE",
+                "stateOrProvince": "FL",
+                "address3": "",
+                "country": "US",
+                "zipCode": "34669",
+                "city": "HUDSON",
+                "address2": ""
+            },
+            "externalPartnerReference": "",
+            "vatNumber": "Test123",
+            "contact": {
+                "emailAddress": "christy.hernandez@crowley.com.uat",
+                "mobilephone": "3052063753",
+                "name": "CHRISTY HERNANDEZ",
+                "telephone": "3052063753",
+                "faxNumber": "",
+                "website": ""
+            },
+            "reference": "CEE1234"
+        }
+    ],
+    "Locations": [
+        {
+            "Function": "PortOfLoading",
+            "Qualifier": "UN",
+            "Identifier": "USPEF",
+            "StateOrProvince": "FL",
+            "Country": "US",
+            "City": "Port Everglades"
+        },
+        {
+            "Function": "PortOfDischarge",
+            "Qualifier": "UN",
+            "Identifier": "CRMOB",
+            "StateOrProvince": "Moin",
+            "Country": "CR",
+            "City": "Moin"
+        }
+    ]
+}

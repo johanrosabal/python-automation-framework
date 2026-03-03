@@ -1,0 +1,118 @@
+{
+    "crowleyBookingNumber": "",
+    "agreementReference": "20-00809",
+    "cargoAvailableDate": "future-date-to-utc{1}",
+    "cargos": [
+        {
+            "cargoType": "CONTAINER",
+            "commodityCode": "OTGenCargo",
+            "commodityDescription": "General Cargo",
+            "containerDetails": {
+                "isShippersOwn": false,
+                "isRunningReefer": false,
+                "equipmentIsoCode": "22G0",
+                "equipmentQuantity": 1
+            },
+            "weight": 1000.0,
+            "weightUOM": "KGS",
+            "volume": 400,
+            "volumeUOM": "MTQ",
+            "emergencyContact": {
+                "emailAddress": "service@galleryshipping.com",
+                "mobilephone": "7278584891",
+                "name": "ALNARDO MARTINEZ",
+                "telephone": "7278584891"
+            },
+            "cargoItems": [
+                {
+                    "goodsPackaging": "BAG-Bag",
+                    "numberOfPackages": 1,
+                    "weight": 250,
+                    "weightUOM": "KGS",
+                    "volume": 100,
+                    "volumeUOM": "MTQ"
+                }
+            ]
+        }
+    ],
+    "Voyages": [],
+    "moveType": "PortToPort",
+    "bookingRemarks": "Test Remarks",
+    "isHazMatBooking": false,
+    "freightPaymentMode": "PrePaid",
+    "electronicCustomerReference": "timestamp-prefix{CustCont}",
+    "shippingtype": "Laden",
+    "shippingCompany": "CRWLY",
+    "parties": [
+        {
+            "code": "5780713-01",
+            "bookingParty": true,
+            "role": "SHP",
+            "name": "GALLERY SHIPPING LLC",
+            "address": {
+                "address1": "12902 CANTON AVE",
+                "stateOrProvince": "FL",
+                "address3": "GALLERY SHIPPING LLC",
+                "country": "US",
+                "zipCode": "34669",
+                "city": "HUDSON",
+                "address2": ""
+            },
+            "externalPartnerReference": "Test123",
+            "vatNumber": "Test123",
+            "contact": {
+                "emailAddress": "christy.hernandez@crowley.com.uat",
+                "mobilephone": "3052063753",
+                "name": "CHRISTY HERNANDEZ",
+                "telephone": "3052063753",
+                "faxNumber": "",
+                "website": ""
+            },
+            "reference": "CEE1234"
+        },
+        {
+            "code": "5780713-01",
+            "bookingParty": false,
+            "role": "CON",
+            "name": "GALLERY SHIPPING LLC",
+            "address": {
+                "address1": "12902 CANTON AVE",
+                "stateOrProvince": "FL",
+                "address3": "",
+                "country": "US",
+                "zipCode": "34669",
+                "city": "HUDSON",
+                "address2": ""
+            },
+            "externalPartnerReference": "",
+            "vatNumber": "Test123",
+            "contact": {
+                "emailAddress": "christy.hernandez@crowley.com.uat",
+                "mobilephone": "3052063753",
+                "name": "CHRISTY HERNANDEZ",
+                "telephone": "3052063753",
+                "faxNumber": "",
+                "website": ""
+            },
+            "reference": "CEE1234"
+        }
+    ],
+    "Locations": [
+        {
+            "Function": "PortOfLoading",
+            "Qualifier": "UN",
+            "Identifier": "USJAX",
+            "StateOrProvince": "FL",
+            "Country": "US",
+            "City": "Jacksonville"
+        },
+        {
+            "Function": "PortOfDischarge",
+            "Qualifier": "UN",
+            "Identifier": "PRSJU",
+            "StateOrProvince": "Puertorico",
+            "Country": "PR",
+            "City": "San Juan"
+        }
+    ]
+}

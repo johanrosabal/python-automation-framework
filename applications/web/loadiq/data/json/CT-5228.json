@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-5228",
+    "testCaseName": "test_verify_filter_loads_successfully_using_delivery_date",
+    "title": "Filter loads successfully using 'Delivery Date'",
+    "description": "Verify that selecting a specific date range for delivery correctly filters the load board to show only matching records.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-5228",
+      "name": "CT-5228"
+    },
+    "data": {
+    }
+  }
+}

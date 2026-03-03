@@ -1,0 +1,56 @@
+{
+   "AddressCode":"9999-{Random-4}",
+   "AddressLine1":"123 Main St",
+   "AddressLine2":"123 Calle Principal",
+   "AddressLine3":"Address Line 3",
+   "AddressLine4":"Address Line 4",
+   "AddressLine5":"Address Line 5",
+   "AddressLine6":"Address Line 6",
+   "AddressLine7":"Address Line 7",
+   "SecondaryLanguage1":"Sec Lan 1",
+   "SecondaryLanguage2":"Sec Lan 2",
+   "SecondaryLanguage3":"Sec Lan 3",
+   "SecondaryLanguage4":"Sec Lan 4",
+   "SecondaryLanguage5":"Sec Lan 5",
+   "SecondaryLanguage6":"Sec Lan 6",
+   "SecondaryLanguage7":"Sec Lan 7",
+   "Contact1":"Contact Test 1",
+   "Contact2":"Contact Test 2",
+   "ContactType":{
+      "Code":"EM",
+      "Name":null
+   },
+   "Street1":"555-1231",
+   "Street2":"Main Street",
+   "Street3":"Apt 1",
+   "Location":{
+      "Code":"$04OU",
+      "Name":null,
+      "Province":null,
+      "Country":null
+   },
+   "CityName":"Springfield, IL",
+   "PostalCode":"60001",
+   "Country":{
+      "Country":null,
+      "Code":null,
+      "Region":null
+   },
+   "Province":{
+      "Code":null,
+      "Province":null,
+      "Country":null,
+      "Id":null,
+      "CountryName":null
+   },
+   "Coordinates":{
+      "Latitude":39.799999,
+      "Longitude":-89.650002,
+      "IsCoordinatesChanged":false
+   },
+   "BAN":"BAN0000",
+   "IsHide":false,
+   "IsWebbooking":false,
+   "IsAddressChanged":false,
+   "Connections":null
+}

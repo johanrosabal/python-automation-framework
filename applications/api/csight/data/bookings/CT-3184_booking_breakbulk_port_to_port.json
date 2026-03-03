@@ -1,0 +1,164 @@
+{
+    "crowleyBookingNumber": "",
+    "agreementReference": "20-00809",
+    "cargoAvailableDate": "future-date-to-utc{1}",
+    "cargos": [
+        {
+            "cargoType": "BREAKBULK",
+            "commodityCode": "OTBBulkVeh",
+            "commodityDescription": "Not In Trailer (BreakBulk/Boat/Jetski/OversizeVeh)",
+            "notInContainerDetails": {
+                "heightUom": "FT",
+                "vehicleSpecificationDetails": {
+                    "vechicleDetails": [
+                        {
+                            "vin": "1XNBU1620R3109900",
+                            "additionalVin": [
+							{
+									"vin": "1XNBU101XR3109905",
+                                    "description": "ITEM #1 - Stacked 2024 DOWN TO EARTH TRAILER #"
+							},
+							{
+									"vin": "1XNBU1429R3109901",
+                                    "description": "ITEM #2 - Stacked 2024 DOWN TO EARTH TRAILER #"
+							},
+							{
+									"vin": "1XNBU1420R3109902",
+                                    "description": "ITEM #3 - Stacked 2024 DOWN TO EARTH TRAILER #"
+							},
+							{
+									"vin": "1XNBU1016R3109903",
+                                    "description": "ITEM #4 - Stacked 2024 DOWN TO EARTH TRAILER #"
+							}
+                            ]
+                        }
+                    ],
+                    "isNew": false
+                },
+                "width": 8,
+                "length": 19,
+                "height": 16,
+                "lengthUom": "FT",
+                "breakBulkSpecification": {
+                    "weathrProtectInd": true
+                },
+                "widthUom": "FT",
+                "quantity": 1
+            },
+            "weight": 1134.00,
+            "weightUOM": "KGS",
+            "volume": 68,
+            "volumeUOM": "MTQ",
+            "emergencyContact": {
+                "emailAddress": "service@galleryshipping.com",
+                "mobilephone": "787-361-0864",
+                "name": "ALNARDO MARTINEZ",
+                "telephone": "787-361-0864",
+                "faxNumber": "",
+                "website": ""
+            },
+            "cargoItems": [
+                {
+                    "goodsPackaging": "BLK-Drybulk",
+                    "numberOfPackages": 1,
+                    "weight": 1134.00,
+                    "weightUOM": "KGS",
+                    "volume": 68,
+                    "volumeUOM": "MTQ",
+                    "hazMatDetails": {
+                        "packagingGroup": "",
+                        "subHazard1": "",
+                        "prefix": "UN",
+                        "properShippingName": "Flammable gas powered",
+                        "UNNumber": "3166",
+                        "isMarinePollutant": false,
+                        "class": "9",
+                        "isLimitedQuantity": false,
+                        "technicalName": "Vehicle, flammable gas powered",
+                        "subHazard2": ""
+                    }
+                }
+            ]
+        }
+    ],
+    "Voyages": [],
+    "moveType": "PortToPort",
+    "bookingRemarks": "Test Remarks",
+    "isHazMatBooking": true,
+    "freightPaymentMode": "PrePaid",
+    "electronicCustomerReference": "timestamp-prefix{CustCont}",
+    "shippingtype": "Laden",
+    "shippingCompany": "CRWLY",
+    "parties": [
+        {
+            "code": "5780713-01",
+            "bookingParty": true,
+            "role": "SHP",
+            "name": "GALLERY SHIPPING LLC",
+            "address": {
+                "address1": "12902 CANTON AVE",
+                "stateOrProvince": "FL",
+                "address3": "GALLERY SHIPPING LLC",
+                "country": "US",
+                "zipCode": "34669",
+                "city": "HUDSON",
+                "address2": ""
+            },
+            "externalPartnerReference": "Test123",
+            "vatNumber": "Test123",
+            "contact": {
+                "emailAddress": "christy.hernandez@crowley.com.uat",
+                "mobilephone": "3052063753",
+                "name": "CHRISTY HERNANDEZ",
+                "telephone": "3052063753",
+                "faxNumber": "",
+                "website": ""
+            },
+            "reference": "CEE1234"
+        },
+        {
+            "code": "5780713-01",
+            "bookingParty": false,
+            "role": "CON",
+            "name": "GALLERY SHIPPING LLC",
+            "address": {
+                "address1": "12902 CANTON AVE",
+                "stateOrProvince": "FL",
+                "address3": "",
+                "country": "US",
+                "zipCode": "34669",
+                "city": "HUDSON",
+                "address2": ""
+            },
+            "externalPartnerReference": "",
+            "vatNumber": "Test123",
+            "contact": {
+                "emailAddress": "christy.hernandez@crowley.com.uat",
+                "mobilephone": "3052063753",
+                "name": "CHRISTY HERNANDEZ",
+                "telephone": "3052063753",
+                "faxNumber": "",
+                "website": ""
+            },
+            "reference": "CEE1234"
+        }
+    ],
+    "Locations": [
+        {
+            "Function": "PortOfLoading",
+            "Qualifier": "UN",
+            "Identifier": "USJAX",
+            "StateOrProvince": "FL",
+            "Country": "US",
+            "City": "Jacksonville"
+        },
+        {
+            "Function": "PortOfDischarge",
+            "Qualifier": "UN",
+            "Identifier": "PRSJU",
+            "StateOrProvince": "Puertorico",
+            "Country": "PR",
+            "City": "San Juan"
+        }
+    ]
+}

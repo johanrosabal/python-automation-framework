@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-4412",
+    "testCaseName": "",
+    "title": "Validate error when entering a date/time for an event that is earlier than the previous event",
+    "description": "This negative test case ensures that the system validates that the date and time of an event cannot be earlier than the immediately preceding event.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-4412",
+      "name": "CT-4412"
+    },
+    "data": {
+    }
+  }
+}

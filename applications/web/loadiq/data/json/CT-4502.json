@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-4502",
+    "testCaseName": "test_delivery_button_visibility_based_on_milestone_completion",
+    "title": "Verify delivery button visibility based on milestone completion",
+    "description": "Verifies that the Complete Delivery button is only visible when all delivery milestones have been input, and that the status transitions correctly from Delivered to Completed.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-4502",
+      "name": "CT-4502"
+    },
+    "data": {
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-4415",
+    "testCaseName": "test_validate_system_behavior_when_entering_invalid_date_and_time_formats",
+    "title": "Validate system behavior when entering invalid date and time formats.",
+    "description": "This negative test case verifies that the system rejects entries that do not comply with the expected format (mm/dd/yyyy hh:mm AM/PM) in the date and time fields.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-4415",
+      "name": "CT-4415"
+    },
+    "data": {
+    }
+  }
+}

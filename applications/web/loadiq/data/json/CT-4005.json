@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-4005",
+    "testCaseName": "test_add_check_call_button_disabled_when_load_not_in_transit",
+    "title": "Add check call - Button Disabled When Load Not In Transit",
+    "description": "Ensure Add Check Call is inaccessible for loads not in In Transit status (e.g., Pending Pickup, Delivered).",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-4005",
+      "name": "CT-4005"
+    },
+    "data": {
+    }
+  }
+}

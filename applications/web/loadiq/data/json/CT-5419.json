@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-5419",
+    "testCaseName": "test_verification_of_chassis_and_genset_fields_existence_in_summary",
+    "title": "Verification of 'Chassis' and 'Genset' fields existence in Summary\"",
+    "description": "Verify that the \"Chassis\" and \"Genset\" fields are visible in the Summary section within the \"Shipment Details\" tab.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-5419",
+      "name": "CT-5419"
+    },
+    "data": {
+    }
+  }
+}

@@ -1,0 +1,20 @@
+# Standard Configuration File
+name: C-Sight
+api:
+  base_token_url: https://stage.api.crowley.com
+  base_url: https://stage.api.crowley.com
+  grant_type: na
+  client_id: 023e4a7580824b7781c9d0a3ee6bbb6f
+  client_secret: 4b34a329Ad6C4105a7d7BE46FA451288
+
+user:
+  username: ZmFiaWFuLnZhcmdhc0Bjcm93bGV5LmNvbS5zZg==
+  password: VjExI3FUMUBMeTkhTno1Jlo=
+
+database:
+  host: qa-db.example.com
+  port: 5432
+  user: qa_user
+  password: qa_password
+  name: qa_db
+  ssl: false

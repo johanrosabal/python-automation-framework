@@ -32,7 +32,7 @@ class Click:
         self._locator = locator
         self._page = page
         # Wait for the element using Element class method, with specified timeout
-        self._element = Element.wait_for_element(driver=self._driver, locator=locator, timeout=explicit_wait)
+        self._element = Element.wait_for_element_clickable(driver=self._driver, locator=locator, timeout=explicit_wait)
         # Log the action with page and element details
         logger.info(Element.log_console(self._page, self._name, locator))
         return self
@@ -64,6 +64,17 @@ class Click:
         else:
             logger.error("Unable to Click: Element WebElement is None.")
         return self
+
+    def javascript_click(self):
+        if self._element:
+            try:
+                self._driver.execute_script("arguments[0].click();", self._element)
+            except Exception as e:
+                logger.error(f"Unable to Click: {e.msg}")
+        else:
+            logger.error("Unable to JavaScript Click: Element WebElement is None.")
+        return self
+
 
     def double_click(self):
         """

@@ -1,0 +1,1028 @@
+<?xml version='1.0' encoding='utf-8'?>
+<CISDocument>
+  <EventName>LoadTendered</EventName>
+  <ReasonCode>TNRD</ReasonCode>
+  <ReasonCodeDescription>Tendered</ReasonCodeDescription>
+  <SystemTimeZoneOffset>0.000000</SystemTimeZoneOffset>
+  <EventDateTime>2025-04-11T15:35:25</EventDateTime>
+  <EventReportedDateTime>2025-04-11T15:35:25</EventReportedDateTime>
+  <EventOccurredDateTime>2025-04-11T15:35:25</EventOccurredDateTime>
+  <EventOccurredTimeZoneOffset>0.000000</EventOccurredTimeZoneOffset>
+  <EventUser>Alex.Boyd@crowley.com</EventUser>
+  <SystemLoadID>77000000048</SystemLoadID>
+  <DivisionCode>CROW</DivisionCode>
+  <LogisticsGroup>*DFT</LogisticsGroup>
+  <Carrier>
+    <CarrierCode>TESTCARRIER</CarrierCode>
+    <CarrierName>TRANSPRO INTERMODAL TRUCKING INC</CarrierName>
+    <POD>PODRQ</POD>
+    <SCAC>TITF</SCAC>
+    <CarrierBusinessHours>
+      <CarrierBusinessHoursTimeZoneOffset>0.000000</CarrierBusinessHoursTimeZoneOffset>
+    </CarrierBusinessHours>
+    <CarrierExternalID1>DOT2401989</CarrierExternalID1>
+    <CarrierExternalID2>MC826175</CarrierExternalID2>
+  </Carrier>
+  <Service>
+    <ServiceCode>TL</ServiceCode>
+  </Service>
+  <EquipmentTypeDetail>
+    <EquipmentType>40DH</EquipmentType>
+  </EquipmentTypeDetail>
+  <TenderedBy>
+    <TenderedByUserID>Alex.Boyd@crowley.com</TenderedByUserID>
+  </TenderedBy>
+  <TariffService>
+    <SystemTariffID>2179</SystemTariffID>
+    <AutoAcceptTender>bFALSE</AutoAcceptTender>
+  </TariffService>
+  <SuspendedReasonEnumVal>NOT SUSPEND</SuspendedReasonEnumVal>
+  <AssetCode>CONTAINER6058336</AssetCode>
+  <TrailerNumber>BMOU6058336</TrailerNumber>
+  <AmountDetail>
+    <ChargeAmount>293.630000</ChargeAmount>
+  </AmountDetail>
+  <CurrencyType>USD</CurrencyType>
+  <TotalNumberOfStops>2</TotalNumberOfStops>
+  <TripID>0</TripID>
+  <SystemLoadStatus>LL_DTENDER</SystemLoadStatus>
+  <PaymentTerm>PREPAID</PaymentTerm>
+  <MustRespondByDateTime>2025-03-28T13:59:00</MustRespondByDateTime>
+  <LoadUOM>
+    <LoadVolumeUOM>FT</LoadVolumeUOM>
+    <LoadWeightUOM>LB</LoadWeightUOM>
+  </LoadUOM>
+  <LoadMemo>
+    <LoadPrintableContent>03/31 0800 - 24866</LoadPrintableContent>
+  </LoadMemo>
+  <LoadReferenceNumberList>
+    <LoadReferenceNumberType>BN</LoadReferenceNumberType>
+    <LoadReferenceNumber>CAT124544001001</LoadReferenceNumber>
+    <LoadReferenceNumberExternalID>BN</LoadReferenceNumberExternalID>
+  </LoadReferenceNumberList>
+  <LoadReferenceNumberList>
+    <LoadReferenceNumberType>LD_ATTACH</LoadReferenceNumberType>
+    <LoadReferenceNumber>Document Attachment Pending</LoadReferenceNumber>
+  </LoadReferenceNumberList>
+  <LoadReferenceNumberList>
+    <LoadReferenceNumberType>BOL</LoadReferenceNumberType>
+    <LoadReferenceNumber>100081609</LoadReferenceNumber>
+  </LoadReferenceNumberList>
+  <LoadReferenceNumberList>
+    <LoadReferenceNumberType>DLV_Event</LoadReferenceNumberType>
+    <LoadReferenceNumber>CU</LoadReferenceNumber>
+  </LoadReferenceNumberList>
+  <LoadReferenceNumberList>
+    <LoadReferenceNumberType>LG</LoadReferenceNumberType>
+    <LoadReferenceNumber>ILIN</LoadReferenceNumber>
+  </LoadReferenceNumberList>
+  <LoadReferenceNumberList>
+    <LoadReferenceNumberType>PU_Event</LoadReferenceNumberType>
+    <LoadReferenceNumber>LD</LoadReferenceNumber>
+  </LoadReferenceNumberList>
+  <LoadReferenceNumberList>
+    <LoadReferenceNumberType>CARR_SCAC</LoadReferenceNumberType>
+    <LoadReferenceNumber>TITF</LoadReferenceNumber>
+  </LoadReferenceNumberList>
+  <LoadReferenceNumberList>
+    <LoadReferenceNumberType>LOAD_CONTAINERNUMBER</LoadReferenceNumberType>
+    <LoadReferenceNumber>BMOU6058336</LoadReferenceNumber>
+  </LoadReferenceNumberList>
+  <LoadStopList>
+    <SystemStopID>123390</SystemStopID>
+    <StopSequenceNumber>1</StopSequenceNumber>
+    <ShippingPointType>DC</ShippingPointType>
+    <ShippingLocationCode>THELEV01</ShippingLocationCode>
+    <ShippingPointAddress>
+      <ShippingPointStreet>30 RUNWAY DR # B</ShippingPointStreet>
+      <ShippingPointCity>LEVITTOWN</ShippingPointCity>
+      <ShippingPointPostalCode>19057</ShippingPointPostalCode>
+      <ShippingPointStateCode>PA</ShippingPointStateCode>
+      <ShippingPointCountryCode>USA</ShippingPointCountryCode>
+      <ShippingPointTimeZoneOffset>0.000000</ShippingPointTimeZoneOffset>
+    </ShippingPointAddress>
+    <StopShippingLocation>
+      <StopShippingLocationName>THE JUDGE ORGANIZATION</StopShippingLocationName>
+      <StopShippingLocationAddress>
+        <StopShippingLocationStreet>30 RUNWAY DR # B</StopShippingLocationStreet>
+        <StopShippingLocationCity>LEVITTOWN</StopShippingLocationCity>
+        <StopShippingLocationPostalCode>19057</StopShippingLocationPostalCode>
+        <StopShippingLocationStateCode>PA</StopShippingLocationStateCode>
+        <StopShippingLocationCountryCode>USA</StopShippingLocationCountryCode>
+        <StopShippingLocationAddressTimeZoneOffset>0.000000</StopShippingLocationAddressTimeZoneOffset>
+      </StopShippingLocationAddress>
+      <StopShippingLocationContact />
+      <StopShippingLocationTimeZoneOffset>0.000000</StopShippingLocationTimeZoneOffset>
+      <StopShippingLocationExternalID2>3276333-04</StopShippingLocationExternalID2>
+    </StopShippingLocation>
+    <LoadingHours>0.000000</LoadingHours>
+    <UnLoadingHours>0.000000</UnLoadingHours>
+    <WaitingHours>0.000000</WaitingHours>
+    <ShipmentsPickedNumber>1</ShipmentsPickedNumber>
+    <PickedShipmentInfo>
+      <PickedWeight>20000.000000</PickedWeight>
+      <PickedVolume>0.000000</PickedVolume>
+      <PickedSkids>1.000000</PickedSkids>
+      <PickedPieces>0.000000</PickedPieces>
+    </PickedShipmentInfo>
+    <ShipmentsDroppedNumber>0</ShipmentsDroppedNumber>
+    <DroppedShipmentInfo>
+      <DroppedWeight>0.000000</DroppedWeight>
+      <DroppedVolume>0.000000</DroppedVolume>
+      <DroppedSkids>0.000000</DroppedSkids>
+      <DroppedPieces>0.000000</DroppedPieces>
+    </DroppedShipmentInfo>
+    <ComputedArrivalDateTime>2025-03-31T08:00:00</ComputedArrivalDateTime>
+    <ComputedDepartureDateTime>2025-03-31T08:00:00</ComputedDepartureDateTime>
+    <AppointmentInfo>
+      <SystemAppointmentID>22938</SystemAppointmentID>
+      <AppointmentStatus>
+        <AppointmentStatusCode>CONFIRMED</AppointmentStatusCode>
+      </AppointmentStatus>
+      <AppointmentFromDateTime>2025-03-31T08:00:00</AppointmentFromDateTime>
+      <AppointmentToDateTime>2025-03-31T08:00:00</AppointmentToDateTime>
+      <OverrideHours>bFALSE</OverrideHours>
+      <AppointmentWithInfo />
+    </AppointmentInfo>
+    <PickShipmentLegDetails>
+      <PickSystemShipmentLegID>100081609</PickSystemShipmentLegID>
+      <PickSystemShipmentNumber>124544001001</PickSystemShipmentNumber>
+    </PickShipmentLegDetails>
+    <DriveTimeToStop>0.000000</DriveTimeToStop>
+    <DriveDistanceToStop>0.000000</DriveDistanceToStop>
+    <WeekendHolidayBreakHours>0.000000</WeekendHolidayBreakHours>
+    <WeekendHolidayBreakOrientation>0</WeekendHolidayBreakOrientation>
+    <LastComputedArrivalDateTime>2025-03-31T08:00:00</LastComputedArrivalDateTime>
+    <LastComputedDepartureDateTime>2025-03-31T08:00:00</LastComputedDepartureDateTime>
+    <StopShippingLocationNameOverride>THE JUDGE ORGANIZATION</StopShippingLocationNameOverride>
+  </LoadStopList>
+  <LoadStopList>
+    <SystemStopID>123401</SystemStopID>
+    <StopSequenceNumber>2</StopSequenceNumber>
+    <ShippingPointType>HUB</ShippingPointType>
+    <ShippingLocationCode>CHTT000</ShippingLocationCode>
+    <ShippingPointAddress>
+      <ShippingPointStreet>1 SAVILLE AVE</ShippingPointStreet>
+      <ShippingPointCity>EDDYSTONE</ShippingPointCity>
+      <ShippingPointPostalCode>19022</ShippingPointPostalCode>
+      <ShippingPointStateCode>PA</ShippingPointStateCode>
+      <ShippingPointCountryCode>USA</ShippingPointCountryCode>
+      <ShippingPointTimeZoneOffset>0.000000</ShippingPointTimeZoneOffset>
+    </ShippingPointAddress>
+    <StopShippingLocation>
+      <StopShippingLocationName>PENN TERMINALS INC</StopShippingLocationName>
+      <StopShippingLocationAddress>
+        <StopShippingLocationStreet>1 SAVILLE AVE</StopShippingLocationStreet>
+        <StopShippingLocationCity>EDDYSTONE</StopShippingLocationCity>
+        <StopShippingLocationPostalCode>19022</StopShippingLocationPostalCode>
+        <StopShippingLocationStateCode>PA</StopShippingLocationStateCode>
+        <StopShippingLocationCountryCode>USA</StopShippingLocationCountryCode>
+        <StopShippingLocationAddressTimeZoneOffset>0.000000</StopShippingLocationAddressTimeZoneOffset>
+      </StopShippingLocationAddress>
+      <StopShippingLocationContact />
+      <StopShippingLocationTimeZoneOffset>0.000000</StopShippingLocationTimeZoneOffset>
+      <StopShippingLocationExternalID1>CHTT000</StopShippingLocationExternalID1>
+      <StopShippingLocationExternalID2>3869474</StopShippingLocationExternalID2>
+    </StopShippingLocation>
+    <LoadingHours>0.000000</LoadingHours>
+    <UnLoadingHours>0.000000</UnLoadingHours>
+    <WaitingHours>0.000000</WaitingHours>
+    <ShipmentsPickedNumber>0</ShipmentsPickedNumber>
+    <PickedShipmentInfo>
+      <PickedWeight>0.000000</PickedWeight>
+      <PickedVolume>0.000000</PickedVolume>
+      <PickedSkids>0.000000</PickedSkids>
+      <PickedPieces>0.000000</PickedPieces>
+    </PickedShipmentInfo>
+    <ShipmentsDroppedNumber>1</ShipmentsDroppedNumber>
+    <DroppedShipmentInfo>
+      <DroppedWeight>20000.000000</DroppedWeight>
+      <DroppedVolume>0.000000</DroppedVolume>
+      <DroppedSkids>1.000000</DroppedSkids>
+      <DroppedPieces>0.000000</DroppedPieces>
+    </DroppedShipmentInfo>
+    <ComputedArrivalDateTime>2025-04-02T00:00:00</ComputedArrivalDateTime>
+    <ComputedDepartureDateTime>2025-04-02T00:00:00</ComputedDepartureDateTime>
+    <AppointmentInfo>
+      <SystemAppointmentID>22937</SystemAppointmentID>
+      <AppointmentStatus>
+        <AppointmentStatusCode>CONFIRMED</AppointmentStatusCode>
+      </AppointmentStatus>
+      <AppointmentReferenceNumber>time pending </AppointmentReferenceNumber>
+      <AppointmentFromDateTime>2025-04-02T00:00:00</AppointmentFromDateTime>
+      <AppointmentToDateTime>2025-04-03T08:00:00</AppointmentToDateTime>
+      <OverrideHours>bFALSE</OverrideHours>
+      <AppointmentWithInfo />
+    </AppointmentInfo>
+    <DropShipmentLegDetails>
+      <DropSystemShipmentLegID>100081609</DropSystemShipmentLegID>
+      <DropSystemShipmentNumber>124544001001</DropSystemShipmentNumber>
+    </DropShipmentLegDetails>
+    <DriveTimeToStop>0.750000</DriveTimeToStop>
+    <DriveDistanceToStop>39.500000</DriveDistanceToStop>
+    <WeekendHolidayBreakHours>0.000000</WeekendHolidayBreakHours>
+    <WeekendHolidayBreakOrientation>0</WeekendHolidayBreakOrientation>
+    <LastComputedArrivalDateTime>2025-04-02T00:00:00</LastComputedArrivalDateTime>
+    <LastComputedDepartureDateTime>2025-04-02T00:00:00</LastComputedDepartureDateTime>
+    <StopShippingLocationNameOverride>PENN TERMINALS INC</StopShippingLocationNameOverride>
+  </LoadStopList>
+  <ShipmentLeg>
+    <ShipmentItinerarySeqNum>100</ShipmentItinerarySeqNum>
+    <Shipment>
+      <SystemShipmentID>46339</SystemShipmentID>
+      <SystemShipmentNumber>124544001001</SystemShipmentNumber>
+      <ShipmentDescription>CAT124544001001</ShipmentDescription>
+      <OriginTypeEnumVal>DC</OriginTypeEnumVal>
+      <OriginCode>THELEV01</OriginCode>
+      <OriginName>THE JUDGE ORGANIZATION</OriginName>
+      <OriginAddress>
+        <OriginStreet>30 RUNWAY DR # B</OriginStreet>
+        <OriginCity>LEVITTOWN</OriginCity>
+        <OriginPostalCode>19057</OriginPostalCode>
+        <OriginStateCode>PA</OriginStateCode>
+        <OriginCountryCode>USA</OriginCountryCode>
+        <OriginTimeZoneOffset>0.000000</OriginTimeZoneOffset>
+      </OriginAddress>
+      <OriginShippingLocation>
+        <OriginShippingLocationName>THE JUDGE ORGANIZATION</OriginShippingLocationName>
+        <OriginShippingLocationContact />
+        <OriginShippingLocationTimeZoneOffset>0.000000</OriginShippingLocationTimeZoneOffset>
+        <OriginShippingLocationExternalID2>3276333-04</OriginShippingLocationExternalID2>
+      </OriginShippingLocation>
+      <DestinationTypeEnumVal>HUB</DestinationTypeEnumVal>
+      <DestinationCode>CHTT000</DestinationCode>
+      <DestinationName>PENN TERMINALS INC</DestinationName>
+      <DestinationAddress>
+        <DestinationStreet>1 SAVILLE AVE</DestinationStreet>
+        <DestinationCity>EDDYSTONE</DestinationCity>
+        <DestinationPostalCode>19022</DestinationPostalCode>
+        <DestinationStateCode>PA</DestinationStateCode>
+        <DestinationCountryCode>USA</DestinationCountryCode>
+        <DestinationTimeZoneOffset>0.000000</DestinationTimeZoneOffset>
+      </DestinationAddress>
+      <DestinationShippingLocation>
+        <DestinationShippingLocationName>PENN TERMINALS INC</DestinationShippingLocationName>
+        <DestinationShippingLocationContact />
+        <DestinationShippingLocationTimeZoneOffset>0.000000</DestinationShippingLocationTimeZoneOffset>
+        <DestinationShippingLocationExternalID1>CHTT000</DestinationShippingLocationExternalID1>
+        <DestinationShippingLocationExternalID2>3869474</DestinationShippingLocationExternalID2>
+      </DestinationShippingLocation>
+      <CustomerCode>NAL</CustomerCode>
+      <BillToCustomerCode>NAL</BillToCustomerCode>
+      <CSR>0</CSR>
+      <ShipmentInfo>
+        <Weight>20000.000000</Weight>
+        <Volume>0.000000</Volume>
+        <Pieces>0.000000</Pieces>
+        <Skids>1.000000</Skids>
+      </ShipmentInfo>
+      <UOM>
+        <WeightUOM>LB</WeightUOM>
+        <VolumeUOM>FT</VolumeUOM>
+      </UOM>
+      <OnHold>bFALSE</OnHold>
+      <CommodityCode>FAK</CommodityCode>
+      <Customer>
+        <CurrentCustomerVersion>
+          <CustomerName>CROWLEY PR SERVICE NORTH ATLANTIC</CustomerName>
+          <CustomerAddress>
+            <CustomerAddressStreet>9487 REGENCY SQUARE BLVD.</CustomerAddressStreet>
+            <CustomerAddressCity>JACKSONVILLE</CustomerAddressCity>
+            <CustomerAddressPostalCode>32225</CustomerAddressPostalCode>
+            <CustomerAddressStateCode>FL</CustomerAddressStateCode>
+            <CustomerAddressCountryCode>USA</CustomerAddressCountryCode>
+            <CustomerAddressTimeZoneOffset>0.000000</CustomerAddressTimeZoneOffset>
+          </CustomerAddress>
+        </CurrentCustomerVersion>
+        <CustomerBusinessHours>
+          <CustomerBusinessHoursTimeZoneOffset>0.000000</CustomerBusinessHoursTimeZoneOffset>
+        </CustomerBusinessHours>
+      </Customer>
+      <BillToCustomer>
+        <CurrentBillToCustomerVersion>
+          <BillToCustomerName>CROWLEY PR SERVICE NORTH ATLANTIC</BillToCustomerName>
+          <BillToCustomerAddress>
+            <BillToCustomerAddressStreet>9487 REGENCY SQUARE BLVD.</BillToCustomerAddressStreet>
+            <BillToCustomerAddressCity>JACKSONVILLE</BillToCustomerAddressCity>
+            <BillToCustomerAddressPostalCode>32225</BillToCustomerAddressPostalCode>
+            <BillToCustomerAddressStateCode>FL</BillToCustomerAddressStateCode>
+            <BillToCustomerAddressCountryCode>USA</BillToCustomerAddressCountryCode>
+            <BillToCustomerAddressTimeZoneOffset>0.000000</BillToCustomerAddressTimeZoneOffset>
+          </BillToCustomerAddress>
+          <CurrentBillToCustomerVersionContact />
+        </CurrentBillToCustomerVersion>
+        <BillToCustomerBusinessHours>
+          <BillToCustomerBusinessHoursTimeZoneOffset>0.000000</BillToCustomerBusinessHoursTimeZoneOffset>
+        </BillToCustomerBusinessHours>
+      </BillToCustomer>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>ContNumber</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>BMOU6058336</ShipmentReferenceNumber>
+        <ShipmentReferenceNumberExternalID>OC</ShipmentReferenceNumberExternalID>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>EQ1</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>40DH</ShipmentReferenceNumber>
+        <ShipmentReferenceNumberExternalID>EQ</ShipmentReferenceNumberExternalID>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>HAZ</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>N</ShipmentReferenceNumber>
+        <ShipmentReferenceNumberExternalID>HO</ShipmentReferenceNumberExternalID>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>V3</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>NAL5012S</ShipmentReferenceNumber>
+        <ShipmentReferenceNumberExternalID>V3</ShipmentReferenceNumberExternalID>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>MVT</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>Southbound</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>REGIONAL_OFF</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>JAX</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>ACTIVITY</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>TRK</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>COMPANY</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>CLS</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>DLV_Event</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>CU</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>LG</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>ILIN</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>Profitability</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>Revenue: $1553.06,Expense: $587.26,Profit: $965.80,Profit %: 62.19</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>PU_Event</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>LD</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>Shipment Source</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>CSight</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>MODE</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>M</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>OFFICE</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>PHL</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>ORDER_BY_ADDRESS</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>STANISLAUS FOOD PRODS THE JUDGE ORGANIZATION LEVITTOWN PA, 19057 USA</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>ORDER_BY_CVIF</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>5518075-04</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>ORDER_BY_ID</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>TBD</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>Loaded OR Empty</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>Loaded</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>ORGREF</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>24866</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentReferenceNumberList>
+        <ShipmentReferenceNumberType>ShipmentPurpose</ShipmentReferenceNumberType>
+        <ShipmentReferenceNumber>Export_LiveLoad</ShipmentReferenceNumber>
+      </ShipmentReferenceNumberList>
+      <ShipmentContainer>
+        <ContainerId>63450</ContainerId>
+        <ContainerDescription>FOODSTUFF,NOS(DRYORREFRIGERATEDCARGO)</ContainerDescription>
+        <ContainerQuantity>1.000000</ContainerQuantity>
+        <ContainerLength>0.000000</ContainerLength>
+        <ContainerWidth>0.000000</ContainerWidth>
+        <ContainerHeight>0.000000</ContainerHeight>
+        <ContainerRatingUnitType>PALLETS</ContainerRatingUnitType>
+        <ContainerShippingInfo>
+          <ContainerShippingInfoWeight>20000.000000</ContainerShippingInfoWeight>
+          <ContainerShippingInfoVolume>0.000000</ContainerShippingInfoVolume>
+          <ContainerShippingInfoOrderValue>0.000000</ContainerShippingInfoOrderValue>
+        </ContainerShippingInfo>
+        <ContainerMarkedForLocationEnumVal>0</ContainerMarkedForLocationEnumVal>
+        <ContainerCommodityCodeDetail>
+          <ContainerCommodityCode>FAK</ContainerCommodityCode>
+        </ContainerCommodityCodeDetail>
+        <ContainerWeightByFreightClass>
+          <WeightByFreightClassFreightCode> 85 </WeightByFreightClassFreightCode>
+        </ContainerWeightByFreightClass>
+        <StackingRuleEnumVal>0</StackingRuleEnumVal>
+        <CarrierPackagingTypeVal>0</CarrierPackagingTypeVal>
+        <SplitMethodEnumVal>NONE</SplitMethodEnumVal>
+        <SystemItemMasterID>0</SystemItemMasterID>
+        <ShipmentDetailItemNumber>1</ShipmentDetailItemNumber>
+        <ItemPackageLevelCode>0</ItemPackageLevelCode>
+        <ShipmentDetailItemDescription>FOODSTUFF,NOS(DRYORREFRIGERATEDCARGO)</ShipmentDetailItemDescription>
+        <ContentQuantity>0.000000</ContentQuantity>
+        <Is3DLoadingRequired>bFALSE</Is3DLoadingRequired>
+        <ItemType>0</ItemType>
+        <ContentLevel>100</ContentLevel>
+        <Priority>0</Priority>
+        <IsItemPackagingCommitted>bFALSE</IsItemPackagingCommitted>
+      </ShipmentContainer>
+      <PickupFromDateTime>2025-03-28T12:00:00</PickupFromDateTime>
+      <PickupToDateTime>2025-04-02T12:00:00</PickupToDateTime>
+      <DeliveryFromDateTime>2025-03-30T12:00:00</DeliveryFromDateTime>
+      <DeliveryToDateTime>2025-04-04T11:59:00</DeliveryToDateTime>
+      <ShipmentNote>
+        <NoteID>5701</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>Order Remarks</NoteSubject>
+        <NoteDescription>LABRADA DISTRIBUTORS INC | CALLE 272 BLOQUE 1C-6 | NUM 5055 COUNTRY CLUB | CAROL</NoteDescription>
+        <NoteInternalOnly>bFALSE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-03-19T08:32:56</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>46339</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>5702</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>EDI 204 DATA 03/19/2025 13:33 UTC</NoteSubject>
+        <NoteDescription>0239BGUS          UCAT124544001001     202503190000202503310000202504110000  U000000140306000000000000                                                                                   
+0539_R4M                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+0539_R1CLS                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539VOYNAL5013S                                                                                                                                                                                                                                                                                                                                                                                                                                                
+0539HZIN                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+0539_RMLABRADA DISTRIBUTORS INC | CALLE 272 BLOQUE 1C-6 | NUM 5055 COUNTRY CLUB | CAROL                                                                                                                                                                                                                                                                                                                                                                        
+0539_T140HC                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+0539SSTPFP                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539_R2TRK                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539_R3PHL                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539VCO202504111200                                                                                                                                                                                                                                                                                                                                                                                                                                            
+0539OCCUnited States                                                                                                                                                                                                                                                                                                                                                                                                                                           
+0539FRV000000000                                                                                                                                                                                                                                                                                                                                                                                                                                               
+0839TRL40HC  NY1   
+0639COPHLT0                                                                                                    EDDYSTONE / CHESTER PA         US                                                                                                               PHLT0       
+0639BTNAL                                9487 REGENCY SQUARE BLVD.                                             JACKSONVILLE        FL32225    US 8002769539                                                                                                    NAL         
+0639SHSTANISLAUS FOOD PRODS              THE JUDGE ORGANIZATION             30 RUNWAY RD B                     LEVITTOWN           PA19057    US 2095227201                                                                                                    5518075-04  
+0339PU195001010000195001010000195001010000                    
+0539REF24866                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+0639STTHE JUDGE ORGANIZATION             30 RUNWAY DR # B                                                      LEVITTOWN           PA19057    US 9047274007                                                                                                    3276333-04  
+0739CNGAITER                                            TE9047274007                                                                      
+0439                LBS   0000000100                                           FAK                                               FAK                                                                                             
+0439                LBS   0002000000CFT   0000000100                           FOODSTUFF,NOS(DRYORREFRIGERATEDCARGO)             FAK                                                                                             
+0339DR202504111200202504111200202504111200                    
+0639STPHLT0                                                                                                    EDDYSTONE / CHESTER PA         US                                                                                                               PHLT0       
+0439                LBS   0000000100                                           FAK                                               FAK                                                                                             
+0439                LBS   0002000000CFT   0000000100                           FOODSTUFF,NOS(DRYORREFRIGERATEDCARGO)             FAK</NoteDescription>
+        <NoteInternalOnly>bFALSE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-03-19T08:32:56</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>46339</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>5703</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>EDI 990 DATA 03/19/2025 13:33 UTC</NoteSubject>
+        <NoteDescription>{"eventContext":{"eventId":"069C3590-8CBF-481D-9670-AE21E06139C9","eventName":"tender-acknowledgement","eventDateTimeStamp":"2025-03-19T13:33:05.103"},"orderTenderResponse":{"messageType":"990","senderSystemId":"BYTM","eventDateTimeStamp":"2025-03-19T13:33:05.103","orderNumber":"124544001001","moveType":"Export","tenderResponse":"Accepted","tenderResponseType":"Update to an Order","tenderResponseDateTime":"2025-03-19T13:33:05.103","equipmentInfo":[{}],"booking":[{"bookingPrefix":"CAT","bookingNumber":"124544","bookingSeq":"001001"}],"carrier":[{"scac":"CYLI"}]}}</NoteDescription>
+        <NoteInternalOnly>bTRUE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-03-19T08:32:57</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>46339</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>13445</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>Order Remarks</NoteSubject>
+        <NoteDescription>LABRADA DISTRIBUTORS INC | CALLE 272 BLOQUE 1C-6 | NUM 5055 COUNTRY CLUB | CAROL</NoteDescription>
+        <NoteInternalOnly>bFALSE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-03-28T13:02:28</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>46339</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>13446</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>EDI 204 DATA 03/28/2025 18:02 UTC</NoteSubject>
+        <NoteDescription>0239BGUS          UCAT124544001001     202503190000202503310000202504110000  U000000140306000000000000                                                                                   
+0539_R4M                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+0539_R1CLS                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539VOYNAL5013S                                                                                                                                                                                                                                                                                                                                                                                                                                                
+0539HZIN                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+0539_RMLABRADA DISTRIBUTORS INC | CALLE 272 BLOQUE 1C-6 | NUM 5055 COUNTRY CLUB | CAROL                                                                                                                                                                                                                                                                                                                                                                        
+0539_T140HC                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+0539SSTPFP                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539_R2TRK                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539_R3PHL                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539VCO202504111200                                                                                                                                                                                                                                                                                                                                                                                                                                            
+0539OCCUnited States                                                                                                                                                                                                                                                                                                                                                                                                                                           
+0539FRV000000000                                                                                                                                                                                                                                                                                                                                                                                                                                               
+0839TRL40HC  NY1   
+0639COPHLT0                                                                                                    EDDYSTONE / CHESTER PA         US                                                                                                               PHLT0       
+0639BTNAL                                9487 REGENCY SQUARE BLVD.                                             JACKSONVILLE        FL32225    US 8002769539                                                                                                    NAL         
+0639SHSTANISLAUS FOOD PRODS              THE JUDGE ORGANIZATION             30 RUNWAY RD B                     LEVITTOWN           PA19057    US 2095227201                                                                                                    5518075-04  
+0339PU195001010000195001010000195001010000                    
+0539REF24866                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+0639STTHE JUDGE ORGANIZATION             30 RUNWAY DR # B                                                      LEVITTOWN           PA19057    US 9047274007                                                                                                    3276333-04  
+0739CNGAITER                                            TE9047274007                                                                      
+0439                LBS   0000000100                                           FAK                                               FAK                                                                                             
+0439                LBS   0002000000CFT   0000000100                           FOODSTUFF,NOS(DRYORREFRIGERATEDCARGO)             FAK                                                                                             
+0339DR202504111200202504111200202504111200                    
+0639STPHLT0                                                                                                    EDDYSTONE / CHESTER PA         US                                                                                                               PHLT0       
+0439                LBS   0000000100                                           FAK                                               FAK                                                                                             
+0439                LBS   0002000000CFT   0000000100                           FOODSTUFF,NOS(DRYORREFRIGERATEDCARGO)             FAK</NoteDescription>
+        <NoteInternalOnly>bFALSE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-03-28T13:02:28</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>46339</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>13447</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>EDI 990 DATA 03/28/2025 18:02 UTC</NoteSubject>
+        <NoteDescription>{"eventContext":{"eventId":"D38E5F5F-244F-41F0-92ED-BCCDB2429D72","eventName":"tender-acknowledgement","eventDateTimeStamp":"2025-03-28T18:02:08.677"},"orderTenderResponse":{"messageType":"990","senderSystemId":"BYTM","eventDateTimeStamp":"2025-03-28T18:02:08.677","orderNumber":"124544001001","moveType":"Export","tenderResponse":"Accepted","tenderResponseType":"Update to an Order","tenderResponseDateTime":"2025-03-28T18:02:08.677","equipmentInfo":[{}],"booking":[{"bookingPrefix":"CAT","bookingNumber":"124544","bookingSeq":"001001"}],"carrier":[{"scac":"CYLI"}]}}</NoteDescription>
+        <NoteInternalOnly>bTRUE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-03-28T13:02:30</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>46339</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>15456</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>Order Remarks</NoteSubject>
+        <NoteDescription>LABRADA DISTRIBUTORS INC | CALLE 272 BLOQUE 1C-6 | NUM 5055 COUNTRY CLUB | CAROL</NoteDescription>
+        <NoteInternalOnly>bFALSE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-03-31T13:29:27</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>46339</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>15457</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>EDI 204 DATA 03/31/2025 18:29 UTC</NoteSubject>
+        <NoteDescription>0239BGUS          UCAT124544001001     202503190000202503310000202504110000  U000000140306000000000000                                                                                   
+0539_R4M                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+0539_R1CLS                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539VOYNAL5013S                                                                                                                                                                                                                                                                                                                                                                                                                                                
+0539HZIN                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+0539_RMLABRADA DISTRIBUTORS INC | CALLE 272 BLOQUE 1C-6 | NUM 5055 COUNTRY CLUB | CAROL                                                                                                                                                                                                                                                                                                                                                                        
+0539_T140HC                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+0539SSTPFP                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539_R2TRK                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539_R3PHL                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539VCO202504111200                                                                                                                                                                                                                                                                                                                                                                                                                                            
+0539CONBMOU 6058336                                                                                                                                                                                                                                                                                                                                                                                                                                            
+0539OCCUnited States                                                                                                                                                                                                                                                                                                                                                                                                                                           
+0539FRV000000000                                                                                                                                                                                                                                                                                                                                                                                                                                               
+0839TRL40HC  NY1   
+0639COPHLT0                                                                                                    EDDYSTONE / CHESTER PA         US                                                                                                               PHLT0       
+0639BTNAL                                9487 REGENCY SQUARE BLVD.                                             JACKSONVILLE        FL32225    US 8002769539                                                                                                    NAL         
+0639SHSTANISLAUS FOOD PRODS              THE JUDGE ORGANIZATION             30 RUNWAY RD B                     LEVITTOWN           PA19057    US 2095227201                                                                                                    5518075-04  
+0339PU195001010000195001010000195001010000                    
+0539REF24866                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+0639STTHE JUDGE ORGANIZATION             30 RUNWAY DR # B                                                      LEVITTOWN           PA19057    US 9047274007                                                                                                    3276333-04  
+0739CNGAITER                                            TE9047274007                                                                      
+0439                LBS   0000000100                                           FAK                                               FAK                                                                                             
+0439                LBS   0002000000CFT   0000000100                           FOODSTUFF,NOS(DRYORREFRIGERATEDCARGO)             FAK                                                                                             
+0339DR202504111200202504111200202504111200                    
+0639STPHLT0                                                                                                    EDDYSTONE / CHESTER PA         US                                                                                                               PHLT0       
+0439                LBS   0000000100                                           FAK                                               FAK                                                                                             
+0439                LBS   0002000000CFT   0000000100                           FOODSTUFF,NOS(DRYORREFRIGERATEDCARGO)             FAK</NoteDescription>
+        <NoteInternalOnly>bFALSE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-03-31T13:29:27</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>46339</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>15458</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>EDI 990 DATA 03/31/2025 18:29 UTC</NoteSubject>
+        <NoteDescription>{"eventContext":{"eventId":"F83820F9-97DF-46F3-9122-88940DAC0DD4","eventName":"tender-acknowledgement","eventDateTimeStamp":"2025-03-31T18:29:08.163"},"orderTenderResponse":{"messageType":"990","senderSystemId":"BYTM","eventDateTimeStamp":"2025-03-31T18:29:08.163","orderNumber":"124544001001","moveType":"Export","tenderResponse":"Accepted","tenderResponseType":"Update to an Order","tenderResponseDateTime":"2025-03-31T18:29:08.163","equipmentInfo":[{}],"booking":[{"bookingPrefix":"CAT","bookingNumber":"124544","bookingSeq":"001001"}],"carrier":[{"scac":"CYLI"}]}}</NoteDescription>
+        <NoteInternalOnly>bTRUE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-03-31T13:29:28</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>46339</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>16983</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>Order Remarks</NoteSubject>
+        <NoteDescription>LABRADA DISTRIBUTORS INC | CALLE 272 BLOQUE 1C-6 | NUM 5055 COUNTRY CLUB | CAROL</NoteDescription>
+        <NoteInternalOnly>bFALSE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-04-01T15:14:25</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>46339</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>16984</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>EDI 204 DATA 04/01/2025 20:14 UTC</NoteSubject>
+        <NoteDescription>0239BGUS          UCAT124544001001     202503190000202503310000202504040000  U000000140306000000000000                                                                                   
+0539_R4M                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+0539_R1CLS                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539VOYNAL5012S                                                                                                                                                                                                                                                                                                                                                                                                                                                
+0539HZIN                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+0539_RMLABRADA DISTRIBUTORS INC | CALLE 272 BLOQUE 1C-6 | NUM 5055 COUNTRY CLUB | CAROL                                                                                                                                                                                                                                                                                                                                                                        
+0539_T140HC                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+0539SSTPFP                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539_R2TRK                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539_R3PHL                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539VCO202504041200                                                                                                                                                                                                                                                                                                                                                                                                                                            
+0539CONBMOU 6058336                                                                                                                                                                                                                                                                                                                                                                                                                                            
+0539OCCUnited States                                                                                                                                                                                                                                                                                                                                                                                                                                           
+0539FRV000000000                                                                                                                                                                                                                                                                                                                                                                                                                                               
+0839TRL40HC  NY1   
+0639COPHLT0                                                                                                    EDDYSTONE / CHESTER PA         US                                                                                                               PHLT0       
+0639BTNAL                                9487 REGENCY SQUARE BLVD.                                             JACKSONVILLE        FL32225    US 8002769539                                                                                                    NAL         
+0639SHSTANISLAUS FOOD PRODS              THE JUDGE ORGANIZATION             30 RUNWAY RD B                     LEVITTOWN           PA19057    US 2095227201                                                                                                    5518075-04  
+0339PU195001010000195001010000195001010000                    
+0539REF24866                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+0639STTHE JUDGE ORGANIZATION             30 RUNWAY DR # B                                                      LEVITTOWN           PA19057    US 9047274007                                                                                                    3276333-04  
+0739CNGAITER                                            TE9047274007                                                                      
+0439                LBS   0000000100                                           FAK                                               FAK                                                                                             
+0439                LBS   0002000000CFT   0000000100                           FOODSTUFF,NOS(DRYORREFRIGERATEDCARGO)             FAK                                                                                             
+0339DR202504041200202504041200202504041200                    
+0639STPHLT0                                                                                                    EDDYSTONE / CHESTER PA         US                                                                                                               PHLT0       
+0439                LBS   0000000100                                           FAK                                               FAK                                                                                             
+0439                LBS   0002000000CFT   0000000100                           FOODSTUFF,NOS(DRYORREFRIGERATEDCARGO)             FAK</NoteDescription>
+        <NoteInternalOnly>bFALSE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-04-01T15:14:25</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>46339</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>16985</NoteID>
+        <NoteType>0</NoteType>
+        <NoteSubject>SUCCESSFUL - SHIPMENT UPDATES ON 04/01/2025</NoteSubject>
+        <NoteDescription>referenceNumberStructure: referenceNumber; Prev: V3: NAL5013S; New: V3: NAL5012S; Date: Apr  1 2025  8:14PM
+shipment: deliveryFromDateTime; Prev: 2025-04-06T12:00:00; New: 2025-03-30T12:00:00; Date: Apr  1 2025  8:14PM
+shipment: deliveryToDateTime; Prev: 2025-04-11T11:59:00; New: 2025-04-04T11:59:00; Date: Apr  1 2025  8:14PM
+shipment: pickupFromDateTime; Prev: 2025-04-04T12:00:00; New: 2025-03-28T12:00:00; Date: Apr  1 2025  8:14PM
+shipment: pickupToDateTime; Prev: 2025-04-09T12:00:00; New: 2025-04-02T12:00:00; Date: Apr  1 2025  8:14PM</NoteDescription>
+        <NoteInternalOnly>bTRUE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-04-01T15:14:27</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>46339</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>16986</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>EDI 990 DATA 04/01/2025 20:14 UTC</NoteSubject>
+        <NoteDescription>{"eventContext":{"eventId":"BAC5E2B9-26BB-46B9-AA14-B0421F49B402","eventName":"tender-acknowledgement","eventDateTimeStamp":"2025-04-01T20:14:07.103"},"orderTenderResponse":{"messageType":"990","senderSystemId":"BYTM","eventDateTimeStamp":"2025-04-01T20:14:07.103","orderNumber":"124544001001","moveType":"Export","tenderResponse":"Accepted","tenderResponseType":"Update to an Order","tenderResponseDateTime":"2025-04-01T20:14:07.103","equipmentInfo":[{}],"booking":[{"bookingPrefix":"CAT","bookingNumber":"124544","bookingSeq":"001001"}],"carrier":[{"scac":"CYLI"}]}}</NoteDescription>
+        <NoteInternalOnly>bTRUE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-04-01T15:14:27</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>46339</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>19329</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>Order Remarks</NoteSubject>
+        <NoteDescription>LABRADA DISTRIBUTORS INC | CALLE 272 BLOQUE 1C-6 | NUM 5055 COUNTRY CLUB | CAROL</NoteDescription>
+        <NoteInternalOnly>bFALSE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-04-02T17:35:26</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>46339</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>19330</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>EDI 204 DATA 04/02/2025 22:35 UTC</NoteSubject>
+        <NoteDescription>0239BGUS          UCAT124544001001     202503190000202503310000202504040000  U000000140306000000000000                                                                                   
+0539_R4M                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+0539_R1CLS                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539VOYNAL5012S                                                                                                                                                                                                                                                                                                                                                                                                                                                
+0539HZIN                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+0539_RMLABRADA DISTRIBUTORS INC | CALLE 272 BLOQUE 1C-6 | NUM 5055 COUNTRY CLUB | CAROL                                                                                                                                                                                                                                                                                                                                                                        
+0539_T140HC                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+0539SSTPFP                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539_R2TRK                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539_R3PHL                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539VCO202504041200                                                                                                                                                                                                                                                                                                                                                                                                                                            
+0539CONBMOU 6058336                                                                                                                                                                                                                                                                                                                                                                                                                                            
+0539OCCUnited States                                                                                                                                                                                                                                                                                                                                                                                                                                           
+0539FRV000000000                                                                                                                                                                                                                                                                                                                                                                                                                                               
+0839TRL40HC  NY1   
+0639COPHLT0                                                                                                    EDDYSTONE / CHESTER PA         US                                                                                                               PHLT0       
+0639BTNAL                                9487 REGENCY SQUARE BLVD.                                             JACKSONVILLE        FL32225    US 8002769539                                                                                                    NAL         
+0639SHSTANISLAUS FOOD PRODS              THE JUDGE ORGANIZATION             30 RUNWAY RD B                     LEVITTOWN           PA19057    US 2095227201                                                                                                    5518075-04  
+0339PU195001010000195001010000195001010000                    
+0539REF24866                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+0639STTHE JUDGE ORGANIZATION             30 RUNWAY DR # B                                                      LEVITTOWN           PA19057    US 9047274007                                                                                                    3276333-04  
+0739CNGAITER                                            TE9047274007                                                                      
+0439                LBS   0000000100                                           FAK                                               FAK                                                                                             
+0439                LBS   0002000000CFT   0000000100                           FOODSTUFF,NOS(DRYORREFRIGERATEDCARGO)             FAK                                                                                             
+0339DR202504041200202504041200202504041200                    
+0639STPHLT0                                                                                                    EDDYSTONE / CHESTER PA         US                                                                                                               PHLT0       
+0439                LBS   0000000100                                           FAK                                               FAK                                                                                             
+0439                LBS   0002000000CFT   0000000100                           FOODSTUFF,NOS(DRYORREFRIGERATEDCARGO)             FAK</NoteDescription>
+        <NoteInternalOnly>bFALSE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-04-02T17:35:26</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>46339</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>19331</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>EDI 990 DATA 04/02/2025 22:35 UTC</NoteSubject>
+        <NoteDescription>{"eventContext":{"eventId":"CFB782E6-7269-465A-BD6F-A385DE20C839","eventName":"tender-acknowledgement","eventDateTimeStamp":"2025-04-02T22:35:07.643"},"orderTenderResponse":{"messageType":"990","senderSystemId":"BYTM","eventDateTimeStamp":"2025-04-02T22:35:07.643","orderNumber":"124544001001","moveType":"Export","tenderResponse":"Accepted","tenderResponseType":"Update to an Order","tenderResponseDateTime":"2025-04-02T22:35:07.643","equipmentInfo":[{}],"booking":[{"bookingPrefix":"CAT","bookingNumber":"124544","bookingSeq":"001001"}],"carrier":[{"scac":"CYLI"}]}}</NoteDescription>
+        <NoteInternalOnly>bTRUE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-04-02T17:35:27</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>46339</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>23830</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>Order Remarks</NoteSubject>
+        <NoteDescription>LABRADA DISTRIBUTORS INC | CALLE 272 BLOQUE 1C-6 | NUM 5055 COUNTRY CLUB | CAROL</NoteDescription>
+        <NoteInternalOnly>bFALSE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-04-07T15:38:25</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>46339</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>23831</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>EDI 204 DATA 04/07/2025 20:38 UTC</NoteSubject>
+        <NoteDescription>0239BGUS          UCAT124544001001     202503190000202503310000202504040000  U000000140306000000000000                                                                                   
+0539_R4M                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+0539_R1CLS                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539VOYNAL5012S                                                                                                                                                                                                                                                                                                                                                                                                                                                
+0539HZIN                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+0539_RMLABRADA DISTRIBUTORS INC | CALLE 272 BLOQUE 1C-6 | NUM 5055 COUNTRY CLUB | CAROL                                                                                                                                                                                                                                                                                                                                                                        
+0539_T140HC                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+0539SSTPFP                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539_R2TRK                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539_R3PHL                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539VCO202504041200                                                                                                                                                                                                                                                                                                                                                                                                                                            
+0539CONBMOU 6058336                                                                                                                                                                                                                                                                                                                                                                                                                                            
+0539OCCUnited States                                                                                                                                                                                                                                                                                                                                                                                                                                           
+0539FRV000000000                                                                                                                                                                                                                                                                                                                                                                                                                                               
+0839TRL40HC  NY1   
+0639COPHLT0                                                                                                    EDDYSTONE / CHESTER PA         US                                                                                                               PHLT0       
+0639BTNAL                                9487 REGENCY SQUARE BLVD.                                             JACKSONVILLE        FL32225    US 8002769539                                                                                                    NAL         
+0639SHSTANISLAUS FOOD PRODS              THE JUDGE ORGANIZATION             30 RUNWAY RD B                     LEVITTOWN           PA19057    US 2095227201                                                                                                    5518075-04  
+0339PU195001010000195001010000195001010000                    
+0539REF24866                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+0639STTHE JUDGE ORGANIZATION             30 RUNWAY DR # B                                                      LEVITTOWN           PA19057    US 9047274007                                                                                                    3276333-04  
+0739CNGAITER                                            TE9047274007                                                                      
+0439                LBS   0000000100                                           FAK                                               FAK                                                                                             
+0439                LBS   0002000000CFT   0000000100                           FOODSTUFF,NOS(DRYORREFRIGERATEDCARGO)             FAK                                                                                             
+0339DR202504041200202504041200202504041200                    
+0639STPHLT0                                                                                                    EDDYSTONE / CHESTER PA         US                                                                                                               PHLT0       
+0439                LBS   0000000100                                           FAK                                               FAK                                                                                             
+0439                LBS   0002000000CFT   0000000100                           FOODSTUFF,NOS(DRYORREFRIGERATEDCARGO)             FAK</NoteDescription>
+        <NoteInternalOnly>bFALSE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-04-07T15:38:25</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>46339</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>23832</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>EDI 990 DATA 04/07/2025 20:38 UTC</NoteSubject>
+        <NoteDescription>{"eventContext":{"eventId":"64972C77-ACDF-46AD-B58D-F0677C60DAB9","eventName":"tender-acknowledgement","eventDateTimeStamp":"2025-04-07T20:38:08.370"},"orderTenderResponse":{"messageType":"990","senderSystemId":"BYTM","eventDateTimeStamp":"2025-04-07T20:38:08.370","orderNumber":"124544001001","moveType":"Export","tenderResponse":"Accepted","tenderResponseType":"Update to an Order","tenderResponseDateTime":"2025-04-07T20:38:08.370","equipmentInfo":[{}],"booking":[{"bookingPrefix":"CAT","bookingNumber":"124544","bookingSeq":"001001"}],"carrier":[{"scac":"CYLI"}]}}</NoteDescription>
+        <NoteInternalOnly>bTRUE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-04-07T15:38:27</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>46339</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>23833</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>Order Remarks</NoteSubject>
+        <NoteDescription>LABRADA DISTRIBUTORS INC | CALLE 272 BLOQUE 1C-6 | NUM 5055 COUNTRY CLUB | CAROL</NoteDescription>
+        <NoteInternalOnly>bFALSE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-04-07T15:39:24</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>46339</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>23834</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>EDI 204 DATA 04/07/2025 20:39 UTC</NoteSubject>
+        <NoteDescription>0239BGUS          UCAT124544001001     202503190000202503310000202504040000  U000000155306000000000000                                                                                   
+0539_R4M                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+0539_R1CLS                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539VOYNAL5012S                                                                                                                                                                                                                                                                                                                                                                                                                                                
+0539HZIN                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+0539_RMLABRADA DISTRIBUTORS INC | CALLE 272 BLOQUE 1C-6 | NUM 5055 COUNTRY CLUB | CAROL                                                                                                                                                                                                                                                                                                                                                                        
+0539_T140HC                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+0539SSTPFP                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539_R2TRK                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539_R3PHL                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+0539VCO202504041200                                                                                                                                                                                                                                                                                                                                                                                                                                            
+0539CONBMOU 6058336                                                                                                                                                                                                                                                                                                                                                                                                                                            
+0539OCCUnited States                                                                                                                                                                                                                                                                                                                                                                                                                                           
+0539FRV000000000                                                                                                                                                                                                                                                                                                                                                                                                                                               
+0839TRL40HC  NY1   
+0639COPHLT0                                                                                                    EDDYSTONE / CHESTER PA         US                                                                                                               PHLT0       
+0639BTNAL                                9487 REGENCY SQUARE BLVD.                                             JACKSONVILLE        FL32225    US 8002769539                                                                                                    NAL         
+0639SHSTANISLAUS FOOD PRODS              THE JUDGE ORGANIZATION             30 RUNWAY RD B                     LEVITTOWN           PA19057    US 2095227201                                                                                                    5518075-04  
+0339PU195001010000195001010000195001010000                    
+0539REF24866                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+0639STTHE JUDGE ORGANIZATION             30 RUNWAY DR # B                                                      LEVITTOWN           PA19057    US 9047274007                                                                                                    3276333-04  
+0739CNGAITER                                            TE9047274007                                                                      
+0439                LBS   0000000100                                           FAK                                               FAK                                                                                             
+0439                LBS   0002000000CFT   0000000100                           FOODSTUFF,NOS(DRYORREFRIGERATEDCARGO)             FAK                                                                                             
+0339DR202504041200202504041200202504041200                    
+0639STPHLT0                                                                                                    EDDYSTONE / CHESTER PA         US                                                                                                               PHLT0       
+0439                LBS   0000000100                                           FAK                                               FAK                                                                                             
+0439                LBS   0002000000CFT   0000000100                           FOODSTUFF,NOS(DRYORREFRIGERATEDCARGO)             FAK</NoteDescription>
+        <NoteInternalOnly>bFALSE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-04-07T15:39:24</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>46339</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>23835</NoteID>
+        <NoteType>0</NoteType>
+        <NoteSubject>SUCCESSFUL - SHIPMENT UPDATES ON 04/07/2025</NoteSubject>
+        <NoteDescription>chargeOverrides: manualOverrideUnits; Prev: SPOT: 1403.060000; New: SPOT: 1553.060000; Date: Apr  7 2025  8:39PM</NoteDescription>
+        <NoteInternalOnly>bTRUE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-04-07T15:39:26</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>46339</NoteEntityID>
+      </ShipmentNote>
+      <ShipmentNote>
+        <NoteID>23836</NoteID>
+        <NoteType>EDI</NoteType>
+        <NoteSubject>EDI 990 DATA 04/07/2025 20:39 UTC</NoteSubject>
+        <NoteDescription>{"eventContext":{"eventId":"4554CF94-194D-48DA-806F-273743A5F1B7","eventName":"tender-acknowledgement","eventDateTimeStamp":"2025-04-07T20:39:08.123"},"orderTenderResponse":{"messageType":"990","senderSystemId":"BYTM","eventDateTimeStamp":"2025-04-07T20:39:08.123","orderNumber":"124544001001","moveType":"Export","tenderResponse":"Accepted","tenderResponseType":"Update to an Order","tenderResponseDateTime":"2025-04-07T20:39:08.123","equipmentInfo":[{}],"booking":[{"bookingPrefix":"CAT","bookingNumber":"124544","bookingSeq":"001001"}],"carrier":[{"scac":"CYLI"}]}}</NoteDescription>
+        <NoteInternalOnly>bTRUE</NoteInternalOnly>
+        <NoteImportance>3</NoteImportance>
+        <NoteCreationDateTime>2025-04-07T15:39:26</NoteCreationDateTime>
+        <NoteUserGroupType>EMPLOYEE</NoteUserGroupType>
+        <NoteEntityID>46339</NoteEntityID>
+      </ShipmentNote>
+    </Shipment>
+    <SystemPickUpStopID>123390</SystemPickUpStopID>
+    <SystemDropStopID>123401</SystemDropStopID>
+    <SystemShipmentLegID>100081609</SystemShipmentLegID>
+    <PickUpSequenceNumber>0</PickUpSequenceNumber>
+    <DropSequenceNumber>1</DropSequenceNumber>
+    <PickStopSequenceNumber>1</PickStopSequenceNumber>
+    <DropStopSequenceNumber>2</DropStopSequenceNumber>
+  </ShipmentLeg>
+  <LoadCarrierTenderContact>
+    <LoadCarrierTenderContactInfo>
+      <LoadCarrierTenderContactInfoPrimaryTelephoneNumber>2152446600</LoadCarrierTenderContactInfoPrimaryTelephoneNumber>
+      <LoadCarrierTenderContactInfoEMailAddress>michaelq@TransProTrucking.com</LoadCarrierTenderContactInfoEMailAddress>
+    </LoadCarrierTenderContactInfo>
+    <LoadCarrierTenderContactName>Michael Ngo</LoadCarrierTenderContactName>
+    <LoadCarrierTenderContactLanguageType>en</LoadCarrierTenderContactLanguageType>
+  </LoadCarrierTenderContact>
+  <LoadSenderTenderContact>
+    <LoadSenderTenderContactInfo>
+      <LoadSenderTenderContactInfoEMailAddress>Alex.Boyd@crowley.com</LoadSenderTenderContactInfoEMailAddress>
+    </LoadSenderTenderContactInfo>
+    <LoadSenderTenderContactName>Alexander Boyd</LoadSenderTenderContactName>
+    <LoadSenderTenderContactLanguageType>en</LoadSenderTenderContactLanguageType>
+  </LoadSenderTenderContact>
+  <SendTenderByEDI>bFALSE</SendTenderByEDI>
+  <LoadScheduleCompleted>bTRUE</LoadScheduleCompleted>
+  <RatingValid>bTRUE</RatingValid>
+  <LoadStartDateTime>2025-03-31T08:00:00</LoadStartDateTime>
+  <LoadEndDateTime>2025-04-02T00:44:00</LoadEndDateTime>
+  <TotalNumberOfShipments>1</TotalNumberOfShipments>
+  <LoadTotals>
+    <LoadWeight>20000.000000</LoadWeight>
+    <LoadVolume>0.000000</LoadVolume>
+    <LoadSkids>1.000000</LoadSkids>
+    <LoadPieces>0.000000</LoadPieces>
+    <LoadFlexibleQuantity1>0.000000</LoadFlexibleQuantity1>
+    <LoadFlexibleQuantity2>0.000000</LoadFlexibleQuantity2>
+    <LoadFlexibleQuantity3>0.000000</LoadFlexibleQuantity3>
+    <LoadFlexibleQuantity4>0.000000</LoadFlexibleQuantity4>
+    <LoadFlexibleQuantity5>0.000000</LoadFlexibleQuantity5>
+  </LoadTotals>
+  <TotalDriveTime>1.480000</TotalDriveTime>
+  <TotalDriveDistance>78.400000</TotalDriveDistance>
+  <LoadSequenceNumber>0</LoadSequenceNumber>
+  <LoadStartDateTimeTimeZoneOffset>0.000000</LoadStartDateTimeTimeZoneOffset>
+  <LoadEndDateTimeTimeZoneOffset>0.000000</LoadEndDateTimeTimeZoneOffset>
+  <LoadSystemTenderRequestID>57026</LoadSystemTenderRequestID>
+  <TenderLevelEnumVal>LOAD</TenderLevelEnumVal>
+  <PaymentCurrencyChargeAmount>293.630000</PaymentCurrencyChargeAmount>
+  <PaymentCurrencyType>USD</PaymentCurrencyType>
+  <NonLivePickUp>bTRUE</NonLivePickUp>
+  <NonLivePickUpOverrideStatus>NONE</NonLivePickUpOverrideStatus>
+  <NonLiveDropOff>bTRUE</NonLiveDropOff>
+  <NonLiveDropOffOverrideStatus>NONE</NonLiveDropOffOverrideStatus>
+  <SystemAssetCode>BMOU6058336</SystemAssetCode>
+  <AssetAssignment>
+    <AssetAssignmentID>96601</AssetAssignmentID>
+    <AssetAssignmentType>ASSOC</AssetAssignmentType>
+    <AssetAssignmentEndDateTime>2025-04-02T00:44:00</AssetAssignmentEndDateTime>
+    <AssetAssignmentEndShippingLocationAddress>
+      <AssetAssignmentEndShippingLocationStreet>30 RUNWAY DR # B</AssetAssignmentEndShippingLocationStreet>
+      <AssetAssignmentEndShippingLocationCity>LEVITTOWN</AssetAssignmentEndShippingLocationCity>
+      <AssetAssignmentEndShippingLocationPostalCode>19057</AssetAssignmentEndShippingLocationPostalCode>
+      <AssetAssignmentEndShippingLocationStateCode>19057</AssetAssignmentEndShippingLocationStateCode>
+      <AssetAssignmentEndShippingLocationCountryCode>USA</AssetAssignmentEndShippingLocationCountryCode>
+      <AssetAssignmentEndShippingLocationTimeZoneOffset>0.000000</AssetAssignmentEndShippingLocationTimeZoneOffset>
+    </AssetAssignmentEndShippingLocationAddress>
+    <AssetAssignmentEndShippingLocationCode>CHTT000</AssetAssignmentEndShippingLocationCode>
+    <AssetAssignmentEndShippingLocationType>HUB</AssetAssignmentEndShippingLocationType>
+    <AssetAssignmentStartDateTime>2025-03-31T08:00:00</AssetAssignmentStartDateTime>
+    <AssetAssignmentStartShippingLocationAddress>
+      <AssetAssignmentStartShippingLocationStreet>30 RUNWAY DR # B</AssetAssignmentStartShippingLocationStreet>
+      <AssetAssignmentStartShippingLocationCity>LEVITTOWN</AssetAssignmentStartShippingLocationCity>
+      <AssetAssignmentStartShippingLocationPostalCode>19057</AssetAssignmentStartShippingLocationPostalCode>
+      <AssetAssignmentStartShippingLocationStateCode>19057</AssetAssignmentStartShippingLocationStateCode>
+      <AssetAssignmentStartShippingLocationCountryCode>USA</AssetAssignmentStartShippingLocationCountryCode>
+      <AssetAssignmentStartShippingLocationTimeZoneOffset>0.000000</AssetAssignmentStartShippingLocationTimeZoneOffset>
+    </AssetAssignmentStartShippingLocationAddress>
+    <AssetAssignmentStartShippingLocationCode>THELEV01</AssetAssignmentStartShippingLocationCode>
+    <AssetAssignmentStartShippingLocationType>DC</AssetAssignmentStartShippingLocationType>
+    <AssetAssignmentStatus>SUGGESTED</AssetAssignmentStatus>
+    <AssetAssignmentSystemAssetCode>BMOU6058336</AssetAssignmentSystemAssetCode>
+    <AssetAssignmentSystemLoadID>10000072941</AssetAssignmentSystemLoadID>
+    <AssetAssignmentTripID>0</AssetAssignmentTripID>
+    <AssetAssignmentTeamDriver>bFALSE</AssetAssignmentTeamDriver>
+    <AssetAssignmentNumberOfViolation>0</AssetAssignmentNumberOfViolation>
+    <AssetDetail>
+      <AssetType>CONTAINER</AssetType>
+      <AssetName>CONTAINER6058336</AssetName>
+      <AssetEquipmentTypeCD>40DH</AssetEquipmentTypeCD>
+      <AssetContactInfo />
+    </AssetDetail>
+  </AssetAssignment>
+  <CarrierMovementTypeEnumVal>1</CarrierMovementTypeEnumVal>
+  <LoadChargeDetailList>
+    <LoadChargeDetailID>25063444</LoadChargeDetailID>
+    <LoadRatingCurrencyAmount>0.000000</LoadRatingCurrencyAmount>
+    <LoadPaymentCurrencyAmount>0.000000</LoadPaymentCurrencyAmount>
+    <LoadRatingUnits>0.000000</LoadRatingUnits>
+    <LoadRate>0.000000</LoadRate>
+    <LoadAdjustmentReason>0</LoadAdjustmentReason>
+    <LoadShippingLocationType>0</LoadShippingLocationType>
+    <LoadApprovalStatus>0</LoadApprovalStatus>
+  </LoadChargeDetailList>
+  <LoadChargeDetailList>
+    <LoadChargeDetailID>25063445</LoadChargeDetailID>
+    <LoadRatingCurrencyAmount>225.000000</LoadRatingCurrencyAmount>
+    <LoadPaymentCurrencyAmount>0.000000</LoadPaymentCurrencyAmount>
+    <LoadRatingUnits>1.000000</LoadRatingUnits>
+    <LoadRate>225.000000</LoadRate>
+    <LoadAdjustmentReason>0</LoadAdjustmentReason>
+    <LoadShippingLocationType>0</LoadShippingLocationType>
+    <LoadApprovalStatus>0</LoadApprovalStatus>
+    <LoadChargeCode>LHS</LoadChargeCode>
+    <LoadChargeDescription>LINEHAUL CHARGES FLAT RAATE - LANES NEED FUEL_LH</LoadChargeDescription>
+  </LoadChargeDetailList>
+  <LoadChargeDetailList>
+    <LoadChargeDetailID>25063446</LoadChargeDetailID>
+    <LoadRatingCurrencyAmount>68.630000</LoadRatingCurrencyAmount>
+    <LoadPaymentCurrencyAmount>0.000000</LoadPaymentCurrencyAmount>
+    <LoadRatingUnits>225.000000</LoadRatingUnits>
+    <LoadRate>30.500000</LoadRate>
+    <LoadAdjustmentReason>0</LoadAdjustmentReason>
+    <LoadShippingLocationType>0</LoadShippingLocationType>
+    <LoadApprovalStatus>0</LoadApprovalStatus>
+    <LoadChargeCode>FSCH</LoadChargeCode>
+    <LoadChargeDescription>FUEL SURCHARGE_FSC</LoadChargeDescription>
+  </LoadChargeDetailList>
+  <LoadChargeDetailList>
+    <LoadChargeDetailID>25063448</LoadChargeDetailID>
+    <LoadRatingCurrencyAmount>293.630000</LoadRatingCurrencyAmount>
+    <LoadPaymentCurrencyAmount>0.000000</LoadPaymentCurrencyAmount>
+    <LoadRatingUnits>0.000000</LoadRatingUnits>
+    <LoadRate>0.000000</LoadRate>
+    <LoadAdjustmentReason>0</LoadAdjustmentReason>
+    <LoadShippingLocationType>0</LoadShippingLocationType>
+    <LoadApprovalStatus>0</LoadApprovalStatus>
+  </LoadChargeDetailList>
+  <RepositioningDistance>0.000000</RepositioningDistance>
+  <ReturnToOriginDistance>38.900000</ReturnToOriginDistance>
+</CISDocument>

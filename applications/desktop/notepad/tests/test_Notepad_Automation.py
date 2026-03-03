@@ -1,7 +1,10 @@
+import pytest
+
 from applications.desktop.notepad.pages.NotepadAutomation import NotepadAutomation
 from core.utils.decorator import test
+from core.utils.random_utils import generate_random_code
 
-
+@pytest.mark.desktop
 class TestNotepadAutomation:
     notepad = NotepadAutomation()
 
@@ -59,7 +62,8 @@ class TestNotepadAutomation:
 
     @test(test_case_id="DES-0009", test_description="Test 'Save As...' Text Notepad Application.")
     def test_save_as(self):
-        self.notepad.save_as_file("C:\\test\\test.txt")
+        ram = generate_random_code("test")
+        self.notepad.save_as_file(f"C:\\test\\{ram}.txt")
 
     @test(test_case_id="DES-0010", test_description="Test About Dialog Box Text Notepad Application.")
     def test_help_menu_about_notepad(self):

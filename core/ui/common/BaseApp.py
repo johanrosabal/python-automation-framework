@@ -47,7 +47,6 @@ class BaseApp:
     def close(self):
         return self.get_driver().close()
 
-    @property
     def maximize_window(self):
         return self.get_driver().maximize_window()
 
@@ -82,7 +81,7 @@ class BaseApp:
             return getattr(_driver, 'instance', None).title
 
     @staticmethod
-    def pause(seconds):
+    def pause(seconds: int = 1):
         logger.info("Pause: " + str(seconds))
         time.sleep(seconds)
 

@@ -8,6 +8,10 @@ user:
   username: Admin
   password: admin123
 
+invalid_user:
+  username: admin
+  password: admin
+
 database:
   host: qa-db.example.com
   port: 5432

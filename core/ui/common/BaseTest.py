@@ -9,7 +9,8 @@ from core.config.config_cmd import get_profile, get_browser, get_app_type, get_a
 from core.config.config_loader import load_web_config
 from core.ui.report.WEBTestReport import WEBTestReport
 from tabulate import tabulate
-
+import allure
+import os
 logger = setup_logger('BaseTest')
 
 
@@ -18,6 +19,26 @@ def user(config):
     user_dto = UserDTO(
         user_name=str(config.get('user', {}).get('username')),
         user_password=str(config.get('user', {}).get('password'))
+    )
+    logger.info("USER DTO: " + user_dto.__str__())
+    return user_dto
+
+
+@pytest.fixture
+def invalid_credentials(config):
+    user_dto = UserDTO(
+        user_name=str(config.get('invalid_credentials', {}).get('username')),
+        user_password=str(config.get('invalid_credentials', {}).get('password'))
+    )
+    logger.info("USER DTO: " + user_dto.__str__())
+    return user_dto
+
+
+@pytest.fixture
+def invalid_username(config):
+    user_dto = UserDTO(
+        user_name=str(config.get('invalid_username', {}).get('username')),
+        user_password=str(config.get('invalid_username', {}).get('password'))
     )
     logger.info("USER DTO: " + user_dto.__str__())
     return user_dto
@@ -34,7 +55,7 @@ class BaseTest(BaseApp):
     report = WEBTestReport()
 
     @pytest.fixture(scope="class", autouse=True)
-    def set_up(self):
+    def set_up(self, request):
         # Use class attributes as defaults
         profile = get_profile() or getattr(self, "profile", None) or "qa"
         app_name = get_app_name() or getattr(self, "app_name", None) or "demo"

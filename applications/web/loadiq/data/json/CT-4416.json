@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-4416",
+    "testCaseName": "test_validate_that_the_update_button_is_enabled_and_disabled_correctly_according_to_data_validity",
+    "title": "Validate that the 'Update' button is enabled and disabled correctly according to data validity.",
+    "description": "This test case verifies that the 'Update' button is only activated when there are valid and pending changes to be saved.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-4416",
+      "name": "CT-4416"
+    },
+    "data": {
+    }
+  }
+}

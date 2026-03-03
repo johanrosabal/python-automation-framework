@@ -1,0 +1,22 @@
+{
+    "OrderData": {
+        "ReferenceNums": [
+            {
+                "RefNumType": "Booking",
+                "RefNumValue": "{CATXXXXXX}"
+            },
+
+            {
+                "RefNumType": "SourceSystem",
+                "RefNumValue": "Gallery"
+            }
+        ],
+
+        "Document": {
+            "DocumentFormat": "TXT",
+            "DocumentType": "Inspection Report",
+            "DocumentName": "UPLOAD_TXT",
+            "Base64Bytes": "VEVTVCBHQUxMRVJZIFBST0pFQ1QgQVBJIERPQ1VNRU5U"
+        }
+    }
+}

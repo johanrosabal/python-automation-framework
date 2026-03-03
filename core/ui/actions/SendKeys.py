@@ -72,6 +72,15 @@ class SendKeys:
         self._encrypt = True
         return self
 
+    def set_text_with_javascript(self, text: str):
+        if self._element:
+            self._driver.execute_script(f"""
+                   arguments[0].value = '{text}';
+                   arguments[0].dispatchEvent(new Event('input', {{ bubbles: true }}));
+                   arguments[0].dispatchEvent(new Event('change', {{ bubbles: true }}));
+               """, self._element)
+        return self
+
     def set_text(self, text: str):
         """Sets and sends the provided text to the element."""
         if not isinstance(text, str):
@@ -140,6 +149,26 @@ class SendKeys:
             self._element.clear()
         else:
             logger.error("Unable to clear element: element is None.")
+        return self
+
+    def clear_input_with_events(self):
+        """
+        Clears input field and triggers necessary JavaScript events.
+        """
+        element = self._element
+        element.clear()
+
+        self._driver.execute_script("""
+            var element = arguments[0];
+            element.value = '';
+            element.dispatchEvent(new Event('input', { bubbles: true }));
+            element.dispatchEvent(new Event('change', { bubbles: true }));
+            element.dispatchEvent(new Event('blur', { bubbles: true }));
+        """, element)
+
+        # # Método 3: Alternativa con send_keys de teclas especiales
+        # element.send_keys(Keys.CONTROL + "a")  # Seleccionar todo
+        # element.send_keys(Keys.DELETE)  # Borrar
         return self
 
     # Keyboard actions

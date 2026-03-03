@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-4007",
+    "testCaseName": "test_add_check_call_successful_check_call_creation_for_load_created_via_BY",
+    "title": "Add check call - Successful Check-Call Creation for a Load created via BY",
+    "description": "Ensure a check-call can be saved when all input fields are valid for a load in In Transit status.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-4007",
+      "name": "CT-4007"
+    },
+    "data": {
+    }
+  }
+}

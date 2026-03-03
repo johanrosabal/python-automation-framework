@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-3589",
+    "testCaseName": "test_in_upload_info_modal_verify_update_labels_in_the_load_information_update",
+    "title": "Verify the update of labels in the 'Load Information Update' modal.",
+    "description": "This test case verifies that all field labels are displayed correctly according to the new requirements.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-3589",
+      "name": "CT-3589"
+    },
+    "data": {
+    }
+  }
+}

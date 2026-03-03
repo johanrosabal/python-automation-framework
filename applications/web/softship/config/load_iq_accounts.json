@@ -1,0 +1,18 @@
+{
+    "load_qa": {
+        "customer_accounts": {
+             "Carrier.Test7" : {"username": "Carrier.Test7@crowleyplatforms.com", "password": "Frest418"},
+              "Carrier.Test12" : {"username": "Carrier.Test12@crowleyplatforms.com", "password": "Frest423"}
+        },
+        "carrier_accounts": {
+              "Carrier.Test20" : {"username": "Carrier.Test20@crowleyplatforms.com", "password": "Frest602"},
+              "Carrier.Test11" : {"username": "Carrier.Test20@crowleyplatforms.com", "password": "Frest422"},
+              "Carrier.Test21" : {"username": "Carrier.Test21@crowleyplatforms.com", "password": "Frest432"}
+        },
+        "ops_accounts": {
+              "Carrier.Test480" : {
+                  "username": "Carrier.Test480@crowleyplatforms.com", "password": "Frest891"
+              }
+        }
+    }
+}

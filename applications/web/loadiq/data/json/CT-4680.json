@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-4680",
+    "testCaseName": "test_validate_the_the_system_does_not_allow_the_word_Bobtail_in_the_trailer_container_field",
+    "title": "Validate that the system does not allow the word 'Bobtail' in the 'Trailer/Container' field.",
+    "description": "This test case ensures that the validation for the word 'Bobtail' (with an initial capital letter) works correctly.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-4680",
+      "name": "CT-4680"
+    },
+    "data": {
+    }
+  }
+}

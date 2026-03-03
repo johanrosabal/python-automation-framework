@@ -1,0 +1,169 @@
+{
+    "crowleyBookingNumber": "",
+    "agreementReference": "20-00809",
+    "cargoAvailableDate": "future-date-to-utc{1}",
+    "cargos": [
+        {
+            "cargoType": "VEHICLE",
+            "commodityCode": "OTVehNew",
+            "commodityDescription": "Vehicle New",
+            "notInContainerDetails": {
+                "heightUom": "FT",
+                "vehicleSpecificationDetails": {
+                    "year": "2024",
+                    "make": "honDA",
+                    "model": "piLOT",
+                    "isNew": true,
+                    "propulsion": "DRIVABLE-ELECTRIC[UN3171]",
+                    "vechicleDetails": [
+                        {
+                            "vin": "Mainvin1234",
+                            "color": "Grey",
+                            "additionalVin": [
+                                {
+                                    "vin": "Inside1",
+                                    "description": "Inside 1 desc",
+                                    "make": "Honda",
+                                    "model": "Acura",
+                                    "year": "2024",
+                                    "color": "White",
+                                    "propulsion": "Drivable - Gas",
+                                    "manufacturer": "Honda"
+                                },
+                                {
+                                    "vin": "Inside2",
+                                    "description": "Inside 1 desc",
+                                    "make": "Honda",
+                                    "model": "civic",
+                                    "year": "2023",
+                                    "color": "Black",
+                                    "propulsion": "Drivable - Gas",
+                                    "manufacturer": "Honda"
+                                }
+                            ],
+                            "dockReceiptNumber": ""
+                        }
+                    ]
+                },
+                "width": 5,
+                "length": 15,
+                "height": 4,
+                "lengthUom": "FT",
+                "widthUom": "FT",
+                "quantity": 2
+            },
+            "weight": 2000,
+            "weightUOM": "KGS",
+            "volume": 300,
+            "volumeUOM": "MTQ",
+            "emergencyContact": {
+                "emailAddress": "abc@gmail.com",
+                "mobilephone": "999-999-9999",
+                "name": "User1",
+                "telephone": "999-999-9999",
+                "faxNumber": "999-999-9999",
+                "website": "abcwebsite.com"
+            },
+            "cargoItems": [
+                {
+                    "goodsPackaging": "AUT-Automobile",
+                    "numberOfPackages": 2,
+                    "weight": 2000.00,
+                    "weightUOM": "KGS",
+                    "volume": 30,
+                    "volumeUOM": "MTQ",
+                    "hazMatDetails": {
+                        "packagingGroup": "",
+                        "subHazard1": "",
+                        "prefix": "UN",
+                        "properShippingName": "CHLORINE PENTAFLUORIDE",
+                        "UNNumber": "3171",
+                        "isMarinePollutant": false,
+                        "class": "9",
+                        "isLimitedQuantity": false,
+                        "technicalName": "Vehicle",
+                        "subHazard2": ""
+                    }
+                }
+            ]
+        }
+    ],
+    "Voyages": [],
+    "moveType": "PortToPort",
+    "bookingRemarks": "Test Remarks",
+    "isHazMatBooking": true,
+    "freightPaymentMode": "PrePaid",
+    "electronicCustomerReference": "timestamp-prefix{CustCont}",
+    "shippingtype": "Laden",
+    "shippingCompany": "CRWLY",
+    "parties": [
+        {
+            "code": "3416267-01",
+            "bookingParty": true,
+            "role": "SHP",
+            "name": "MIGUEL MAITIN AUTO AGENT LLC",
+            "reference": "",
+            "address": {
+                "address1": "PO BOX 720486",
+                "stateOrProvince": "FL",
+                "address3": "",
+                "country": "US",
+                "zipCode": "32872",
+                "city": "ORLANDO",
+                "address2": ""
+            },
+            "externalPartnerReference": "",
+            "contact": {
+                "emailAddress": "gladys@mmaitin.com.uat",
+                "mobilephone": "4073849200",
+                "name": "GLADYS MAITIN",
+                "telephone": "4073849200",
+                "faxNumber": "",
+                "website": ""
+            }
+        },
+        {
+            "code": "3416267-01",
+            "bookingParty": false,
+            "role": "CON",
+            "name": "MIGUEL MAITIN AUTO AGENT LLC",
+            "address": {
+                "address1": "PO BOX 720486",
+                "stateOrProvince": "FL",
+                "address3": "",
+                "country": "US",
+                "zipCode": "32872",
+                "city": "ORLANDO",
+                "address2": ""
+            },
+            "externalPartnerReference": "",
+            "contact": {
+                "emailAddress": "gladys@mmaitin.com.uat",
+                "mobilephone": "4073849200",
+                "name": "GLADYS MAITIN",
+                "telephone": "4073849200",
+                "faxNumber": "",
+                "website": ""
+            },
+            "reference": ""
+        }
+    ],
+    "Locations": [
+        {
+            "Function": "PortOfLoading",
+            "Qualifier": "UN",
+            "Identifier": "USCHT",
+            "StateOrProvince": "PA",
+            "Country": "US",
+            "City": "Eddystone / Chester"
+        },
+        {
+            "Function": "PortOfDischarge",
+            "Qualifier": "UN",
+            "Identifier": "PRSJU",
+            "StateOrProvince": "Puertorico",
+            "Country": "PR",
+            "City": "PuertoRico"
+        }
+    ]
+}

@@ -1,0 +1,360 @@
+{
+  "tests": {
+    "idTC": "CT-4206",
+    "testCaseName": "test_create_booking_containers",
+    "title": "Validate Drop/Pull booking creation",
+    "description": "Booking Container creation with Drop/Pull.",
+    "tag": "CSIGHT",
+    "feature": "Create Booking Container",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-4206",
+      "name": "CT-4206"
+    },
+    "data": {
+      "booking": {
+        "origin_destination": {
+          "booking_party": {
+            "booking_account": "COLGATE PALMOLIVE COMPANY",
+            "address": "101 N SUMMIT ST, TENAFLY, NJ 07670, US",
+            "contact_name": "ADA SANTIAGO",
+            "phone_number": "7872735003",
+            "email": "rachna.bhowra@nagarro.com",
+            "replace_contact_info": false
+          },
+          "bill_to_party": {
+            "same_as_booking_party": true,
+            "bill_to_party_type": "Shipper",
+            "bill_to_account": "",
+            "address": "",
+            "contact_name": "",
+            "phone_number": "",
+            "email": "",
+            "replace_contact_info": false
+          },
+          "shipping_details": {
+            "cargo_ready_for_transport": "future-date-{1}"
+          },
+          "account_details": {
+            "same_as_booking_party": true,
+            "same_as_bill_to_party": false,
+            "search_using_account_name": true,
+            "search_using_contract_number": false,
+            "account_name": "",
+            "address": "",
+            "contact_name": "",
+            "phone_number": "",
+            "email": "",
+            "replace_contact_info": false,
+            "contract_number": "-- None --"
+          },
+          "origin_details_pick_up_address": {
+            "origin": "DOOR - New Concord, OH (43762)",
+            "origin_country_cargo": "United States",
+            "origin_sublocation": "COLGATE PALMOLIVE COMPANY",
+            "crowley_trucking_pickup": false,
+            "cleared_customs_at_first_us_port_of_entry": "No",
+            "pre_carriage_mode": "Cross Dock All Motor",
+            "drayage_options": "Live Load",
+            "special_instructions": "",
+            "pick_up_location_account_name": "",
+            "pick_up_location_address": "",
+            "pick_up_location_contact_name": "",
+            "pick_up_location_phone_number": "",
+            "enable-stops": false,
+            "stops": [
+              {
+                "stop_location_account_name": "",
+                "stop_location_address": "",
+                "stop_location_contact_name": "",
+                "stop_location_phone_number": ""
+              }
+            ]
+          },
+          "destination_details_final_delivery_address": {
+            "final_destination": "PORT - San Juan, Puerto Rico (PRSJU)",
+            "crowley_trucking_pickup": false,
+            "on_carriage_mode": "",
+            "drayage_options": "",
+            "special_instructions": "",
+            "final_delivery_location_account_name": "",
+            "address": "",
+            "contact_name": "",
+            "relace_phone_number": false,
+            "phone_number": "",
+            "enable-stops": false,
+            "stops_intermediate": [
+              {
+                "stop_location_account_name": "",
+                "stop_location_address": "",
+                "stop_location_contact_name": "",
+                "stop_location_phone_number": ""
+              }
+            ]
+          }
+        },
+        "cargo_details": {
+          "cargo_type": {
+            "container": true,
+            "vehicles": false,
+            "cargo_not_in_container": false
+          },
+          "container": [
+            {
+              "size_type": "53' High Cube Dry, 102",
+              "quantity": [
+                {
+                  "request_container": "",
+                  "assigned_container": "",
+                  "seaboard_booking_number": ""
+                },
+                {
+                  "request_container": "",
+                  "assigned_container": "",
+                  "seaboard_booking_number": ""
+                },
+                {
+                  "request_container": "",
+                  "assigned_container": "",
+                  "seaboard_booking_number": ""
+                }
+              ],
+              "cargo_wt_per_container": "19500",
+              "weight_type": "lb",
+              "rating_commodity_category": "General Cargo, not incl. Pharma/Med Supp/Devices",
+              "hazardous_booking": "No",
+              "waste": "No",
+              "RCRA": "No",
+              "hazardous_details_entered": "No",
+              "hazardous_details": {
+                "final_IMO_received": false,
+                "upload_files": [],
+                "upload_files_remove": [],
+                "emergency_contact_name": "",
+                "emergency_contact_number": "",
+                "haz_contract_number": "",
+                "UN_number": [
+                  {
+                    "code": "",
+                    "proper_shipping": "",
+                    "package_group": "",
+                    "content_type": "Not Specified",
+                    "permit_number": "",
+                    "ex_number": "",
+                    "technical_name": "",
+                    "secondary_emergency_contact_name": "",
+                    "secondary_emergency_contact_number": "",
+                    "secondary_haz_contract_number": "",
+                    "special_provision": "",
+                    "special_permit": "",
+                    "excepted_quantity": "No",
+                    "marine_pollutant": "No",
+                    "max_limited_quantity_in_package": "No",
+                    "flash_temperature": {
+                      "amount": 0,
+                      "scale": "F"
+                    },
+                    "report_spill_quantity": {
+                      "amount": 0,
+                      "scale": "ml"
+                    },
+                    "quantity": 0,
+                    "type_of_package": "Box",
+                    "weight": {
+                      "amount": 0,
+                      "scale": "lb"
+                    }
+                  }
+                ],
+                "remove_UN_number": []
+              },
+              "shipper_owned": false,
+              "NOR": false,
+              "HTS_number": "",
+              "actual_cargo_description": "DROP AND PULL TEST",
+              "declared_value_of_cargo": 1000,
+              "specialized_equipment_fasteners": "",
+              "dimensions": {
+                "unit_measure": {
+                  "lb_ft": false,
+                  "kg_m": false
+                },
+                "length": {
+                  "ft_m": 0,
+                  "in_cm": 0
+                },
+                "width": {
+                  "ft_m": 0,
+                  "in_cm": 0
+                },
+                "height": {
+                  "ft_m": 0,
+                  "in_cm": 0
+                },
+                "weight": {
+                  "lb_kg": 0
+                }
+              },
+              "temperature": {
+                "amount": 35,
+                "scale": "F",
+                "vent_settings": 10
+              },
+              "optional_services": {
+                "bulkhead": "No",
+                "logistic_bar": "No",
+                "protective_covering": "No",
+                "team_driver_origin": "No",
+                "EEI_preparation": "EEI Filing + Freight Forwarding",
+                "marine_cargo_insurance": "No",
+                "south_florida_tailgate_government_inspec": "No",
+                "fumigation": "No",
+                "merchant_haulage": "No",
+                "team_driver_destination": "No",
+                "additional_bill_of_lading_fee": {
+                  "checked": false,
+                  "quantity": 0
+                },
+                "additional_seals": {
+                  "checked": false,
+                  "quantity": 0
+                },
+                "customs_exam": {
+                  "checked": false,
+                  "price": 0
+                },
+                "multiple_bills_of_lading": {
+                  "checked": false,
+                  "quantity": 0
+                },
+                "additional_bill_of_lading_fee_return_cargo": {
+                  "checked": false,
+                  "quantity": 0
+                },
+                "additional_straps": {
+                  "checked": false,
+                  "quantity": 0
+                },
+                "dry_run_false_move_destination": {
+                  "checked": false,
+                  "price": 0
+                },
+                "pallets": {
+                  "checked": false,
+                  "quantity": 0
+                },
+                "additional_chains": {
+                  "checked": false,
+                  "quantity": 0
+                },
+                "complete_government_inspection": {
+                  "checked": false,
+                  "price": 0
+                },
+                "dry_run_false_move_origin": {
+                  "checked": false,
+                  "price": 0
+                },
+                "additional_cargo_in_on_units": false,
+                "bonded_cargo_document_fee": false,
+                "customs_clearance_vehicle_wheeled_NIT": false,
+                "equipment_cleaning": false,
+                "GPS_fee": false,
+                "late_documentation_fee": false,
+                "shipment_roll_over_charge": false,
+                "WAM_usage": false,
+                "blocking_bracing_securing_fee": false,
+                "caricom_invoice_prep_fee": false,
+                "diversion_or_reconsignment": false,
+                "equipment_repositioning_charge": false,
+                "importer_security_filing": false,
+                "late_gate_charge": false,
+                "shipper_loaded_flatrack_OOG_cargo_penalty": false,
+                "wire_pick_end_down_charge": false,
+                "BOL_processing_fee": false,
+                "custom_brokerage": false,
+                "document_change_fee": false,
+                "excess_fuel_in_vehicles_RO_RO": false,
+                "labels_and_placards": false,
+                "NIT_non_operable": false,
+                "VGM_certification": false
+              }
+            }
+          ],
+          "operational_services": {
+            "origin_transfer": "None",
+            "destination_transfer": "None",
+            "load_last_hot_hatch": false,
+            "do_not_advance": false,
+            "do_not_split": false
+          }
+        },
+        "routes": {
+          "routes_item": 1,
+          "vessel_name": "",
+          "voyage_number": "",
+          "origin_terminal": "",
+          "origin_city_state": "",
+          "origin_prefix": "",
+          "destination_terminal": "",
+          "destination_city_state": "",
+          "destination_prefix": "",
+          "rate_amount": 0
+        },
+        "other_details": {
+          "booking_options": {
+            "single_booking": true,
+            "multiple_booking": false
+          },
+          "customer_details": "Prepaid",
+          "cargo_release": {
+            "customs_clearence_location": "",
+            "Customs Clearence Sublocation": "",
+            "cargo_release_location": "",
+            "cargo_release_sublocation": ""
+          },
+          "shipper_details": {
+            "reference_number": "1234"
+          },
+          "consignee_details": {
+            "same_as_booking_party": true,
+            "same_as_customer": false,
+            "shipper_account": "",
+            "address": "",
+            "contact_name": "",
+            "phone_number": "",
+            "email_id": "",
+            "reference_number": ""
+          },
+          "other_party_details": [
+            {
+              "party_type": "",
+              "same_as_booking_party": false,
+              "same_as_customer": false,
+              "account": "",
+              "address": "",
+              "contact_name": "",
+              "email_id": "",
+              "reference_number": ""
+            }
+          ],
+          "booking_remarks": [
+            "Remark 1 Test"
+          ],
+          "ITN_Number": [
+            "123456"
+          ],
+          "exemption_clause": "",
+          "postdeparture_date": "",
+          "booking_pending_reason": [],
+          "vsa_booking_ref_numbers": "",
+          "reefer": "",
+          "hazardous": "",
+          "vehicle": "",
+          "cargo_not_in_a_container": ""
+        }
+      }
+    }
+  }
+}
+

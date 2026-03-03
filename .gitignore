@@ -50,7 +50,10 @@ coverage.xml
 
 # PyCharm
 .idea/
+.idea
+/.idea/
 *.iml
+.idea/python-selenium-automation.iml
 
 # Visual Studio Code
 .vscode/
@@ -102,5 +105,12 @@ application/logs
 allure-report
 allure-results
 
+*_request.json
+*_request_*
+*_response.json
+*_response*
+
 /downloads/
 **/report.xml
+
+**test.py

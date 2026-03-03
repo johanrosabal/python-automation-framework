@@ -1,0 +1,389 @@
+{
+    "crowleyBookingNumber": "",
+    "agreementReference": "20-00809",
+    "cargoAvailableDate": "future-date-to-utc{1}",
+    "cargos": [
+        {
+            "cargoType": "CONTAINER",
+            "commodityCode": "OTGenCargo",
+            "commodityDescription": "General Cargo",
+            "containerDetails": {
+                "isShippersOwn": false,
+                "isRunningReefer": false,
+                "equipmentIsoCode": "22G0",
+                "equipmentQuantity": 1
+            },
+            "weight": 2000.00,
+            "weightUOM": "KGS",
+            "volume": 300,
+            "volumeUOM": "MTQ",
+            "emergencyContact": {
+                "emailAddress": "abc@gmail.com",
+                "mobilephone": "999-999-9999",
+                "name": "User1",
+                "telephone": "999-999-9999",
+                "faxNumber": "999-999-9999",
+                "website": "abcwebsite.com"
+            },
+            "cargoItems": [
+                {
+                    "goodsPackaging": "BAG-Bag",
+                    "numberOfPackages": 10,
+                    "weight": 2000.00,
+                    "weightUOM": "KGS",
+                    "volume": 30,
+                    "volumeUOM": "MTQ"
+                }
+            ],
+            "OptionalServices": [
+                {
+                    "AdditionalChains": {
+                        "value": "YES",
+                        "AdditionalQtySelected": 1
+                    },
+                    "AdditionalSeals": {
+                        "value": "YES",
+                        "AdditionalQtySelected": 1
+                    },
+                    "AdditionalStraps": {
+                        "value": "YES",
+                        "AdditionalQtySelected": 1
+                    },
+                    "BlockinBracingSecuringFees": {
+                        "value": "YES"
+                    },
+                    "BoLProcessingFee": {
+                        "value": "YES"
+                    },
+                    "BondedCargoDocFee": {
+                        "value": "YES"
+                    },
+                    "CargoinVehicle": {
+                        "value": "YES"
+                    },
+                    "CaricomInvoicePrepFee": {
+                        "value": "YES"
+                    },
+                    "CompleteGovernmentInspection": {
+                        "value": "YES",
+                        "Charge": 1000
+                    },
+                    "ConsolidationCharges": {
+                        "value": "Refrigerated (Jax, MIA, PEV)"
+                    },
+                    "CustomsBrokerage": {
+                        "value": "YES"
+                    },
+                    "CustomsExam": {
+                        "value": "YES",
+                        "Charge": 100
+                    },
+                    "DiversionorReconsignment": {
+                        "value": "YES"
+                    },
+                    "DocumentChangeFee": {
+                        "value": "YES"
+                    },
+                    "DryRun": {
+                        "value": "YES",
+                        "Charge": 100
+                    },
+                    "EEIPreparationFiling": {
+                        "value": "EEI Filing"
+                    },
+                    "EquipmentCleaning": {
+                        "value": "YES"
+                    },
+                    "EquipmentRepositioningCharge": {
+                        "value": "YES"
+                    },
+                    "ExcessFuelinVehicles": {
+                        "value": "YES"
+                    },
+                    "ForkliftTransferCharge": {
+                        "value": "YES"
+                    },
+					"Fumigation": {
+                        "value": "Using 1 Container"
+                    },
+                    "GPSFee": {
+                        "value": "YES"
+                    },
+                    "ImporterSecurityFiling": {
+                        "value": "YES"
+                    },
+                    "LabelsandPlacards": {
+                        "value": "YES"
+                    },
+                    "LateDocumentationFee": {
+                        "value": "YES"
+                    },
+                    "LateGateCharge": {
+                        "value": "YES"
+                    },
+                    "MarineCargoInsurance": {
+                        "value": "Over $250K Cargo Value"
+                    },
+                    "MultipleBoLFee": {
+                        "value": "YES",
+                        "AdditionalQtySelected": 2
+                    },
+                    "ProtectiveCovering": {
+                        "value": "Disposible"
+                    },
+                    "ShipmentRollOverCharge": {
+                        "value": "YES"
+                    },
+                    "ShipperLoadedFlatrackOOGCargoPenalt": {
+                        "value": "YES"
+                    },
+                    "SouthFloridaTailgateGovInspec": {
+                        "value": "Mixed Flowers"
+                    },
+                    "TransferCharge": {
+                        "value": "YES"
+                    },
+                    "VGMCertification": {
+                        "value": "YES"
+                    },
+                    "WAMUsage": {
+                        "value": "YES"
+                    },
+                    "WirePickEndDownCharge": {
+                        "value": "YES"
+                    }
+                }
+            ]
+        },
+        {
+            "cargoType": "CONTAINER",
+            "commodityCode": "OTGenCargo",
+            "commodityDescription": "General Cargo",
+            "containerDetails": {
+                "isShippersOwn": false,
+                "isRunningReefer": false,
+                "equipmentIsoCode": "45G0",
+                "equipmentQuantity": 1
+            },
+            "weight": 2000.00,
+            "weightUOM": "KGS",
+            "volume": 300,
+            "volumeUOM": "MTQ",
+            "emergencyContact": {
+                "emailAddress": "abc@gmail.com",
+                "mobilephone": "999-999-9999",
+                "name": "User1",
+                "telephone": "999-999-9999",
+                "faxNumber": "999-999-9999",
+                "website": "abcwebsite.com"
+            },
+            "cargoItems": [
+                {
+                    "goodsPackaging": "BAG-Bag",
+                    "numberOfPackages": 10,
+                    "weight": 2000.00,
+                    "weightUOM": "KGS",
+                    "volume": 30,
+                    "volumeUOM": "MTQ"
+                }
+            ],
+		"OptionalServices": [{
+			"AdditionalChains": {
+				"value": "YES",
+				"AdditionalQtySelected": 1
+			},
+			"AdditionalSeals": {
+				"value": "YES",
+				"AdditionalQtySelected": 1
+			},
+			"AdditionalStraps": {
+				"value": "YES",
+				"AdditionalQtySelected": 1
+			},
+			"BlockinBracingSecuringFees": {
+				"value": "YES"
+			},
+			"BoLProcessingFee": {
+				"value": "YES"
+			},
+			"BondedCargoDocFee": {
+				"value": "YES"
+			},
+			"CargoinVehicle": {
+				"value": "YES"
+			},
+			"CaricomInvoicePrepFee": {
+				"value": "YES"
+			},
+			"CompleteGovernmentInspection": {
+				"value": "YES",
+                "Charge": 1000
+			},
+			"ConsolidationCharges": {
+				"value": "Refrigerated (Jax, MIA, PEV)"
+			},
+			"CustomsBrokerage": {
+				"value": "YES"
+			},
+			"CustomsExam": {
+				"value": "YES",
+				"Charge": 100
+			},
+			"DiversionorReconsignment": {
+				"value": "YES"
+			},
+			"DocumentChangeFee": {
+				"value": "YES"
+			},
+			"DryRun": {
+				"value": "YES",
+				"Charge": 100
+			},
+			"EEIPreparationFiling": {
+				"value": "EEI Filing"
+			},
+			"EquipmentCleaning": {
+				"value": "YES"
+			},
+			"EquipmentRepositioningCharge": {
+				"value": "YES"
+			},
+			"ExcessFuelinVehicles": {
+				"value": "YES"
+			},
+			"ForkliftTransferCharge": {
+				"value": "YES"
+			},
+			"Fumigation": {
+                        "value": "Using 1 Container"
+            },
+			"GPSFee": {
+				"value": "YES"
+			},
+			"ImporterSecurityFiling": {
+				"value": "YES"
+			},
+			"LabelsandPlacards": {
+				"value": "YES"
+			},
+			"LateDocumentationFee": {
+				"value": "YES"
+			},
+			"LateGateCharge": {
+				"value": "YES"
+			},
+			"MarineCargoInsurance": {
+                  "value": "Over $250K Cargo Value"
+			},
+			"MultipleBoLFee": {
+				"value": "YES",
+				"AdditionalQtySelected": 2
+			},
+			"ProtectiveCovering": {
+				"value": "Disposible"
+			},
+			"ShipmentRollOverCharge": {
+				"value": "YES"
+			},
+			"ShipperLoadedFlatrackOOGCargoPenalt": {
+				"value": "YES"
+			},
+			"SouthFloridaTailgateGovInspec": {
+				"value": "Mixed Flowers"
+			},
+			"TransferCharge": {
+				"value": "YES"
+			},
+			"VGMCertification": {
+				"value": "YES"
+			},
+			"WAMUsage": {
+				"value": "YES"
+			},
+			"WirePickEndDownCharge": {
+				"value": "YES"
+			}
+		}]
+        }
+    ],
+    "Voyages": [],
+    "moveType": "PortToPort",
+    "bookingRemarks": "Test Remarks",
+    "isHazMatBooking": false,
+    "freightPaymentMode": "PrePaid",
+    "electronicCustomerReference": "timestamp-prefix{CustCont}",
+    "shippingtype": "Laden",
+    "shippingCompany": "CRWLY",
+    "parties": [
+        {
+            "code": "5780713-01",
+            "bookingParty": true,
+            "role": "SHP",
+            "name": "GALLERY SHIPPING LLC",
+            "address": {
+                "address1": "12902 CANTON AVE",
+                "stateOrProvince": "FL",
+                "address3": "GALLERY SHIPPING LLC",
+                "country": "US",
+                "zipCode": "34669",
+                "city": "HUDSON",
+                "address2": ""
+            },
+            "externalPartnerReference": "Test123",
+            "vatNumber": "Test123",
+            "contact": {
+                "emailAddress": "christy.hernandez@crowley.com.uat",
+                "mobilephone": "3052063753",
+                "name": "CHRISTY HERNANDEZ",
+                "telephone": "3052063753",
+                "faxNumber": "",
+                "website": ""
+            },
+            "reference": "CEE1234"
+        },
+        {
+            "code": "5780713-01",
+            "bookingParty": false,
+            "role": "CON",
+            "name": "GALLERY SHIPPING LLC",
+            "address": {
+                "address1": "12902 CANTON AVE",
+                "stateOrProvince": "FL",
+                "address3": "",
+                "country": "US",
+                "zipCode": "34669",
+                "city": "HUDSON",
+                "address2": ""
+            },
+            "externalPartnerReference": "",
+            "vatNumber": "Test123",
+            "contact": {
+                "emailAddress": "christy.hernandez@crowley.com.uat",
+                "mobilephone": "3052063753",
+                "name": "CHRISTY HERNANDEZ",
+                "telephone": "3052063753",
+                "faxNumber": "",
+                "website": ""
+            },
+            "reference": "CEE1234"
+        }
+    ],
+    "Locations": [
+        {
+            "Function": "PortOfLoading",
+            "Qualifier": "UN",
+            "Identifier": "USJAX",
+            "StateOrProvince": "FL",
+            "Country": "US",
+            "City": "Jacksonville"
+        },
+        {
+            "Function": "PortOfDischarge",
+            "Qualifier": "UN",
+            "Identifier": "PRSJU",
+            "StateOrProvince": "Puertorico",
+            "Country": "PR",
+            "City": "SanJuan"
+        }
+    ]
+}

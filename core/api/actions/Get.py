@@ -19,6 +19,11 @@ class Get:
         self.verify = False
         self.response = None
 
+    def set_base_url(self, base_url):
+        """Set the API BaseURL."""
+        self.base_url = base_url
+        return self
+
     def set_endpoint(self, endpoint):
         """Set the API endpoint."""
         self.endpoint = endpoint
@@ -29,8 +34,8 @@ class Get:
         self.headers[key] = value
         return self
 
-    def set_params(self, params):
-        """Set the query parameters to be sent in the request."""
+    def set_params(self, params: dict):
+        """Set the query parameters to be sent in the request. Input Data is a Dictionary"""
         self.params = params
         return self
 
@@ -100,13 +105,19 @@ class Get:
                 timeout=self.timeout,
                 verify=self.verify
             )
-            self.response.raise_for_status()  # Raise an error for 4xx or 5xx status codes
-            logger.info("Response received successfully")
-        except requests.exceptions.HTTPError as err:
-            logger.error(f"Error in GET request: {err}")
-            self.response = None
+            if 200 <= self.response.status_code < 300:
+                logger.info("Response received successfully")
+                logger.info(f"Status Code: {self.response.status_code}")
+            else:
+                logger.error(f"Error response: {self.response.status_code}")
+                logger.error(self.response.text)
+                logger.error(self.response.request.body)
 
-        return self
+            return self.response
+
+        except requests.exceptions.HTTPError as err:
+            logger.error(f"Error in PUT request: {err}")
+            return self.response
 
     def get_response(self):
         """Get the response from the GET request."""

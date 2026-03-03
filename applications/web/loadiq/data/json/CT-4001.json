@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-4001",
+    "testCaseName": "",
+    "title": "Add check call - Display of “Add Check Call” Button (Load In Transit",
+    "description": "Confirm the Add Check Call button is visible and enabled when the load status is In Transit.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-4001",
+      "name": "CT-4001"
+    },
+    "data": {
+    }
+  }
+}

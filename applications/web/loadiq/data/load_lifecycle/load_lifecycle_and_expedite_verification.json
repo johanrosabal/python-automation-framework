@@ -1,0 +1,102 @@
+{
+  "tests": [
+    {
+      "idTC": "CT-3792",
+      "testCaseName": "test_customer_create_shipment_and_expedite_verification",
+      "description": "test_customer_create_shipment_and_expedite_verification",
+      "data": {
+        "origin": {
+          "location": {
+            "name": "Miami",
+            "location": "Miami",
+            "address": "Miami, FL, USA",
+            "address_line_2": "N/A"
+          },
+          "contact": {
+            "name": "John",
+            "phone": "1141850000",
+            "email": "bob@flinstones.com"
+          },
+          "pickup_appointment": {
+            "from_day_offset": 5,
+            "to_day_offset": 10,
+            "open_time": {
+              "hours": "01",
+              "minutes": "00",
+              "indicator": "AM"
+            },
+            "close_time": {
+              "hours": "01",
+              "minutes": "00",
+              "indicator": "PM"
+            }
+          }
+        },
+        "destination": {
+          "location": {
+            "name": "22554 Stafford",
+            "location": "22554 Stafford",
+            "address": "Stafford, VA 22554, USA",
+            "address_line_2": "N/A"
+          },
+          "contact": {
+            "name": "Damian",
+            "phone": "9988779936",
+            "email": "test@hotmail.com"
+          },
+          "pickup_appointment": {
+            "from_day_offset": 10,
+            "to_day_offset": 15,
+            "open_time": {
+              "hours": "11",
+              "minutes": "00",
+              "indicator": "AM"
+            },
+            "close_time": {
+              "hours": "11",
+              "minutes": "00",
+              "indicator": "PM"
+            }
+          }
+        },
+        "shipment_details": {
+          "equipment": "Container",
+          "freight_class": "Class 50",
+          "po_number": "1234",
+          "bill_of_lading_number": "1234",
+          "pick_up_number": "1234",
+          "shipment_instructions": "Shipment Automation Test"
+        },
+        "freight": {
+          "freight_item": {
+            "gross_weight": "100",
+            "weight_type": "Lb",
+            "handling_unit_count": "1",
+            "select_handling_unit_type": "Pallet",
+            "commodity_value": "10000"
+          },
+          "dimension": {
+            "length": "121",
+            "width": "212",
+            "height": "222",
+            "uom": "Inch",
+            "commodity_description": "Shipment Automation Test"
+          }
+        },
+        "bid_parameters": {
+          "book_it_now_rate": "100",
+          "bid_expiration_offset_days": 3,
+          "bid_expiration_time": {
+            "hours": "11",
+            "minutes": "00",
+            "indicator": "PM"
+          },
+          "upload_file": {
+            "file_name": "upload_test_document.png",
+            "description": "Automation Test Upload"
+          }
+        }
+      }
+    }
+  ]
+}

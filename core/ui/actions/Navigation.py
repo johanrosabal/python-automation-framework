@@ -66,7 +66,7 @@ class Navigation:
         if self._driver:
             url = str(base_url) + str(url)
             self._driver.get(url)
-            WebDriverWait(self._driver, 15).until(
+            WebDriverWait(self._driver, 40).until(
                 lambda d: d.execute_script("return document.readyState") == "complete"
             )
             logger.debug(f"Go to: {url}")

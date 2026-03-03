@@ -75,7 +75,12 @@ class Dropdown:
     def by_text(self, text: str):
         """Selects an option by its visible text."""
         if Element(self._driver).wait(self._locator):
-            Select(self._element).select_by_visible_text(text)
+            options = Select(self._element).options
+            for option in options:
+                if option.text.strip().lower() == text.strip().lower():
+                    option.click()
+                    break  # Out for loop
+
             logger.info(f"Dropdown option selected by text: {text}")
         else:
             logger.error("Cannot select dropdown option by text: dropdown element is None.")
@@ -85,10 +90,12 @@ class Dropdown:
         """Selects an option that contains specific text."""
         if Element(self._driver).wait(self._locator):
             for option in Select(self._element).options:
-                if search_text in option.text:
+                text = option.text
+                logger.info(f"Option Value: {text}")
+                if search_text in text:
                     option.click()
                     logger.info(f"Dropdown option containing '{search_text}' selected: {option.text}")
-                    return self
+                    break
             logger.error(f"Dropdown option containing '{search_text}' not found.")
         else:
             logger.error("Cannot find dropdown options: dropdown element is None.")

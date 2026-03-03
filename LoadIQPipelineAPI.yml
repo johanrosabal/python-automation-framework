@@ -1,0 +1,111 @@
+# Python package
+# Create and test a Python package on multiple Python versions.
+# Add steps that analyze code, save the dist with the build record, publish to a PyPI-compatible index, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/python
+parameters:
+  - name: "testplan"
+    type: string
+    default: "CT-1276"
+
+trigger:
+- dev
+
+resources:
+  webhooks:
+    - webhook: "MyWebhookTrigger"             ### Webhook alias
+      connection: "MyWebhookConnection"   
+
+pool:
+  vmImage: ubuntu-latest
+
+strategy:
+  matrix:
+    Python311:
+      python.version: '3.12.4'
+
+steps:
+# 1. Install Python
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.12.4'
+    addToPath: true
+
+- script: |
+    sudo apt-get update
+    sudo apt-get install -y wget software-properties-common
+    wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+    sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main"
+    sudo apt-get install -y libgbm-dev libnss3 libxshmfence1
+    sudo apt-get install -y microsoft-edge-stable
+    VERSION=$(microsoft-edge --version | grep -oP '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+')
+    wget https://msedgedriver.azureedge.net/$VERSION/edgedriver_linux64.zip
+    unzip edgedriver_linux64.zip
+    sudo mv msedgedriver /usr/local/bin/
+    microsoft-edge --version
+    msedgedriver --version
+  displayName: 'Install Microsoft Edge and EdgeDriver'
+
+# 2. Install dependencies
+- script: |
+    python -m pip install --upgrade pip
+    pip install -r requirements.txt
+    sudo mkdir -p /home/logs
+    sudo chmod -R 777 /home/logs
+  displayName: 'Install dependencies'
+
+# Create reports directory
+- script: |
+    mkdir -p ./reports
+  displayName: 'Create reports directory'
+
+# 3. Execute test cases with pytest
+- script: |
+    pytest applications/api/loadiq/tests/support_portal/test_new_okta_api_call.py --alluredir=allure-results --junitxml=reports/results.xml --headless=True
+  displayName: 'Execute test cases'
+  
+
+- script: |
+    cat reports/results.xml  # Esto imprime el contenido del archivo para ver si está bien formado.
+  displayName: 'Check results file'
+  condition: always()
+
+# 5. Publish results in Allure
+- task: PublishAllureReport@1
+  displayName: Publish results in Allure
+  inputs:
+    allureVersion: 2.27.0
+    testResultsDir: allure-results
+  condition: always()
+
+- bash: |
+    echo "Exporting testplan parameter to environment variable"
+    export TESTPLAN=${ parameters.testplan }
+    echo $TESTPLAN
+  displayName: '(debug) print testplan parameter'
+
+- bash: |
+    set -x
+    export token=$(curl -H "Content-Type: application/json" -X POST --data "{ \"client_id\": \"$CLIENT_ID\",\"client_secret\": \"$CLIENT_SECRET\" }" "$(xray_endpoint)/api/v2/authenticate"| tr -d '"')
+    curl -X POST -H "Content-Type: text/xml" -H "Authorization: Bearer $token"  --data @"reports/results.xml" $(xray_endpoint)/api/v2/import/execution/junit?projectKey=CT&testPlanKey=${{ parameters.testplan }}
+  displayName: 'Import results to Xray cloud'
+  condition: always()
+
+# Import test evidence to Xray
+- bash: |
+    set -x
+    export token=$(curl -H "Content-Type: application/json" -X POST --data "{ \"client_id\": \"$(CLIENT_ID)\",\"client_secret\": \"$(CLIENT_SECRET)\" }" "$(xray_endpoint)/api/v2/authenticate"| tr -d '"')
+    
+    for evidence in ./reports/evidence_*.json; do
+      if [ -f "$evidence" ]; then
+        test_key=$(jq -r '.testInfo.testKey' "$evidence")
+        echo "Sending evidence for test case: $test_key"
+        
+        curl -X POST \
+          -H "Content-Type: application/json" \
+          -H "Authorization: Bearer $token" \
+          --data @"$evidence" \
+          "$(xray_endpoint)/api/v2/import/execution/test/$test_key"
+      fi
+    done
+  displayName: 'Import test evidence to Xray'
+  condition: always()

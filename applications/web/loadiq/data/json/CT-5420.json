@@ -1,0 +1,19 @@
+{
+  "tests": {
+    "idTC": "CT-5420",
+    "testCaseName": "test_verification_data_correctly_populated_from_load_information_updated",
+    "title": "Verification of data correctly populated from 'Load Information Update'",
+    "description": "Verify that the values entered in the load information update screen are correctly reflected in the Summary fields.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-5420",
+      "name": "CT-5420"
+    },
+    "data": {
+
+
+    }
+  }
+}

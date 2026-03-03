@@ -1,0 +1,123 @@
+{
+  "tests": [
+    {
+      "idTC": "CT-3245",
+      "testCaseName": "test_support_user_creation_dispatcher",
+      "description": "Create User Dispatcher",
+      "data": {
+        "crowleyBookingNumber": "",
+        "agreementReference": "20-00809",
+        "cargoAvailableDate": "future-date-to-utc{1}",
+        "cargos": [
+            {
+                "cargoType": "CONTAINER",
+                "commodityCode": "201200400",
+                "commodityDescription": "General Cargo",
+                "containerDetails": {
+                    "isShippersOwn": true,
+                    "isRunningReefer": false,
+                    "equipmentIsoCode": "22G0",
+                    "equipmentQuantity": 1
+                },
+                "weight": 2000.00,
+                "weightUOM": "KGS",
+                "volume": 300,
+                "volumeUOM": "MTQ",
+                "cargoItems": [
+                    {
+                        "goodsPackaging": "BAG-Bag",
+                        "numberOfPackages": 10,
+                        "weight": 2000.00,
+                        "weightUOM": "KGS",
+                        "volume": 30,
+                        "volumeUOM": "MTQ"
+                    }
+                ]
+            }
+        ],
+        "Voyages": [],
+        "moveType": "PortToPort",
+        "bookingRemarks": "Test Remarks",
+        "isHazMatBooking": false,
+        "freightPaymentMode": "PrePaid",
+        "electronicCustomerReference": "timestamp-prefix{CustCont}",
+        "shippingtype": "Laden",
+        "shippingCompany": "CRWLY",
+        "parties": [
+            {
+                "ein": "-----BEGIN PGP MESSAGE-----\r\nVersion: BCPG v1.74.0\r\n\r\nwcDMA42u3/pDdqFbAQv/WfK8H2JR0Pr1069OKFHo2aWr59GgqRSUHU/2Rh0c7RS/\r\nF3RPbWfnilCBonJwi+gxi3A6aPduqo3170xd5Q/8ichFTfbEHkCE5ZFPnVHr5MEh\r\nR+WtGyRqgilIK0Mcn3wUioBiwvninvrnauBS6WBUeghu+MzKbAylcrLLxFFM6+hE\r\n6NXyIA+A/eEsOQrLqjVeIqUOyQsuApqEO5sr3CdK2lkzR8mltXYxFHssv5TC4sC1\r\nblvPhlP8v9rD/nVlTD9SUR4vUudTHOFjFR+fo97w2zsJ2ahZQm9Tqm9glyLfznEi\r\nzdS9X62hDYDt9Q2kk5CmW3Xvq8iDV4xCooK6jaC94Xvpn2YwXATjUho2o8M4T7Lt\r\nlXfWIYaJTdHM75ml7p/xRM3UYDr5UU0PMY3jpFZzV1+9TbEDzRTzXCH9f92QwPgQ\r\nH/opFMl7cZ1NzY30JyKAUsiFPwF5+YiNzWHOZIoE/ltZQf27e1ViZsuSDKoyqADb\r\nXA6icfX5Cjmsy90V9B2E0kABSVEJGDWSvL9dRrfDkTDW0lZ+5oGjzOMsTv8Pxx0x\r\nx23ik56lNYepNDIdAUGW4GLXsegXkpnt6I5detgX+dHe\r\n=Ui+p\r\n-----END PGP MESSAGE-----\r\n",
+                "code": "5780713-01",
+                "bookingParty": true,
+                "role": "SHP",
+                "name": "GALLERY SHIPPING LLC",
+                "address": {
+                    "address1": "12902 CANTON AVE",
+                    "stateOrProvince": "FL",
+                    "address3": "GALLERY SHIPPING LLC",
+                    "country": "US",
+                    "zipCode": "34669",
+                    "city": "HUDSON",
+                    "address2": ""
+                },
+                "externalPartnerReference": "Test123",
+                "vatNumber": "Test123",
+                "contact": {
+                    "emailAddress": "christy.hernandez@crowley.com.uat",
+                    "mobilephone": "3052063753",
+                    "name": "CHRISTY HERNANDEZ",
+                    "telephone": "3052063753",
+                    "faxNumber": "",
+                    "website": ""
+                },
+                "reference": "CEE1234"
+            },
+            {
+                "ein": "-----BEGIN PGP MESSAGE-----\r\nVersion: BCPG v1.74.0\r\n\r\nwcDMA42u3/pDdqFbAQv/WfK8H2JR0Pr1069OKFHo2aWr59GgqRSUHU/2Rh0c7RS/\r\nF3RPbWfnilCBonJwi+gxi3A6aPduqo3170xd5Q/8ichFTfbEHkCE5ZFPnVHr5MEh\r\nR+WtGyRqgilIK0Mcn3wUioBiwvninvrnauBS6WBUeghu+MzKbAylcrLLxFFM6+hE\r\n6NXyIA+A/eEsOQrLqjVeIqUOyQsuApqEO5sr3CdK2lkzR8mltXYxFHssv5TC4sC1\r\nblvPhlP8v9rD/nVlTD9SUR4vUudTHOFjFR+fo97w2zsJ2ahZQm9Tqm9glyLfznEi\r\nzdS9X62hDYDt9Q2kk5CmW3Xvq8iDV4xCooK6jaC94Xvpn2YwXATjUho2o8M4T7Lt\r\nlXfWIYaJTdHM75ml7p/xRM3UYDr5UU0PMY3jpFZzV1+9TbEDzRTzXCH9f92QwPgQ\r\nH/opFMl7cZ1NzY30JyKAUsiFPwF5+YiNzWHOZIoE/ltZQf27e1ViZsuSDKoyqADb\r\nXA6icfX5Cjmsy90V9B2E0kABSVEJGDWSvL9dRrfDkTDW0lZ+5oGjzOMsTv8Pxx0x\r\nx23ik56lNYepNDIdAUGW4GLXsegXkpnt6I5detgX+dHe\r\n=Ui+p\r\n-----END PGP MESSAGE-----\r\n",
+                "code": "5780713-01",
+                "bookingParty": false,
+                "role": "CON",
+                "name": "GALLERY SHIPPING LLC",
+                "address": {
+                    "address1": "12902 CANTON AVE",
+                    "stateOrProvince": "FL",
+                    "address3": "",
+                    "country": "US",
+                    "zipCode": "34669",
+                    "city": "HUDSON",
+                    "address2": ""
+                },
+                "externalPartnerReference": "",
+                "vatNumber": "Test123",
+                "contact": {
+                    "emailAddress": "christy.hernandez@crowley.com.uat",
+                    "mobilephone": "3052063753",
+                    "name": "CHRISTY HERNANDEZ",
+                    "telephone": "3052063753",
+                    "faxNumber": "",
+                    "website": ""
+                },
+                "reference": "CEE1234"
+            }
+        ],
+        "Locations": [
+            {
+                "Function": "PortOfLoading",
+                "Qualifier": "UN",
+                "Identifier": "USJAX",
+                "StateOrProvince": "FL",
+                "Country": "US",
+                "City": "Jacksonville"
+            },
+            {
+                "Function": "PortOfDischarge",
+                "Qualifier": "UN",
+                "Identifier": "PRSJU",
+                "StateOrProvince": "Puertorico",
+                "Country": "PR",
+                "City": "San Juan"
+            }
+        ]
+      }
+    }
+  ]
+}

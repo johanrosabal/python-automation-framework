@@ -1,0 +1,17 @@
+{
+  "tests": {
+    "idTC": "CT-2661",
+    "testCaseName": "test_verify_booking_number_is_accessible_without_loss_of_information",
+    "title": "Verify full Booking Number is accessible without loss of information",
+    "description": "Verify that users can view the full Booking Number without loss of information on the My Loads and Shipment Tracking pages.",
+    "tag": "LOADIQ",
+    "feature": "Status Update",
+    "severity": "Critical",
+    "link": {
+      "url": "https://crowley.atlassian.net/browse/CT-2661",
+      "name": "CT-2661"
+    },
+    "data": {
+    }
+  }
+}
