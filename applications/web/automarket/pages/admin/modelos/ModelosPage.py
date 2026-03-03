@@ -18,6 +18,7 @@ class ModelosPage(BasePage):
         self._button_add_model_button = (By.XPATH, "//button[@id='add-model-button']", "Agregar Modelo [Button]")
         self._page_content = (By.ID, "models-page", "Main Page: Modelos")
 
+
         # Modal
         self._modal_div = (By.XPATH,"//div[@role='dialog']","Modal Visible")
         self._modal_brand = (By.XPATH,"//button[@role='combobox' and text()='Selecciona una marca']","Marca [Button]")
@@ -36,6 +37,10 @@ class ModelosPage(BasePage):
         self._model_save = (By.XPATH,"//button[@id='submit-model-button']","Guardar Datos [Button]")
         self._model_cancel = (By.XPATH, "//button[@id='cancel-model-button']", "Cancelar Registro [Button]")
 
+        self._input_search_by_name = (By.XPATH,"//input[@placeholder='Buscar por Nombre...']","Buscar por Nombre")
+        self._actions_delete = (By.XPATH,"//div[text()=' Eliminar']","Borrar Modelo")
+        self._modal_continue = (By.XPATH,"//button[text()='Continuar']","Continuar")
+
 
     @classmethod
     def get_instance(cls):
@@ -50,8 +55,25 @@ class ModelosPage(BasePage):
         self.navigation().go(base_url, self.relative)
         return self
 
+    def enter_buscar_por_nombre(self, text):
+        self.send_keys().set_locator(self._input_search_by_name).set_text(text).pause(2)
+        return self
+
+    def click_actions_menu(self, index):
+        locator = (By.XPATH,f"(//button[contains(@id,'model-actions-button')])[{index}]",f"Actions Menu [{index}]")
+        self.click().set_locator(locator).single_click()
+        return self
+
+    def click_eliminar_modelo(self):
+        self.click().set_locator(self._actions_delete).single_click()
+        return self
+
+    def click_continuar(self):
+        self.click().set_locator(self._modal_continue).single_click().pause(1)
+        return self
+
     def click_agregar_modelo(self):
-        self.click().set_locator(self._button_add_model_button).pause(2).single_click()
+        self.click().pause(2).set_locator(self._button_add_model_button).single_click()
         return self
 
     def click_marca(self):
@@ -106,7 +128,7 @@ class ModelosPage(BasePage):
         return self
 
     def click_guardar(self):
-        self.click().set_locator(self._model_save).single_click().pause(2)
+        self.click().set_locator(self._model_save).single_click().pause(3)
         return self
 
     def click_cancelar(self):
@@ -119,6 +141,19 @@ class ModelosPage(BasePage):
 
     def is_modal_displayed(self):
         return self.element().set_locator(self._modal_div).is_visible()
+
+    def get_column(self, row, col):
+        locator = (By.XPATH,f"//table/tbody/tr[{row}]/td[{col}]","Column Models")
+        return self.get_text().set_locator(locator).highlight().by_text()
+
+    def double_click_nombre_modelo(self, row, col):
+        locator = (By.XPATH, f"//table/tbody/tr[{row}]/td[{col}]", "Column Models")
+        self.click().set_locator(locator).highlight().double_click()
+        return self
+
+    def enter_nombre_modelo_tabla(self, row, col):
+        locator = (By.XPATH, f"//table/tbody/tr[{row}]/td[{col}]//input", "Column Models")
+        return self.get_text().set_locator(locator).highlight().by_text()
 
     def add_model(self, marca, categoria, tipo,modelo, inicio, fin ):
 
@@ -144,6 +179,9 @@ class ModelosPage(BasePage):
         self.click_guardar()
 
         return self
+
+    def select_pagination(self):
+        page_button = (By.XPATH,"//button[@id='page-size-selector']", "Page Button Selector")
 
 
 

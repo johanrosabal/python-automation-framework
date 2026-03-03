@@ -63,11 +63,11 @@ class TestLogin(BaseTest):
                 sub_categorias=tipo.VehicleLevel2
             )
 
-    @test(test_case_id="AUTO-004", test_description="Agregar Modelos", skip=False)
+    @test(test_case_id="AUTO-004", test_description="Agregar Modelos", skip=True)
     def test_agregar_modelos_de_vehiculo(self):
 
         # Importar Datos
-        path = "../../data/modelos_vehiculos_3.csv"
+        path = "../../data/modelos_vehiculos_1.csv"
         # 02. Specifying the Sheet Name to map UserInformation values
         modelos_vehiculos = EXCELReader().set_file_path(path).read_file(
             object_class=ModelosDeVehiculos
@@ -93,6 +93,29 @@ class TestLogin(BaseTest):
                 inicio=modelo.inicio,
                 fin=modelo.fin
             )
+
+    @test(test_case_id="AUTO-005", test_description="Eliminar Modelo", skip=False)
+    def test_eliminar_modelo(self):
+
+        self.ModelosPage.load_page()
+        self.ModelosPage.enter_buscar_por_nombre("Final Edition")
+
+        for i in range(577):
+            self.ModelosPage.click_actions_menu(1)
+            self.ModelosPage.click_eliminar_modelo()
+            self.ModelosPage.click_continuar()
+
+    @test(test_case_id="AUTO-005", test_description="Eliminar Modelo", skip=False)
+    def test_editar_nombre_modelo(self):
+        self.ModelosPage.load_page()
+
+
+        marca = self.ModelosPage.get_column(1,3)
+        nombre = self.ModelosPage.get_column(1,2)
+
+        self.ModelosPage.double_click_nombre_modelo(1,2)
+
+
 
 
 

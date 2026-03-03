@@ -41,7 +41,7 @@ class BaseTest(BaseApp):
         browser = get_browser() or getattr(self, "browser", None) or "chrome"
         app_type = get_app_type() or getattr(self, "app_type", None) or "web"
         # headless = get_headless() or getattr(self, "headless", None) or False
-        headless = True
+        headless = False
 
         # Load configurations
         project_root = Path(__file__).resolve().parent.parent.parent.parent
